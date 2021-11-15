@@ -25,6 +25,6 @@ To request a new sound or to report an issue, please open an [issue on Github](h
 
 ## Credits
 
-Sounds (used with permission): Poofesure ([YouTube](https://www.youtube.com/c/Poofesure) | [Twitch](https://www.twitch.tv/poofesure))
+Sounds (used with permission): Poofesure ([YouTube](https://www.youtube.com/c/Poofesure), [Twitch](https://www.twitch.tv/poofesure))
 
 Resource pack: youngmani ([Twitch](https://www.twitch.tv/youngmani))
