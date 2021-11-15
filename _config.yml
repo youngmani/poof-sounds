@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+custom_links:
+  show: true
+  latest_release: https://github.com/youngmani/poof-sounds/releases/latest
+  direct_download: https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds.zip
