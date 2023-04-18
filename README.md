@@ -2,6 +2,8 @@
 ## Poofesure Minecraft Sound Pack!
 ![icon](pack.png)
 
+![GitHub all releases](https://img.shields.io/github/downloads/youngmani/poof-sounds/total)
+
 **poof sounds** is a Minecraft resource pack for Java Edition that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348)
 
 The latest release of **poof sounds** is compatible with Minecraft version 1.19.4 and newer, although it may work with other versions as well. [**poof sounds** version 1.3](https://github.com/youngmani/poof-sounds/releases/tag/v1.3.0) was designed for Minecraft version 1.16.2 to 1.16.5.
