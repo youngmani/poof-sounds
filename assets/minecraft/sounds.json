@@ -45,6 +45,17 @@
     ],
     "subtitle": "SSSsss"
   },
+  "entity.generic.explode": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/explosion1",
+        "pitch": 1.5,
+        "volume": 5
+      }
+    ],
+    "subtitle": "boom"
+  },
   "entity.ghast.warn": {
     "replace": true,
     "sounds": [
@@ -131,6 +142,18 @@
       }
     ],
     "subtitle": "uh oh you are burning"
+  },
+  "entity.player.hurt_freeze": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/drown1"
+      },
+      {
+        "name": "custom/mono/drown2"
+      }
+    ],
+    "subtitle": "uh oh you are freezing"
   },
   "entity.player.hurt_sweet_berry_bush": {
     "replace": true,
@@ -570,7 +593,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/burp"
+        "name": "custom/mono/burp",
+        "pitch": 1.05
       }
     ],
     "subtitle": "excuse you"
@@ -624,5 +648,26 @@
       }
     ],
     "subtitle": "oink"
+  },
+  "block.chest.open": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/putthatinthere1",
+        "pitch": 1.05,
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/putthatinthere2",
+        "pitch": 1.05,
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/putthatinthere3",
+        "pitch": 1.05,
+        "volume": 2
+      }
+    ],
+    "subtitle": "putthatinthere"
   }
 }
