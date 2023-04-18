@@ -1,9 +1,10 @@
 # poof sounds
+## Poofesure Minecraft Sound Pack!
 ![icon](pack.png)
 
-Minecraft Java Edition resource pack that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348)
+**poof sounds** is a Minecraft resource pack for Java Edition that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348)
 
-**poof sounds** was designed for and tested on version 1.16.2 to 1.16.5 of Minecraft Java edition, but it will probably work on version 1.17 and 1.18 as well.
+The latest release of **poof sounds** is compatible with Minecraft version 1.19.4 and newer, although it may work with other versions as well. [**poof sounds** version 1.3](https://github.com/youngmani/poof-sounds/releases/tag/v1.3.0) was designed for Minecraft version 1.16.2 to 1.16.5.
 
 This resource pack is not currently available for Minecraft Bedrock Edition, but feel free to create your own based off of this resource pack! Bedrock Edition may be supported in the future. 
 
