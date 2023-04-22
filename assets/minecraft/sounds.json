@@ -575,7 +575,72 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellingtontrim"
+        "name": "custom/mono/skellington"
+      }
+    ],
+    "subtitle": "skellington sound"
+  },
+  "entity.wither_skeleton.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hateskellington1",
+        "pitch": 0.7
+      },
+      {
+        "name": "custom/mono/hateskellington2",
+        "pitch": 0.7,
+        "weight": 6
+      },
+      {
+        "name": "custom/mono/hateskellington3",
+        "pitch": 0.7,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/hateskellington4",
+        "pitch": 0.7,
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate wither skellingtons"
+  },
+  "entity.wither_skeleton.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/skellington",
+        "pitch": 0.7
+      }
+    ],
+    "subtitle": "wither skellington sound"
+  },
+  "entity.stray.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hateskellington1echo"
+      },
+      {
+        "name": "custom/mono/hateskellington2echo",
+        "weight": 6
+      },
+      {
+        "name": "custom/mono/hateskellington3echo",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/hateskellington4echo",
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate skellingtons"
+  },
+  "entity.stray.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/skellingtonecho"
       }
     ],
     "subtitle": "skellington sound"
@@ -648,6 +713,27 @@
       }
     ],
     "subtitle": "oink"
+  },
+  "entity.piglin.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/oink1",
+        "pitch": 0.7,
+        "weight": 10
+      },
+      {
+        "name": "custom/mono/oink2",
+        "pitch": 0.7,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/oink3",
+        "pitch": 0.7,
+        "weight": 12
+      }
+    ],
+    "subtitle": "piglin oink"
   },
   "block.chest.open": {
     "replace": true,
