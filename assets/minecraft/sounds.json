@@ -634,7 +634,7 @@
         "weight": 3
       }
     ],
-    "subtitle": "i hate skellingtons"
+    "subtitle": "i hate strays"
   },
   "entity.stray.ambient": {
     "replace": true,
@@ -643,7 +643,7 @@
         "name": "custom/mono/skellingtonecho"
       }
     ],
-    "subtitle": "skellington sound"
+    "subtitle": "stray sound"
   },
   "entity.sheep.ambient": {
     "replace": true,
@@ -687,7 +687,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/nononononovocals"
+        "name": "custom/mono/nononononovocals",
+        "volume": 2
       }
     ],
     "subtitle": "uh oh enderman mad"
