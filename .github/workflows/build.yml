@@ -1,0 +1,28 @@
+name: Build and Release
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Extract tag name
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: echo "GITHUB_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: Draft release
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: build/poof-sounds.zip
+          artifactContentType: application/zip
+          draft: true
+          generateReleaseNotes: true
