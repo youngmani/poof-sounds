@@ -4,19 +4,19 @@
     "sounds": [
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 1.8
+        "pitch": 1.9
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 1.8
+        "pitch": 1.9
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 1.9
+        "pitch": 1.95
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 1.9
+        "pitch": 1.95
       },
       {
         "name": "custom/mono/screamlouder1",
@@ -28,19 +28,19 @@
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2.1
+        "pitch": 2.05
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 2.1
+        "pitch": 2.05
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2.2
+        "pitch": 2.1
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 2.2
+        "pitch": 2.1
       }
     ],
     "subtitle": "SSSsss"
@@ -678,7 +678,13 @@
     "sounds": [
       {
         "name": "custom/mono/dabriss",
-        "pitch": 1.2
+        "pitch": 1.2,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/dabriss2",
+        "pitch": 1.2,
+        "weight": 1
       }
     ],
     "subtitle": "you found dabriss"
@@ -756,5 +762,14 @@
       }
     ],
     "subtitle": "putthatinthere"
+  },
+  "block.end_portal.spawn": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/stereo/opened"
+      }
+    ],
+    "subtitle": "nice you opened the end portal"
   }
 }
