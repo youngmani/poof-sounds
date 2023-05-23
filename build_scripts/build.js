@@ -1,10 +1,10 @@
-const fs = require('fs/promises');
-const ffprobe = require('ffprobe');
-const ffprobePath = require('ffprobe-static').path;
-const Zip = require('adm-zip');
+const fs = require("fs/promises");
+const ffprobe = require("ffprobe");
+const ffprobePath = require("ffprobe-static").path;
+const Zip = require("adm-zip");
 
 const BASE_MC_DIR = "./assets/minecraft";
-const TARGET_DIR = "./build"
+const TARGET_DIR = "./build";
 
 const verifySoundsExist = async () => {
   const soundsJson = await fs.readFile(`${BASE_MC_DIR}/sounds.json`);
@@ -61,15 +61,17 @@ const buildZip = async () => {
   const zip = new Zip();
   zip.addLocalFile(`./pack.mcmeta`);
   zip.addLocalFile(`./pack.png`);
-  await zip.addLocalFolderPromise(`./assets`, { zipPath: 'assets' });
+  await zip.addLocalFolderPromise(`./assets`, { zipPath: "assets" });
   try {
     await fs.access(TARGET_DIR);
   } catch (e) {
     await fs.mkdir(TARGET_DIR);
   }
-  await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds.zip`, { overwrite: true })
-  console.log(`successfully wrote zip file to: ${TARGET_DIR}/poof-sounds.zip`)
-}
+  await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds.zip`, {
+    overwrite: true,
+  });
+  console.log(`successfully wrote zip file to: ${TARGET_DIR}/poof-sounds.zip`);
+};
 
 verifySoundsExist();
 validateSoundFormat();
