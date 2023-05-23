@@ -771,5 +771,23 @@
       }
     ],
     "subtitle": "nice you opened the end portal"
+  },
+  "entity.donkey.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/donkey1"
+      }
+    ],
+    "subtitle": "donkey ee er"
+  },
+  "entity.item.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/simplefuck"
+      }
+    ],
+    "subtitle": "fuck tool broke"
   }
 }
