@@ -50,8 +50,7 @@
     "sounds": [
       {
         "name": "custom/mono/explosion1",
-        "pitch": 1.5,
-        "volume": 5
+        "pitch": 1.5
       }
     ],
     "subtitle": "boom"
@@ -176,8 +175,7 @@
         "weight": 20
       },
       {
-        "name": "custom/mono/noway",
-        "volume": 1
+        "name": "custom/mono/noway"
       }
     ],
     "subtitle": "dead"
@@ -446,10 +444,6 @@
         "name": "custom/mono/no",
         "weight": 3,
         "volume": 0.9
-      },
-      {
-        "name": "custom/mono/noooo",
-        "volume": 0.9
       }
     ],
     "subtitle": "villager says fuck you"
@@ -471,15 +465,50 @@
       {
         "name": "custom/mono/hardasrock",
         "weight": 4
+      },
+      {
+        "name": "custom/mono/whipnaenae"
       }
     ],
     "subtitle": "villager says YES"
+  },
+  "entity.villager.celebrate": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/thankyou"
+      },
+      {
+        "name": "custom/mono/yes1"
+      },
+      {
+        "name": "custom/mono/yes2"
+      },
+      {
+        "name": "custom/mono/hardasrock",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/whipnaenae",
+        "weight": 3
+      }
+    ],
+    "subtitle": "villager celebrating"
+  },
+  "entity.villager.death": {
+    "sounds": [
+      {
+        "name": "custom/mono/noooo",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "i can't believe you killed a villager"
   },
   "entity.villager.ambient": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/elisashortfilter",
+        "name": "custom/mono/elisashort",
         "volume": 0.8,
         "weight": 3
       },
@@ -693,8 +722,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/nononononovocals",
-        "volume": 2
+        "name": "custom/mono/nonononono"
       }
     ],
     "subtitle": "uh oh enderman mad"
@@ -747,18 +775,15 @@
     "sounds": [
       {
         "name": "custom/mono/putthatinthere1",
-        "pitch": 1.05,
-        "volume": 2
+        "pitch": 1.05
       },
       {
         "name": "custom/mono/putthatinthere2",
-        "pitch": 1.05,
-        "volume": 2
+        "pitch": 1.05
       },
       {
         "name": "custom/mono/putthatinthere3",
-        "pitch": 1.05,
-        "volume": 2
+        "pitch": 1.05
       }
     ],
     "subtitle": "putthatinthere"
