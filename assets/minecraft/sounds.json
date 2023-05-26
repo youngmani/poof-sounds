@@ -1,37 +1,181 @@
 {
+  "block.ancient_debris.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/dabriss",
+        "pitch": 1.2,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/dabriss2",
+        "pitch": 1.2,
+        "weight": 1
+      }
+    ],
+    "subtitle": "you found dabriss"
+  },
+  "block.bell.use": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/bell",
+        "pitch": 0.96
+      },
+      {
+        "name": "custom/mono/bell",
+        "pitch": 0.98
+      },
+      {
+        "name": "custom/mono/bell",
+        "pitch": 1.02
+      },
+      {
+        "name": "custom/mono/bell",
+        "pitch": 1.04
+      },
+      {
+        "name": "custom/mono/bell"
+      }
+    ],
+    "subtitle": "ding-a-ling"
+  },
+  "block.chest.open": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/putthatinthere1",
+        "pitch": 1.05
+      },
+      {
+        "name": "custom/mono/putthatinthere2",
+        "pitch": 1.05
+      },
+      {
+        "name": "custom/mono/putthatinthere3",
+        "pitch": 1.05
+      }
+    ],
+    "subtitle": "putthatinthere"
+  },
+  "block.end_portal.spawn": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/stereo/opened"
+      }
+    ],
+    "subtitle": "nice you opened the end portal"
+  },
+  "entity.cat.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/goodmeow1",
+        "pitch": 1,
+        "volume": 0.7,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "pitch": 1,
+        "volume": 0.7,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/meow1",
+        "pitch": 1,
+        "volume": 0.6
+      },
+      {
+        "name": "custom/mono/meow2",
+        "pitch": 1.02,
+        "volume": 0.54
+      },
+      {
+        "name": "custom/mono/meow3",
+        "pitch": 1.04,
+        "volume": 0.48
+      },
+      {
+        "name": "custom/mono/meow4",
+        "pitch": 1.06,
+        "volume": 0.42
+      }
+    ],
+    "subtitle": "meoww"
+  },
+  "entity.cat.stray_ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/goodmeow1",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow1",
+        "pitch": 1,
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "pitch": 1,
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/meow1",
+        "volume": 0.45
+      },
+      {
+        "name": "custom/mono/meow2",
+        "volume": 0.39
+      },
+      {
+        "name": "custom/mono/meow3",
+        "volume": 0.33
+      },
+      {
+        "name": "custom/mono/meow4",
+        "volume": 0.27
+      }
+    ],
+    "subtitle": "meow"
+  },
   "entity.creeper.primed": {
     "replace": true,
     "sounds": [
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 1.9
-      },
-      {
-        "name": "custom/mono/screamlouder2",
-        "pitch": 1.9
-      },
-      {
-        "name": "custom/mono/screamlouder1",
-        "pitch": 1.95
-      },
-      {
-        "name": "custom/mono/screamlouder2",
         "pitch": 1.95
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2
-      },
-      {
-        "name": "custom/mono/screamlouder2",
-        "pitch": 2
+        "pitch": 1.9
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2.05
-      },
-      {
-        "name": "custom/mono/screamlouder2",
         "pitch": 2.05
       },
       {
@@ -39,11 +183,73 @@
         "pitch": 2.1
       },
       {
+        "name": "custom/mono/screamlouder1",
+        "pitch": 2
+      },
+      {
+        "name": "custom/mono/screamlouder2",
+        "pitch": 1.95
+      },
+      {
+        "name": "custom/mono/screamlouder2",
+        "pitch": 1.9
+      },
+      {
+        "name": "custom/mono/screamlouder2",
+        "pitch": 2.05
+      },
+      {
         "name": "custom/mono/screamlouder2",
         "pitch": 2.1
+      },
+      {
+        "name": "custom/mono/screamlouder2",
+        "pitch": 2
       }
     ],
     "subtitle": "SSSsss"
+  },
+  "entity.donkey.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/donkey1"
+      }
+    ],
+    "subtitle": "donkey ee er"
+  },
+  "entity.ender_dragon.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/stereo/win"
+      }
+    ],
+    "subtitle": "you beat minecraft good job"
+  },
+  "entity.enderman.stare": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/nonononono"
+      }
+    ],
+    "subtitle": "uh oh enderman mad"
+  },
+  "entity.generic.eat": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/nomnomshort1"
+      },
+      {
+        "name": "custom/mono/nomnomshort2"
+      },
+      {
+        "name": "custom/mono/nomnomshort4"
+      }
+    ],
+    "subtitle": "nom nom nom"
   },
   "entity.generic.explode": {
     "replace": true,
@@ -64,50 +270,99 @@
     ],
     "subtitle": "uh oh a ghast is shooting you"
   },
-  "entity.spider.ambient": {
+  "entity.item.break": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spider1"
-      },
-      {
-        "name": "custom/mono/spider2"
-      },
-      {
-        "name": "custom/mono/spider3"
-      },
-      {
-        "name": "custom/mono/spider4"
+        "name": "custom/mono/simplefuck"
       }
     ],
-    "subtitle": "spider sound"
+    "subtitle": "fuck tool broke"
   },
-  "entity.spider.hurt": {
+  "entity.pig.ambient": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spider1"
+        "name": "custom/mono/ineedsomeonetomakemeoink",
+        "weight": 1
       },
       {
-        "name": "custom/mono/spider2"
+        "name": "custom/mono/oink1",
+        "weight": 10
       },
       {
-        "name": "custom/mono/spider3"
+        "name": "custom/mono/oink2",
+        "weight": 4
       },
       {
-        "name": "custom/mono/spider4"
+        "name": "custom/mono/oink3",
+        "weight": 12
       }
     ],
-    "subtitle": "spider ouchie"
+    "subtitle": "oink"
   },
-  "entity.spider.death": {
+  "entity.piglin.ambient": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spiderdie"
+        "name": "custom/mono/oink1",
+        "pitch": 0.7,
+        "weight": 10
+      },
+      {
+        "name": "custom/mono/oink2",
+        "pitch": 0.7,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/oink3",
+        "pitch": 0.7,
+        "weight": 12
       }
     ],
-    "subtitle": "spider dead"
+    "subtitle": "piglin oink"
+  },
+  "entity.pillager.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/pillagermumble"
+      }
+    ],
+    "subtitle": "pillager mumble"
+  },
+  "entity.pillager.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/pillagerhurt"
+      }
+    ],
+    "subtitle": "pillager hurt"
+  },
+  "entity.player.burp": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/burp",
+        "pitch": 1.05
+      }
+    ],
+    "subtitle": "excuse you"
+  },
+  "entity.player.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/diedshort",
+        "volume": 0.85,
+        "weight": 20
+      },
+      {
+        "name": "custom/mono/noway"
+      }
+    ],
+    "subtitle": "dead"
   },
   "entity.player.hurt": {
     "replace": true,
@@ -130,18 +385,6 @@
     ],
     "subtitle": "uh oh you are drowning"
   },
-  "entity.player.hurt_on_fire": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/drown1"
-      },
-      {
-        "name": "custom/mono/drown2"
-      }
-    ],
-    "subtitle": "uh oh you are burning"
-  },
   "entity.player.hurt_freeze": {
     "replace": true,
     "sounds": [
@@ -153,6 +396,18 @@
       }
     ],
     "subtitle": "uh oh you are freezing"
+  },
+  "entity.player.hurt_on_fire": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/drown1"
+      },
+      {
+        "name": "custom/mono/drown2"
+      }
+    ],
+    "subtitle": "uh oh you are burning"
   },
   "entity.player.hurt_sweet_berry_bush": {
     "replace": true,
@@ -166,19 +421,278 @@
     ],
     "subtitle": "OUCH!! BUSH!!"
   },
-  "entity.player.death": {
+  "entity.sheep.ambient": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/diedshort",
-        "volume": 0.85,
-        "weight": 20
-      },
-      {
-        "name": "custom/mono/noway"
+        "name": "custom/mono/baa"
       }
     ],
-    "subtitle": "dead"
+    "subtitle": "sheep baaa"
+  },
+  "entity.shulker.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/shulker"
+      }
+    ],
+    "subtitle": "shulker bleaghh"
+  },
+  "entity.skeleton.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/skellington"
+      }
+    ],
+    "subtitle": "skellington sound"
+  },
+  "entity.skeleton.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hateskellington1"
+      },
+      {
+        "name": "custom/mono/hateskellington2",
+        "weight": 6
+      },
+      {
+        "name": "custom/mono/hateskellington3",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/hateskellington4",
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate skellingtons"
+  },
+  "entity.spider.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/spider1"
+      },
+      {
+        "name": "custom/mono/spider2"
+      },
+      {
+        "name": "custom/mono/spider3"
+      },
+      {
+        "name": "custom/mono/spider4"
+      }
+    ],
+    "subtitle": "spider sound"
+  },
+  "entity.spider.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/spiderdie"
+      }
+    ],
+    "subtitle": "spider dead"
+  },
+  "entity.spider.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/spider1"
+      },
+      {
+        "name": "custom/mono/spider2"
+      },
+      {
+        "name": "custom/mono/spider3"
+      },
+      {
+        "name": "custom/mono/spider4"
+      }
+    ],
+    "subtitle": "spider ouchie"
+  },
+  "entity.stray.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/skellingtonecho"
+      }
+    ],
+    "subtitle": "stray sound"
+  },
+  "entity.stray.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hateskellington1echo"
+      },
+      {
+        "name": "custom/mono/hateskellington2echo",
+        "weight": 6
+      },
+      {
+        "name": "custom/mono/hateskellington3echo",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/hateskellington4echo",
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate strays"
+  },
+  "entity.villager.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/bullshit",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/butterfly",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/eatmyass",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/eatshit",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/elisashort",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/fuckallofyou",
+        "volume": 0.8
+      },
+      {
+        "name": "custom/mono/fuckingassholes",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/gibberish",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/gottapoop1",
+        "volume": 0.95,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/gottapoop2",
+        "volume": 0.95,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/gottapoop3",
+        "volume": 0.95,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/luigi",
+        "volume": 0.8,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/screaming",
+        "volume": 0.75,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/youbitch",
+        "volume": 0.55,
+        "weight": 3
+      }
+    ],
+    "subtitle": "villager sounds"
+  },
+  "entity.villager.celebrate": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hardasrock",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/thankyou"
+      },
+      {
+        "name": "custom/mono/whipnaenae",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/yes1"
+      },
+      {
+        "name": "custom/mono/yes2"
+      }
+    ],
+    "subtitle": "villager celebrating"
+  },
+  "entity.villager.death": {
+    "sounds": [
+      {
+        "name": "custom/mono/noooo",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "i can't believe you killed a villager"
+  },
+  "entity.villager.no": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/fuckyou",
+        "weight": 5
+      },
+      {
+        "name": "custom/mono/naww",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/no",
+        "volume": 0.9,
+        "weight": 3
+      }
+    ],
+    "subtitle": "villager says fuck you"
+  },
+  "entity.villager.yes": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hardasrock",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/thankyou",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/whipnaenae"
+      },
+      {
+        "name": "custom/mono/yes1",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/yes2"
+      }
+    ],
+    "subtitle": "villager says YES"
   },
   "entity.witch.ambient": {
     "replace": true,
@@ -195,36 +709,40 @@
     ],
     "subtitle": "witch giggle hehehehe"
   },
-  "item.axe.strip": {
+  "entity.wither_skeleton.ambient": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 0.94,
-        "volume": 0.99
-      },
-      {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 0.97,
-        "volume": 0.99
-      },
-      {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1,
-        "volume": 0.99
-      },
-      {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.03,
-        "volume": 0.99
-      },
-      {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.06,
-        "volume": 0.99
+        "name": "custom/mono/skellington",
+        "pitch": 0.7
       }
     ],
-    "subtitle": "FUCK log stripped"
+    "subtitle": "wither skellington sound"
+  },
+  "entity.wither_skeleton.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hateskellington1",
+        "pitch": 0.7
+      },
+      {
+        "name": "custom/mono/hateskellington2",
+        "pitch": 0.7,
+        "weight": 6
+      },
+      {
+        "name": "custom/mono/hateskellington3",
+        "pitch": 0.7,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/hateskellington4",
+        "pitch": 0.7,
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate wither skellingtons"
   },
   "entity.zombie.ambient": {
     "replace": true,
@@ -257,46 +775,6 @@
     ],
     "subtitle": "zombie got hurt and made a sound"
   },
-  "entity.generic.eat": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/nomnomshort1"
-      },
-      {
-        "name": "custom/mono/nomnomshort2"
-      },
-      {
-        "name": "custom/mono/nomnomshort4"
-      }
-    ],
-    "subtitle": "nom nom nom"
-  },
-  "block.bell.use": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/bell"
-      },
-      {
-        "name": "custom/mono/bell",
-        "pitch": 1.04
-      },
-      {
-        "name": "custom/mono/bell",
-        "pitch": 1.02
-      },
-      {
-        "name": "custom/mono/bell",
-        "pitch": 0.98
-      },
-      {
-        "name": "custom/mono/bell",
-        "pitch": 0.96
-      }
-    ],
-    "subtitle": "ding-a-ling"
-  },
   "entity.zombified_piglin.hurt": {
     "replace": true,
     "sounds": [
@@ -306,513 +784,35 @@
     ],
     "subtitle": "uh oh zombified piglin got hurt"
   },
-  "entity.cat.ambient": {
+  "item.axe.strip": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/meow1",
-        "pitch": 1,
-        "volume": 0.6
-      },
-      {
-        "name": "custom/mono/meow2",
-        "pitch": 1.02,
-        "volume": 0.54
-      },
-      {
-        "name": "custom/mono/meow3",
-        "pitch": 1.04,
-        "volume": 0.48
-      },
-      {
-        "name": "custom/mono/meow4",
-        "pitch": 1.06,
-        "volume": 0.42
-      },
-      {
-        "name": "custom/mono/goodmeow1",
-        "pitch": 1.06,
-        "volume": 0.72,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/goodmeow1",
-        "pitch": 1,
-        "volume": 0.7,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/goodmeow2",
-        "pitch": 1.06,
-        "volume": 0.72,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/goodmeow2",
-        "pitch": 1,
-        "volume": 0.7,
-        "weight": 2
-      }
-    ],
-    "subtitle": "meoww"
-  },
-  "entity.cat.stray_ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/meow1",
-        "volume": 0.45
-      },
-      {
-        "name": "custom/mono/meow2",
-        "volume": 0.39
-      },
-      {
-        "name": "custom/mono/meow3",
-        "volume": 0.33
-      },
-      {
-        "name": "custom/mono/meow4",
-        "volume": 0.27
-      },
-      {
-        "name": "custom/mono/goodmeow1",
+        "name": "custom/mono/shorterfuck",
         "pitch": 0.94,
-        "volume": 0.62,
-        "weight": 2
+        "volume": 0.99
       },
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "custom/mono/shorterfuck",
+        "pitch": 0.97,
+        "volume": 0.99
+      },
+      {
+        "name": "custom/mono/shorterfuck",
         "pitch": 1,
-        "volume": 0.6,
-        "weight": 2
+        "volume": 0.99
       },
       {
-        "name": "custom/mono/goodmeow2",
-        "pitch": 0.94,
-        "volume": 0.62,
-        "weight": 2
+        "name": "custom/mono/shorterfuck",
+        "pitch": 1.03,
+        "volume": 0.99
       },
       {
-        "name": "custom/mono/goodmeow2",
-        "pitch": 1,
-        "volume": 0.6,
-        "weight": 2
+        "name": "custom/mono/shorterfuck",
+        "pitch": 1.06,
+        "volume": 0.99
       }
     ],
-    "subtitle": "meow"
-  },
-  "entity.pillager.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/pillagermumble"
-      }
-    ],
-    "subtitle": "pillager mumble"
-  },
-  "entity.pillager.hurt": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/pillagerhurt"
-      }
-    ],
-    "subtitle": "pillager hurt"
-  },
-  "entity.shulker.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/shulker"
-      }
-    ],
-    "subtitle": "shulker bleaghh"
-  },
-  "entity.villager.no": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/fuckyou",
-        "weight": 5
-      },
-      {
-        "name": "custom/mono/naww",
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/no",
-        "weight": 3,
-        "volume": 0.9
-      }
-    ],
-    "subtitle": "villager says fuck you"
-  },
-  "entity.villager.yes": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/thankyou",
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/yes1",
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/yes2"
-      },
-      {
-        "name": "custom/mono/hardasrock",
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/whipnaenae"
-      }
-    ],
-    "subtitle": "villager says YES"
-  },
-  "entity.villager.celebrate": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/thankyou"
-      },
-      {
-        "name": "custom/mono/yes1"
-      },
-      {
-        "name": "custom/mono/yes2"
-      },
-      {
-        "name": "custom/mono/hardasrock",
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/whipnaenae",
-        "weight": 3
-      }
-    ],
-    "subtitle": "villager celebrating"
-  },
-  "entity.villager.death": {
-    "sounds": [
-      {
-        "name": "custom/mono/noooo",
-        "volume": 0.9
-      }
-    ],
-    "subtitle": "i can't believe you killed a villager"
-  },
-  "entity.villager.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/elisashort",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/youbitch",
-        "volume": 0.55,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/eatshit",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/screaming",
-        "volume": 0.75,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/luigi",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/bullshit",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/fuckallofyou",
-        "volume": 0.8
-      },
-      {
-        "name": "custom/mono/gibberish",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/eatmyass",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/butterfly",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/fuckingassholes",
-        "volume": 0.8,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/gottapoop1",
-        "volume": 0.95,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/gottapoop2",
-        "volume": 0.95,
-        "weight": 3
-      },
-      {
-        "name": "custom/mono/gottapoop3",
-        "volume": 0.95,
-        "weight": 4
-      }
-    ],
-    "subtitle": "villager sounds"
-  },
-  "entity.skeleton.death": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/hateskellington1"
-      },
-      {
-        "name": "custom/mono/hateskellington2",
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3",
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/hateskellington4",
-        "weight": 3
-      }
-    ],
-    "subtitle": "i hate skellingtons"
-  },
-  "entity.skeleton.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/skellington"
-      }
-    ],
-    "subtitle": "skellington sound"
-  },
-  "entity.wither_skeleton.death": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/hateskellington1",
-        "pitch": 0.7
-      },
-      {
-        "name": "custom/mono/hateskellington2",
-        "pitch": 0.7,
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3",
-        "pitch": 0.7,
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/hateskellington4",
-        "pitch": 0.7,
-        "weight": 3
-      }
-    ],
-    "subtitle": "i hate wither skellingtons"
-  },
-  "entity.wither_skeleton.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/skellington",
-        "pitch": 0.7
-      }
-    ],
-    "subtitle": "wither skellington sound"
-  },
-  "entity.stray.death": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/hateskellington1echo"
-      },
-      {
-        "name": "custom/mono/hateskellington2echo",
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3echo",
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/hateskellington4echo",
-        "weight": 3
-      }
-    ],
-    "subtitle": "i hate strays"
-  },
-  "entity.stray.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/skellingtonecho"
-      }
-    ],
-    "subtitle": "stray sound"
-  },
-  "entity.sheep.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/baa"
-      }
-    ],
-    "subtitle": "sheep baaa"
-  },
-  "entity.player.burp": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/burp",
-        "pitch": 1.05
-      }
-    ],
-    "subtitle": "excuse you"
-  },
-  "entity.ender_dragon.death": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/stereo/win"
-      }
-    ],
-    "subtitle": "you beat minecraft good job"
-  },
-  "block.ancient_debris.break": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/dabriss",
-        "pitch": 1.2,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/dabriss2",
-        "pitch": 1.2,
-        "weight": 1
-      }
-    ],
-    "subtitle": "you found dabriss"
-  },
-  "entity.enderman.stare": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/nonononono"
-      }
-    ],
-    "subtitle": "uh oh enderman mad"
-  },
-  "entity.pig.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/oink1",
-        "weight": 10
-      },
-      {
-        "name": "custom/mono/oink2",
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/oink3",
-        "weight": 12
-      },
-      {
-        "name": "custom/mono/ineedsomeonetomakemeoink",
-        "weight": 1
-      }
-    ],
-    "subtitle": "oink"
-  },
-  "entity.piglin.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/oink1",
-        "pitch": 0.7,
-        "weight": 10
-      },
-      {
-        "name": "custom/mono/oink2",
-        "pitch": 0.7,
-        "weight": 4
-      },
-      {
-        "name": "custom/mono/oink3",
-        "pitch": 0.7,
-        "weight": 12
-      }
-    ],
-    "subtitle": "piglin oink"
-  },
-  "block.chest.open": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/putthatinthere1",
-        "pitch": 1.05
-      },
-      {
-        "name": "custom/mono/putthatinthere2",
-        "pitch": 1.05
-      },
-      {
-        "name": "custom/mono/putthatinthere3",
-        "pitch": 1.05
-      }
-    ],
-    "subtitle": "putthatinthere"
-  },
-  "block.end_portal.spawn": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/stereo/opened"
-      }
-    ],
-    "subtitle": "nice you opened the end portal"
-  },
-  "entity.donkey.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/donkey1"
-      }
-    ],
-    "subtitle": "donkey ee er"
-  },
-  "entity.item.break": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "custom/mono/simplefuck"
-      }
-    ],
-    "subtitle": "fuck tool broke"
+    "subtitle": "FUCK log stripped"
   }
 }
