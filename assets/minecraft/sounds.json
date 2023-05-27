@@ -72,7 +72,6 @@
     "sounds": [
       {
         "name": "custom/mono/goodmeow1",
-        "pitch": 1,
         "volume": 0.7,
         "weight": 2
       },
@@ -84,7 +83,6 @@
       },
       {
         "name": "custom/mono/goodmeow2",
-        "pitch": 1,
         "volume": 0.7,
         "weight": 2
       },
@@ -96,7 +94,6 @@
       },
       {
         "name": "custom/mono/meow1",
-        "pitch": 1,
         "volume": 0.6
       },
       {
@@ -128,7 +125,6 @@
       },
       {
         "name": "custom/mono/goodmeow1",
-        "pitch": 1,
         "volume": 0.6,
         "weight": 2
       },
@@ -140,7 +136,6 @@
       },
       {
         "name": "custom/mono/goodmeow2",
-        "pitch": 1,
         "volume": 0.6,
         "weight": 2
       },
@@ -278,6 +273,50 @@
       }
     ],
     "subtitle": "fuck tool broke"
+  },
+  "entity.ocelot.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/goodmeow1",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow1",
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "volume": 0.6,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/meow1",
+        "volume": 0.45
+      },
+      {
+        "name": "custom/mono/meow2",
+        "volume": 0.39
+      },
+      {
+        "name": "custom/mono/meow3",
+        "volume": 0.33
+      },
+      {
+        "name": "custom/mono/meow4",
+        "volume": 0.27
+      }
+    ],
+    "subtitle": "meow"
   },
   "entity.pig.ambient": {
     "replace": true,

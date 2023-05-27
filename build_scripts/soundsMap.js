@@ -1,0 +1,132 @@
+// map java sound names to bedrock and add additional metadata
+module.exports = {
+  "block.ancient_debris.break": {
+    name: "dig.ancient_debris",
+  },
+  "block.bell.use": {
+    name: "block.bell.hit",
+  },
+  "block.chest.open": {
+    name: "random.chestopen",
+  },
+  "block.end_portal.spawn": {
+    name: "block.end_portal.spawn",
+  },
+  "entity.cat.ambient": {
+    name: "mob.cat.meow",
+  },
+  "entity.cat.stray_ambient": {
+    name: "mob.cat.straymeow",
+  },
+  "entity.creeper.primed": {
+    name: "random.fuse",
+  },
+  "entity.donkey.ambient": {
+    name: "mob.horse.donkey.idle",
+  },
+  "entity.ender_dragon.death": {
+    name: "mob.enderdragon.death",
+  },
+  "entity.enderman.stare": {
+    name: "mob.endermen.stare",
+  },
+  "entity.generic.eat": {
+    name: "random.eat",
+  },
+  "entity.generic.explode": {
+    name: "random.explode",
+  },
+  "entity.ghast.warn": {
+    name: "mob.ghast.charge",
+  },
+  "entity.item.break": {
+    name: "random.break",
+  },
+  "entity.ocelot.ambient": {
+    name: "mob.ocelot.idle",
+  },
+  "entity.pig.ambient": {
+    name: "mob.pig.say",
+  },
+  "entity.piglin.ambient": {
+    name: "mob.piglin.ambient",
+  },
+  "entity.pillager.ambient": {
+    name: "mob.pillager.idle",
+  },
+  "entity.pillager.hurt": {
+    name: "mob.pillager.hurt",
+  },
+  "entity.player.burp": {
+    name: "random.burp",
+  },
+  "entity.player.death": {
+    name: "game.player.die",
+  },
+  "entity.player.hurt": {
+    name: "game.player.hurt",
+  },
+  "entity.player.hurt_drown": {
+    name: "mob.player.hurt_drown",
+  },
+  "entity.player.hurt_freeze": {
+    name: "mob.player.hurt_freeze",
+  },
+  "entity.player.hurt_on_fire": {
+    name: "mob.player.hurt_on_fire",
+  },
+  "entity.player.hurt_sweet_berry_bush": {
+    name: "block.sweet_berry_bush.hurt",
+  },
+  "entity.sheep.ambient": {
+    name: "mob.sheep.say",
+  },
+  "entity.shulker.ambient": {
+    name: "mob.shulker.ambient",
+  },
+  "entity.skeleton.ambient": {
+    name: "mob.skeleton.say",
+  },
+  "entity.skeleton.death": {
+    name: "mob.skeleton.death",
+  },
+  "entity.spider.ambient": {
+    name: "mob.spider.say",
+  },
+  "entity.spider.death": {
+    name: "mob.spider.death",
+  },
+  "entity.stray.ambient": {
+    name: "mob.stray.ambient",
+  },
+  "entity.stray.death": {
+    name: "mob.stray.death",
+  },
+  "entity.villager.ambient": {
+    name: "mob.villager.idle",
+  },
+  "entity.villager.death": {
+    name: "mob.villager.death",
+  },
+  "entity.villager.no": {
+    name: "mob.villager.no",
+  },
+  "entity.villager.yes": {
+    name: "mob.villager.yes",
+  },
+  "entity.witch.ambient": {
+    name: "mob.witch.ambient",
+  },
+  "entity.zombie.ambient": {
+    name: "mob.zombie.say",
+  },
+  "entity.zombie.hurt": {
+    name: "mob.zombie.hurt",
+  },
+  "entity.zombified_piglin.hurt": {
+    name: "mob.zombiepig.zpighurt",
+  },
+  "item.axe.strip": {
+    name: "use.wood",
+  },
+};

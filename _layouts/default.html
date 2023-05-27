@@ -23,11 +23,8 @@
       {% endif %}
       {% if site.custom_links.show %}
         <a href="{{ site.custom_links.latest_release }}" class="btn">Latest Release</a>
-        <a href="{{ site.custom_links.direct_download }}" class="btn">Direct Download</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+        <a href="{{ site.custom_links.direct_download_java }}" class="btn">Direct Download (Java)</a>
+        <a href="{{ site.custom_links.direct_download_bedrock }}" class="btn">Direct Download (Bedrock)</a>
       {% endif %}
     </header>
 
