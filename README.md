@@ -4,7 +4,7 @@
 
 ![GitHub all releases](https://img.shields.io/github/downloads/youngmani/poof-sounds/total)
 
-**poof sounds** is a Minecraft resource pack for Java Edition that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348)
+**poof sounds** is a Minecraft resource pack for Java Edition that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348) ([and here!](https://www.youtube.com/watch?v=xruD5lhVHwQ))
 
 **poof sounds** is compatible with Minecraft version 1.19.4, although it may work with older and newer versions as well.
  
@@ -22,7 +22,9 @@
 
 ## Bedrock Edition (Experimental)
 
-**poof-sounds** is available for Minecraft Bedrock Edition on PC. There may be some issues with sound volume and pitch, and not all sounds will be mapped correctly. To install, download the `poof-sounds-bedrock.mcpack` file from the [latest release](https://github.com/youngmani/poof-sounds/releases/latest) ([direct download](https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds-bedrock.mcpack)), and then double click the file to add it to Minecraft.
+**poof-sounds** is available for Minecraft Bedrock Edition on PC. Not all sounds will be mapped correctly, and there may be some issues with sound volume and pitch, as this pack is designed for Java Edition.
+
+To install, download the `poof-sounds-bedrock.mcpack` file from the [latest release](https://github.com/youngmani/poof-sounds/releases/latest) ([direct download](https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds-bedrock.mcpack)), and then double click the file to add it to Minecraft.
 
 ## Request a new sound or report an issue
 
