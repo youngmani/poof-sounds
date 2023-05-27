@@ -83,27 +83,17 @@ const buildZip = async () => {
 };
 
 const convertToBedrock = async () => {
-  await fs.mkdir(`${TEMP_DIR}/bedrock/sounds/custom/mono`, { recursive: true });
-  await fs.mkdir(`${TEMP_DIR}/bedrock/sounds/custom/stereo`);
-  const [monoFiles, stereoFiles, soundsJson, splashesTxt] = await Promise.all([
-    fs.readdir(`${BASE_MC_DIR}/sounds/custom/mono`),
-    fs.readdir(`${BASE_MC_DIR}/sounds/custom/stereo`),
+  const [soundsJson, splashesTxt] = await Promise.all([
     fs.readFile(`${BASE_MC_DIR}/sounds.json`),
     fs.readFile(`${BASE_MC_DIR}/texts/splashes.txt`),
+    fs.cp(`${BASE_MC_DIR}/sounds/`, `${TEMP_DIR}/bedrock/sounds/`, {
+      recursive: true,
+    }),
   ]);
-  const files = [];
-  monoFiles.forEach((fileName) => {
-    files.push(`mono/${fileName}`);
-  });
-  stereoFiles.forEach((fileName) => {
-    files.push(`stereo/${fileName}`);
-  });
-  const promises = files.map((path) =>
-    fs.copyFile(
-      `${BASE_MC_DIR}/sounds/custom/${path}`,
-      `${TEMP_DIR}/bedrock/sounds/custom/${path}`
-    )
-  );
+
+  const promises = [
+    fs.copyFile("./pack.png", `${TEMP_DIR}/bedrock/pack_icon.png`)
+  ];
 
   const javaSounds = JSON.parse(soundsJson);
   const javaSoundKeys = Object.keys(javaSounds);
@@ -175,8 +165,6 @@ const convertToBedrock = async () => {
   promises.push(
     fs.writeFile(`${TEMP_DIR}/bedrock/manifest.json`, JSON.stringify(manifest))
   );
-
-  promises.push(fs.copyFile("./pack.png", `${TEMP_DIR}/bedrock/pack_icon.png`));
 
   await Promise.all(promises);
 
