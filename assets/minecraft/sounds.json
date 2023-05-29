@@ -420,6 +420,12 @@
       },
       {
         "name": "custom/mono/drown2"
+      },
+      {
+        "name": "custom/mono/drown3"
+      },
+      {
+        "name": "custom/mono/drown4"
       }
     ],
     "subtitle": "uh oh you are drowning"
@@ -428,10 +434,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/drown1"
+        "name": "custom/mono/freeze1"
       },
       {
-        "name": "custom/mono/drown2"
+        "name": "custom/mono/freeze2"
+      },
+      {
+        "name": "custom/mono/freeze3"
+      },
+      {
+        "name": "custom/mono/freeze4"
+      },
+      {
+        "name": "custom/mono/freeze5"
       }
     ],
     "subtitle": "uh oh you are freezing"
@@ -440,10 +455,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/drown1"
+        "name": "custom/mono/fire1"
       },
       {
-        "name": "custom/mono/drown2"
+        "name": "custom/mono/fire2"
+      },
+      {
+        "name": "custom/mono/fire3"
       }
     ],
     "subtitle": "uh oh you are burning"
