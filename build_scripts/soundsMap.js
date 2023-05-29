@@ -18,6 +18,9 @@ module.exports = {
   "entity.cat.stray_ambient": {
     name: "mob.cat.straymeow",
   },
+  "entity.cow.ambient": {
+    name: "mob.cow.say",
+  },
   "entity.creeper.primed": {
     name: "random.fuse",
   },
@@ -109,11 +112,35 @@ module.exports = {
   "entity.villager.death": {
     name: "mob.villager.death",
   },
+  "entity.villager.hurt": {
+    name: "mob.villager.hit",
+  },
   "entity.villager.no": {
     name: "mob.villager.no",
   },
+  "entity.villager.trade": {
+    name: "mob.villager.haggle",
+  },
   "entity.villager.yes": {
     name: "mob.villager.yes",
+  },
+  "entity.wandering_trader.ambient": {
+    name: "mob.wanderingtrader.idle",
+  },
+  "entity.wandering_trader.death": {
+    name: "mob.wanderingtrader.death",
+  },
+  "entity.wandering_trader.hurt": {
+    name: "mob.wanderingtrader.hurt",
+  },
+  "entity.wandering_trader.no": {
+    name: "mob.wanderingtrader.no",
+  },
+  "entity.wandering_trader.trade": {
+    name: "mob.wanderingtrader.haggle",
+  },
+  "entity.wandering_trader.yes": {
+    name: "mob.wanderingtrader.yes",
   },
   "entity.witch.ambient": {
     name: "mob.witch.ambient",

@@ -158,6 +158,15 @@
     ],
     "subtitle": "meow"
   },
+  "entity.cow.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/moo"
+      }
+    ],
+    "subtitle": "meow"
+  },
   "entity.creeper.primed": {
     "replace": true,
     "sounds": [
@@ -708,6 +717,16 @@
     ],
     "subtitle": "i can't believe you killed a villager"
   },
+  "entity.villager.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/owfuck",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "villager hurt D:"
+  },
   "entity.villager.no": {
     "replace": true,
     "sounds": [
@@ -727,6 +746,15 @@
     ],
     "subtitle": "villager says fuck you"
   },
+  "entity.villager.trade": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/whipnaenae"
+      }
+    ],
+    "subtitle": "villager trading"
+  },
   "entity.villager.yes": {
     "replace": true,
     "sounds": [
@@ -739,7 +767,95 @@
         "weight": 2
       },
       {
+        "name": "custom/mono/yes1",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/yes2"
+      }
+    ],
+    "subtitle": "villager says YES"
+  },
+  "entity.wandering_trader.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/balls",
+        "volume": 0.9,
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/nose",
+        "volume": 0.7
+      },
+      {
+        "name": "custom/mono/stigma",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/wawawaw",
+        "weight": 3
+      }
+    ],
+    "subtitle": "wandering trader sounds"
+  },
+  "entity.wandering_trader.death": {
+    "sounds": [
+      {
+        "name": "custom/mono/noooo",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "i can't believe you killed a wandering trader"
+  },
+  "entity.wandering_trader.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/owfuck",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "wandering trader hurt D:"
+  },
+  "entity.wandering_trader.no": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/fuckyou",
+        "weight": 5
+      },
+      {
+        "name": "custom/mono/naww",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/no",
+        "volume": 0.9,
+        "weight": 3
+      }
+    ],
+    "subtitle": "wandering trader says fuck you"
+  },
+  "entity.wandering_trader.trade": {
+    "replace": true,
+    "sounds": [
+      {
         "name": "custom/mono/whipnaenae"
+      }
+    ],
+    "subtitle": "wandering trader trading"
+  },
+  "entity.wandering_trader.yes": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/hardasrock",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/thankyou",
+        "weight": 2
       },
       {
         "name": "custom/mono/yes1",
@@ -749,7 +865,7 @@
         "name": "custom/mono/yes2"
       }
     ],
-    "subtitle": "villager says YES"
+    "subtitle": "wandering trader says YES"
   },
   "entity.witch.ambient": {
     "replace": true,
