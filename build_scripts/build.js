@@ -102,9 +102,13 @@ const convertToBedrock = async () => {
       const sound = javaSounds[key];
       delete javaSounds[key];
 
-      const { name: newSoundName } = soundsMap[key];
+      const { name: newSoundName, pitchAdjust } = soundsMap[key];
       sound.sounds = sound.sounds.map((s) => {
         s.name = `sounds/${s.name}`;
+        if (pitchAdjust) {
+          s.pitch ??= 1;
+          s.pitch *= pitchAdjust;
+        }
         return s;
       });
       delete sound.replace;
@@ -199,7 +203,7 @@ const build = async () => {
     await fs.mkdir(TEMP_DIR);
   }
   await Promise.all([buildZip(), convertToBedrock()]);
-  await fs.rm(TEMP_DIR, { recursive: true, force: true });
+  // await fs.rm(TEMP_DIR, { recursive: true, force: true });
   console.log("END BUILD");
 };
 

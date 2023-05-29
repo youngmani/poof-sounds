@@ -35,6 +35,7 @@ module.exports = {
   },
   "entity.generic.explode": {
     name: "random.explode",
+    pitchAdjust: 2 / 3,
   },
   "entity.ghast.warn": {
     name: "mob.ghast.charge",
