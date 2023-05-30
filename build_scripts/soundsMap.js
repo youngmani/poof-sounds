@@ -2,6 +2,7 @@
 module.exports = {
   "block.ancient_debris.break": {
     name: "dig.ancient_debris",
+    pitchAdjust: 11 / 12,
   },
   "block.bell.use": {
     name: "block.bell.hit",

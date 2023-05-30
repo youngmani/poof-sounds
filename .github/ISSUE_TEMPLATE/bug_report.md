@@ -8,10 +8,10 @@ assignees: youngmani
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is, and steps to reproduce the issue.
+[A clear and concise description of what the bug is, and steps to reproduce the issue.]
 
 **Minecraft Version:**
-[e.g. version 1.17.1]
+[e.g. "Java Edition 1.17.1"]
 
 **Additional context**
-Add any other context about the problem here.
+[Add any other context about the problem here, if applicable.]

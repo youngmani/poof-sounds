@@ -203,7 +203,7 @@ const build = async () => {
     await fs.mkdir(TEMP_DIR);
   }
   await Promise.all([buildZip(), convertToBedrock()]);
-  // await fs.rm(TEMP_DIR, { recursive: true, force: true });
+  await fs.rm(TEMP_DIR, { recursive: true, force: true });
   console.log("END BUILD");
 };
 
