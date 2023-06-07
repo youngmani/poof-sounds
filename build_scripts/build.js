@@ -79,12 +79,14 @@ const convertToBedrock = async tempDir => {
   const [soundsJson, splashesTxt] = await Promise.all([
     fs.readFile(`${BASE_MC_DIR}/sounds.json`),
     fs.readFile(`${BASE_MC_DIR}/texts/splashes.txt`),
-    fs.cp(`${BASE_MC_DIR}/sounds/`, `${tempDir}/bedrock/sounds/`, {
-      recursive: true,
-    }),
+    fs.cp(`${BASE_MC_DIR}/sounds/`, `${tempDir}/bedrock/sounds/`, { recursive: true }),
   ]);
 
-  const promises = [fs.copyFile('./pack.png', `${tempDir}/bedrock/pack_icon.png`)];
+  const promises = [
+    fs.copyFile('./pack.png', `${tempDir}/bedrock/pack_icon.png`),
+    fs.cp(`${BASE_MC_DIR}/textures/`, `${tempDir}/bedrock/textures/`, { recursive: true }),
+    fs.cp(`bedrock/`, `${tempDir}/bedrock/`, { recursive: true }),
+  ];
 
   const javaSounds = JSON.parse(soundsJson);
   const javaSoundKeys = Object.keys(javaSounds);
