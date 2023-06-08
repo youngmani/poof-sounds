@@ -44,6 +44,15 @@ module.exports = {
   'entity.ghast.warn': {
     name: 'mob.ghast.charge',
   },
+  'entity.glow_squid.ambient': {
+    name: 'mob.glow_squid.ambient',
+  },
+  'entity.glow_squid.death': {
+    name: 'mob.glow_squid.death',
+  },
+  'entity.glow_squid.hurt': {
+    name: 'mob.glow_squid.hurt',
+  },
   'entity.item.break': {
     name: 'random.break',
   },
@@ -100,6 +109,15 @@ module.exports = {
   },
   'entity.spider.death': {
     name: 'mob.spider.death',
+  },
+  'entity.squid.ambient': {
+    name: 'mob.squid.ambient',
+  },
+  'entity.squid.death': {
+    name: 'mob.squid.death',
+  },
+  'entity.squid.hurt': {
+    name: 'mob.squid.hurt',
   },
   'entity.stray.ambient': {
     name: 'mob.stray.ambient',

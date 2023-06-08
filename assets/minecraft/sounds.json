@@ -274,6 +274,33 @@
     ],
     "subtitle": "uh oh a ghast is shooting you"
   },
+  "entity.glow_squid.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward1"
+      }
+    ],
+    "subtitle": "glow squidward"
+  },
+  "entity.glow_squid.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward3"
+      }
+    ],
+    "subtitle": "glow squidward dead"
+  },
+  "entity.glow_squid.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward2"
+      }
+    ],
+    "subtitle": "glow squidward hurt"
+  },
   "entity.item.break": {
     "replace": true,
     "sounds": [
@@ -579,6 +606,33 @@
       }
     ],
     "subtitle": "spider ouchie"
+  },
+  "entity.squid.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward1"
+      }
+    ],
+    "subtitle": "squidward"
+  },
+  "entity.squid.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward3"
+      }
+    ],
+    "subtitle": "squidward dead"
+  },
+  "entity.squid.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/squidward2"
+      }
+    ],
+    "subtitle": "squidward hurt"
   },
   "entity.stray.ambient": {
     "replace": true,
