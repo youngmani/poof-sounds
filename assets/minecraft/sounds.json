@@ -971,6 +971,20 @@
     ],
     "subtitle": "i hate wither skellingtons"
   },
+  "entity.wolf.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/bark",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/woof",
+        "weight": 3
+      }
+    ],
+    "subtitle": "bark"
+  },
   "entity.zombie.ambient": {
     "replace": true,
     "sounds": [

@@ -164,6 +164,9 @@ module.exports = {
   'entity.witch.ambient': {
     name: 'mob.witch.ambient',
   },
+  'entity.wolf.ambient': {
+    name: 'mob.wolf.bark',
+  },
   'entity.zombie.ambient': {
     name: 'mob.zombie.say',
   },
