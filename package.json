@@ -1,6 +1,6 @@
 {
   "name": "poof-sounds",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "build scripts for poof sounds",
   "scripts": {
     "build": "node build_scripts/build.js"
@@ -8,7 +8,8 @@
   "dependencies": {
     "adm-zip": "^0.5.10",
     "ffprobe": "^1.1.2",
-    "ffprobe-static": "^3.1.0"
+    "ffprobe-static": "^3.1.0",
+    "loglevel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8.42.0",

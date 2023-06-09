@@ -72,17 +72,12 @@
     "sounds": [
       {
         "name": "custom/mono/goodmeow1",
-        "volume": 0.7,
+        "pitch": 1.06,
+        "volume": 0.72,
         "weight": 2
       },
       {
         "name": "custom/mono/goodmeow1",
-        "pitch": 1.06,
-        "volume": 0.72,
-        "weight": 2
-      },
-      {
-        "name": "custom/mono/goodmeow2",
         "volume": 0.7,
         "weight": 2
       },
@@ -90,6 +85,11 @@
         "name": "custom/mono/goodmeow2",
         "pitch": 1.06,
         "volume": 0.72,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/goodmeow2",
+        "volume": 0.7,
         "weight": 2
       },
       {
@@ -172,43 +172,43 @@
     "sounds": [
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 1.95
+        "pitch": 1.88
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 1.9
+        "pitch": 1.94
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2.05
+        "pitch": 1.99
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2.1
+        "pitch": 2.06
       },
       {
         "name": "custom/mono/screamlouder1",
-        "pitch": 2
+        "pitch": 2.12
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 1.95
+        "pitch": 1.88
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 1.9
+        "pitch": 1.94
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 2.05
+        "pitch": 1.99
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 2.1
+        "pitch": 2.06
       },
       {
         "name": "custom/mono/screamlouder2",
-        "pitch": 2
+        "pitch": 2.12
       }
     ],
     "subtitle": "SSSsss"
@@ -250,6 +250,9 @@
         "name": "custom/mono/nomnomshort2"
       },
       {
+        "name": "custom/mono/nomnomshort3"
+      },
+      {
         "name": "custom/mono/nomnomshort4"
       }
     ],
@@ -278,7 +281,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward1"
+        "name": "custom/mono/squidward1",
+        "volume": 1.5
       }
     ],
     "subtitle": "glow squidward"
@@ -287,7 +291,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward3"
+        "name": "custom/mono/squidward3",
+        "volume": 2
       }
     ],
     "subtitle": "glow squidward dead"
@@ -296,7 +301,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward2"
+        "name": "custom/mono/squidward2",
+        "volume": 2
       }
     ],
     "subtitle": "glow squidward hurt"
@@ -611,7 +617,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward1"
+        "name": "custom/mono/squidward1",
+        "volume": 1.25
       }
     ],
     "subtitle": "squidward"
@@ -620,7 +627,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward3"
+        "name": "custom/mono/squidward3",
+        "volume": 1.75
       }
     ],
     "subtitle": "squidward dead"
@@ -629,7 +637,8 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward2"
+        "name": "custom/mono/squidward2",
+        "volume": 1.75
       }
     ],
     "subtitle": "squidward hurt"
@@ -976,10 +985,12 @@
     "sounds": [
       {
         "name": "custom/mono/bark",
+        "volume": 2,
         "weight": 2
       },
       {
         "name": "custom/mono/woof",
+        "volume": 2,
         "weight": 3
       }
     ],

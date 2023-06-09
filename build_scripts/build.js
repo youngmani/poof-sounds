@@ -2,39 +2,45 @@ const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
 const Zip = require('adm-zip');
+const log = require('loglevel');
 
 const soundsMap = require('./soundsMap');
 
 const BASE_MC_DIR = './assets/minecraft';
 const TARGET_DIR = './build';
 
-const verifySoundsExist = async () => {
+const verifySoundsExist = async (monoFiles, stereoFiles) => {
+  const allFiles = new Set([...monoFiles, ...stereoFiles]);
+  const usedFiles = new Set();
   const soundsJson = await fs.readFile(`${BASE_MC_DIR}/sounds.json`);
   const sounds = JSON.parse(soundsJson);
-  const filesToCheck = new Set();
   Object.values(sounds).forEach(sound => {
-    sound.sounds.forEach(clip => {
-      filesToCheck.add(clip.name);
+    sound.sounds.forEach(({ name }) => {
+      const [folder, channels, soundName] = name.split('/');
+      const fileName = `${soundName}.ogg`;
+      if (usedFiles.has(fileName)) {
+        return;
+      }
+      if (
+        folder === 'custom' &&
+        ((channels === 'mono' && monoFiles.includes(fileName)) ||
+          (channels === 'stereo' && stereoFiles.includes(fileName)))
+      ) {
+        usedFiles.add(fileName);
+        log.debug(`file exists: ${name}`);
+      } else {
+        throw new Error(`sound does not exist: ${name}`);
+      }
     });
   });
-  const promises = [...filesToCheck].map(file =>
-    fs
-      .access(`${BASE_MC_DIR}/sounds/${file}.ogg`)
-      .then(() => {
-        console.debug(`file exists: ${file}`);
-      })
-      .catch(() => {
-        throw new Error(`sound does not exist: ${file}`);
-      })
-  );
-  await Promise.all(promises);
+  allFiles.forEach(file => {
+    if (!usedFiles.delete(file)) {
+      log.warn(`unused file found: ${file}`);
+    }
+  });
 };
 
-const validateSoundFormat = async () => {
-  const [monoFiles, stereoFiles] = await Promise.all([
-    fs.readdir(`${BASE_MC_DIR}/sounds/custom/mono`),
-    fs.readdir(`${BASE_MC_DIR}/sounds/custom/stereo`),
-  ]);
+const validateSoundFormat = async (monoFiles, stereoFiles) => {
   const files = [];
   monoFiles.forEach(fileName => {
     files.push({ path: `mono/${fileName}`, channels: 1 });
@@ -47,7 +53,7 @@ const validateSoundFormat = async () => {
       path: ffprobePath,
     }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
-        console.debug(`validated correct number of audio channels for: custom/${path}`);
+        log.debug(`validated correct number of audio channels for: custom/${path}`);
       } else {
         throw new Error(`incorrect number of audio channels for: custom/${path}`);
       }
@@ -63,7 +69,7 @@ const buildZip = async tempDir => {
   ]);
   mcmeta = mcmeta.replace('{VERSION}', process.env.npm_package_version);
   await fs.writeFile(`${tempDir}/java/pack.mcmeta`, mcmeta);
-  console.debug(`java build: set version to ${process.env.npm_package_version}`);
+  log.info(`java build: set version to ${process.env.npm_package_version}`);
 
   const zip = new Zip();
   zip.addLocalFile(`${tempDir}/java/pack.mcmeta`);
@@ -72,7 +78,7 @@ const buildZip = async tempDir => {
   await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds.zip`, {
     overwrite: true,
   });
-  console.debug(`java build: successfully wrote zip file to: ${TARGET_DIR}/poof-sounds.zip`);
+  log.info(`java build: successfully wrote zip file to: ${TARGET_DIR}/poof-sounds.zip`);
 };
 
 const convertToBedrock = async tempDir => {
@@ -107,9 +113,9 @@ const convertToBedrock = async tempDir => {
       delete sound.replace;
 
       javaSounds[newSoundName] = sound;
-      console.debug(`bedrock build: converting ${key} to ${newSoundName}`);
+      log.debug(`bedrock build: converting ${key} to ${newSoundName}`);
     } else {
-      console.debug(`bedrock build: unmapped java sound ${key}`);
+      log.info(`bedrock build: unmapped java sound ${key}`);
       delete javaSounds[key];
     }
   });
@@ -129,7 +135,7 @@ const convertToBedrock = async tempDir => {
   promises.push(fs.writeFile(`${tempDir}/bedrock/splashes.json`, JSON.stringify(bedrockSplashes, null, 2)));
 
   const version = process.env.npm_package_version.split('.').map(n => parseInt(n.split('-')[0]));
-  console.debug(`bedrock build: using version ${version}`);
+  log.info(`bedrock build: using version ${version}`);
 
   const manifest = {
     format_version: 2,
@@ -158,36 +164,45 @@ const convertToBedrock = async tempDir => {
   await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds-bedrock.mcpack`, {
     overwrite: true,
   });
-  console.debug(`bedrock build: successfully wrote mcpack file to: ${TARGET_DIR}/poof-sounds.mcpack`);
+  log.info(`bedrock build: successfully wrote mcpack file to: ${TARGET_DIR}/poof-sounds.mcpack`);
 };
 
 const validate = async () => {
-  console.info('BEGIN VALIDATION');
+  log.info('begin validation');
   try {
-    await Promise.all([verifySoundsExist(), validateSoundFormat()]);
+    const [monoFiles, stereoFiles] = await Promise.all([
+      fs.readdir(`${BASE_MC_DIR}/sounds/custom/mono`),
+      fs.readdir(`${BASE_MC_DIR}/sounds/custom/stereo`),
+    ]);
+    await Promise.all([verifySoundsExist(monoFiles, stereoFiles), validateSoundFormat(monoFiles, stereoFiles)]);
   } catch (error) {
-    console.error('error occurred during validation:', error.message);
+    log.error('error occurred during validation:', error.message);
     return 1;
   }
-  console.info('END VALIDATION');
+  log.info('end validation');
   return 0;
 };
 
 const build = async () => {
-  console.info('BEGIN BUILD');
+  log.info('begin build');
   try {
     const [tempDir] = await Promise.all([fs.mkdtemp('temp-'), fs.mkdir(TARGET_DIR, { recursive: true })]);
     await Promise.all([buildZip(tempDir), convertToBedrock(tempDir)]);
     await fs.rm(tempDir, { recursive: true, force: true });
   } catch (error) {
-    console.error('error occurred during build:', error.message);
+    log.error('error occurred during build:', error.message);
     return 1;
   }
-  console.info('END BUILD');
+  log.info('end build');
   return 0;
 };
 
 const run = async () => {
+  if (process.argv.includes('debug')) {
+    log.setLevel(log.levels.DEBUG);
+  } else {
+    log.setLevel(log.levels.INFO);
+  }
   process.exit((await validate()) || (await build()));
 };
 
