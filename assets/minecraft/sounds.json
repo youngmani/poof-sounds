@@ -772,6 +772,7 @@
     "subtitle": "villager celebrating"
   },
   "entity.villager.death": {
+    "replace": true,
     "sounds": [
       {
         "name": "custom/mono/noooo",
@@ -813,6 +814,9 @@
     "replace": true,
     "sounds": [
       {
+        "name": "custom/mono/wawawaw"
+      },
+      {
         "name": "custom/mono/whipnaenae"
       }
     ],
@@ -823,7 +827,7 @@
     "sounds": [
       {
         "name": "custom/mono/hardasrock",
-        "weight": 4
+        "weight": 3
       },
       {
         "name": "custom/mono/thankyou",
@@ -848,21 +852,29 @@
         "weight": 3
       },
       {
+        "name": "custom/mono/eatmyass2",
+        "weight": 3
+      },
+      {
         "name": "custom/mono/nose",
         "volume": 0.7
       },
       {
-        "name": "custom/mono/stigma",
-        "weight": 3
+        "name": "custom/mono/pinky1"
       },
       {
-        "name": "custom/mono/wawawaw",
+        "name": "custom/mono/pinky2",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/stigma",
         "weight": 3
       }
     ],
     "subtitle": "wandering trader sounds"
   },
   "entity.wandering_trader.death": {
+    "replace": true,
     "sounds": [
       {
         "name": "custom/mono/noooo",
@@ -904,6 +916,9 @@
     "replace": true,
     "sounds": [
       {
+        "name": "custom/mono/wawawaw"
+      },
+      {
         "name": "custom/mono/whipnaenae"
       }
     ],
@@ -914,7 +929,7 @@
     "sounds": [
       {
         "name": "custom/mono/hardasrock",
-        "weight": 4
+        "weight": 3
       },
       {
         "name": "custom/mono/thankyou",

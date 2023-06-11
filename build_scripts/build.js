@@ -14,7 +14,7 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const usedFiles = new Set();
   const soundsJson = await fs.readFile(`${BASE_MC_DIR}/sounds.json`);
   const sounds = JSON.parse(soundsJson);
-  Object.values(sounds).forEach(sound => {
+  Object.entries(sounds).forEach(([key, sound]) => {
     sound.sounds.forEach(({ name }) => {
       const [folder, channels, soundName] = name.split('/');
       const fileName = `${soundName}.ogg`;
@@ -32,6 +32,9 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
         throw new Error(`sound does not exist: ${name}`);
       }
     });
+    if (!sound.replace) {
+      log.warn(`replace not set on sound for ${key}`);
+    }
   });
   allFiles.forEach(file => {
     if (!usedFiles.delete(file)) {
