@@ -178,5 +178,6 @@ module.exports = {
   },
   'item.axe.strip': {
     name: 'use.wood',
+    pitchAdjust: 1.2,
   },
 };
