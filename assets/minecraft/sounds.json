@@ -162,7 +162,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/moo"
+        "name": "custom/mono/moo",
+        "volume": 0.95,
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/moo2",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/moo3"
       }
     ],
     "subtitle": "mooo cow"
@@ -524,7 +533,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/baa"
+        "name": "custom/mono/baa",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/baa2",
+        "weight": 2
+      },
+      {
+        "name": "custom/mono/baa3"
       }
     ],
     "subtitle": "sheep baaa"
@@ -858,6 +875,9 @@
       {
         "name": "custom/mono/eatmyass2",
         "weight": 3
+      },
+      {
+        "name": "custom/mono/licker"
       },
       {
         "name": "custom/mono/nose",
