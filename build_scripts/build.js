@@ -35,7 +35,8 @@ const convertToBedrock = async tempDir => {
 
   const promises = [
     fs.copyFile('./pack.png', `${tempDir}/bedrock/pack_icon.png`),
-    fs.cp(`${BASE_MC_DIR}/textures/`, `${tempDir}/bedrock/textures/`, { recursive: true }),
+    fs.cp(`${BASE_MC_DIR}/textures/entity`, `${tempDir}/bedrock/textures/entity`, { recursive: true }),
+    fs.cp(`${BASE_MC_DIR}/textures/gui/title/background`, `${tempDir}/bedrock/textures/ui`, { recursive: true }),
     fs.cp(`bedrock/`, `${tempDir}/bedrock/`, { recursive: true }),
   ];
 
@@ -132,7 +133,7 @@ const run = async () => {
   } else {
     log.setLevel(log.levels.INFO);
   }
-  process.exit((await build()));
+  process.exit(await build());
 };
 
 run();
