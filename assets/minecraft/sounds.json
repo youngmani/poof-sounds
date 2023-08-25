@@ -249,6 +249,15 @@
     ],
     "subtitle": "uh oh enderman mad"
   },
+  "entity.evoker_fangs.attack": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/floormonster"
+      }
+    ],
+    "subtitle": "the evoker summoned floor monsters"
+  },
   "entity.generic.eat": {
     "replace": true,
     "sounds": [
@@ -324,6 +333,20 @@
       }
     ],
     "subtitle": "fuck tool broke"
+  },
+  "entity.lightning_bolt.thunder": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/thunder1",
+        "pitch": 1.06
+      },
+      {
+        "name": "custom/mono/thunder2",
+        "pitch": 1.06
+      }
+    ],
+    "subtitle": "thunda"
   },
   "entity.ocelot.ambient": {
     "replace": true,
@@ -860,6 +883,27 @@
     ],
     "subtitle": "villager says YES"
   },
+  "entity.vindicator.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/vindicator1"
+      },
+      {
+        "name": "custom/mono/vindicator2"
+      }
+    ],
+    "subtitle": "vindicator harr"
+  },
+  "entity.vindicator.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/killedone"
+      }
+    ],
+    "subtitle": "no way, killed a vindicator!!"
+  },
   "entity.wandering_trader.ambient": {
     "replace": true,
     "sounds": [
@@ -1105,5 +1149,23 @@
       }
     ],
     "subtitle": "FUCK log stripped"
+  },
+  "item.shield.block": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/shield"
+      }
+    ],
+    "subtitle": "blocked by shield"
+  },
+  "item.shield.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/simplefuck"
+      }
+    ],
+    "subtitle": "fuck shield broke"
   }
 }

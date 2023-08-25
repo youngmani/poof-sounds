@@ -34,6 +34,9 @@ module.exports = {
   'entity.enderman.stare': {
     name: 'mob.endermen.stare',
   },
+  'entity.evoker_fangs.attack': {
+    name: 'mob.evocation_fangs.attack',
+  },
   'entity.generic.eat': {
     name: 'random.eat',
   },
@@ -55,6 +58,10 @@ module.exports = {
   },
   'entity.item.break': {
     name: 'random.break',
+  },
+  'entity.lightning_bolt.thunder': {
+    name: 'ambient.weather.thunder',
+    pitchAdjust: 1.05,
   },
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
@@ -143,6 +150,12 @@ module.exports = {
   'entity.villager.yes': {
     name: 'mob.villager.yes',
   },
+  'entity.vindicator.ambient': {
+    name: 'mob.vindicator.idle',
+  },
+  'entity.vindicator.death': {
+    name: 'mob.vindicator.death',
+  },
   'entity.wandering_trader.ambient': {
     name: 'mob.wanderingtrader.idle',
   },
@@ -179,5 +192,8 @@ module.exports = {
   'item.axe.strip': {
     name: 'use.wood',
     pitchAdjust: 1.2,
+  },
+  'item.shield.block': {
+    name: 'item.shield.block',
   },
 };
