@@ -37,6 +37,9 @@ module.exports = {
   'entity.evoker_fangs.attack': {
     name: 'mob.evocation_fangs.attack',
   },
+  'entity.frog.ambient': {
+    name: 'mob.frog.ambient',
+  },
   'entity.generic.eat': {
     name: 'random.eat',
   },

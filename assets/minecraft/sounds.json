@@ -258,6 +258,24 @@
     ],
     "subtitle": "the evoker summoned floor monsters"
   },
+  "entity.frog.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/ribbit1",
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/ribbit2",
+        "weight": 3
+      },
+      {
+        "name": "custom/mono/ribbit3",
+        "weight": 2
+      }
+    ],
+    "subtitle": "frog ribbit"
+  },
   "entity.generic.eat": {
     "replace": true,
     "sounds": [
