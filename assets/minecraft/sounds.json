@@ -15,6 +15,18 @@
     ],
     "subtitle": "you found dabriss"
   },
+  "block.barrel.open": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/barrelopen1"
+      },
+      {
+        "name": "custom/mono/barrelopen2"
+      }
+    ],
+    "subtitle": "putthatinbarrel"
+  },
   "block.bell.use": {
     "replace": true,
     "sounds": [
@@ -63,6 +75,36 @@
       }
     ],
     "subtitle": "nice you opened the end portal"
+  },
+  "block.ender_chest.open": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/enderchestopen1"
+      },
+      {
+        "name": "custom/mono/enderchestopen2"
+      },
+      {
+        "name": "custom/mono/enderchestopen3"
+      }
+    ],
+    "subtitle": "putthatinenderchest"
+  },
+  "block.shulker_box.open": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/shulkerboxopen1"
+      },
+      {
+        "name": "custom/mono/shulkerboxopen2"
+      },
+      {
+        "name": "custom/mono/shulkerboxopen3"
+      }
+    ],
+    "subtitle": "putthatinshulkerbox"
   },
   "entity.cat.ambient": {
     "replace": true,
@@ -1164,6 +1206,21 @@
       }
     ],
     "subtitle": "FUCK log stripped"
+  },
+  "item.bundle.insert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/bundleinsert1"
+      },
+      {
+        "name": "custom/mono/bundleinsert2"
+      },
+      {
+        "name": "custom/mono/bundleinsert3"
+      }
+    ],
+    "subtitle": "putthatinbundle"
   },
   "item.shield.block": {
     "replace": true,

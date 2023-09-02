@@ -4,6 +4,10 @@ module.exports = {
     name: 'dig.ancient_debris',
     pitchAdjust: 11 / 12,
   },
+  'block.barrel.open': {
+    name: 'block.barrel.open',
+    pitchAdjust: 1 / 1.05,
+  },
   'block.bell.use': {
     name: 'block.bell.hit',
   },
@@ -12,6 +16,12 @@ module.exports = {
   },
   'block.end_portal.spawn': {
     name: 'block.end_portal.spawn',
+  },
+  'block.ender_chest.open': {
+    name: 'random.enderchestopen',
+  },
+  'block.shulker_box.open': {
+    name: 'random.shulkerboxopen',
   },
   'entity.cat.ambient': {
     name: 'mob.cat.meow',
