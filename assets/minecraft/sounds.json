@@ -44,19 +44,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/putthatinthere1",
-        "pitch": 1.05
+        "name": "custom/mono/chestopen1"
       },
       {
-        "name": "custom/mono/putthatinthere2",
-        "pitch": 1.05
+        "name": "custom/mono/chestopen2"
       },
       {
-        "name": "custom/mono/putthatinthere3",
-        "pitch": 1.05
+        "name": "custom/mono/chestopen3"
       }
     ],
-    "subtitle": "putthatinthere"
+    "subtitle": "putthatinchest"
   },
   "block.end_portal.spawn": {
     "replace": true,
