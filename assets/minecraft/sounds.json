@@ -292,7 +292,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/floormonster"
+        "name": "custom/mono/fangs"
       }
     ],
     "subtitle": "the evoker summoned floor monsters"
@@ -356,7 +356,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward1",
+        "name": "custom/mono/glowsquid1",
+        "volume": 1.5
+      },
+      {
+        "name": "custom/mono/glowsquid2",
+        "volume": 1.5
+      },
+      {
+        "name": "custom/mono/glowsquid3",
+        "volume": 1.5
+      },
+      {
+        "name": "custom/mono/glowsquid4",
+        "volume": 1.5
+      },
+      {
+        "name": "custom/mono/glowsquid5",
         "volume": 1.5
       }
     ],
@@ -366,7 +382,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward3",
+        "name": "custom/mono/glowsquiddeath1",
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/glowsquiddeath2",
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/glowsquiddeath3",
         "volume": 2
       }
     ],
@@ -376,7 +400,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward2",
+        "name": "custom/mono/glowsquidhurt1",
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/glowsquidhurt2",
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/glowsquidhurt3",
+        "volume": 2
+      },
+      {
+        "name": "custom/mono/glowsquidhurt4",
         "volume": 2
       }
     ],
@@ -639,7 +675,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellington"
+        "name": "custom/mono/skellington1"
+      },
+      {
+        "name": "custom/mono/skellington2"
+      },
+      {
+        "name": "custom/mono/skellington3"
       }
     ],
     "subtitle": "skellington sound"
@@ -648,18 +690,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hateskellington1"
+        "name": "custom/mono/skellingtondeath2",
+        "weight": 5
       },
       {
-        "name": "custom/mono/hateskellington2",
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3",
+        "name": "custom/mono/skellingtondeath3",
         "weight": 4
       },
       {
-        "name": "custom/mono/hateskellington4",
+        "name": "custom/mono/skellingtondeath4",
         "weight": 3
       }
     ],
@@ -714,7 +753,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward1",
+        "name": "custom/mono/squid1",
+        "volume": 1.25
+      },
+      {
+        "name": "custom/mono/squid2",
+        "volume": 1.25
+      },
+      {
+        "name": "custom/mono/squid3",
+        "volume": 1.25
+      },
+      {
+        "name": "custom/mono/squid4",
+        "volume": 1.25
+      },
+      {
+        "name": "custom/mono/squid5",
         "volume": 1.25
       }
     ],
@@ -724,7 +779,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward3",
+        "name": "custom/mono/squiddeath1",
+        "volume": 1.75
+      },
+      {
+        "name": "custom/mono/squiddeath2",
+        "volume": 1.75
+      },
+      {
+        "name": "custom/mono/squiddeath3",
         "volume": 1.75
       }
     ],
@@ -734,7 +797,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidward2",
+        "name": "custom/mono/squidhurt1",
+        "volume": 1.75
+      },
+      {
+        "name": "custom/mono/squidhurt2",
+        "volume": 1.75
+      },
+      {
+        "name": "custom/mono/squidhurt3",
+        "volume": 1.75
+      },
+      {
+        "name": "custom/mono/squidhurt4",
         "volume": 1.75
       }
     ],
@@ -744,31 +819,33 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellingtonecho"
+        "name": "custom/mono/stray1"
+      },
+      {
+        "name": "custom/mono/stray2"
+      },
+      {
+        "name": "custom/mono/stray3"
+      },
+      {
+        "name": "custom/mono/stray4"
       }
     ],
-    "subtitle": "stray sound"
+    "subtitle": "stray skellington sound"
   },
   "entity.stray.death": {
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hateskellington1echo"
+        "name": "custom/mono/straydeath2",
+        "weight": 5
       },
       {
-        "name": "custom/mono/hateskellington2echo",
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3echo",
+        "name": "custom/mono/straydeath3",
         "weight": 4
-      },
-      {
-        "name": "custom/mono/hateskellington4echo",
-        "weight": 3
       }
     ],
-    "subtitle": "i hate strays"
+    "subtitle": "i hate stray skellingtons"
   },
   "entity.villager.ambient": {
     "replace": true,
@@ -956,7 +1033,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/killedone"
+        "name": "custom/mono/vindicatorkilled1"
+      },
+      {
+        "name": "custom/mono/vindicatorkilled2"
       }
     ],
     "subtitle": "no way, killed a vindicator!!"
@@ -1089,8 +1169,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellington",
-        "pitch": 0.7
+        "name": "custom/mono/witherskellington1"
+      },
+      {
+        "name": "custom/mono/witherskellington2"
+      },
+      {
+        "name": "custom/mono/witherskellington3"
       }
     ],
     "subtitle": "wither skellington sound"
@@ -1099,23 +1184,12 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hateskellington1",
-        "pitch": 0.7
+        "name": "custom/mono/witherskellingtondeath2",
+        "weight": 5
       },
       {
-        "name": "custom/mono/hateskellington2",
-        "pitch": 0.7,
-        "weight": 6
-      },
-      {
-        "name": "custom/mono/hateskellington3",
-        "pitch": 0.7,
+        "name": "custom/mono/witherskellingtondeath3",
         "weight": 4
-      },
-      {
-        "name": "custom/mono/hateskellington4",
-        "pitch": 0.7,
-        "weight": 3
       }
     ],
     "subtitle": "i hate wither skellingtons"
