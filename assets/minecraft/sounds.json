@@ -512,6 +512,27 @@
     "sounds": [
       {
         "name": "custom/mono/oink1",
+        "pitch": 0.85,
+        "weight": 10
+      },
+      {
+        "name": "custom/mono/oink2",
+        "pitch": 0.85,
+        "weight": 4
+      },
+      {
+        "name": "custom/mono/oink3",
+        "pitch": 0.85,
+        "weight": 12
+      }
+    ],
+    "subtitle": "piglin oink"
+  },
+  "entity.piglin_brute.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/oink1",
         "pitch": 0.7,
         "weight": 10
       },
@@ -526,7 +547,7 @@
         "weight": 12
       }
     ],
-    "subtitle": "piglin oink"
+    "subtitle": "piglin brute oink"
   },
   "entity.pillager.ambient": {
     "replace": true,

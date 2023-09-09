@@ -85,6 +85,9 @@ module.exports = {
   'entity.piglin.ambient': {
     name: 'mob.piglin.ambient',
   },
+  'entity.piglin_brute.ambient': {
+    name: 'mob.piglin_brute.ambient',
+  },
   'entity.pillager.ambient': {
     name: 'mob.pillager.idle',
   },
