@@ -574,7 +574,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/ouch"
+        "name": "custom/mono/ouch1"
+      },
+      {
+        "name": "custom/mono/ouch2"
+      },
+      {
+        "name": "custom/mono/ouch3"
       }
     ],
     "subtitle": "ouch"
@@ -1304,7 +1310,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shield"
+        "name": "custom/mono/shield1"
+      },
+      {
+        "name": "custom/mono/shield2"
+      },
+      {
+        "name": "custom/mono/shield3"
+      },
+      {
+        "name": "custom/mono/shield4"
+      },
+      {
+        "name": "custom/mono/shield5"
       }
     ],
     "subtitle": "blocked by shield"
