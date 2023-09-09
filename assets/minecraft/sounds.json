@@ -91,6 +91,26 @@
     ],
     "subtitle": "putthatinenderchest"
   },
+  "block.portal.travel": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/stereo/destination",
+        "volume": 4
+      }
+    ],
+    "subtitle": "made it to the destination!!"
+  },
+  "block.portal.trigger": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/stereo/goingin",
+        "volume": 4
+      }
+    ],
+    "subtitle": "going into the nether!!"
+  },
   "block.shulker_box.open": {
     "replace": true,
     "sounds": [
@@ -1356,5 +1376,14 @@
       }
     ],
     "subtitle": "fuck shield broke"
+  },
+  "item.totem.use": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/totem"
+      }
+    ],
+    "subtitle": "totem saved your life"
   }
 }

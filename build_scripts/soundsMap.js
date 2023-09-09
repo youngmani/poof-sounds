@@ -20,6 +20,12 @@ module.exports = {
   'block.ender_chest.open': {
     name: 'random.enderchestopen',
   },
+  'block.portal.travel': {
+    name: 'portal.travel',
+  },
+  'block.portal.trigger': {
+    name: 'portal.trigger',
+  },
   'block.shulker_box.open': {
     name: 'random.shulkerboxopen',
   },
@@ -211,5 +217,8 @@ module.exports = {
   },
   'item.shield.block': {
     name: 'item.shield.block',
+  },
+  'item.totem.use': {
+    name: 'random.totem',
   },
 };
