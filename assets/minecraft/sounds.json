@@ -442,7 +442,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/simplefuck"
+        "name": "custom/mono/break"
       }
     ],
     "subtitle": "fuck tool broke"
@@ -1305,29 +1305,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 0.99,
-        "volume": 0.99
+        "name": "custom/mono/strip1"
       },
       {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.02,
-        "volume": 0.99
+        "name": "custom/mono/strip2"
       },
       {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.05,
-        "volume": 0.99
+        "name": "custom/mono/strip3"
       },
       {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.08,
-        "volume": 0.99
-      },
-      {
-        "name": "custom/mono/shorterfuck",
-        "pitch": 1.11,
-        "volume": 0.99
+        "name": "custom/mono/strip4"
       }
     ],
     "subtitle": "FUCK log stripped"
@@ -1372,7 +1359,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/simplefuck"
+        "name": "custom/mono/break"
       }
     ],
     "subtitle": "fuck shield broke"
