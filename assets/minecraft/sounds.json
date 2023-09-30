@@ -548,6 +548,16 @@
     ],
     "subtitle": "piglin oink"
   },
+  "entity.piglin.retreat": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/piglinretreat",
+        "volume": 1.5
+      }
+    ],
+    "subtitle": "piglin retreats wee"
+  },
   "entity.piglin_brute.ambient": {
     "replace": true,
     "sounds": [
@@ -955,6 +965,11 @@
         "name": "custom/mono/luigi",
         "volume": 0.8,
         "weight": 3
+      },
+      {
+        "name": "custom/mono/pooped",
+        "volume": 0.99,
+        "weight": 2
       },
       {
         "name": "custom/mono/screaming",
