@@ -47,7 +47,7 @@ const convertToBedrock = async tempDir => {
       const sound = javaSounds[key];
       delete javaSounds[key];
 
-      const { name: newSoundName, pitchAdjust } = soundsMap[key];
+      const { additionalNames = [], name: newSoundName, pitchAdjust } = soundsMap[key];
       sound.sounds = sound.sounds.map(s => {
         s.name = `sounds/${s.name}`;
         if (pitchAdjust) {
@@ -58,8 +58,10 @@ const convertToBedrock = async tempDir => {
       });
       delete sound.replace;
 
-      javaSounds[newSoundName] = sound;
-      log.debug(`bedrock build: converting ${key} to ${newSoundName}`);
+      [newSoundName, ...additionalNames].forEach(name => {
+        javaSounds[name] = sound;
+        log.debug(`bedrock build: converting ${key} to ${name}`);
+      });
     } else {
       log.info(`bedrock build: unmapped java sound ${key}`);
       delete javaSounds[key];

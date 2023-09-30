@@ -77,6 +77,7 @@ module.exports = {
   },
   'entity.item.break': {
     name: 'random.break',
+    pitchAdjust: 1 / 0.9,
   },
   'entity.lightning_bolt.thunder': {
     name: 'ambient.weather.thunder',
@@ -215,6 +216,7 @@ module.exports = {
     name: 'mob.zombiepig.zpighurt',
   },
   'item.axe.strip': {
+    additionalNames: ['use.stem'],
     name: 'use.wood',
     pitchAdjust: 1.2,
   },
