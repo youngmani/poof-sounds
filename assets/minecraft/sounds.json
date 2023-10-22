@@ -67,6 +67,24 @@
     ],
     "subtitle": "putthatinchest"
   },
+  "block.decorated_pot.insert": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/potinsert1"
+      },
+      {
+        "name": "custom/mono/potinsert2"
+      },
+      {
+        "name": "custom/mono/potinsert3"
+      },
+      {
+        "name": "custom/mono/potinsert4"
+      }
+    ],
+    "subtitle": "putthatinpot"
+  },
   "block.end_portal.spawn": {
     "replace": true,
     "sounds": [

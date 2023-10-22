@@ -14,6 +14,9 @@ module.exports = {
   'block.chest.open': {
     name: 'random.chestopen',
   },
+  'block.decorated_pot.insert': {
+    name: 'block.decorated_pot.insert',
+  },
   'block.end_portal.spawn': {
     name: 'block.end_portal.spawn',
   },
