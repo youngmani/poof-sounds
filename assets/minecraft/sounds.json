@@ -3,14 +3,24 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/dabriss",
-        "pitch": 1.2,
-        "weight": 2
+        "name": "custom/mono/dabrissbreak1",
+        "pitch": 1.2
       },
       {
-        "name": "custom/mono/dabriss2",
-        "pitch": 1.2,
-        "weight": 1
+        "name": "custom/mono/dabrissbreak2",
+        "pitch": 1.2
+      },
+      {
+        "name": "custom/mono/dabrissbreak3",
+        "pitch": 1.2
+      },
+      {
+        "name": "custom/mono/dabrissbreak4",
+        "pitch": 1.2
+      },
+      {
+        "name": "custom/mono/dabrissbreak5",
+        "pitch": 1.2
       }
     ],
     "subtitle": "you found dabriss"
