@@ -1,10 +1,10 @@
 {
   "pack": {
     "description": "Poofesure Minecraft Sounds\n\u00A78\u00A7ov{VERSION} by youngmani",
-    "pack_format": 18,
+    "pack_format": 15,
     "supported_formats": {
-      "max_inclusive": 19,
-      "min_inclusive": 16
+      "max_inclusive": 20,
+      "min_inclusive": 6
     }
   }
 }
