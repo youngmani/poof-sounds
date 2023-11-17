@@ -78,6 +78,9 @@ module.exports = {
   'entity.glow_squid.hurt': {
     name: 'mob.glow_squid.hurt',
   },
+  'entity.horse.ambient': {
+    name: 'mob.horse.idle',
+  },
   'entity.item.break': {
     name: 'random.break',
     pitchAdjust: 1 / 0.9,

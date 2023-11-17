@@ -466,6 +466,15 @@
     ],
     "subtitle": "glow squidward hurt"
   },
+  "entity.horse.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "custom/mono/neigh"
+      }
+    ],
+    "subtitle": "horse neigh"
+  },
   "entity.item.break": {
     "replace": true,
     "sounds": [
