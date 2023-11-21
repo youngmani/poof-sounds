@@ -640,6 +640,10 @@
       {
         "name": "custom/mono/burp",
         "pitch": 1.05
+      },
+      {
+        "name": "custom/mono/burp2",
+        "pitch": 1.05
       }
     ],
     "subtitle": "excuse you"
