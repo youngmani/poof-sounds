@@ -729,7 +729,7 @@
         "name": "custom/mono/fire3"
       }
     ],
-    "subtitle": "uh oh you are burning"
+    "subtitle": "ow you are burning"
   },
   "entity.player.hurt_sweet_berry_bush": {
     "replace": true,
