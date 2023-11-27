@@ -29,9 +29,9 @@ jobs:
           artifactContentType: application/zip
           draft: true
           generateReleaseNotes: true
-        - name: Upload artifacts
-          uses: actions/upload-artifact@v3
-          with:
-            name: build
-            path: build/
-            retention-days: 3
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build/
+          retention-days: 3
