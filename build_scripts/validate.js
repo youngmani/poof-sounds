@@ -78,7 +78,7 @@ const validate = async () => {
 };
 
 const run = async () => {
-  if (process.argv.includes('debug')) {
+  if (process.argv.includes('dev')) {
     log.setLevel(log.levels.DEBUG);
   } else {
     log.setLevel(log.levels.INFO);

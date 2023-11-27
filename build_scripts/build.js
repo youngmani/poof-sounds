@@ -1,32 +1,35 @@
 const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const log = require('loglevel');
+const semver = require('semver');
 
 const soundsMap = require('./soundsMap');
 
 const BASE_MC_DIR = './assets/minecraft';
 const TARGET_DIR = './build';
 
-const buildZip = async tempDir => {
+const buildZip = async (tempDir, version) => {
   let [mcmeta] = await Promise.all([
     fs.readFile('./pack.mcmeta', 'utf8'),
     fs.mkdir(`${tempDir}/java`, { recursive: true }),
   ]);
-  mcmeta = mcmeta.replace('{VERSION}', process.env.npm_package_version);
+  mcmeta = mcmeta.replace('{VERSION}', version);
   await fs.writeFile(`${tempDir}/java/pack.mcmeta`, mcmeta);
-  log.info(`java build: set version to ${process.env.npm_package_version}`);
+  log.info(`java build: set version to ${version}`);
 
   const zip = new Zip();
   zip.addLocalFile(`${tempDir}/java/pack.mcmeta`);
   zip.addLocalFile('./pack.png');
-  await zip.addLocalFolderPromise('./assets', { zipPath: 'assets' });
-  await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds.zip`, {
-    overwrite: true,
-  });
-  log.info(`java build: successfully wrote zip file to: ${TARGET_DIR}/poof-sounds.zip`);
+  await Promise.all([
+    zip.addLocalFolderPromise('./assets', { zipPath: 'assets' }),
+  ]);
+  const isPrerelease = !!semver.prerelease(version);
+  const target = `${TARGET_DIR}/poof-sounds${isPrerelease ? '-beta' : ''}.zip`;
+  await zip.writeZipPromise(target, { overwrite: true });
+  log.info(`java build: successfully wrote zip file to: ${target}`);
 };
 
-const convertToBedrock = async tempDir => {
+const convertToBedrock = async (tempDir, version) => {
   const [soundsJson, splashesTxt] = await Promise.all([
     fs.readFile(`${BASE_MC_DIR}/sounds.json`),
     fs.readFile(`${BASE_MC_DIR}/texts/splashes.txt`),
@@ -82,25 +85,37 @@ const convertToBedrock = async tempDir => {
   const bedrockSplashes = { splashes };
   promises.push(fs.writeFile(`${tempDir}/bedrock/splashes.json`, JSON.stringify(bedrockSplashes, null, 2)));
 
-  const version = process.env.npm_package_version.split('.').map(n => parseInt(n.split('-')[0]));
-  log.info(`bedrock build: using version ${version}`);
+  const isBeta = !!semver.prerelease(version);
+  const versionArr = [
+    semver.major(version),
+    semver.minor(version),
+    isBeta
+      ? 1000 * semver.patch(version) + (semver.prerelease(version).find(i => typeof i === 'number') ?? 0)
+      : semver.patch(version),
+  ];
+  log.info(`bedrock build: using version ${versionArr}, beta=${isBeta}`);
 
   const manifest = {
     format_version: 2,
     header: {
-      name: 'poof-sounds',
-      description: `Poofesure Minecraft Sounds\nv${process.env.npm_package_version} by youngmani`,
-      uuid: '6c107856-6a56-460a-a5f9-59aee383c1b8',
-      version,
+      name: `poof-sounds${isBeta ? '-beta' : ''}`,
+      description: `Poofesure Minecraft Sounds\nv${version} by youngmani`,
+      uuid: isBeta ? '9afbe638-2cd4-44c4-8d8c-f40ebbe1cf88' : '6c107856-6a56-460a-a5f9-59aee383c1b8',
+      version: versionArr,
       min_engine_version: [1, 14, 0],
     },
     modules: [
       {
         type: 'resources',
-        uuid: '0d68d1b5-b211-4c59-952d-eb6e8129983b',
-        version,
+        uuid: isBeta ? '5c0c66e8-d410-4f5d-ad00-5d14f9949655' : '0d68d1b5-b211-4c59-952d-eb6e8129983b',
+        version: versionArr,
       },
     ],
+    metadata: {
+      authors: ['youngmani'],
+      license: 'CC0',
+      url: 'https://youngmani.github.io/poof-sounds/',
+    },
   };
 
   promises.push(fs.writeFile(`${tempDir}/bedrock/manifest.json`, JSON.stringify(manifest, null, 2)));
@@ -109,20 +124,22 @@ const convertToBedrock = async tempDir => {
 
   const zip = new Zip();
   await zip.addLocalFolderPromise(`${tempDir}/bedrock`);
-  await zip.writeZipPromise(`${TARGET_DIR}/poof-sounds-bedrock.mcpack`, {
-    overwrite: true,
-  });
-  log.info(`bedrock build: successfully wrote mcpack file to: ${TARGET_DIR}/poof-sounds.mcpack`);
+  const target = `${TARGET_DIR}/poof-sounds-bedrock${isBeta ? '-beta' : ''}.mcpack`;
+  await zip.writeZipPromise(target, { overwrite: true });
+  log.info(`bedrock build: successfully wrote mcpack file to: ${target}`);
 };
 
-const build = async () => {
+const build = async version => {
   log.info('begin build');
   try {
+    if (!semver.valid(version)) {
+      throw Error('invalid version');
+    }
     const [tempDir] = await Promise.all([fs.mkdtemp('temp-'), fs.mkdir(TARGET_DIR, { recursive: true })]);
-    await Promise.all([buildZip(tempDir), convertToBedrock(tempDir)]);
+    await Promise.all([buildZip(tempDir, version), convertToBedrock(tempDir, version)]);
     await fs.rm(tempDir, { recursive: true, force: true });
   } catch (error) {
-    log.error('error occurred during build:', error.message);
+    log.error('error occurred during build:', error.message ?? error);
     return 1;
   }
   log.info('end build');
@@ -130,12 +147,14 @@ const build = async () => {
 };
 
 const run = async () => {
-  if (process.argv.includes('debug')) {
+  let version = semver.clean(process.env.npm_package_version);
+  if (process.argv.includes('dev')) {
     log.setLevel(log.levels.DEBUG);
+    version = semver.inc(version, 'prerelease');
   } else {
     log.setLevel(log.levels.INFO);
   }
-  process.exit(await build());
+  process.exit(await build(version));
 };
 
 run();
