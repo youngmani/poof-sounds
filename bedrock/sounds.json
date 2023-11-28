@@ -1,0 +1,72 @@
+{
+  "block_sounds": {
+    "bamboo_wood": {
+      "events": {
+        "item.use.on": {
+          "pitch": 0.8,
+          "sound": "use.wood"
+        }
+      }
+    },
+    "cherry_wood": {
+      "events": {
+        "item.use.on": {
+          "pitch": 0.8,
+          "sound": "use.wood"
+        }
+      }
+    }
+  },
+  "entity_sounds": {
+    "entities": {
+      "cave_spider": {
+        "events": {
+          "hurt": "poofsounds.spider.hurt"
+        }
+      },
+      "cod": {
+        "events": {
+          "death": "mob.fish.hurt"
+        }
+      },
+      "creeper": {
+        "events": {
+          "fuse": {
+            "pitch": 0.5,
+            "sound": "poofsounds.creeper.sss",
+            "volume": 1.0
+          }
+        }
+      },
+      "parrot": {
+        "events": {
+          "imitate.creeper": {
+            "pitch": 0.8,
+            "sound": "poofsounds.creeper.sss",
+            "volume": 0.6
+          }
+        }
+      },
+      "pufferfish": {
+        "events": {
+          "death": "mob.fish.hurt"
+        }
+      },
+      "salmon": {
+        "events": {
+          "death": "mob.fish.hurt"
+        }
+      },
+      "spider": {
+        "events": {
+          "hurt": "poofsounds.spider.hurt"
+        }
+      },
+      "tropicalfish": {
+        "events": {
+          "death": "mob.fish.hurt"
+        }
+      }
+    }
+  }
+}

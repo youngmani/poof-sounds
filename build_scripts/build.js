@@ -56,7 +56,8 @@ const convertToBedrock = async (tempDir, version) => {
       const sound = javaSounds[key];
       delete javaSounds[key];
 
-      const { additionalNames = [], name: newSoundName, pitchAdjust } = soundsMap[key];
+      const { additionalNames = [], name, pitchAdjust, poofName } = soundsMap[key];
+      const newSoundName = poofName ?? name;
       sound.sounds = sound.sounds.map(s => {
         s.name = `sounds/${s.name.replace(':', '/')}`;
         if (pitchAdjust) {

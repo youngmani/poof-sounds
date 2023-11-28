@@ -43,6 +43,7 @@ module.exports = {
   },
   'entity.creeper.primed': {
     name: 'random.fuse',
+    poofName: 'poofsounds.creeper.sss',
   },
   'entity.donkey.ambient': {
     name: 'mob.horse.donkey.idle',
@@ -148,6 +149,9 @@ module.exports = {
   },
   'entity.spider.death': {
     name: 'mob.spider.death',
+  },
+  'entity.spider.hurt': {
+    poofName: 'poofsounds.spider.hurt',
   },
   'entity.squid.ambient': {
     name: 'mob.squid.ambient',
