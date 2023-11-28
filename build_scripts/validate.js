@@ -4,6 +4,7 @@ const ffprobePath = require('ffprobe-static').path;
 const log = require('loglevel');
 
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
+const { getOverlayDirectories } = require('./utils');
 
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
@@ -61,6 +62,32 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
   await Promise.all(promises);
 };
 
+const validateOverlaysExist = async () => {
+  const [mcmeta, overlayDirs] = await Promise.all([fs.readFile('./pack.mcmeta', 'utf8'), getOverlayDirectories()]);
+  const usedDirs = new Set();
+  const mcmetaJson = JSON.parse(mcmeta);
+  mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
+    if (!/^[a-z0-9_-]+$/.test(directory)) {
+      throw new Error(`overlay has invalid directory: ${directory}`);
+    }
+    if (overlayDirs.includes(directory)) {
+      if (usedDirs.has(directory)) {
+        log.warn(`duplicate overlay: ${directory}`);
+      } else {
+        log.debug(`overlay exists: ${directory}`);
+      }
+      usedDirs.add(directory);
+    } else {
+      throw new Error(`overlay does not exist: ${directory}`);
+    }
+  });
+  overlayDirs.forEach(dir => {
+    if (!usedDirs.delete(dir)) {
+      log.warn(`unused overlay found: ${dir}`);
+    }
+  });
+};
+
 const validate = async () => {
   log.info('begin validation');
   try {
@@ -68,7 +95,11 @@ const validate = async () => {
       fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/mono`),
       fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/stereo`),
     ]);
-    await Promise.all([verifySoundsExist(monoFiles, stereoFiles), validateSoundFormat(monoFiles, stereoFiles)]);
+    await Promise.all([
+      verifySoundsExist(monoFiles, stereoFiles),
+      validateSoundFormat(monoFiles, stereoFiles),
+      validateOverlaysExist(),
+    ]);
   } catch (error) {
     log.error('error occurred during validation:', error.message);
     return 1;
