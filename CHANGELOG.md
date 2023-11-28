@@ -6,16 +6,22 @@ title: Changelog
 
 # Changelog
 
+## [Version 3.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.1) - 11/28/2023
+
+- (Java Edition only) update resource pack version to be compatible with 1.20.3 prereleases
+- add a new variant for a sound
+- update a subtitle
+
 ## [Version 3.7.0](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.0) - 11/16/2023
 
-- (Java Edition only) update resource pack version to be compatible with latest 1.20.3 snapshots
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.3 snapshots (up to 23w46a)
 - add a new sound for a mob
 - clean up a sound by combining it with the original game sound
 - update voice line for burning to be different from drowning/freezing
 
 ## [Version 3.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v3.6.0) - 10/25/2023
 
-- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.2 and newer
+- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.2 and 1.20.3 snapshots (up to 23w41a)
 - use container sound for a new container
 - combine another sound with the original game sound
 - (Bedrock Edition only) use dedicated Wither Skeleton sound for version 1.20.40
