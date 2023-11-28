@@ -1,6 +1,6 @@
 {
   "name": "poof-sounds",
-  "version": "3.7.1",
+  "version": "4.0.0-0",
   "description": "build scripts for poof sounds",
   "scripts": {
     "build": "npm run validate && node build_scripts/build.js",
