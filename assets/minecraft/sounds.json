@@ -3,23 +3,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/dabrissbreak1",
+        "name": "poof-sounds:mono/dabrissbreak1",
         "pitch": 1.2
       },
       {
-        "name": "custom/mono/dabrissbreak2",
+        "name": "poof-sounds:mono/dabrissbreak2",
         "pitch": 1.2
       },
       {
-        "name": "custom/mono/dabrissbreak3",
+        "name": "poof-sounds:mono/dabrissbreak3",
         "pitch": 1.2
       },
       {
-        "name": "custom/mono/dabrissbreak4",
+        "name": "poof-sounds:mono/dabrissbreak4",
         "pitch": 1.2
       },
       {
-        "name": "custom/mono/dabrissbreak5",
+        "name": "poof-sounds:mono/dabrissbreak5",
         "pitch": 1.2
       }
     ],
@@ -29,10 +29,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/barrelopen1"
+        "name": "poof-sounds:mono/barrelopen1"
       },
       {
-        "name": "custom/mono/barrelopen2"
+        "name": "poof-sounds:mono/barrelopen2"
       }
     ],
     "subtitle": "putthatinbarrel"
@@ -41,23 +41,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/bell",
+        "name": "poof-sounds:mono/bell",
         "pitch": 0.96
       },
       {
-        "name": "custom/mono/bell",
+        "name": "poof-sounds:mono/bell",
         "pitch": 0.98
       },
       {
-        "name": "custom/mono/bell",
+        "name": "poof-sounds:mono/bell",
         "pitch": 1.02
       },
       {
-        "name": "custom/mono/bell",
+        "name": "poof-sounds:mono/bell",
         "pitch": 1.04
       },
       {
-        "name": "custom/mono/bell"
+        "name": "poof-sounds:mono/bell"
       }
     ],
     "subtitle": "ding-a-ling"
@@ -66,13 +66,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/chestopen1"
+        "name": "poof-sounds:mono/chestopen1"
       },
       {
-        "name": "custom/mono/chestopen2"
+        "name": "poof-sounds:mono/chestopen2"
       },
       {
-        "name": "custom/mono/chestopen3"
+        "name": "poof-sounds:mono/chestopen3"
       }
     ],
     "subtitle": "putthatinchest"
@@ -81,16 +81,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/potinsert1"
+        "name": "poof-sounds:mono/potinsert1"
       },
       {
-        "name": "custom/mono/potinsert2"
+        "name": "poof-sounds:mono/potinsert2"
       },
       {
-        "name": "custom/mono/potinsert3"
+        "name": "poof-sounds:mono/potinsert3"
       },
       {
-        "name": "custom/mono/potinsert4"
+        "name": "poof-sounds:mono/potinsert4"
       }
     ],
     "subtitle": "putthatinpot"
@@ -99,7 +99,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/stereo/opened"
+        "name": "poof-sounds:stereo/opened"
       }
     ],
     "subtitle": "nice you opened the end portal"
@@ -108,13 +108,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/enderchestopen1"
+        "name": "poof-sounds:mono/enderchestopen1"
       },
       {
-        "name": "custom/mono/enderchestopen2"
+        "name": "poof-sounds:mono/enderchestopen2"
       },
       {
-        "name": "custom/mono/enderchestopen3"
+        "name": "poof-sounds:mono/enderchestopen3"
       }
     ],
     "subtitle": "putthatinenderchest"
@@ -123,7 +123,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/stereo/destination",
+        "name": "poof-sounds:stereo/destination",
         "volume": 4
       }
     ],
@@ -133,7 +133,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/stereo/goingin",
+        "name": "poof-sounds:stereo/goingin",
         "volume": 4
       }
     ],
@@ -143,13 +143,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shulkerboxopen1"
+        "name": "poof-sounds:mono/shulkerboxopen1"
       },
       {
-        "name": "custom/mono/shulkerboxopen2"
+        "name": "poof-sounds:mono/shulkerboxopen2"
       },
       {
-        "name": "custom/mono/shulkerboxopen3"
+        "name": "poof-sounds:mono/shulkerboxopen3"
       }
     ],
     "subtitle": "putthatinshulkerbox"
@@ -158,43 +158,43 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "pitch": 1.06,
         "volume": 0.72,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "volume": 0.7,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "pitch": 1.06,
         "volume": 0.72,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "volume": 0.7,
         "weight": 2
       },
       {
-        "name": "custom/mono/meow1",
+        "name": "poof-sounds:mono/meow1",
         "volume": 0.6
       },
       {
-        "name": "custom/mono/meow2",
+        "name": "poof-sounds:mono/meow2",
         "pitch": 1.02,
         "volume": 0.54
       },
       {
-        "name": "custom/mono/meow3",
+        "name": "poof-sounds:mono/meow3",
         "pitch": 1.04,
         "volume": 0.48
       },
       {
-        "name": "custom/mono/meow4",
+        "name": "poof-sounds:mono/meow4",
         "pitch": 1.06,
         "volume": 0.42
       }
@@ -205,41 +205,41 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "pitch": 0.94,
         "volume": 0.62,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "volume": 0.6,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "pitch": 0.94,
         "volume": 0.62,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "volume": 0.6,
         "weight": 2
       },
       {
-        "name": "custom/mono/meow1",
+        "name": "poof-sounds:mono/meow1",
         "volume": 0.45
       },
       {
-        "name": "custom/mono/meow2",
+        "name": "poof-sounds:mono/meow2",
         "volume": 0.39
       },
       {
-        "name": "custom/mono/meow3",
+        "name": "poof-sounds:mono/meow3",
         "volume": 0.33
       },
       {
-        "name": "custom/mono/meow4",
+        "name": "poof-sounds:mono/meow4",
         "volume": 0.27
       }
     ],
@@ -249,16 +249,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/moo",
+        "name": "poof-sounds:mono/moo",
         "volume": 0.95,
         "weight": 2
       },
       {
-        "name": "custom/mono/moo2",
+        "name": "poof-sounds:mono/moo2",
         "weight": 3
       },
       {
-        "name": "custom/mono/moo3"
+        "name": "poof-sounds:mono/moo3"
       }
     ],
     "subtitle": "mooo cow"
@@ -267,43 +267,43 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/screamlouder1",
+        "name": "poof-sounds:mono/screamlouder1",
         "pitch": 1.88
       },
       {
-        "name": "custom/mono/screamlouder1",
+        "name": "poof-sounds:mono/screamlouder1",
         "pitch": 1.94
       },
       {
-        "name": "custom/mono/screamlouder1",
+        "name": "poof-sounds:mono/screamlouder1",
         "pitch": 1.99
       },
       {
-        "name": "custom/mono/screamlouder1",
+        "name": "poof-sounds:mono/screamlouder1",
         "pitch": 2.06
       },
       {
-        "name": "custom/mono/screamlouder1",
+        "name": "poof-sounds:mono/screamlouder1",
         "pitch": 2.12
       },
       {
-        "name": "custom/mono/screamlouder2",
+        "name": "poof-sounds:mono/screamlouder2",
         "pitch": 1.88
       },
       {
-        "name": "custom/mono/screamlouder2",
+        "name": "poof-sounds:mono/screamlouder2",
         "pitch": 1.94
       },
       {
-        "name": "custom/mono/screamlouder2",
+        "name": "poof-sounds:mono/screamlouder2",
         "pitch": 1.99
       },
       {
-        "name": "custom/mono/screamlouder2",
+        "name": "poof-sounds:mono/screamlouder2",
         "pitch": 2.06
       },
       {
-        "name": "custom/mono/screamlouder2",
+        "name": "poof-sounds:mono/screamlouder2",
         "pitch": 2.12
       }
     ],
@@ -313,7 +313,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/donkey1"
+        "name": "poof-sounds:mono/donkey1"
       }
     ],
     "subtitle": "donkey ee er"
@@ -322,7 +322,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/stereo/win"
+        "name": "poof-sounds:stereo/win"
       }
     ],
     "subtitle": "you beat minecraft good job"
@@ -331,7 +331,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/nonononono"
+        "name": "poof-sounds:mono/nonononono"
       }
     ],
     "subtitle": "uh oh enderman mad"
@@ -340,7 +340,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/fangs"
+        "name": "poof-sounds:mono/fangs"
       }
     ],
     "subtitle": "the evoker summoned floor monsters"
@@ -349,15 +349,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/ribbit1",
+        "name": "poof-sounds:mono/ribbit1",
         "weight": 4
       },
       {
-        "name": "custom/mono/ribbit2",
+        "name": "poof-sounds:mono/ribbit2",
         "weight": 3
       },
       {
-        "name": "custom/mono/ribbit3",
+        "name": "poof-sounds:mono/ribbit3",
         "weight": 2
       }
     ],
@@ -367,16 +367,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/nomnomshort1"
+        "name": "poof-sounds:mono/nomnomshort1"
       },
       {
-        "name": "custom/mono/nomnomshort2"
+        "name": "poof-sounds:mono/nomnomshort2"
       },
       {
-        "name": "custom/mono/nomnomshort3"
+        "name": "poof-sounds:mono/nomnomshort3"
       },
       {
-        "name": "custom/mono/nomnomshort4"
+        "name": "poof-sounds:mono/nomnomshort4"
       }
     ],
     "subtitle": "nom nom nom"
@@ -385,7 +385,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/explosion1",
+        "name": "poof-sounds:mono/explosion1",
         "pitch": 1.5
       }
     ],
@@ -395,7 +395,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/ghastshoot"
+        "name": "poof-sounds:mono/ghastshoot"
       }
     ],
     "subtitle": "uh oh a ghast is shooting you"
@@ -404,23 +404,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/glowsquid1",
+        "name": "poof-sounds:mono/glowsquid1",
         "volume": 1.5
       },
       {
-        "name": "custom/mono/glowsquid2",
+        "name": "poof-sounds:mono/glowsquid2",
         "volume": 1.5
       },
       {
-        "name": "custom/mono/glowsquid3",
+        "name": "poof-sounds:mono/glowsquid3",
         "volume": 1.5
       },
       {
-        "name": "custom/mono/glowsquid4",
+        "name": "poof-sounds:mono/glowsquid4",
         "volume": 1.5
       },
       {
-        "name": "custom/mono/glowsquid5",
+        "name": "poof-sounds:mono/glowsquid5",
         "volume": 1.5
       }
     ],
@@ -430,15 +430,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/glowsquiddeath1",
+        "name": "poof-sounds:mono/glowsquiddeath1",
         "volume": 2
       },
       {
-        "name": "custom/mono/glowsquiddeath2",
+        "name": "poof-sounds:mono/glowsquiddeath2",
         "volume": 2
       },
       {
-        "name": "custom/mono/glowsquiddeath3",
+        "name": "poof-sounds:mono/glowsquiddeath3",
         "volume": 2
       }
     ],
@@ -448,19 +448,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/glowsquidhurt1",
+        "name": "poof-sounds:mono/glowsquidhurt1",
         "volume": 2
       },
       {
-        "name": "custom/mono/glowsquidhurt2",
+        "name": "poof-sounds:mono/glowsquidhurt2",
         "volume": 2
       },
       {
-        "name": "custom/mono/glowsquidhurt3",
+        "name": "poof-sounds:mono/glowsquidhurt3",
         "volume": 2
       },
       {
-        "name": "custom/mono/glowsquidhurt4",
+        "name": "poof-sounds:mono/glowsquidhurt4",
         "volume": 2
       }
     ],
@@ -470,7 +470,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/neigh"
+        "name": "poof-sounds:mono/neigh"
       }
     ],
     "subtitle": "horse neigh"
@@ -479,7 +479,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/break"
+        "name": "poof-sounds:mono/break"
       }
     ],
     "subtitle": "fuck tool broke"
@@ -488,11 +488,11 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/thunder1",
+        "name": "poof-sounds:mono/thunder1",
         "pitch": 1.06
       },
       {
-        "name": "custom/mono/thunder2",
+        "name": "poof-sounds:mono/thunder2",
         "pitch": 1.06
       }
     ],
@@ -502,41 +502,41 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "pitch": 0.94,
         "volume": 0.62,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow1",
+        "name": "poof-sounds:mono/goodmeow1",
         "volume": 0.6,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "pitch": 0.94,
         "volume": 0.62,
         "weight": 2
       },
       {
-        "name": "custom/mono/goodmeow2",
+        "name": "poof-sounds:mono/goodmeow2",
         "volume": 0.6,
         "weight": 2
       },
       {
-        "name": "custom/mono/meow1",
+        "name": "poof-sounds:mono/meow1",
         "volume": 0.45
       },
       {
-        "name": "custom/mono/meow2",
+        "name": "poof-sounds:mono/meow2",
         "volume": 0.39
       },
       {
-        "name": "custom/mono/meow3",
+        "name": "poof-sounds:mono/meow3",
         "volume": 0.33
       },
       {
-        "name": "custom/mono/meow4",
+        "name": "poof-sounds:mono/meow4",
         "volume": 0.27
       }
     ],
@@ -546,19 +546,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/ineedsomeonetomakemeoink",
+        "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
         "weight": 1
       },
       {
-        "name": "custom/mono/oink1",
+        "name": "poof-sounds:mono/oink1",
         "weight": 10
       },
       {
-        "name": "custom/mono/oink2",
+        "name": "poof-sounds:mono/oink2",
         "weight": 4
       },
       {
-        "name": "custom/mono/oink3",
+        "name": "poof-sounds:mono/oink3",
         "weight": 12
       }
     ],
@@ -568,17 +568,17 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/oink1",
+        "name": "poof-sounds:mono/oink1",
         "pitch": 0.85,
         "weight": 10
       },
       {
-        "name": "custom/mono/oink2",
+        "name": "poof-sounds:mono/oink2",
         "pitch": 0.85,
         "weight": 4
       },
       {
-        "name": "custom/mono/oink3",
+        "name": "poof-sounds:mono/oink3",
         "pitch": 0.85,
         "weight": 12
       }
@@ -589,7 +589,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/piglinretreat",
+        "name": "poof-sounds:mono/piglinretreat",
         "volume": 1.5
       }
     ],
@@ -599,17 +599,17 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/oink1",
+        "name": "poof-sounds:mono/oink1",
         "pitch": 0.7,
         "weight": 10
       },
       {
-        "name": "custom/mono/oink2",
+        "name": "poof-sounds:mono/oink2",
         "pitch": 0.7,
         "weight": 4
       },
       {
-        "name": "custom/mono/oink3",
+        "name": "poof-sounds:mono/oink3",
         "pitch": 0.7,
         "weight": 12
       }
@@ -620,7 +620,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/pillagermumble"
+        "name": "poof-sounds:mono/pillagermumble"
       }
     ],
     "subtitle": "pillager mumble"
@@ -629,7 +629,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/pillagerhurt"
+        "name": "poof-sounds:mono/pillagerhurt"
       }
     ],
     "subtitle": "pillager hurt"
@@ -638,11 +638,11 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/burp",
+        "name": "poof-sounds:mono/burp",
         "pitch": 1.05
       },
       {
-        "name": "custom/mono/burp2",
+        "name": "poof-sounds:mono/burp2",
         "pitch": 1.05
       }
     ],
@@ -652,12 +652,12 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/diedshort",
+        "name": "poof-sounds:mono/diedshort",
         "volume": 0.85,
         "weight": 20
       },
       {
-        "name": "custom/mono/noway"
+        "name": "poof-sounds:mono/noway"
       }
     ],
     "subtitle": "dead"
@@ -666,13 +666,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/ouch1"
+        "name": "poof-sounds:mono/ouch1"
       },
       {
-        "name": "custom/mono/ouch2"
+        "name": "poof-sounds:mono/ouch2"
       },
       {
-        "name": "custom/mono/ouch3"
+        "name": "poof-sounds:mono/ouch3"
       }
     ],
     "subtitle": "ouch"
@@ -681,16 +681,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/drown1"
+        "name": "poof-sounds:mono/drown1"
       },
       {
-        "name": "custom/mono/drown2"
+        "name": "poof-sounds:mono/drown2"
       },
       {
-        "name": "custom/mono/drown3"
+        "name": "poof-sounds:mono/drown3"
       },
       {
-        "name": "custom/mono/drown4"
+        "name": "poof-sounds:mono/drown4"
       }
     ],
     "subtitle": "uh oh you are drowning"
@@ -699,19 +699,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/freeze1"
+        "name": "poof-sounds:mono/freeze1"
       },
       {
-        "name": "custom/mono/freeze2"
+        "name": "poof-sounds:mono/freeze2"
       },
       {
-        "name": "custom/mono/freeze3"
+        "name": "poof-sounds:mono/freeze3"
       },
       {
-        "name": "custom/mono/freeze4"
+        "name": "poof-sounds:mono/freeze4"
       },
       {
-        "name": "custom/mono/freeze5"
+        "name": "poof-sounds:mono/freeze5"
       }
     ],
     "subtitle": "uh oh you are freezing"
@@ -720,13 +720,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/fire1"
+        "name": "poof-sounds:mono/fire1"
       },
       {
-        "name": "custom/mono/fire2"
+        "name": "poof-sounds:mono/fire2"
       },
       {
-        "name": "custom/mono/fire3"
+        "name": "poof-sounds:mono/fire3"
       }
     ],
     "subtitle": "ow you are burning"
@@ -735,10 +735,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/bush1"
+        "name": "poof-sounds:mono/bush1"
       },
       {
-        "name": "custom/mono/bush2"
+        "name": "poof-sounds:mono/bush2"
       }
     ],
     "subtitle": "OUCH!! BUSH!!"
@@ -747,15 +747,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/baa",
+        "name": "poof-sounds:mono/baa",
         "weight": 3
       },
       {
-        "name": "custom/mono/baa2",
+        "name": "poof-sounds:mono/baa2",
         "weight": 2
       },
       {
-        "name": "custom/mono/baa3"
+        "name": "poof-sounds:mono/baa3"
       }
     ],
     "subtitle": "sheep baaa"
@@ -764,7 +764,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shulker"
+        "name": "poof-sounds:mono/shulker"
       }
     ],
     "subtitle": "shulker bleaghh"
@@ -773,13 +773,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellington1"
+        "name": "poof-sounds:mono/skellington1"
       },
       {
-        "name": "custom/mono/skellington2"
+        "name": "poof-sounds:mono/skellington2"
       },
       {
-        "name": "custom/mono/skellington3"
+        "name": "poof-sounds:mono/skellington3"
       }
     ],
     "subtitle": "skellington sound"
@@ -788,15 +788,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/skellingtondeath2",
+        "name": "poof-sounds:mono/skellingtondeath2",
         "weight": 5
       },
       {
-        "name": "custom/mono/skellingtondeath3",
+        "name": "poof-sounds:mono/skellingtondeath3",
         "weight": 4
       },
       {
-        "name": "custom/mono/skellingtondeath4",
+        "name": "poof-sounds:mono/skellingtondeath4",
         "weight": 3
       }
     ],
@@ -806,16 +806,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spider1"
+        "name": "poof-sounds:mono/spider1"
       },
       {
-        "name": "custom/mono/spider2"
+        "name": "poof-sounds:mono/spider2"
       },
       {
-        "name": "custom/mono/spider3"
+        "name": "poof-sounds:mono/spider3"
       },
       {
-        "name": "custom/mono/spider4"
+        "name": "poof-sounds:mono/spider4"
       }
     ],
     "subtitle": "spider sound"
@@ -824,7 +824,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spiderdie"
+        "name": "poof-sounds:mono/spiderdie"
       }
     ],
     "subtitle": "spider dead"
@@ -833,16 +833,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/spider1"
+        "name": "poof-sounds:mono/spider1"
       },
       {
-        "name": "custom/mono/spider2"
+        "name": "poof-sounds:mono/spider2"
       },
       {
-        "name": "custom/mono/spider3"
+        "name": "poof-sounds:mono/spider3"
       },
       {
-        "name": "custom/mono/spider4"
+        "name": "poof-sounds:mono/spider4"
       }
     ],
     "subtitle": "spider ouchie"
@@ -851,23 +851,23 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squid1",
+        "name": "poof-sounds:mono/squid1",
         "volume": 1.25
       },
       {
-        "name": "custom/mono/squid2",
+        "name": "poof-sounds:mono/squid2",
         "volume": 1.25
       },
       {
-        "name": "custom/mono/squid3",
+        "name": "poof-sounds:mono/squid3",
         "volume": 1.25
       },
       {
-        "name": "custom/mono/squid4",
+        "name": "poof-sounds:mono/squid4",
         "volume": 1.25
       },
       {
-        "name": "custom/mono/squid5",
+        "name": "poof-sounds:mono/squid5",
         "volume": 1.25
       }
     ],
@@ -877,15 +877,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squiddeath1",
+        "name": "poof-sounds:mono/squiddeath1",
         "volume": 1.75
       },
       {
-        "name": "custom/mono/squiddeath2",
+        "name": "poof-sounds:mono/squiddeath2",
         "volume": 1.75
       },
       {
-        "name": "custom/mono/squiddeath3",
+        "name": "poof-sounds:mono/squiddeath3",
         "volume": 1.75
       }
     ],
@@ -895,19 +895,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/squidhurt1",
+        "name": "poof-sounds:mono/squidhurt1",
         "volume": 1.75
       },
       {
-        "name": "custom/mono/squidhurt2",
+        "name": "poof-sounds:mono/squidhurt2",
         "volume": 1.75
       },
       {
-        "name": "custom/mono/squidhurt3",
+        "name": "poof-sounds:mono/squidhurt3",
         "volume": 1.75
       },
       {
-        "name": "custom/mono/squidhurt4",
+        "name": "poof-sounds:mono/squidhurt4",
         "volume": 1.75
       }
     ],
@@ -917,16 +917,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/stray1"
+        "name": "poof-sounds:mono/stray1"
       },
       {
-        "name": "custom/mono/stray2"
+        "name": "poof-sounds:mono/stray2"
       },
       {
-        "name": "custom/mono/stray3"
+        "name": "poof-sounds:mono/stray3"
       },
       {
-        "name": "custom/mono/stray4"
+        "name": "poof-sounds:mono/stray4"
       }
     ],
     "subtitle": "stray skellington sound"
@@ -935,11 +935,11 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/straydeath2",
+        "name": "poof-sounds:mono/straydeath2",
         "weight": 5
       },
       {
-        "name": "custom/mono/straydeath3",
+        "name": "poof-sounds:mono/straydeath3",
         "weight": 4
       }
     ],
@@ -949,76 +949,76 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/bullshit",
+        "name": "poof-sounds:mono/bullshit",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/butterfly",
+        "name": "poof-sounds:mono/butterfly",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/eatmyass",
+        "name": "poof-sounds:mono/eatmyass",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/eatshit",
+        "name": "poof-sounds:mono/eatshit",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/elisashort",
+        "name": "poof-sounds:mono/elisashort",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/fuckallofyou",
+        "name": "poof-sounds:mono/fuckallofyou",
         "volume": 0.8
       },
       {
-        "name": "custom/mono/fuckingassholes",
+        "name": "poof-sounds:mono/fuckingassholes",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/gibberish",
+        "name": "poof-sounds:mono/gibberish",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/gottapoop1",
+        "name": "poof-sounds:mono/gottapoop1",
         "volume": 0.95,
         "weight": 2
       },
       {
-        "name": "custom/mono/gottapoop2",
+        "name": "poof-sounds:mono/gottapoop2",
         "volume": 0.95,
         "weight": 3
       },
       {
-        "name": "custom/mono/gottapoop3",
+        "name": "poof-sounds:mono/gottapoop3",
         "volume": 0.95,
         "weight": 4
       },
       {
-        "name": "custom/mono/luigi",
+        "name": "poof-sounds:mono/luigi",
         "volume": 0.8,
         "weight": 3
       },
       {
-        "name": "custom/mono/pooped",
+        "name": "poof-sounds:mono/pooped",
         "volume": 0.99,
         "weight": 2
       },
       {
-        "name": "custom/mono/screaming",
+        "name": "poof-sounds:mono/screaming",
         "volume": 0.75,
         "weight": 3
       },
       {
-        "name": "custom/mono/youbitch",
+        "name": "poof-sounds:mono/youbitch",
         "volume": 0.55,
         "weight": 3
       }
@@ -1029,21 +1029,21 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hardasrock",
+        "name": "poof-sounds:mono/hardasrock",
         "weight": 3
       },
       {
-        "name": "custom/mono/thankyou"
+        "name": "poof-sounds:mono/thankyou"
       },
       {
-        "name": "custom/mono/whipnaenae",
+        "name": "poof-sounds:mono/whipnaenae",
         "weight": 3
       },
       {
-        "name": "custom/mono/yes1"
+        "name": "poof-sounds:mono/yes1"
       },
       {
-        "name": "custom/mono/yes2"
+        "name": "poof-sounds:mono/yes2"
       }
     ],
     "subtitle": "villager celebrating"
@@ -1052,7 +1052,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/noooo",
+        "name": "poof-sounds:mono/noooo",
         "volume": 0.9
       }
     ],
@@ -1062,7 +1062,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/owfuck",
+        "name": "poof-sounds:mono/owfuck",
         "volume": 0.9
       }
     ],
@@ -1072,15 +1072,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/fuckyou",
+        "name": "poof-sounds:mono/fuckyou",
         "weight": 5
       },
       {
-        "name": "custom/mono/naww",
+        "name": "poof-sounds:mono/naww",
         "weight": 2
       },
       {
-        "name": "custom/mono/no",
+        "name": "poof-sounds:mono/no",
         "volume": 0.9,
         "weight": 3
       }
@@ -1091,10 +1091,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/wawawaw"
+        "name": "poof-sounds:mono/wawawaw"
       },
       {
-        "name": "custom/mono/whipnaenae"
+        "name": "poof-sounds:mono/whipnaenae"
       }
     ],
     "subtitle": "villager trading"
@@ -1103,19 +1103,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hardasrock",
+        "name": "poof-sounds:mono/hardasrock",
         "weight": 3
       },
       {
-        "name": "custom/mono/thankyou",
+        "name": "poof-sounds:mono/thankyou",
         "weight": 2
       },
       {
-        "name": "custom/mono/yes1",
+        "name": "poof-sounds:mono/yes1",
         "weight": 2
       },
       {
-        "name": "custom/mono/yes2"
+        "name": "poof-sounds:mono/yes2"
       }
     ],
     "subtitle": "villager says YES"
@@ -1124,10 +1124,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/vindicator1"
+        "name": "poof-sounds:mono/vindicator1"
       },
       {
-        "name": "custom/mono/vindicator2"
+        "name": "poof-sounds:mono/vindicator2"
       }
     ],
     "subtitle": "vindicator harr"
@@ -1136,10 +1136,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/vindicatorkilled1"
+        "name": "poof-sounds:mono/vindicatorkilled1"
       },
       {
-        "name": "custom/mono/vindicatorkilled2"
+        "name": "poof-sounds:mono/vindicatorkilled2"
       }
     ],
     "subtitle": "no way, killed a vindicator!!"
@@ -1148,38 +1148,38 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/balls",
+        "name": "poof-sounds:mono/balls",
         "volume": 0.9,
         "weight": 3
       },
       {
-        "name": "custom/mono/come",
+        "name": "poof-sounds:mono/come",
         "weight": 3
       },
       {
-        "name": "custom/mono/eatmyass2",
+        "name": "poof-sounds:mono/eatmyass2",
         "weight": 3
       },
       {
-        "name": "custom/mono/fmeinthea",
+        "name": "poof-sounds:mono/fmeinthea",
         "weight": 2
       },
       {
-        "name": "custom/mono/licker"
+        "name": "poof-sounds:mono/licker"
       },
       {
-        "name": "custom/mono/nose",
+        "name": "poof-sounds:mono/nose",
         "volume": 0.7
       },
       {
-        "name": "custom/mono/pinky1"
+        "name": "poof-sounds:mono/pinky1"
       },
       {
-        "name": "custom/mono/pinky2",
+        "name": "poof-sounds:mono/pinky2",
         "weight": 2
       },
       {
-        "name": "custom/mono/stigma",
+        "name": "poof-sounds:mono/stigma",
         "weight": 3
       }
     ],
@@ -1189,7 +1189,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/noooo",
+        "name": "poof-sounds:mono/noooo",
         "volume": 0.9
       }
     ],
@@ -1199,7 +1199,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/owfuck",
+        "name": "poof-sounds:mono/owfuck",
         "volume": 0.9
       }
     ],
@@ -1209,15 +1209,15 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/fuckyou",
+        "name": "poof-sounds:mono/fuckyou",
         "weight": 5
       },
       {
-        "name": "custom/mono/naww",
+        "name": "poof-sounds:mono/naww",
         "weight": 2
       },
       {
-        "name": "custom/mono/no",
+        "name": "poof-sounds:mono/no",
         "volume": 0.9,
         "weight": 3
       }
@@ -1228,10 +1228,10 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/wawawaw"
+        "name": "poof-sounds:mono/wawawaw"
       },
       {
-        "name": "custom/mono/whipnaenae"
+        "name": "poof-sounds:mono/whipnaenae"
       }
     ],
     "subtitle": "wandering trader trading"
@@ -1240,19 +1240,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/hardasrock",
+        "name": "poof-sounds:mono/hardasrock",
         "weight": 3
       },
       {
-        "name": "custom/mono/thankyou",
+        "name": "poof-sounds:mono/thankyou",
         "weight": 2
       },
       {
-        "name": "custom/mono/yes1",
+        "name": "poof-sounds:mono/yes1",
         "weight": 2
       },
       {
-        "name": "custom/mono/yes2"
+        "name": "poof-sounds:mono/yes2"
       }
     ],
     "subtitle": "wandering trader says YES"
@@ -1261,13 +1261,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/witch1"
+        "name": "poof-sounds:mono/witch1"
       },
       {
-        "name": "custom/mono/witch2"
+        "name": "poof-sounds:mono/witch2"
       },
       {
-        "name": "custom/mono/witch3"
+        "name": "poof-sounds:mono/witch3"
       }
     ],
     "subtitle": "witch giggle hehehehe"
@@ -1276,13 +1276,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/witherskellington1"
+        "name": "poof-sounds:mono/witherskellington1"
       },
       {
-        "name": "custom/mono/witherskellington2"
+        "name": "poof-sounds:mono/witherskellington2"
       },
       {
-        "name": "custom/mono/witherskellington3"
+        "name": "poof-sounds:mono/witherskellington3"
       }
     ],
     "subtitle": "wither skellington sound"
@@ -1291,11 +1291,11 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/witherskellingtondeath2",
+        "name": "poof-sounds:mono/witherskellingtondeath2",
         "weight": 5
       },
       {
-        "name": "custom/mono/witherskellingtondeath3",
+        "name": "poof-sounds:mono/witherskellingtondeath3",
         "weight": 4
       }
     ],
@@ -1305,12 +1305,12 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/bark",
+        "name": "poof-sounds:mono/bark",
         "volume": 2,
         "weight": 2
       },
       {
-        "name": "custom/mono/woof",
+        "name": "poof-sounds:mono/woof",
         "volume": 2,
         "weight": 3
       }
@@ -1321,19 +1321,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/zombie1",
+        "name": "poof-sounds:mono/zombie1",
         "volume": 0.32
       },
       {
-        "name": "custom/mono/zombie2",
+        "name": "poof-sounds:mono/zombie2",
         "volume": 0.85
       },
       {
-        "name": "custom/mono/zombiegroan1",
+        "name": "poof-sounds:mono/zombiegroan1",
         "volume": 0.88
       },
       {
-        "name": "custom/mono/zombiegroan2",
+        "name": "poof-sounds:mono/zombiegroan2",
         "volume": 0.88
       }
     ],
@@ -1343,7 +1343,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/zombiehurt"
+        "name": "poof-sounds:mono/zombiehurt"
       }
     ],
     "subtitle": "zombie got hurt and made a sound"
@@ -1352,7 +1352,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/pigmansqueal"
+        "name": "poof-sounds:mono/pigmansqueal"
       }
     ],
     "subtitle": "uh oh zombified piglin got hurt"
@@ -1361,16 +1361,16 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/strip1"
+        "name": "poof-sounds:mono/strip1"
       },
       {
-        "name": "custom/mono/strip2"
+        "name": "poof-sounds:mono/strip2"
       },
       {
-        "name": "custom/mono/strip3"
+        "name": "poof-sounds:mono/strip3"
       },
       {
-        "name": "custom/mono/strip4"
+        "name": "poof-sounds:mono/strip4"
       }
     ],
     "subtitle": "FUCK log stripped"
@@ -1379,13 +1379,13 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/bundleinsert1"
+        "name": "poof-sounds:mono/bundleinsert1"
       },
       {
-        "name": "custom/mono/bundleinsert2"
+        "name": "poof-sounds:mono/bundleinsert2"
       },
       {
-        "name": "custom/mono/bundleinsert3"
+        "name": "poof-sounds:mono/bundleinsert3"
       }
     ],
     "subtitle": "putthatinbundle"
@@ -1394,19 +1394,19 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/shield1"
+        "name": "poof-sounds:mono/shield1"
       },
       {
-        "name": "custom/mono/shield2"
+        "name": "poof-sounds:mono/shield2"
       },
       {
-        "name": "custom/mono/shield3"
+        "name": "poof-sounds:mono/shield3"
       },
       {
-        "name": "custom/mono/shield4"
+        "name": "poof-sounds:mono/shield4"
       },
       {
-        "name": "custom/mono/shield5"
+        "name": "poof-sounds:mono/shield5"
       }
     ],
     "subtitle": "blocked by shield"
@@ -1415,7 +1415,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/break"
+        "name": "poof-sounds:mono/break"
       }
     ],
     "subtitle": "fuck shield broke"
@@ -1424,7 +1424,7 @@
     "replace": true,
     "sounds": [
       {
-        "name": "custom/mono/totem"
+        "name": "poof-sounds:mono/totem"
       }
     ],
     "subtitle": "totem saved your life"

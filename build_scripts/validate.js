@@ -3,29 +3,29 @@ const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
 const log = require('loglevel');
 
-const BASE_MC_DIR = './assets/minecraft';
+const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
 
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
   const usedFiles = new Set();
-  const soundsJson = await fs.readFile(`${BASE_MC_DIR}/sounds.json`);
+  const soundsJson = await fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`);
   const sounds = JSON.parse(soundsJson);
   Object.entries(sounds).forEach(([key, sound]) => {
     sound.sounds.forEach(({ name }) => {
-      const [folder, channels, soundName] = name.split('/');
+      const [namespace, path] = name.split(':');
+      const [folder, soundName] = path?.split('/') ?? [];
       const fileName = `${soundName}.ogg`;
       if (usedFiles.has(fileName)) {
         return;
       }
       if (
-        folder === 'custom' &&
-        ((channels === 'mono' && monoFiles.includes(fileName)) ||
-          (channels === 'stereo' && stereoFiles.includes(fileName)))
+        namespace === POOF_NAMESPACE &&
+        ((folder === 'mono' && monoFiles.includes(fileName)) || (folder === 'stereo' && stereoFiles.includes(fileName)))
       ) {
         usedFiles.add(fileName);
-        log.debug(`file exists: ${name}`);
+        log.debug(`file exists: ${path}`);
       } else {
-        throw new Error(`sound does not exist: ${name}`);
+        throw new Error(`sound does not exist: ${path}`);
       }
     });
     if (!sound.replace) {
@@ -48,13 +48,13 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
     files.push({ path: `stereo/${fileName}`, channels: 2 });
   });
   const promises = files.map(({ path, channels }) =>
-    ffprobe(`${BASE_MC_DIR}/sounds/custom/${path}`, {
+    ffprobe(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/${path}`, {
       path: ffprobePath,
     }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
-        log.debug(`validated correct number of audio channels for: custom/${path}`);
+        log.debug(`correct number of audio channels for: ${path}`);
       } else {
-        throw new Error(`incorrect number of audio channels for: custom/${path}`);
+        throw new Error(`incorrect number of audio channels for: ${path}`);
       }
     })
   );
@@ -65,8 +65,8 @@ const validate = async () => {
   log.info('begin validation');
   try {
     const [monoFiles, stereoFiles] = await Promise.all([
-      fs.readdir(`${BASE_MC_DIR}/sounds/custom/mono`),
-      fs.readdir(`${BASE_MC_DIR}/sounds/custom/stereo`),
+      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/mono`),
+      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/stereo`),
     ]);
     await Promise.all([verifySoundsExist(monoFiles, stereoFiles), validateSoundFormat(monoFiles, stereoFiles)]);
   } catch (error) {

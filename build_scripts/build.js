@@ -5,8 +5,7 @@ const semver = require('semver');
 
 const soundsMap = require('./soundsMap');
 
-const BASE_MC_DIR = './assets/minecraft';
-const TARGET_DIR = './build';
+const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
 
 const buildZip = async (tempDir, version) => {
   let [mcmeta] = await Promise.all([
@@ -22,6 +21,7 @@ const buildZip = async (tempDir, version) => {
   zip.addLocalFile('./pack.png');
   await Promise.all([
     zip.addLocalFolderPromise('./assets', { zipPath: 'assets' }),
+    // zip.addLocalFolderPromise('./overlays'),
   ]);
   const isPrerelease = !!semver.prerelease(version);
   const target = `${TARGET_DIR}/poof-sounds${isPrerelease ? '-beta' : ''}.zip`;
@@ -31,15 +31,21 @@ const buildZip = async (tempDir, version) => {
 
 const convertToBedrock = async (tempDir, version) => {
   const [soundsJson, splashesTxt] = await Promise.all([
-    fs.readFile(`${BASE_MC_DIR}/sounds.json`),
-    fs.readFile(`${BASE_MC_DIR}/texts/splashes.txt`),
-    fs.cp(`${BASE_MC_DIR}/sounds/`, `${tempDir}/bedrock/sounds/`, { recursive: true }),
+    fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
+    fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`),
+    fs.cp(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, `${tempDir}/bedrock/sounds/${POOF_NAMESPACE}`, {
+      recursive: true,
+    }),
   ]);
 
   const promises = [
     fs.copyFile('./pack.png', `${tempDir}/bedrock/pack_icon.png`),
-    fs.cp(`${BASE_MC_DIR}/textures/entity`, `${tempDir}/bedrock/textures/entity`, { recursive: true }),
-    fs.cp(`${BASE_MC_DIR}/textures/gui/title/background`, `${tempDir}/bedrock/textures/ui`, { recursive: true }),
+    fs.cp(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, `${tempDir}/bedrock/textures/entity`, {
+      recursive: true,
+    }),
+    fs.cp(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, `${tempDir}/bedrock/textures/ui`, {
+      recursive: true,
+    }),
     fs.cp(`bedrock/`, `${tempDir}/bedrock/`, { recursive: true }),
   ];
 
@@ -52,7 +58,7 @@ const convertToBedrock = async (tempDir, version) => {
 
       const { additionalNames = [], name: newSoundName, pitchAdjust } = soundsMap[key];
       sound.sounds = sound.sounds.map(s => {
-        s.name = `sounds/${s.name}`;
+        s.name = `sounds/${s.name.replace(':', '/')}`;
         if (pitchAdjust) {
           s.pitch ??= 1;
           s.pitch *= pitchAdjust;
