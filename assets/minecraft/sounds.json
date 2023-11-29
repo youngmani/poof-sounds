@@ -951,76 +951,87 @@
       {
         "name": "poof-sounds:mono/bullshit",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/butterfly",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/eatmyass",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/eatshit",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/elisashort",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/fuckallofyou",
-        "volume": 0.8
+        "volume": 0.8,
+        "weight": 2
       },
       {
         "name": "poof-sounds:mono/fuckingassholes",
         "volume": 0.8,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/gibberish",
         "volume": 0.8,
-        "weight": 3
+        "weight": 6
       },
       {
         "name": "poof-sounds:mono/gottapoop1",
         "volume": 0.95,
-        "weight": 2
+        "weight": 3
       },
       {
         "name": "poof-sounds:mono/gottapoop2",
         "volume": 0.95,
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/gottapoop3",
         "volume": 0.95,
-        "weight": 4
+        "weight": 7
       },
       {
         "name": "poof-sounds:mono/luigi",
         "volume": 0.8,
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/newhat1",
+        "volume": 0.96,
         "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/newhat2",
+        "volume": 0.96,
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/pooped",
         "volume": 0.99,
-        "weight": 2
+        "weight": 4
       },
       {
         "name": "poof-sounds:mono/screaming",
         "volume": 0.75,
-        "weight": 3
+        "weight": 6
       },
       {
         "name": "poof-sounds:mono/youbitch",
         "volume": 0.55,
-        "weight": 3
+        "weight": 5
       }
     ],
     "subtitle": "villager sounds"
