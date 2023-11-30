@@ -19,11 +19,6 @@
   },
   "entity_sounds": {
     "entities": {
-      "cave_spider": {
-        "events": {
-          "hurt": "poofsounds.spider.hurt"
-        }
-      },
       "cod": {
         "events": {
           "death": "mob.fish.hurt"
@@ -41,7 +36,7 @@
       "parrot": {
         "events": {
           "imitate.creeper": {
-            "pitch": 0.8,
+            "pitch": 0.9,
             "sound": "poofsounds.creeper.sss",
             "volume": 0.6
           }
@@ -55,11 +50,6 @@
       "salmon": {
         "events": {
           "death": "mob.fish.hurt"
-        }
-      },
-      "spider": {
-        "events": {
-          "hurt": "poofsounds.spider.hurt"
         }
       },
       "tropicalfish": {

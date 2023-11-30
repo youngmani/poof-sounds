@@ -43,6 +43,7 @@ module.exports = {
   },
   'entity.creeper.primed': {
     name: 'random.fuse',
+    /* prevent conflict with random.fuse which is used for tnt */
     poofName: 'poofsounds.creeper.sss',
   },
   'entity.donkey.ambient': {
@@ -96,6 +97,10 @@ module.exports = {
   'entity.pig.ambient': {
     name: 'mob.pig.say',
   },
+  'entity.pig.hurt': {
+    /* uses mob.pig.say */
+    name: null,
+  },
   'entity.piglin.ambient': {
     name: 'mob.piglin.ambient',
   },
@@ -135,6 +140,14 @@ module.exports = {
   'entity.sheep.ambient': {
     name: 'mob.sheep.say',
   },
+  'entity.sheep.death': {
+    /* uses mob.sheep.say */
+    name: null,
+  },
+  'entity.sheep.hurt': {
+    /* uses mob.sheep.say */
+    name: null,
+  },
   'entity.shulker.ambient': {
     name: 'mob.shulker.ambient',
   },
@@ -151,7 +164,8 @@ module.exports = {
     name: 'mob.spider.death',
   },
   'entity.spider.hurt': {
-    poofName: 'poofsounds.spider.hurt',
+    /* uses mob.spider.say */
+    name: null,
   },
   'entity.squid.ambient': {
     name: 'mob.squid.ambient',
@@ -170,6 +184,9 @@ module.exports = {
   },
   'entity.villager.ambient': {
     name: 'mob.villager.idle',
+  },
+  'entity.villager.celebrate': {
+    name: null,
   },
   'entity.villager.death': {
     name: 'mob.villager.death',
@@ -236,8 +253,15 @@ module.exports = {
     name: 'use.wood',
     pitchAdjust: 1.2,
   },
+  'item.bundle.insert': {
+    name: null,
+  },
   'item.shield.block': {
     name: 'item.shield.block',
+  },
+  'item.shield.break': {
+    /* uses random.break */
+    name: null,
   },
   'item.totem.use': {
     name: 'random.totem',

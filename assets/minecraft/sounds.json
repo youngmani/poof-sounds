@@ -555,14 +555,32 @@
       },
       {
         "name": "poof-sounds:mono/oink2",
-        "weight": 4
+        "weight": 7
       },
       {
         "name": "poof-sounds:mono/oink3",
-        "weight": 12
+        "weight": 9
       }
     ],
     "subtitle": "oink"
+  },
+  "entity.pig.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/oink1",
+        "weight": 10
+      },
+      {
+        "name": "poof-sounds:mono/oink2",
+        "weight": 7
+      },
+      {
+        "name": "poof-sounds:mono/oink3",
+        "weight": 9
+      }
+    ],
+    "subtitle": "oink (hurt)"
   },
   "entity.piglin.ambient": {
     "replace": true,
@@ -759,6 +777,40 @@
       }
     ],
     "subtitle": "sheep baaa"
+  },
+  "entity.sheep.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/baa",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/baa2",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/baa3"
+      }
+    ],
+    "subtitle": "sheep baaa (died)"
+  },
+  "entity.sheep.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/baa",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/baa2",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/baa3"
+      }
+    ],
+    "subtitle": "sheep baaa (hurt)"
   },
   "entity.shulker.ambient": {
     "replace": true,

@@ -61,22 +61,26 @@ const convertToBedrock = async (tempDir, version) => {
 
       const { additionalNames = [], name, pitchAdjust, poofName } = soundsMap[key];
       const newSoundName = poofName ?? name;
-      sound.sounds = sound.sounds.map(s => {
-        s.name = `sounds/${s.name.replace(':', '/')}`;
-        if (pitchAdjust) {
-          s.pitch ??= 1;
-          s.pitch *= pitchAdjust;
-        }
-        return s;
-      });
-      delete sound.replace;
+      if (newSoundName) {
+        sound.sounds = sound.sounds.map(s => {
+          s.name = `sounds/${s.name.replace(':', '/')}`;
+          if (pitchAdjust) {
+            s.pitch ??= 1;
+            s.pitch *= pitchAdjust;
+          }
+          return s;
+        });
+        delete sound.replace;
 
-      [newSoundName, ...additionalNames].forEach(name => {
-        javaSounds[name] = sound;
-        log.debug(`bedrock build: converting ${key} to ${name}`);
-      });
+        [newSoundName, ...additionalNames].forEach(name => {
+          javaSounds[name] = sound;
+          log.debug(`bedrock build: converting ${key} to ${name}`);
+        });
+      } else {
+        log.debug(`bedrock build: skipping java sound ${key}`);
+      }
     } else {
-      log.info(`bedrock build: unmapped java sound ${key}`);
+      log.warn(`bedrock build: unmapped java sound ${key}`);
       delete javaSounds[key];
     }
   });
