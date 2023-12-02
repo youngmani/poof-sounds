@@ -2,21 +2,25 @@ const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const log = require('loglevel');
 const semver = require('semver');
+const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
 
+const PAINTING_SIZE = 128;
+
 const convertToBedrock = async (tempDir, version) => {
-  const [soundsJson, splashesTxt] = await Promise.all([
+  const [soundsJson, splashesTxt, kz] = await Promise.all([
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`),
+    generateKz(),
     fs.cp(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, `${tempDir}/bedrock/sounds/${POOF_NAMESPACE}`, {
       recursive: true,
     }),
   ]);
 
   const promises = [
-    fs.copyFile('./pack.png', `${tempDir}/bedrock/pack_icon.png`),
+    fs.copyFile('pack.png', `${tempDir}/bedrock/pack_icon.png`),
     fs.cp(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, `${tempDir}/bedrock/textures/entity`, {
       recursive: true,
     }),
@@ -24,6 +28,7 @@ const convertToBedrock = async (tempDir, version) => {
       recursive: true,
     }),
     fs.cp(`bedrock/`, `${tempDir}/bedrock/`, { recursive: true }),
+    kz.writeAsync(`${tempDir}/bedrock/textures/painting/kz.png`),
   ];
 
   const javaSounds = JSON.parse(soundsJson);
@@ -115,6 +120,51 @@ const convertToBedrock = async (tempDir, version) => {
   const target = `${TARGET_DIR}/poof-sounds-bedrock${isBeta ? '-beta' : ''}.mcpack`;
   await zip.writeZipPromise(target, { overwrite: true });
   log.info(`bedrock build: successfully wrote mcpack file to: ${target}`);
+};
+
+const generateKz = async () => {
+  const kz = await Jimp.read('build_scripts/resources/kz_template.png');
+  const scale = PAINTING_SIZE / 16;
+  if (scale !== 1) kz.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
+  const promises = [
+    { name: 'kebab', x: 0, y: 0, h: 1, w: 1 },
+    { name: 'aztec', x: 1, y: 0, h: 1, w: 1 },
+    { name: 'alban', x: 2, y: 0, h: 1, w: 1 },
+    { name: 'aztec2', x: 3, y: 0, h: 1, w: 1 },
+    { name: 'bomb', x: 4, y: 0, h: 1, w: 1 },
+    { name: 'plant', x: 5, y: 0, h: 1, w: 1 },
+    { name: 'wasteland', x: 6, y: 0, h: 1, w: 1 },
+    { name: 'pool', x: 0, y: 2, h: 1, w: 2 },
+    { name: 'courbet', x: 2, y: 2, h: 1, w: 2 },
+    { name: 'sea', x: 4, y: 2, h: 1, w: 2 },
+    { name: 'sunset', x: 6, y: 2, h: 1, w: 2 },
+    { name: 'creebet', x: 8, y: 2, h: 1, w: 2 },
+    { name: 'wanderer', x: 0, y: 4, h: 2, w: 1 },
+    { name: 'graham', x: 1, y: 4, h: 2, w: 1 },
+    { name: 'fighters', x: 0, y: 6, h: 2, w: 4 },
+    { name: 'match', x: 0, y: 8, h: 2, w: 2 },
+    { name: 'bust', x: 2, y: 8, h: 2, w: 2 },
+    { name: 'stage', x: 4, y: 8, h: 2, w: 2 },
+    { name: 'void', x: 6, y: 8, h: 2, w: 2 },
+    { name: 'skull_and_roses', x: 8, y: 8, h: 2, w: 2 },
+    { name: 'wither', x: 10, y: 8, h: 2, w: 2 },
+    { name: 'pointer', x: 0, y: 12, h: 4, w: 4 },
+    { name: 'pigscene', x: 4, y: 12, h: 4, w: 4 },
+    { name: 'burning_skull', x: 8, y: 12, h: 4, w: 4 },
+    { name: 'skeleton', x: 12, y: 4, h: 3, w: 4 },
+    { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
+  ].map(painting => addPainting(kz, painting));
+  await Promise.all(promises);
+  log.debug(`bedrock build: generated kz.png`);
+  return kz;
+};
+
+const addPainting = async (kz, { name, x, y, h, w }) => {
+  const image = await Jimp.read(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/painting/${name}.png`);
+  const scale = (h * PAINTING_SIZE) / image.getHeight();
+  if (scale !== 1) image.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
+  if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`bedrock build: invalid painting dimensions for ${name}`);
+  await kz.blit(image, x * PAINTING_SIZE, y * PAINTING_SIZE);
 };
 
 module.exports = convertToBedrock;
