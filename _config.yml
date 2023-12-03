@@ -1,6 +1,1 @@
 theme: jekyll-theme-cayman
-custom_links:
-  show: true
-  latest_release: https://github.com/youngmani/poof-sounds/releases/latest
-  direct_download_java: https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds.zip
-  direct_download_bedrock: https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds-bedrock.mcpack

@@ -11,6 +11,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="shortcut icon" type="image/x-icon" href="/poof-sounds/pack.png">
+    <style>
+      body {
+        color: #2B2D31;
+      }
+      a {
+        color: #2278CE;
+      }
+    </style>
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -18,13 +26,13 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
+      {% if page.name != "README.md" %}
+        <a href="{{ site.github.baseurl }}" class="btn">Homepage</a>
+      {% elsif site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.custom_links.show %}
-        <a href="{{ site.custom_links.latest_release }}" class="btn">Latest Release</a>
-        <a href="{{ site.custom_links.direct_download_java }}" class="btn">Direct Download (Java)</a>
-        <a href="{{ site.custom_links.direct_download_bedrock }}" class="btn">Direct Download (Bedrock)</a>
+        <a href="{{ site.github.releases_url }}/latest" class="btn">Latest Release</a>
+        <a href="{{ site.github.releases_url }}/latest/download/poof-sounds.zip" class="btn">Direct Download (Java)</a>
+        <a href="{{ site.github.releases_url }}/latest/download/poof-sounds-bedrock.mcpack" class="btn">Direct Download (Bedrock)</a>
       {% endif %}
     </header>
 
