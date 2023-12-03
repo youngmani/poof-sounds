@@ -31,6 +31,10 @@ To install, download the `poof-sounds-bedrock.mcpack` file from the [latest rele
 
 To request a new sound or to report an issue, please open an [issue on Github](https://github.com/youngmani/poof-sounds/issues/new/choose).
 
+## More Links
+
+- [Changelog](CHANGELOG.md)
+
 ## Credits
 
 Sounds (used with permission): Poofesure ([YouTube](https://www.youtube.com/c/Poofesure), [Twitch](https://www.twitch.tv/poofesure))
