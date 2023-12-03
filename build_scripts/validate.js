@@ -4,7 +4,7 @@ const ffprobePath = require('ffprobe-static').path;
 const log = require('loglevel');
 
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
-const { getOverlayDirectories } = require('./utils');
+const { getOverlayDirectories, all } = require('./utils');
 
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
@@ -59,11 +59,11 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
       }
     })
   );
-  await Promise.all(promises);
+  await all(promises);
 };
 
 const validateOverlaysExist = async () => {
-  const [mcmeta, overlayDirs] = await Promise.all([fs.readFile('./pack.mcmeta', 'utf8'), getOverlayDirectories()]);
+  const [mcmeta, overlayDirs] = await all([fs.readFile('pack.mcmeta', 'utf8'), getOverlayDirectories()]);
   const usedDirs = new Set();
   const mcmetaJson = JSON.parse(mcmeta);
   mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
@@ -91,17 +91,18 @@ const validateOverlaysExist = async () => {
 const validate = async () => {
   log.info('begin validation');
   try {
-    const [monoFiles, stereoFiles] = await Promise.all([
+    const [monoFiles, stereoFiles] = await all([
       fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/mono`),
       fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/stereo`),
     ]);
-    await Promise.all([
+    await all([
       verifySoundsExist(monoFiles, stereoFiles),
       validateSoundFormat(monoFiles, stereoFiles),
       validateOverlaysExist(),
     ]);
   } catch (error) {
-    log.error('error occurred during validation:', error.message);
+    log.error(error);
+    log.error('validation failed');
     return 1;
   }
   log.info('end validation');
@@ -109,12 +110,12 @@ const validate = async () => {
 };
 
 const run = async () => {
-  if (process.argv.includes('dev')) {
-    log.setLevel(log.levels.DEBUG);
-  } else {
-    log.setLevel(log.levels.INFO);
-  }
+  log.setLevel(process.env.LOG_LEVEL ?? log.levels.INFO);
   process.exit(await validate());
 };
 
-run();
+if (!module?.parent) {
+  run();
+}
+
+module.exports = validate;

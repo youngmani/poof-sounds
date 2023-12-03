@@ -3,11 +3,10 @@
   "version": "4.0.0-1",
   "description": "build scripts for poof sounds",
   "scripts": {
-    "build": "npm run validate && node build_scripts/build.js",
-    "build:dev": "npm run validate:dev && node build_scripts/build.js dev",
+    "build": "node build_scripts/build.js",
+    "build:beta": "node build_scripts/build.js beta",
     "preversion": "npm run validate",
-    "validate": "node build_scripts/validate.js",
-    "validate:dev": "node build_scripts/validate.js dev"
+    "validate": "node build_scripts/validate.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.10",

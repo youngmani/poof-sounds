@@ -6,11 +6,12 @@ const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
+const { all } = require('./utils');
 
 const PAINTING_SIZE = 128;
 
 const convertToBedrock = async (tempDir, version) => {
-  const [soundsJson, splashesTxt, kz] = await Promise.all([
+  const [soundsJson, splashesTxt, kz] = await all([
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`),
     generateKz(),
@@ -113,7 +114,7 @@ const convertToBedrock = async (tempDir, version) => {
 
   promises.push(fs.writeFile(`${tempDir}/bedrock/manifest.json`, JSON.stringify(manifest, null, 2)));
 
-  await Promise.all(promises);
+  await all(promises);
 
   const zip = new Zip();
   await zip.addLocalFolderPromise(`${tempDir}/bedrock`);
@@ -154,7 +155,7 @@ const generateKz = async () => {
     { name: 'skeleton', x: 12, y: 4, h: 3, w: 4 },
     { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
   ].map(painting => addPainting(kz, painting));
-  await Promise.all(promises);
+  await all(promises);
   log.debug(`bedrock build: generated kz.png`);
   return kz;
 };

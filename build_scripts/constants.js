@@ -1,6 +1,6 @@
 module.exports = {
-  BASE_PACK_DIR: './assets',
+  BASE_PACK_DIR: 'assets',
   MC_NAMESPACE: 'minecraft',
   POOF_NAMESPACE: 'poof-sounds',
-  TARGET_DIR: './build',
+  TARGET_DIR: 'build',
 };
