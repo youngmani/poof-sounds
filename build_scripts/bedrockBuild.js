@@ -1,14 +1,15 @@
 const fs = require('fs/promises');
 const Zip = require('adm-zip');
-const log = require('loglevel');
 const semver = require('semver');
 const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
-const { all } = require('./utils');
+const { all, logger } = require('./utils');
 
 const PAINTING_SIZE = 128;
+
+const log = logger.child({ prefix: 'bedrock build' });
 
 const convertToBedrock = async (tempDir, version) => {
   const [soundsJson, splashesTxt, kz] = await all([
@@ -54,13 +55,13 @@ const convertToBedrock = async (tempDir, version) => {
 
         [newSoundName, ...additionalNames].forEach(name => {
           javaSounds[name] = sound;
-          log.debug(`bedrock build: converting ${key} to ${name}`);
+          log.debug(`converting ${key} to ${name}`);
         });
       } else {
-        log.debug(`bedrock build: skipping java sound ${key}`);
+        log.verbose(`skipping java sound ${key}`);
       }
     } else {
-      log.warn(`bedrock build: unmapped java sound ${key}`);
+      log.warn(`unmapped java sound ${key}`);
       delete javaSounds[key];
     }
   });
@@ -87,7 +88,7 @@ const convertToBedrock = async (tempDir, version) => {
       ? 1000 * semver.patch(version) + (semver.prerelease(version).find(i => typeof i === 'number') ?? 0)
       : semver.patch(version),
   ];
-  log.info(`bedrock build: using version ${versionArr}, beta=${isBeta}`);
+  log.info(`using version ${versionArr}, beta=${isBeta}`);
 
   const manifest = {
     format_version: 2,
@@ -120,7 +121,7 @@ const convertToBedrock = async (tempDir, version) => {
   await zip.addLocalFolderPromise(`${tempDir}/bedrock`);
   const target = `${TARGET_DIR}/poof-sounds-bedrock${isBeta ? '-beta' : ''}.mcpack`;
   await zip.writeZipPromise(target, { overwrite: true });
-  log.info(`bedrock build: successfully wrote mcpack file to: ${target}`);
+  log.info(`successfully wrote mcpack file to: ${target}`);
 };
 
 const generateKz = async () => {
@@ -156,7 +157,7 @@ const generateKz = async () => {
     { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
   ].map(painting => addPainting(kz, painting));
   await all(promises);
-  log.debug(`bedrock build: generated kz.png`);
+  log.debug(`generated kz.png`);
   return kz;
 };
 
@@ -164,8 +165,9 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
   const image = await Jimp.read(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/painting/${name}.png`);
   const scale = (h * PAINTING_SIZE) / image.getHeight();
   if (scale !== 1) image.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
-  if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`bedrock build: invalid painting dimensions for ${name}`);
+  if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`invalid painting dimensions for ${name}`);
   await kz.blit(image, x * PAINTING_SIZE, y * PAINTING_SIZE);
+  log.debug(`added ${name} to kz`);
 };
 
 module.exports = convertToBedrock;

@@ -1,10 +1,11 @@
 const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
-const log = require('loglevel');
 
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
-const { getOverlayDirectories, all } = require('./utils');
+const { getOverlayDirectories, all, logger } = require('./utils');
+
+const log = logger.child({ prefix: 'validate' });
 
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
@@ -24,7 +25,7 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
         ((folder === 'mono' && monoFiles.includes(fileName)) || (folder === 'stereo' && stereoFiles.includes(fileName)))
       ) {
         usedFiles.add(fileName);
-        log.debug(`file exists: ${path}`);
+        log.silly(`file exists: ${path}`);
       } else {
         throw new Error(`sound does not exist: ${path}`);
       }
@@ -53,7 +54,7 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
       path: ffprobePath,
     }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
-        log.debug(`correct number of audio channels for: ${path}`);
+        log.silly(`correct number of audio channels for: ${path}`);
       } else {
         throw new Error(`incorrect number of audio channels for: ${path}`);
       }
@@ -74,7 +75,7 @@ const validateOverlaysExist = async () => {
       if (usedDirs.has(directory)) {
         log.warn(`duplicate overlay: ${directory}`);
       } else {
-        log.debug(`overlay exists: ${directory}`);
+        log.silly(`overlay exists: ${directory}`);
       }
       usedDirs.add(directory);
     } else {
@@ -110,7 +111,6 @@ const validate = async () => {
 };
 
 const run = async () => {
-  log.setLevel(process.env.LOG_LEVEL ?? log.levels.INFO);
   process.exit(await validate());
 };
 
