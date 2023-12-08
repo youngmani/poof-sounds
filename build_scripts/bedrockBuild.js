@@ -33,87 +33,16 @@ const convertToBedrock = async (tempDir, version) => {
     kz.writeAsync(`${tempDir}/bedrock/textures/painting/kz.png`),
   ];
 
-  const javaSounds = JSON.parse(soundsJson);
-  const javaSoundKeys = Object.keys(javaSounds);
-  javaSoundKeys.forEach(key => {
-    if (soundsMap[key]) {
-      const sound = javaSounds[key];
-      delete javaSounds[key];
-
-      const { additionalNames = [], name, pitchAdjust, poofName } = soundsMap[key];
-      const newSoundName = poofName ?? name;
-      if (newSoundName) {
-        sound.sounds = sound.sounds.map(s => {
-          s.name = `sounds/${s.name.replace(':', '/')}`;
-          if (pitchAdjust) {
-            s.pitch ??= 1;
-            s.pitch *= pitchAdjust;
-          }
-          return s;
-        });
-        delete sound.replace;
-
-        [newSoundName, ...additionalNames].forEach(name => {
-          javaSounds[name] = sound;
-          log.debug(`converting ${key} to ${name}`);
-        });
-      } else {
-        log.verbose(`skipping java sound ${key}`);
-      }
-    } else {
-      log.warn(`unmapped java sound ${key}`);
-      delete javaSounds[key];
-    }
-  });
-  const bedrockSounds = {
-    format_version: '1.14.0',
-    sound_definitions: javaSounds,
-  };
+  const bedrockSounds = generateSoundDefinitions(soundsJson);
   promises.push(
     fs.writeFile(`${tempDir}/bedrock/sounds/sound_definitions.json`, JSON.stringify(bedrockSounds, null, 2))
   );
 
-  const splashes = splashesTxt
-    .split('\n')
-    .map(text => text.trim())
-    .filter(text => text);
-  splashes.push('poof sounds on bedrock!');
-  const bedrockSplashes = { splashes };
+  const bedrockSplashes = generateSplashes(splashesTxt);
   promises.push(fs.writeFile(`${tempDir}/bedrock/splashes.json`, JSON.stringify(bedrockSplashes, null, 2)));
 
   const isBeta = !!semver.prerelease(version);
-  const versionArr = [
-    semver.major(version),
-    semver.minor(version),
-    isBeta
-      ? 1000 * semver.patch(version) + (semver.prerelease(version).find(i => typeof i === 'number') ?? 0)
-      : semver.patch(version),
-  ];
-  log.info(`using version ${versionArr}, beta=${isBeta}`);
-
-  const manifest = {
-    format_version: 2,
-    header: {
-      name: `poof-sounds${isBeta ? '-beta' : ''}`,
-      description: `Poofesure Minecraft Sounds\nv${version} by youngmani`,
-      uuid: isBeta ? '9afbe638-2cd4-44c4-8d8c-f40ebbe1cf88' : '6c107856-6a56-460a-a5f9-59aee383c1b8',
-      version: versionArr,
-      min_engine_version: [1, 14, 0],
-    },
-    modules: [
-      {
-        type: 'resources',
-        uuid: isBeta ? '5c0c66e8-d410-4f5d-ad00-5d14f9949655' : '0d68d1b5-b211-4c59-952d-eb6e8129983b',
-        version: versionArr,
-      },
-    ],
-    metadata: {
-      authors: ['youngmani'],
-      license: 'CC0',
-      url: 'https://youngmani.github.io/poof-sounds/',
-    },
-  };
-
+  const manifest = generateManifest(version, isBeta);
   promises.push(fs.writeFile(`${tempDir}/bedrock/manifest.json`, JSON.stringify(manifest, null, 2)));
 
   await all(promises);
@@ -169,6 +98,86 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
   if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`invalid painting dimensions for ${name}`);
   await kz.blit(image, x * PAINTING_SIZE, y * PAINTING_SIZE);
   log.debug(`added ${name} to kz`);
+};
+
+const generateSoundDefinitions = soundsJson => {
+  const javaSounds = JSON.parse(soundsJson);
+  const definitions = {};
+  Object.keys(javaSounds).forEach(key => {
+    if (soundsMap[key]) {
+      const { additionalNames = [], name, pitchAdjust, poofName, propOverrides = {} } = soundsMap[key];
+      const sound = { ...javaSounds[key], ...propOverrides };
+
+      const newSoundName = poofName ?? name;
+      if (newSoundName) {
+        sound.sounds = sound.sounds.map(s => {
+          s.name = `sounds/${s.name.replace(':', '/')}`;
+          if (pitchAdjust) {
+            s.pitch ??= 1;
+            s.pitch *= pitchAdjust;
+          }
+          return s;
+        });
+        delete sound.replace;
+
+        [newSoundName, ...additionalNames].forEach(name => {
+          definitions[name] = sound;
+          log.debug(`converting ${key} to ${name}`);
+        });
+      } else {
+        log.verbose(`skipping java sound ${key}`);
+      }
+    } else {
+      log.warn(`unmapped java sound ${key}`);
+    }
+  });
+  return {
+    format_version: '1.14.0',
+    sound_definitions: definitions,
+  };
+};
+
+const generateSplashes = splashesTxt => {
+  const splashes = splashesTxt
+    .split('\n')
+    .map(text => text.trim())
+    .filter(text => text);
+  splashes.push('poof sounds on bedrock!');
+  return { splashes };
+};
+
+const generateManifest = (version, isBeta) => {
+  const versionArr = [
+    semver.major(version),
+    semver.minor(version),
+    isBeta
+      ? 1000 * semver.patch(version) + (semver.prerelease(version).find(i => typeof i === 'number') ?? 0)
+      : semver.patch(version),
+  ];
+  log.info(`using version ${versionArr}, beta=${isBeta}`);
+
+  return {
+    format_version: 2,
+    header: {
+      name: `poof-sounds${isBeta ? '-beta' : ''}`,
+      description: `Poofesure Minecraft Sounds\nv${version} by youngmani`,
+      uuid: isBeta ? '9afbe638-2cd4-44c4-8d8c-f40ebbe1cf88' : '6c107856-6a56-460a-a5f9-59aee383c1b8',
+      version: versionArr,
+      min_engine_version: [1, 14, 0],
+    },
+    modules: [
+      {
+        type: 'resources',
+        uuid: isBeta ? '5c0c66e8-d410-4f5d-ad00-5d14f9949655' : '0d68d1b5-b211-4c59-952d-eb6e8129983b',
+        version: versionArr,
+      },
+    ],
+    metadata: {
+      authors: ['youngmani'],
+      license: 'CC0',
+      url: 'https://youngmani.github.io/poof-sounds/',
+    },
+  };
 };
 
 module.exports = convertToBedrock;

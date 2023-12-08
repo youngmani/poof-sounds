@@ -45,6 +45,9 @@ module.exports = {
     name: 'random.fuse',
     /* prevent conflict with random.fuse which is used for tnt */
     poofName: 'poofsounds.creeper.sss',
+    propOverrides: {
+      category: 'block',
+    },
   },
   'entity.donkey.ambient': {
     name: 'mob.horse.donkey.idle',
