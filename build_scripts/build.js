@@ -18,6 +18,7 @@ const build = async version => {
       throw Error('invalid version');
     }
     [tempDir] = await all([fs.mkdtemp('temp-'), fs.mkdir(TARGET_DIR, { recursive: true })]);
+    log.verbose(`building with temp dir ${tempDir}`);
     await all([buildZip(tempDir, version), convertToBedrock(tempDir, version)]);
   } catch (error) {
     log.error(error);
@@ -25,10 +26,13 @@ const build = async version => {
     return 1;
   } finally {
     if (tempDir) {
-      await fs.rm(tempDir, { recursive: true, force: true }).catch(error => {
+      try {
+        await fs.rm(tempDir, { recursive: true, force: true });
+        log.verbose(`cleaned up temp dir ${tempDir}`);
+      } catch (error) {
         log.warn(error);
         log.warn(`failed to clean up temp dir ${tempDir}`);
-      });
+      }
     }
   }
   log.info('end build');

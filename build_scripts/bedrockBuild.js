@@ -5,7 +5,7 @@ const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
-const { all, logger } = require('./utils');
+const { all, logger, getSplashes } = require('./utils');
 
 const PAINTING_SIZE = 128;
 
@@ -14,7 +14,7 @@ const log = logger.child({ prefix: 'bedrock build' });
 const convertToBedrock = async (tempDir, version) => {
   const [soundsJson, splashesTxt, kz] = await all([
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
-    fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`),
+    getSplashes(version),
     generateKz(),
     fs.cp(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, `${tempDir}/bedrock/sounds/${POOF_NAMESPACE}`, {
       recursive: true,
@@ -74,9 +74,10 @@ const convertToBedrock = async (tempDir, version) => {
   );
 
   const splashes = splashesTxt
-    .toString()
     .split('\n')
-    .map(text => text.trim());
+    .map(text => text.trim())
+    .filter(text => text);
+  splashes.push('poof sounds on bedrock!');
   const bedrockSplashes = { splashes };
   promises.push(fs.writeFile(`${tempDir}/bedrock/splashes.json`, JSON.stringify(bedrockSplashes, null, 2)));
 

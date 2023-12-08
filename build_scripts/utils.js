@@ -1,5 +1,8 @@
 const fs = require('fs/promises');
 const winston = require('winston');
+const semver = require('semver');
+
+const { BASE_PACK_DIR, MC_NAMESPACE } = require('./constants');
 
 const all = async promises => {
   const results = await Promise.allSettled(promises);
@@ -14,6 +17,11 @@ const all = async promises => {
 const getOverlayDirectories = async () => {
   const files = await fs.readdir('.');
   return files.filter(file => file.startsWith('overlay_'));
+};
+
+const getSplashes = async version => {
+  const splashes = await fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`);
+  return splashes.toString() + `\npoof sounds v${version}\npoof sounds version ${semver.major(version)}!`;
 };
 
 const logFormat = winston.format.printf(info => {
@@ -44,5 +52,6 @@ const logger = winston.createLogger({
 module.exports = {
   all,
   getOverlayDirectories,
+  getSplashes,
   logger,
 };
