@@ -639,6 +639,9 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/pillagermumble"
+      },
+      {
+        "name": "poof-sounds:mono/pillagermumble2"
       }
     ],
     "subtitle": "pillager mumble"
