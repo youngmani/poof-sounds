@@ -1,18 +1,20 @@
 {
   "name": "poof-sounds",
-  "version": "3.7.1",
+  "version": "4.0.0-2",
   "description": "build scripts for poof sounds",
   "scripts": {
-    "build": "npm run validate && node build_scripts/build.js",
-    "build:debug": "npm run validate:debug && node build_scripts/build.js debug",
-    "validate": "node build_scripts/validate.js",
-    "validate:debug": "node build_scripts/validate.js debug"
+    "build": "node build_scripts/build.js",
+    "build:beta": "node build_scripts/build.js beta",
+    "preversion": "npm run validate",
+    "validate": "node build_scripts/validate.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.10",
     "ffprobe": "^1.1.2",
     "ffprobe-static": "^3.1.0",
-    "loglevel": "^1.8.1"
+    "jimp": "^0.22.10",
+    "semver": "^7.5.4",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
