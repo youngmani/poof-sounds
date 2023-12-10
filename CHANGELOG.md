@@ -6,22 +6,36 @@ title: Changelog
 
 # Changelog
 
+What's new in every version of **poof sounds**!
+
+## [Version 4.0.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.0.0) - 12/10/2023
+
+- add a new villager voice line
+- add a new variant of a sound
+- add custom painting textures
+- add more splash texts
+- adjust distribution of villager and wandering trader voice lines
+- clean up background noise in some sounds
+- (Java Edition only) improve sound mappings to be more consistent with the original game sounds
+- (Java Edition only) move sound files to namespaced folder (technical change only)
+- (Bedrock Edition only) override certain sound mappings to prevent custom sounds from playing for the wrong events
+
 ## [Version 3.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.1) - 11/28/2023
 
-- (Java Edition only) update resource pack version to be compatible with 1.20.3 prereleases
+- (Java Edition only) update resource pack version to be compatible with 1.20.3 prereleases and 1.20.3
 - add a new variant for a sound
 - update a subtitle
 
 ## [Version 3.7.0](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.0) - 11/16/2023
 
-- (Java Edition only) update resource pack version to be compatible with newer 1.20.3 snapshots (up to 23w46a)
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.3 snapshots
 - add a new sound for a mob
 - clean up a sound by combining it with the original game sound
 - update voice line for burning to be different from drowning/freezing
 
 ## [Version 3.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v3.6.0) - 10/25/2023
 
-- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.2 and 1.20.3 snapshots (up to 23w41a)
+- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.2 and 1.20.3 snapshots
 - use container sound for a new container
 - combine another sound with the original game sound
 - (Bedrock Edition only) use dedicated Wither Skeleton sound for version 1.20.40
