@@ -1028,7 +1028,7 @@
       {
         "name": "poof-sounds:mono/fuckallofyou",
         "volume": 0.8,
-        "weight": 2
+        "weight": 3
       },
       {
         "name": "poof-sounds:mono/fuckingassholes",
@@ -1053,7 +1053,7 @@
       {
         "name": "poof-sounds:mono/gottapoop3",
         "volume": 0.95,
-        "weight": 7
+        "weight": 6
       },
       {
         "name": "poof-sounds:mono/luigi",
@@ -1073,7 +1073,7 @@
       {
         "name": "poof-sounds:mono/pooped",
         "volume": 0.99,
-        "weight": 4
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/screaming",
@@ -1213,37 +1213,40 @@
       {
         "name": "poof-sounds:mono/balls",
         "volume": 0.9,
-        "weight": 3
+        "weight": 9
       },
       {
         "name": "poof-sounds:mono/come",
-        "weight": 3
+        "weight": 9
       },
       {
         "name": "poof-sounds:mono/eatmyass2",
-        "weight": 3
+        "weight": 10
       },
       {
         "name": "poof-sounds:mono/fmeinthea",
-        "weight": 2
+        "weight": 8
       },
       {
-        "name": "poof-sounds:mono/licker"
+        "name": "poof-sounds:mono/licker",
+        "weight": 7
       },
       {
         "name": "poof-sounds:mono/nose",
-        "volume": 0.7
+        "volume": 0.7,
+        "weight": 7
       },
       {
-        "name": "poof-sounds:mono/pinky1"
-      },
-      {
-        "name": "poof-sounds:mono/pinky2",
+        "name": "poof-sounds:mono/pinky1",
         "weight": 2
       },
       {
+        "name": "poof-sounds:mono/pinky2",
+        "weight": 6
+      },
+      {
         "name": "poof-sounds:mono/stigma",
-        "weight": 3
+        "weight": 8
       }
     ],
     "subtitle": "wandering trader sounds"
