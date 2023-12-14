@@ -32,6 +32,9 @@ module.exports = {
   'block.shulker_box.open': {
     name: 'random.shulkerboxopen',
   },
+  'entity.blaze.shoot': {
+    name: 'mob.blaze.shoot',
+  },
   'entity.cat.ambient': {
     name: 'mob.cat.meow',
   },

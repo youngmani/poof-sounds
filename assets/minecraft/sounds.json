@@ -154,6 +154,21 @@
     ],
     "subtitle": "putthatinshulkerbox"
   },
+  "entity.blaze.shoot": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/blazeshoot1"
+      },
+      {
+        "name": "poof-sounds:mono/blazeshoot2"
+      },
+      {
+        "name": "poof-sounds:mono/blazeshoot3"
+      }
+    ],
+    "subtitle": "blaze choo"
+  },
   "entity.cat.ambient": {
     "replace": true,
     "sounds": [
