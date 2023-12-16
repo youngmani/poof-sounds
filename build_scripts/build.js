@@ -3,7 +3,6 @@ const semver = require('semver');
 
 const buildZip = require('./javaBuild');
 const convertToBedrock = require('./bedrockBuild');
-const validate = require('./validate');
 
 const { TARGET_DIR } = require('./constants');
 const { all, logger } = require('./utils');
@@ -41,10 +40,10 @@ const build = async version => {
 
 const run = async () => {
   let version = semver.clean(process.env.npm_package_version);
-  if (process.argv.includes('beta')) {
+  if (process.env.IS_RELEASE?.toLowerCase() !== 'true') {
     version = semver.inc(version, 'prerelease');
   }
-  process.exit((await validate()) || (await build(version)));
+  process.exit(await build(version));
 };
 
 run();

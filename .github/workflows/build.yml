@@ -17,10 +17,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - run: npm ci
-      - if: env.IS_RELEASE == 'true'
-        run: npm run build
-      - if: env.IS_RELEASE == 'false'
-        run: npm run build:beta
+      - run: npm run build
       - name: Draft release
         if: env.IS_RELEASE == 'true'
         uses: ncipollo/release-action@v1

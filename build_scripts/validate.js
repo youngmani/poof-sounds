@@ -114,8 +114,4 @@ const run = async () => {
   process.exit(await validate());
 };
 
-if (!module?.parent) {
-  run();
-}
-
-module.exports = validate;
+run();
