@@ -236,6 +236,12 @@ module.exports = {
   'entity.witch.ambient': {
     name: 'mob.witch.ambient',
   },
+  'entity.wither.death': {
+    name: 'mob.wither.death',
+  },
+  'entity.wither.spawn': {
+    name: 'mob.wither.spawn',
+  },
   'entity.wither_skeleton.ambient': {
     name: 'entity.wither_skeleton.ambient',
   },

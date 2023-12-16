@@ -1356,6 +1356,24 @@
     ],
     "subtitle": "witch giggle hehehehe"
   },
+  "entity.wither.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/witherdead"
+      }
+    ],
+    "subtitle": "the wither is dead"
+  },
+  "entity.wither.spawn": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:stereo/witherspawn"
+      }
+    ],
+    "subtitle": "the scary wither has been spawned"
+  },
   "entity.wither_skeleton.ambient": {
     "replace": true,
     "sounds": [
