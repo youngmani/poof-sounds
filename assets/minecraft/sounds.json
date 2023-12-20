@@ -562,19 +562,28 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
+        "volume": 1.1,
         "weight": 1
       },
       {
         "name": "poof-sounds:mono/oink1",
+        "volume": 1.1,
         "weight": 10
       },
       {
         "name": "poof-sounds:mono/oink2",
+        "volume": 1.1,
         "weight": 7
       },
       {
         "name": "poof-sounds:mono/oink3",
+        "volume": 1.1,
         "weight": 9
+      },
+      {
+        "name": "poof-sounds:mono/peppapig",
+        "volume": 1.1,
+        "weight": 1
       }
     ],
     "subtitle": "oink"
@@ -584,14 +593,17 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/oink1",
+        "volume": 1.1,
         "weight": 10
       },
       {
         "name": "poof-sounds:mono/oink2",
+        "volume": 1.1,
         "weight": 7
       },
       {
         "name": "poof-sounds:mono/oink3",
+        "volume": 1.1,
         "weight": 9
       }
     ],
@@ -603,16 +615,19 @@
       {
         "name": "poof-sounds:mono/oink1",
         "pitch": 0.85,
+        "volume": 1.1,
         "weight": 10
       },
       {
         "name": "poof-sounds:mono/oink2",
         "pitch": 0.85,
+        "volume": 1.1,
         "weight": 4
       },
       {
         "name": "poof-sounds:mono/oink3",
         "pitch": 0.85,
+        "volume": 1.1,
         "weight": 12
       }
     ],
@@ -634,16 +649,19 @@
       {
         "name": "poof-sounds:mono/oink1",
         "pitch": 0.7,
+        "volume": 1.1,
         "weight": 10
       },
       {
         "name": "poof-sounds:mono/oink2",
         "pitch": 0.7,
+        "volume": 1.1,
         "weight": 4
       },
       {
         "name": "poof-sounds:mono/oink3",
         "pitch": 0.7,
+        "volume": 1.1,
         "weight": 12
       }
     ],
