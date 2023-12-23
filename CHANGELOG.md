@@ -8,6 +8,12 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.1.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.1.0) - 12/22/2023
+
+- add new sounds for a couple mobs
+- add a new variant of pig sound
+- adjust volume and remove background sound from existing pig sounds
+
 ## [Version 4.0.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.0.0) - 12/10/2023
 
 - add a new villager voice line
