@@ -563,27 +563,27 @@
       {
         "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
         "volume": 1.1,
-        "weight": 1
+        "weight": 2
       },
       {
         "name": "poof-sounds:mono/oink1",
         "volume": 1.1,
-        "weight": 10
+        "weight": 20
       },
       {
         "name": "poof-sounds:mono/oink2",
         "volume": 1.1,
-        "weight": 7
+        "weight": 14
       },
       {
         "name": "poof-sounds:mono/oink3",
         "volume": 1.1,
-        "weight": 9
+        "weight": 18
       },
       {
         "name": "poof-sounds:mono/peppapig",
         "volume": 1.1,
-        "weight": 1
+        "weight": 3
       }
     ],
     "subtitle": "oink"
@@ -693,11 +693,13 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/burp",
-        "pitch": 1.05
+        "pitch": 1.05,
+        "weight": 2
       },
       {
         "name": "poof-sounds:mono/burp2",
-        "pitch": 1.05
+        "pitch": 1.05,
+        "weight": 3
       }
     ],
     "subtitle": "excuse you"
