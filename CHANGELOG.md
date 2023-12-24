@@ -8,6 +8,14 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.2.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.2.0) - 12/23/2023
+
+- add a new sound for a mob
+- trim silence from sound clips to better sync sounds to gameplay
+- slightly adjust weights for a couple sounds
+- reduce background noise in a sound
+- update wandering trader subtitles
+
 ## [Version 4.1.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.1.0) - 12/22/2023
 
 - add new sounds for a couple mobs
