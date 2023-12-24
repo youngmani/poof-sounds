@@ -1296,7 +1296,7 @@
         "weight": 8
       }
     ],
-    "subtitle": "wandering trader sounds"
+    "subtitle": "trader joe sounds"
   },
   "entity.wandering_trader.death": {
     "replace": true,
@@ -1306,7 +1306,7 @@
         "volume": 0.9
       }
     ],
-    "subtitle": "i can't believe you killed a wandering trader"
+    "subtitle": "i can't believe you killed a trader joe"
   },
   "entity.wandering_trader.hurt": {
     "replace": true,
@@ -1316,7 +1316,7 @@
         "volume": 0.9
       }
     ],
-    "subtitle": "wandering trader hurt D:"
+    "subtitle": "trader joe hurt D:"
   },
   "entity.wandering_trader.no": {
     "replace": true,
@@ -1335,7 +1335,7 @@
         "weight": 3
       }
     ],
-    "subtitle": "wandering trader says fuck you"
+    "subtitle": "trader joe says fuck you"
   },
   "entity.wandering_trader.trade": {
     "replace": true,
@@ -1347,7 +1347,7 @@
         "name": "poof-sounds:mono/whipnaenae"
       }
     ],
-    "subtitle": "wandering trader trading"
+    "subtitle": "trader joe trading"
   },
   "entity.wandering_trader.yes": {
     "replace": true,
@@ -1368,7 +1368,7 @@
         "name": "poof-sounds:mono/yes2"
       }
     ],
-    "subtitle": "wandering trader says YES"
+    "subtitle": "trader joe says YES"
   },
   "entity.witch.ambient": {
     "replace": true,
