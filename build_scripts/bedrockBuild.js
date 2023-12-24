@@ -121,8 +121,12 @@ const generateSoundDefinitions = soundsJson => {
         delete sound.replace;
 
         [newSoundName, ...additionalNames].forEach(name => {
-          definitions[name] = sound;
-          log.debug(`converting ${key} to ${name}`);
+          if (!definitions[name]) {
+            definitions[name] = sound;
+            log.debug(`converting ${key} to ${name}`);
+          } else {
+            log.warn(`${name} already mapped`);
+          }
         });
       } else {
         log.verbose(`skipping java sound ${key}`);
