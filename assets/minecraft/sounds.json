@@ -513,6 +513,15 @@
     ],
     "subtitle": "thunda"
   },
+  "entity.llama.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/llama1"
+      }
+    ],
+    "subtitle": "llama duh"
+  },
   "entity.ocelot.ambient": {
     "replace": true,
     "sounds": [

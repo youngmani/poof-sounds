@@ -97,6 +97,9 @@ module.exports = {
     name: 'ambient.weather.thunder',
     pitchAdjust: 1.05,
   },
+  'entity.llama.ambient': {
+    name: 'mob.llama.idle',
+  },
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
   },
