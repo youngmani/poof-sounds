@@ -4,7 +4,6 @@ about: Suggest a new sound for the resource pack!
 title: 'Sound request: [sound name]'
 labels: enhancement
 assignees: youngmani
-
 ---
 
 **Describe the sound**

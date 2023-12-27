@@ -4,7 +4,6 @@ about: Report an issue with the resource pack
 title: 'Bug report: [short description]'
 labels: bug
 assignees: youngmani
-
 ---
 
 **Describe the bug**
