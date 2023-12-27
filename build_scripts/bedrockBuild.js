@@ -111,6 +111,9 @@ const generateSoundDefinitions = soundsJson => {
       const newSoundName = poofName ?? name;
       if (newSoundName) {
         sound.sounds = sound.sounds.map(s => {
+          if (typeof s === 'string') {
+            s = { name: s };
+          }
           s.name = `sounds/${s.name.replace(':', '/')}`;
           if (pitchAdjust) {
             s.pitch ??= 1;

@@ -13,23 +13,26 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const soundsJson = await fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`);
   const sounds = JSON.parse(soundsJson);
   Object.entries(sounds).forEach(([key, sound]) => {
-    sound.sounds.forEach(({ name }) => {
-      const [namespace, path] = name.split(':');
-      const [folder, soundName] = path?.split('/') ?? [];
-      const fileName = `${soundName}.ogg`;
-      if (usedFiles.has(fileName)) {
-        return;
-      }
-      if (
-        namespace === POOF_NAMESPACE &&
-        ((folder === 'mono' && monoFiles.includes(fileName)) || (folder === 'stereo' && stereoFiles.includes(fileName)))
-      ) {
-        usedFiles.add(fileName);
-        log.silly(`file exists: ${path}`);
-      } else {
-        throw new Error(`sound does not exist: ${path}`);
-      }
-    });
+    sound.sounds
+      .map(s => (typeof s === 'string' ? { name: s } : s))
+      .forEach(({ name }) => {
+        const [namespace, path] = name.split(':');
+        const [folder, soundName] = path?.split('/') ?? [];
+        const fileName = `${soundName}.ogg`;
+        if (usedFiles.has(fileName)) {
+          return;
+        }
+        if (
+          namespace === POOF_NAMESPACE &&
+          ((folder === 'mono' && monoFiles.includes(fileName)) ||
+            (folder === 'stereo' && stereoFiles.includes(fileName)))
+        ) {
+          usedFiles.add(fileName);
+          log.silly(`file exists: ${path}`);
+        } else {
+          throw new Error(`sound does not exist: ${path}`);
+        }
+      });
     if (!sound.replace) {
       log.warn(`replace not set on sound for ${key}`);
     }
