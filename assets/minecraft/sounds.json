@@ -27,14 +27,7 @@
   },
   "block.barrel.open": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/barrelopen1"
-      },
-      {
-        "name": "poof-sounds:mono/barrelopen2"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/barrelopen1", "poof-sounds:mono/barrelopen2"],
     "subtitle": "putthatinbarrel"
   },
   "block.bell.use": {
@@ -64,58 +57,30 @@
   },
   "block.chest.open": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/chestopen1"
-      },
-      {
-        "name": "poof-sounds:mono/chestopen2"
-      },
-      {
-        "name": "poof-sounds:mono/chestopen3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/chestopen1", "poof-sounds:mono/chestopen2", "poof-sounds:mono/chestopen3"],
     "subtitle": "putthatinchest"
   },
   "block.decorated_pot.insert": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/potinsert1"
-      },
-      {
-        "name": "poof-sounds:mono/potinsert2"
-      },
-      {
-        "name": "poof-sounds:mono/potinsert3"
-      },
-      {
-        "name": "poof-sounds:mono/potinsert4"
-      }
+      "poof-sounds:mono/potinsert1",
+      "poof-sounds:mono/potinsert2",
+      "poof-sounds:mono/potinsert3",
+      "poof-sounds:mono/potinsert4"
     ],
     "subtitle": "putthatinpot"
   },
   "block.end_portal.spawn": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:stereo/opened"
-      }
-    ],
+    "sounds": ["poof-sounds:stereo/opened"],
     "subtitle": "nice you opened the end portal"
   },
   "block.ender_chest.open": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/enderchestopen1"
-      },
-      {
-        "name": "poof-sounds:mono/enderchestopen2"
-      },
-      {
-        "name": "poof-sounds:mono/enderchestopen3"
-      }
+      "poof-sounds:mono/enderchestopen1",
+      "poof-sounds:mono/enderchestopen2",
+      "poof-sounds:mono/enderchestopen3"
     ],
     "subtitle": "putthatinenderchest"
   },
@@ -142,31 +107,15 @@
   "block.shulker_box.open": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/shulkerboxopen1"
-      },
-      {
-        "name": "poof-sounds:mono/shulkerboxopen2"
-      },
-      {
-        "name": "poof-sounds:mono/shulkerboxopen3"
-      }
+      "poof-sounds:mono/shulkerboxopen1",
+      "poof-sounds:mono/shulkerboxopen2",
+      "poof-sounds:mono/shulkerboxopen3"
     ],
     "subtitle": "putthatinshulkerbox"
   },
   "entity.blaze.shoot": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/blazeshoot1"
-      },
-      {
-        "name": "poof-sounds:mono/blazeshoot2"
-      },
-      {
-        "name": "poof-sounds:mono/blazeshoot3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/blazeshoot1", "poof-sounds:mono/blazeshoot2", "poof-sounds:mono/blazeshoot3"],
     "subtitle": "blaze choo"
   },
   "entity.cat.ambient": {
@@ -326,38 +275,22 @@
   },
   "entity.donkey.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/donkey1"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/donkey1"],
     "subtitle": "donkey ee er"
   },
   "entity.ender_dragon.death": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:stereo/win"
-      }
-    ],
+    "sounds": ["poof-sounds:stereo/win"],
     "subtitle": "you beat minecraft good job"
   },
   "entity.enderman.stare": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/nonononono"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/nonononono"],
     "subtitle": "uh oh enderman mad"
   },
   "entity.evoker_fangs.attack": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/fangs"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/fangs"],
     "subtitle": "the evoker summoned floor monsters"
   },
   "entity.frog.ambient": {
@@ -381,18 +314,10 @@
   "entity.generic.eat": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/nomnomshort1"
-      },
-      {
-        "name": "poof-sounds:mono/nomnomshort2"
-      },
-      {
-        "name": "poof-sounds:mono/nomnomshort3"
-      },
-      {
-        "name": "poof-sounds:mono/nomnomshort4"
-      }
+      "poof-sounds:mono/nomnomshort1",
+      "poof-sounds:mono/nomnomshort2",
+      "poof-sounds:mono/nomnomshort3",
+      "poof-sounds:mono/nomnomshort4"
     ],
     "subtitle": "nom nom nom"
   },
@@ -408,11 +333,7 @@
   },
   "entity.ghast.warn": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/ghastshoot"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/ghastshoot"],
     "subtitle": "uh oh a ghast is shooting you"
   },
   "entity.glow_squid.ambient": {
@@ -483,20 +404,12 @@
   },
   "entity.horse.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/neigh"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/neigh"],
     "subtitle": "horse neigh"
   },
   "entity.item.break": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/break"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/break"],
     "subtitle": "fuck tool broke"
   },
   "entity.lightning_bolt.thunder": {
@@ -515,11 +428,7 @@
   },
   "entity.llama.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/llama1"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/llama1"],
     "subtitle": "llama duh"
   },
   "entity.ocelot.ambient": {
@@ -678,23 +587,12 @@
   },
   "entity.pillager.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/pillagermumble"
-      },
-      {
-        "name": "poof-sounds:mono/pillagermumble2"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/pillagermumble", "poof-sounds:mono/pillagermumble2"],
     "subtitle": "pillager mumble"
   },
   "entity.pillager.hurt": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/pillagerhurt"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/pillagerhurt"],
     "subtitle": "pillager hurt"
   },
   "entity.player.burp": {
@@ -729,83 +627,38 @@
   },
   "entity.player.hurt": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/ouch1"
-      },
-      {
-        "name": "poof-sounds:mono/ouch2"
-      },
-      {
-        "name": "poof-sounds:mono/ouch3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/ouch1", "poof-sounds:mono/ouch2", "poof-sounds:mono/ouch3"],
     "subtitle": "ouch"
   },
   "entity.player.hurt_drown": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/drown1"
-      },
-      {
-        "name": "poof-sounds:mono/drown2"
-      },
-      {
-        "name": "poof-sounds:mono/drown3"
-      },
-      {
-        "name": "poof-sounds:mono/drown4"
-      }
+      "poof-sounds:mono/drown1",
+      "poof-sounds:mono/drown2",
+      "poof-sounds:mono/drown3",
+      "poof-sounds:mono/drown4"
     ],
     "subtitle": "uh oh you are drowning"
   },
   "entity.player.hurt_freeze": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/freeze1"
-      },
-      {
-        "name": "poof-sounds:mono/freeze2"
-      },
-      {
-        "name": "poof-sounds:mono/freeze3"
-      },
-      {
-        "name": "poof-sounds:mono/freeze4"
-      },
-      {
-        "name": "poof-sounds:mono/freeze5"
-      }
+      "poof-sounds:mono/freeze1",
+      "poof-sounds:mono/freeze2",
+      "poof-sounds:mono/freeze3",
+      "poof-sounds:mono/freeze4",
+      "poof-sounds:mono/freeze5"
     ],
     "subtitle": "uh oh you are freezing"
   },
   "entity.player.hurt_on_fire": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/fire1"
-      },
-      {
-        "name": "poof-sounds:mono/fire2"
-      },
-      {
-        "name": "poof-sounds:mono/fire3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/fire1", "poof-sounds:mono/fire2", "poof-sounds:mono/fire3"],
     "subtitle": "ow you are burning"
   },
   "entity.player.hurt_sweet_berry_bush": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/bush1"
-      },
-      {
-        "name": "poof-sounds:mono/bush2"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/bush1", "poof-sounds:mono/bush2"],
     "subtitle": "OUCH!! BUSH!!"
   },
   "entity.sheep.ambient": {
@@ -861,26 +714,12 @@
   },
   "entity.shulker.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/shulker"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/shulker"],
     "subtitle": "shulker bleaghh"
   },
   "entity.skeleton.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/skellington1"
-      },
-      {
-        "name": "poof-sounds:mono/skellington2"
-      },
-      {
-        "name": "poof-sounds:mono/skellington3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/skellington1", "poof-sounds:mono/skellington2", "poof-sounds:mono/skellington3"],
     "subtitle": "skellington sound"
   },
   "entity.skeleton.death": {
@@ -904,45 +743,25 @@
   "entity.spider.ambient": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/spider1"
-      },
-      {
-        "name": "poof-sounds:mono/spider2"
-      },
-      {
-        "name": "poof-sounds:mono/spider3"
-      },
-      {
-        "name": "poof-sounds:mono/spider4"
-      }
+      "poof-sounds:mono/spider1",
+      "poof-sounds:mono/spider2",
+      "poof-sounds:mono/spider3",
+      "poof-sounds:mono/spider4"
     ],
     "subtitle": "spider sound"
   },
   "entity.spider.death": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/spiderdie"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/spiderdie"],
     "subtitle": "spider dead"
   },
   "entity.spider.hurt": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/spider1"
-      },
-      {
-        "name": "poof-sounds:mono/spider2"
-      },
-      {
-        "name": "poof-sounds:mono/spider3"
-      },
-      {
-        "name": "poof-sounds:mono/spider4"
-      }
+      "poof-sounds:mono/spider1",
+      "poof-sounds:mono/spider2",
+      "poof-sounds:mono/spider3",
+      "poof-sounds:mono/spider4"
     ],
     "subtitle": "spider ouchie"
   },
@@ -1015,18 +834,10 @@
   "entity.stray.ambient": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/stray1"
-      },
-      {
-        "name": "poof-sounds:mono/stray2"
-      },
-      {
-        "name": "poof-sounds:mono/stray3"
-      },
-      {
-        "name": "poof-sounds:mono/stray4"
-      }
+      "poof-sounds:mono/stray1",
+      "poof-sounds:mono/stray2",
+      "poof-sounds:mono/stray3",
+      "poof-sounds:mono/stray4"
     ],
     "subtitle": "stray skellington sound"
   },
@@ -1199,14 +1010,7 @@
   },
   "entity.villager.trade": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/wawawaw"
-      },
-      {
-        "name": "poof-sounds:mono/whipnaenae"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
     "subtitle": "villager trading"
   },
   "entity.villager.yes": {
@@ -1232,26 +1036,12 @@
   },
   "entity.vindicator.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/vindicator1"
-      },
-      {
-        "name": "poof-sounds:mono/vindicator2"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/vindicator1", "poof-sounds:mono/vindicator2"],
     "subtitle": "vindicator harr"
   },
   "entity.vindicator.death": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/vindicatorkilled1"
-      },
-      {
-        "name": "poof-sounds:mono/vindicatorkilled2"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/vindicatorkilled1", "poof-sounds:mono/vindicatorkilled2"],
     "subtitle": "no way, killed a vindicator!!"
   },
   "entity.wandering_trader.ambient": {
@@ -1339,14 +1129,7 @@
   },
   "entity.wandering_trader.trade": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/wawawaw"
-      },
-      {
-        "name": "poof-sounds:mono/whipnaenae"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
     "subtitle": "trader joe trading"
   },
   "entity.wandering_trader.yes": {
@@ -1372,49 +1155,25 @@
   },
   "entity.witch.ambient": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/witch1"
-      },
-      {
-        "name": "poof-sounds:mono/witch2"
-      },
-      {
-        "name": "poof-sounds:mono/witch3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/witch1", "poof-sounds:mono/witch2", "poof-sounds:mono/witch3"],
     "subtitle": "witch giggle hehehehe"
   },
   "entity.wither.death": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/witherdead"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/witherdead"],
     "subtitle": "the wither is dead"
   },
   "entity.wither.spawn": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:stereo/witherspawn"
-      }
-    ],
+    "sounds": ["poof-sounds:stereo/witherspawn"],
     "subtitle": "the scary wither has been spawned"
   },
   "entity.wither_skeleton.ambient": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/witherskellington1"
-      },
-      {
-        "name": "poof-sounds:mono/witherskellington2"
-      },
-      {
-        "name": "poof-sounds:mono/witherskellington3"
-      }
+      "poof-sounds:mono/witherskellington1",
+      "poof-sounds:mono/witherskellington2",
+      "poof-sounds:mono/witherskellington3"
     ],
     "subtitle": "wither skellington sound"
   },
@@ -1472,92 +1231,48 @@
   },
   "entity.zombie.hurt": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/zombiehurt"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/zombiehurt"],
     "subtitle": "zombie got hurt and made a sound"
   },
   "entity.zombified_piglin.hurt": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/pigmansqueal"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/pigmansqueal"],
     "subtitle": "uh oh zombified piglin got hurt"
   },
   "item.axe.strip": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/strip1"
-      },
-      {
-        "name": "poof-sounds:mono/strip2"
-      },
-      {
-        "name": "poof-sounds:mono/strip3"
-      },
-      {
-        "name": "poof-sounds:mono/strip4"
-      }
+      "poof-sounds:mono/strip1",
+      "poof-sounds:mono/strip2",
+      "poof-sounds:mono/strip3",
+      "poof-sounds:mono/strip4"
     ],
     "subtitle": "FUCK log stripped"
   },
   "item.bundle.insert": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/bundleinsert1"
-      },
-      {
-        "name": "poof-sounds:mono/bundleinsert2"
-      },
-      {
-        "name": "poof-sounds:mono/bundleinsert3"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/bundleinsert1", "poof-sounds:mono/bundleinsert2", "poof-sounds:mono/bundleinsert3"],
     "subtitle": "putthatinbundle"
   },
   "item.shield.block": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/shield1"
-      },
-      {
-        "name": "poof-sounds:mono/shield2"
-      },
-      {
-        "name": "poof-sounds:mono/shield3"
-      },
-      {
-        "name": "poof-sounds:mono/shield4"
-      },
-      {
-        "name": "poof-sounds:mono/shield5"
-      }
+      "poof-sounds:mono/shield1",
+      "poof-sounds:mono/shield2",
+      "poof-sounds:mono/shield3",
+      "poof-sounds:mono/shield4",
+      "poof-sounds:mono/shield5"
     ],
     "subtitle": "blocked by shield"
   },
   "item.shield.break": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/break"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/break"],
     "subtitle": "fuck shield broke"
   },
   "item.totem.use": {
     "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/totem"
-      }
-    ],
+    "sounds": ["poof-sounds:mono/totem"],
     "subtitle": "totem saved your life"
   }
 }
