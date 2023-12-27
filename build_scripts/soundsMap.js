@@ -314,7 +314,7 @@ module.exports = {
   'item.bundle.insert': {
     name: null,
   },
-  "item.elytra.flying": {
+  'item.elytra.flying': {
     name: 'elytra.loop',
   },
   'item.shield.block': {
