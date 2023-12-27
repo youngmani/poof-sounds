@@ -16,6 +16,18 @@ module.exports = {
   'block.bell.use': {
     name: 'block.bell.hit',
   },
+  'block.bubble_column.upwards_ambient': {
+    name: 'bubble.up',
+  },
+  'block.bubble_column.upwards_inside': {
+    name: 'bubble.upinside',
+  },
+  'block.bubble_column.whirlpool_ambient': {
+    name: 'bubble.down',
+  },
+  'block.bubble_column.whirlpool_inside': {
+    name: 'bubble.downinside',
+  },
   'block.chest.open': {
     name: 'random.chestopen',
   },
@@ -37,6 +49,9 @@ module.exports = {
   'block.shulker_box.open': {
     name: 'random.shulkerboxopen',
   },
+  'entity.axolotl.splash': {
+    name: 'mob.axolotl.splash',
+  },
   'entity.blaze.shoot': {
     name: 'mob.blaze.shoot',
   },
@@ -57,6 +72,9 @@ module.exports = {
       category: 'block',
     },
   },
+  'entity.dolphin.splash': {
+    name: 'mob.dolphin.splash',
+  },
   'entity.donkey.ambient': {
     name: 'mob.horse.donkey.idle',
   },
@@ -69,6 +87,10 @@ module.exports = {
   'entity.evoker_fangs.attack': {
     name: 'mob.evocation_fangs.attack',
   },
+  'entity.fishing_bobber.splash': {
+    /* only usage in java, but reused in bedrock */
+    name: 'random.splash',
+  },
   'entity.frog.ambient': {
     name: 'mob.frog.ambient',
   },
@@ -78,6 +100,10 @@ module.exports = {
   'entity.generic.explode': {
     name: 'random.explode',
     pitchAdjust: 2 / 3,
+  },
+  'entity.generic.splash': {
+    /* uses random.splash */
+    name: null,
   },
   'entity.ghast.warn': {
     name: 'mob.ghast.charge',
@@ -93,6 +119,10 @@ module.exports = {
   },
   'entity.horse.ambient': {
     name: 'mob.horse.idle',
+  },
+  'entity.hostile.splash': {
+    /* uses random.splash */
+    name: null,
   },
   'entity.item.break': {
     name: 'random.break',
@@ -150,6 +180,14 @@ module.exports = {
   },
   'entity.player.hurt_sweet_berry_bush': {
     name: 'block.sweet_berry_bush.hurt',
+  },
+  'entity.player.splash': {
+    /* uses random.splash */
+    name: null,
+  },
+  'entity.player.splash.high_speed': {
+    /* no bedrock equivalent */
+    name: null,
   },
   'entity.sheep.ambient': {
     name: 'mob.sheep.say',
@@ -275,6 +313,9 @@ module.exports = {
   },
   'item.bundle.insert': {
     name: null,
+  },
+  "item.elytra.flying": {
+    name: 'elytra.loop',
   },
   'item.shield.block': {
     name: 'item.shield.block',

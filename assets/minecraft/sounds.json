@@ -55,6 +55,78 @@
     ],
     "subtitle": "ding-a-ling"
   },
+  "block.bubble_column.upwards_ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/bubble_up_a1",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_up_a2",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_up_a3",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_up_a4",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_up_a5",
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "bubble (up)"
+  },
+  "block.bubble_column.upwards_inside": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:stereo/bubble_up",
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "inside the bubble (up)"
+  },
+  "block.bubble_column.whirlpool_ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/bubble_down_a1",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_down_a2",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_down_a3",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_down_a4",
+        "volume": 0.6
+      },
+      {
+        "name": "poof-sounds:mono/bubble_down_a5",
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "bubble (down)"
+  },
+  "block.bubble_column.whirlpool_inside": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:stereo/bubble_down",
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "inside the bubble (down)"
+  },
   "block.chest.open": {
     "replace": true,
     "sounds": ["poof-sounds:mono/chestopen1", "poof-sounds:mono/chestopen2", "poof-sounds:mono/chestopen3"],
@@ -112,6 +184,27 @@
       "poof-sounds:mono/shulkerboxopen3"
     ],
     "subtitle": "putthatinshulkerbox"
+  },
+  "entity.axolotl.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/dolphinsplash1",
+        "pitch": 1.2,
+        "volume": 1.8
+      },
+      {
+        "name": "poof-sounds:mono/dolphinsplash2",
+        "pitch": 1.2,
+        "volume": 1.8
+      },
+      {
+        "name": "poof-sounds:mono/dolphinsplash3",
+        "pitch": 1.2,
+        "volume": 1.8
+      }
+    ],
+    "subtitle": "splash (axolotl)"
   },
   "entity.blaze.shoot": {
     "replace": true,
@@ -273,6 +366,24 @@
     ],
     "subtitle": "SSSsss"
   },
+  "entity.dolphin.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/dolphinsplash1",
+        "volume": 2
+      },
+      {
+        "name": "poof-sounds:mono/dolphinsplash2",
+        "volume": 2
+      },
+      {
+        "name": "poof-sounds:mono/dolphinsplash3",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash (dolphin)"
+  },
   "entity.donkey.ambient": {
     "replace": true,
     "sounds": ["poof-sounds:mono/donkey1"],
@@ -292,6 +403,16 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/fangs"],
     "subtitle": "the evoker summoned floor monsters"
+  },
+  "entity.fishing_bobber.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/randomsplash",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash (fishing)"
   },
   "entity.frog.ambient": {
     "replace": true,
@@ -330,6 +451,20 @@
       }
     ],
     "subtitle": "boom"
+  },
+  "entity.generic.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/liquidsplash1",
+        "volume": 2
+      },
+      {
+        "name": "poof-sounds:mono/liquidsplash2",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash"
   },
   "entity.ghast.warn": {
     "replace": true,
@@ -406,6 +541,20 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/neigh"],
     "subtitle": "horse neigh"
+  },
+  "entity.hostile.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/liquidsplash1",
+        "volume": 2
+      },
+      {
+        "name": "poof-sounds:mono/liquidsplash2",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash"
   },
   "entity.item.break": {
     "replace": true,
@@ -660,6 +809,30 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/bush1", "poof-sounds:mono/bush2"],
     "subtitle": "OUCH!! BUSH!!"
+  },
+  "entity.player.splash": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/liquidsplash1",
+        "volume": 2
+      },
+      {
+        "name": "poof-sounds:mono/liquidsplash2",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash"
+  },
+  "entity.player.splash.high_speed": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/bigsplash",
+        "volume": 2
+      }
+    ],
+    "subtitle": "splash (high speed)"
   },
   "entity.sheep.ambient": {
     "replace": true,
@@ -1253,6 +1426,16 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/bundleinsert1", "poof-sounds:mono/bundleinsert2", "poof-sounds:mono/bundleinsert3"],
     "subtitle": "putthatinbundle"
+  },
+  "item.elytra.flying": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:stereo/flying",
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "just flying around"
   },
   "item.shield.block": {
     "replace": true,
