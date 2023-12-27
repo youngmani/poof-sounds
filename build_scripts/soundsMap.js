@@ -3,6 +3,11 @@ module.exports = {
   'block.ancient_debris.break': {
     name: 'dig.ancient_debris',
     pitchAdjust: 11 / 12,
+    /* dig.ancient_debris is also used for placing debris */
+    poofName: 'poofsounds.dabriss.break',
+    propOverrides: {
+      category: 'block',
+    },
   },
   'block.barrel.open': {
     name: 'block.barrel.open',
