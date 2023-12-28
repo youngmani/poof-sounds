@@ -166,7 +166,8 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
-        "pitch": 1.43
+        "pitch": 1.45,
+        "volume": 2
       }
     ],
     "subtitle": "boom (end gateway)"
@@ -432,7 +433,8 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
-        "pitch": 1.05
+        "pitch": 1.05,
+        "volume": 2
       }
     ],
     "subtitle": "boom (dragon fireball)"
@@ -510,7 +512,8 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
-        "pitch": 1.43
+        "pitch": 1.45,
+        "volume": 2
       }
     ],
     "subtitle": "boom"
@@ -644,7 +647,8 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
-        "pitch": 1.66
+        "pitch": 1.6,
+        "volume": 2
       }
     ],
     "subtitle": "boom (lightning)"

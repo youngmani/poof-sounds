@@ -118,7 +118,7 @@ module.exports = {
   },
   'entity.generic.explode': {
     adjustments: {
-      pitch: 7 / 10,
+      pitch: 20 / 29,
     },
     name: 'random.explode',
   },
@@ -155,6 +155,9 @@ module.exports = {
     name: 'random.break',
   },
   'entity.lightning_bolt.impact': {
+    adjustments: {
+      pitch: 11 / 10,
+    },
     name: 'ambient.weather.lightning.impact',
   },
   'entity.lightning_bolt.thunder': {
