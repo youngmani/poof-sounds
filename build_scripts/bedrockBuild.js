@@ -105,7 +105,7 @@ const generateSoundDefinitions = soundsJson => {
   const definitions = {};
   Object.keys(javaSounds).forEach(key => {
     if (soundsMap[key]) {
-      const { additionalNames = [], name, pitchAdjust, poofName, propOverrides = {} } = soundsMap[key];
+      const { additionalNames = [], adjustments = {}, name, poofName, propOverrides = {} } = soundsMap[key];
       const sound = { ...javaSounds[key], ...propOverrides };
 
       const newSoundName = poofName ?? name;
@@ -115,9 +115,12 @@ const generateSoundDefinitions = soundsJson => {
             s = { name: s };
           }
           s.name = `sounds/${s.name.replace(':', '/')}`;
-          if (pitchAdjust) {
-            s.pitch ??= 1;
-            s.pitch *= pitchAdjust;
+          Object.entries(adjustments).forEach(([key, value]) => {
+            s[key] ??= 1;
+            s[key] *= value;
+          });
+          if (Object.keys(s).length === 1 && s.name) {
+            s = s.name;
           }
           return s;
         });

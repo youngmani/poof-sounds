@@ -142,12 +142,34 @@
   "block.decorated_pot.insert": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/potinsert1",
-      "poof-sounds:mono/potinsert2",
-      "poof-sounds:mono/potinsert3",
-      "poof-sounds:mono/potinsert4"
+      {
+        "name": "poof-sounds:mono/potinsert1",
+        "volume": 0.9
+      },
+      {
+        "name": "poof-sounds:mono/potinsert2",
+        "volume": 0.9
+      },
+      {
+        "name": "poof-sounds:mono/potinsert3",
+        "volume": 0.9
+      },
+      {
+        "name": "poof-sounds:mono/potinsert4",
+        "volume": 0.9
+      }
     ],
     "subtitle": "putthatinpot"
+  },
+  "block.end_gateway.spawn": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/explosion1",
+        "pitch": 1.43
+      }
+    ],
+    "subtitle": "boom (end gateway)"
   },
   "block.end_portal.spawn": {
     "replace": true,
@@ -321,14 +343,15 @@
       {
         "name": "poof-sounds:mono/moo",
         "volume": 0.95,
-        "weight": 2
-      },
-      {
-        "name": "poof-sounds:mono/moo2",
         "weight": 3
       },
       {
-        "name": "poof-sounds:mono/moo3"
+        "name": "poof-sounds:mono/moo2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/moo3",
+        "weight": 2
       }
     ],
     "subtitle": "mooo cow"
@@ -404,12 +427,31 @@
     ],
     "subtitle": "donkey ee er"
   },
+  "entity.dragon_fireball.explode": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/explosion1",
+        "pitch": 1.05
+      }
+    ],
+    "subtitle": "boom (dragon fireball)"
+  },
   "entity.ender_dragon.death": {
     "replace": true,
     "sounds": [
       "poof-sounds:stereo/win"
     ],
     "subtitle": "you beat minecraft good job"
+  },
+  "entity.ender_dragon.shoot": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/blazeshoot1",
+      "poof-sounds:mono/blazeshoot2",
+      "poof-sounds:mono/blazeshoot3"
+    ],
+    "subtitle": "ender dragon choo"
   },
   "entity.enderman.stare": {
     "replace": true,
@@ -468,7 +510,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
-        "pitch": 1.5
+        "pitch": 1.43
       }
     ],
     "subtitle": "boom"
@@ -486,6 +528,15 @@
       }
     ],
     "subtitle": "splash"
+  },
+  "entity.ghast.shoot": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/blazeshoot1",
+      "poof-sounds:mono/blazeshoot2",
+      "poof-sounds:mono/blazeshoot3"
+    ],
+    "subtitle": "ghast choo"
   },
   "entity.ghast.warn": {
     "replace": true,
@@ -587,6 +638,16 @@
       "poof-sounds:mono/break"
     ],
     "subtitle": "fuck tool broke"
+  },
+  "entity.lightning_bolt.impact": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/explosion1",
+        "pitch": 1.66
+      }
+    ],
+    "subtitle": "boom (lightning)"
   },
   "entity.lightning_bolt.thunder": {
     "replace": true,
@@ -1517,6 +1578,15 @@
       }
     ],
     "subtitle": "just flying around"
+  },
+  "item.firecharge.use": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/blazeshoot1",
+      "poof-sounds:mono/blazeshoot2",
+      "poof-sounds:mono/blazeshoot3"
+    ],
+    "subtitle": "fire charge choo"
   },
   "item.shield.block": {
     "replace": true,

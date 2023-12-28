@@ -1,8 +1,10 @@
 // map java sound names to bedrock and add additional metadata
 module.exports = {
   'block.ancient_debris.break': {
+    adjustments: {
+      pitch: 11 / 12,
+    },
     name: 'dig.ancient_debris',
-    pitchAdjust: 11 / 12,
     /* dig.ancient_debris is also used for placing debris */
     poofName: 'poofsounds.dabriss.break',
     propOverrides: {
@@ -10,8 +12,10 @@ module.exports = {
     },
   },
   'block.barrel.open': {
+    adjustments: {
+      pitch: 20 / 21,
+    },
     name: 'block.barrel.open',
-    pitchAdjust: 1 / 1.05,
   },
   'block.bell.use': {
     name: 'block.bell.hit',
@@ -33,6 +37,10 @@ module.exports = {
   },
   'block.decorated_pot.insert': {
     name: 'block.decorated_pot.insert',
+  },
+  'block.end_gateway.spawn': {
+    /* no bedrock equivalent */
+    name: null,
   },
   'block.end_portal.spawn': {
     name: 'block.end_portal.spawn',
@@ -78,8 +86,19 @@ module.exports = {
   'entity.donkey.ambient': {
     name: 'mob.horse.donkey.idle',
   },
+  'entity.dragon_fireball.explode': {
+    /* no bedrock equivalent */
+    name: null,
+  },
   'entity.ender_dragon.death': {
+    adjustments: {
+      volume: 8,
+    },
     name: 'mob.enderdragon.death',
+  },
+  'entity.ender_dragon.shoot': {
+    /* no bedrock equivalent */
+    name: null,
   },
   'entity.enderman.stare': {
     name: 'mob.endermen.stare',
@@ -98,12 +117,17 @@ module.exports = {
     name: 'random.eat',
   },
   'entity.generic.explode': {
+    adjustments: {
+      pitch: 7 / 10,
+    },
     name: 'random.explode',
-    pitchAdjust: 2 / 3,
   },
   'entity.generic.splash': {
     /* uses random.splash */
     name: null,
+  },
+  'entity.ghast.shoot': {
+    name: 'mob.ghast.fireball',
   },
   'entity.ghast.warn': {
     name: 'mob.ghast.charge',
@@ -125,12 +149,19 @@ module.exports = {
     name: null,
   },
   'entity.item.break': {
+    adjustments: {
+      pitch: 10 / 9,
+    },
     name: 'random.break',
-    pitchAdjust: 1 / 0.9,
+  },
+  'entity.lightning_bolt.impact': {
+    name: 'ambient.weather.lightning.impact',
   },
   'entity.lightning_bolt.thunder': {
+    adjustments: {
+      pitch: 21 / 20,
+    },
     name: 'ambient.weather.thunder',
-    pitchAdjust: 1.05,
   },
   'entity.llama.ambient': {
     name: 'mob.llama.idle',
@@ -308,14 +339,20 @@ module.exports = {
   },
   'item.axe.strip': {
     additionalNames: ['use.stem'],
+    adjustments: {
+      pitch: 12 / 10,
+    },
     name: 'use.wood',
-    pitchAdjust: 1.2,
   },
   'item.bundle.insert': {
     name: null,
   },
   'item.elytra.flying': {
     name: 'elytra.loop',
+  },
+  'item.firecharge.use': {
+    /* no bedrock equivalent */
+    name: null,
   },
   'item.shield.block': {
     name: 'item.shield.block',
