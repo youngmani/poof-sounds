@@ -776,19 +776,19 @@
       {
         "name": "poof-sounds:mono/oink1",
         "pitch": 0.85,
-        "volume": 1.1,
+        "volume": 0.9,
         "weight": 10
       },
       {
         "name": "poof-sounds:mono/oink2",
         "pitch": 0.85,
-        "volume": 1.1,
+        "volume": 0.9,
         "weight": 4
       },
       {
         "name": "poof-sounds:mono/oink3",
         "pitch": 0.85,
-        "volume": 1.1,
+        "volume": 0.9,
         "weight": 12
       }
     ],
@@ -797,10 +797,7 @@
   "entity.piglin.retreat": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/piglinretreat",
-        "volume": 1.5
-      }
+      "poof-sounds:mono/piglinretreat"
     ],
     "subtitle": "piglin retreats wee"
   },
@@ -1521,22 +1518,10 @@
   "entity.zombie.ambient": {
     "replace": true,
     "sounds": [
-      {
-        "name": "poof-sounds:mono/zombie1",
-        "volume": 0.32
-      },
-      {
-        "name": "poof-sounds:mono/zombie2",
-        "volume": 0.85
-      },
-      {
-        "name": "poof-sounds:mono/zombiegroan1",
-        "volume": 0.88
-      },
-      {
-        "name": "poof-sounds:mono/zombiegroan2",
-        "volume": 0.88
-      }
+      "poof-sounds:mono/zombie1",
+      "poof-sounds:mono/zombie2",
+      "poof-sounds:mono/zombiegroan1",
+      "poof-sounds:mono/zombiegroan2"
     ],
     "subtitle": "zombie says bruhhh"
   },
