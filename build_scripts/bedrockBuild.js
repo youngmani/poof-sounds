@@ -97,7 +97,7 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
   if (scale !== 1) image.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
   if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`invalid painting dimensions for ${name}`);
   await kz.blit(image, x * PAINTING_SIZE, y * PAINTING_SIZE);
-  log.debug(`added ${name} to kz`);
+  log.silly(`added ${name} to kz`);
 };
 
 const generateSoundDefinitions = soundsJson => {
