@@ -674,6 +674,13 @@
     ],
     "subtitle": "llama duh"
   },
+  "entity.mule.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/donkey1"
+    ],
+    "subtitle": "mule ee er"
+  },
   "entity.ocelot.ambient": {
     "replace": true,
     "sounds": [

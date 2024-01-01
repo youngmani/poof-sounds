@@ -169,6 +169,10 @@ module.exports = {
   'entity.llama.ambient': {
     name: 'mob.llama.idle',
   },
+  'entity.mule.ambient': {
+    /* bedrock uses donkey sounds for mule */
+    name: null,
+  },
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
   },
