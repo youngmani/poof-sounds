@@ -1038,29 +1038,51 @@
   "entity.spider.ambient": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/spider1",
-      "poof-sounds:mono/spider2",
-      "poof-sounds:mono/spider3",
-      "poof-sounds:mono/spider4"
+      "poof-sounds:mono/spiderhiss1",
+      "poof-sounds:mono/spiderhiss2",
+      "poof-sounds:mono/spiderhiss3"
     ],
-    "subtitle": "spider sound"
+    "subtitle": "spider hiss"
   },
   "entity.spider.death": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/spiderdie"
+      {
+        "name": "poof-sounds:mono/spiderhiss1",
+        "pitch": 0.75
+      }
     ],
     "subtitle": "spider dead"
   },
   "entity.spider.hurt": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/spider1",
-      "poof-sounds:mono/spider2",
-      "poof-sounds:mono/spider3",
-      "poof-sounds:mono/spider4"
+      {
+        "name": "poof-sounds:mono/spiderhiss1",
+        "weight": 2
+      },
+      "poof-sounds:mono/spiderhiss2",
+      "poof-sounds:mono/spiderhiss3"
     ],
     "subtitle": "spider ouchie"
+  },
+  "entity.spider.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/spiderstep1",
+        "volume": 2.5
+      },
+      {
+        "name": "poof-sounds:mono/spiderstep2",
+        "volume": 2.5
+      },
+      {
+        "name": "poof-sounds:mono/spiderstep3",
+        "volume": 2.5
+      }
+    ],
+    "subtitle": "spider walking"
   },
   "entity.squid.ambient": {
     "replace": true,

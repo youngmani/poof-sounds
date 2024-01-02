@@ -257,6 +257,12 @@ module.exports = {
     /* uses mob.spider.say */
     name: null,
   },
+  'entity.spider.step': {
+    adjustments: {
+      volume: 0.5,
+    },
+    name: 'mob.spider.step',
+  },
   'entity.squid.ambient': {
     name: 'mob.squid.ambient',
   },
