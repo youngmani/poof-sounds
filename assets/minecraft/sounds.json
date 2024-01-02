@@ -1002,7 +1002,10 @@
   "entity.shulker.ambient": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/shulker",
+      {
+        "name": "poof-sounds:mono/shulker",
+        "weight": 2
+      },
       "poof-sounds:mono/shulker2",
       "poof-sounds:mono/shulker3"
     ],
