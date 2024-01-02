@@ -67,5 +67,14 @@
         }
       }
     }
+  },
+  "individual_event_sounds": {
+    "events": {
+      "armor.equip_elytra": {
+        "pitch": 1.0,
+        "sound": "poofsounds.equip_elytra",
+        "volume": 1.0
+      }
+    }
   }
 }

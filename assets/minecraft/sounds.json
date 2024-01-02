@@ -1548,6 +1548,18 @@
     ],
     "subtitle": "uh oh zombified piglin got hurt"
   },
+  "item.armor.equip_elytra": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/elytra1",
+      "poof-sounds:mono/elytra2",
+      "poof-sounds:mono/elytra3",
+      "poof-sounds:mono/elytra4",
+      "poof-sounds:mono/elytra5",
+      "poof-sounds:mono/elytra6"
+    ],
+    "subtitle": "got an elytra"
+  },
   "item.axe.strip": {
     "replace": true,
     "sounds": [

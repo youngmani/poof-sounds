@@ -344,6 +344,11 @@ module.exports = {
   'entity.zombified_piglin.hurt': {
     name: 'mob.zombiepig.zpighurt',
   },
+  'item.armor.equip_elytra': {
+    name: null,
+    /* prevent mapping to regular leather armor */
+    poofName: 'poofsounds.equip_elytra',
+  },
   'item.axe.strip': {
     additionalNames: ['use.stem'],
     adjustments: {
