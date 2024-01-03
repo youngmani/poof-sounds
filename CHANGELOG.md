@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.0) - 01/02/2023
+
+- add several new sounds
+- add new variants to a few sounds
+- adjust volume and pitch of a few sounds
+- improve sound mapping of several sounds to be more consistent with the original game sounds
+
 ## [Version 4.2.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.2.0) - 12/23/2023
 
 - add a new sound for a mob
