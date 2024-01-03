@@ -176,6 +176,9 @@ module.exports = {
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
   },
+  'entity.parrot.ambient': {
+    name: 'mob.parrot.idle',
+  },
   'entity.pig.ambient': {
     name: 'mob.pig.say',
   },

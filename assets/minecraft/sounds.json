@@ -725,6 +725,14 @@
     ],
     "subtitle": "meow"
   },
+  "entity.parrot.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/parrot1",
+      "poof-sounds:mono/parrot2"
+    ],
+    "subtitle": "parrot noise"
+  },
   "entity.pig.ambient": {
     "replace": true,
     "sounds": [
