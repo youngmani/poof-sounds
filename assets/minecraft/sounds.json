@@ -1605,6 +1605,18 @@
     ],
     "subtitle": "uh oh zombified piglin got hurt"
   },
+  "item.armor.equip_diamond": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/diamondarmor1",
+      "poof-sounds:mono/diamondarmor2",
+      "poof-sounds:mono/diamondarmor3",
+      "poof-sounds:mono/diamondarmor4",
+      "poof-sounds:mono/diamondarmor5",
+      "poof-sounds:mono/diamondarmor6"
+    ],
+    "subtitle": "diamond armor PogChamp"
+  },
   "item.armor.equip_elytra": {
     "replace": true,
     "sounds": [
