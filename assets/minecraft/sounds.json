@@ -945,17 +945,17 @@
       "poof-sounds:mono/fire1_alt",
       {
         "name": "poof-sounds:mono/fire1",
-        "weight": 14
+        "weight": 9
       },
       "poof-sounds:mono/fire2_alt",
       {
         "name": "poof-sounds:mono/fire2",
-        "weight": 14
+        "weight": 9
       },
       "poof-sounds:mono/fire3_alt",
       {
         "name": "poof-sounds:mono/fire3",
-        "weight": 14
+        "weight": 9
       }
     ],
     "subtitle": "ow you are burning"
