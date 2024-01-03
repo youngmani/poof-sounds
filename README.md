@@ -4,7 +4,7 @@
 
 ![icon](pack.png)
 
-![downloads](https://img.shields.io/github/downloads/youngmani/poof-sounds/total) ![release](https://img.shields.io/github/v/release/youngmani/poof-sounds)
+![release](https://img.shields.io/github/v/release/youngmani/poof-sounds) ![downloads](https://img.shields.io/github/downloads/youngmani/poof-sounds/total)
 
 **poof sounds** is a Minecraft resource pack for Java Edition that replaces in-game sounds with audio clips of Poofesure! [Watch Poofesure play Minecraft with this sound pack here!](https://www.youtube.com/watch?v=0h4PMg7i348) ([and here!](https://www.youtube.com/watch?v=xruD5lhVHwQ))
 
