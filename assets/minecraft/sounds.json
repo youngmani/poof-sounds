@@ -167,6 +167,12 @@
       {
         "name": "poof-sounds:mono/explosion1",
         "pitch": 1.45,
+        "volume": 2,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/explosion2",
+        "pitch": 1.45,
         "volume": 2
       }
     ],
@@ -434,6 +440,12 @@
       {
         "name": "poof-sounds:mono/explosion1",
         "pitch": 1.05,
+        "volume": 2,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/explosion2",
+        "pitch": 1.05,
         "volume": 2
       }
     ],
@@ -512,6 +524,12 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
+        "pitch": 1.45,
+        "volume": 2,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/explosion2",
         "pitch": 1.45,
         "volume": 2
       }
@@ -647,6 +665,12 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/explosion1",
+        "pitch": 1.6,
+        "volume": 2,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/explosion2",
         "pitch": 1.6,
         "volume": 2
       }
