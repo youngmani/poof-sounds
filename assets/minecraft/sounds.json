@@ -942,9 +942,21 @@
   "entity.player.hurt_on_fire": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/fire1",
-      "poof-sounds:mono/fire2",
-      "poof-sounds:mono/fire3"
+      "poof-sounds:mono/fire1_alt",
+      {
+        "name": "poof-sounds:mono/fire1",
+        "weight": 14
+      },
+      "poof-sounds:mono/fire2_alt",
+      {
+        "name": "poof-sounds:mono/fire2",
+        "weight": 14
+      },
+      "poof-sounds:mono/fire3_alt",
+      {
+        "name": "poof-sounds:mono/fire3",
+        "weight": 14
+      }
     ],
     "subtitle": "ow you are burning"
   },
