@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const semver = require('semver');

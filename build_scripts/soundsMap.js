@@ -1,3 +1,5 @@
+'use strict';
+
 // map java sound names to bedrock and add additional metadata
 module.exports = {
   'block.ancient_debris.break': {

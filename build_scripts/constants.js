@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   BASE_PACK_DIR: 'assets',
   MC_NAMESPACE: 'minecraft',

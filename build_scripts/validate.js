@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
