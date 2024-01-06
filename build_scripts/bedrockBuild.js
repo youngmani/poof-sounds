@@ -104,48 +104,48 @@ const generateSoundDefinitions = soundsJson => {
   const javaSounds = JSON.parse(soundsJson);
   const definitions = {};
   Object.keys(javaSounds).forEach(key => {
-    if (soundsMap[key]) {
-      const { additionalNames = [], adjustments = {}, name, poofName, propOverrides = {} } = soundsMap[key];
-      const sound = { ...javaSounds[key], ...propOverrides };
-
-      const newSoundName = poofName ?? name;
-      if (newSoundName) {
-        sound.sounds = sound.sounds.map(s => {
-          if (typeof s === 'string') {
-            s = { name: s };
-          }
-          s.name = `sounds/${s.name.replace(':', '/')}`;
-          Object.entries(adjustments).forEach(([key, value]) => {
-            s[key] ??= 1;
-            s[key] *= value;
-          });
-          if (Object.keys(s).length === 1 && s.name) {
-            s = s.name;
-          }
-          return s;
-        });
-        delete sound.replace;
-
-        [newSoundName, ...additionalNames].forEach(name => {
-          if (!definitions[name]) {
-            definitions[name] = sound;
-            log.debug(`converting ${key} to ${name}`);
-          } else {
-            log.warn(`${name} already mapped`);
-          }
-        });
-      } else {
-        log.verbose(`skipping java sound ${key}`);
-      }
-    } else {
+    if (!soundsMap[key]) {
       log.warn(`unmapped java sound ${key}`);
+      return;
     }
+    const soundMappings = soundsMap[key] instanceof Array ? soundsMap[key] : [soundsMap[key]];
+    if (!soundMappings.length) {
+      log.verbose(`skipping java sound ${key}`);
+      return;
+    }
+    soundMappings.forEach(({ adjustments = {}, name, propOverrides = {} }) => {
+      if (definitions[name]) {
+        log.warn(`${name} already mapped`);
+        return;
+      }
+      const sound = { ...javaSounds[key], ...propOverrides };
+      delete sound.replace;
+      sound.sounds = adjustSounds(sound.sounds, adjustments);
+      definitions[name] = sound;
+      log.debug(`converting ${key} to ${name}`);
+    });
   });
   return {
     format_version: '1.14.0',
     sound_definitions: definitions,
   };
 };
+
+const adjustSounds = (sounds = [], adjustments = {}) =>
+  JSON.parse(JSON.stringify(sounds)).map(s => {
+    if (typeof s === 'string') {
+      s = { name: s };
+    }
+    s.name = `sounds/${s.name.replace(':', '/')}`;
+    Object.entries(adjustments).forEach(([key, value]) => {
+      s[key] ??= 1;
+      s[key] *= value;
+    });
+    if (Object.keys(s).length === 1 && s.name) {
+      s = s.name;
+    }
+    return s;
+  });
 
 const generateSplashes = splashesTxt => {
   const splashes = splashesTxt

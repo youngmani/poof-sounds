@@ -4,9 +4,8 @@ module.exports = {
     adjustments: {
       pitch: 11 / 12,
     },
-    name: 'dig.ancient_debris',
     /* dig.ancient_debris is also used for placing debris */
-    poofName: 'poofsounds.dabriss.break',
+    name: 'poofsounds.dabriss.break',
     propOverrides: {
       category: 'block',
     },
@@ -38,10 +37,9 @@ module.exports = {
   'block.decorated_pot.insert': {
     name: 'block.decorated_pot.insert',
   },
-  'block.end_gateway.spawn': {
+  'block.end_gateway.spawn': [
     /* no bedrock equivalent */
-    name: null,
-  },
+  ],
   'block.end_portal.spawn': {
     name: 'block.end_portal.spawn',
   },
@@ -73,9 +71,8 @@ module.exports = {
     name: 'mob.cow.say',
   },
   'entity.creeper.primed': {
-    name: 'random.fuse',
     /* prevent conflict with random.fuse which is used for tnt */
-    poofName: 'poofsounds.creeper.sss',
+    name: 'poofsounds.creeper.sss',
     propOverrides: {
       category: 'block',
     },
@@ -86,30 +83,30 @@ module.exports = {
   'entity.donkey.ambient': {
     name: 'mob.horse.donkey.idle',
   },
-  'entity.dragon_fireball.explode': {
+  'entity.dragon_fireball.explode': [
     /* no bedrock equivalent */
-    name: null,
-  },
+  ],
   'entity.ender_dragon.death': {
     adjustments: {
       volume: 8,
     },
     name: 'mob.enderdragon.death',
   },
-  'entity.ender_dragon.shoot': {
+  'entity.ender_dragon.shoot': [
     /* no bedrock equivalent */
-    name: null,
-  },
+  ],
   'entity.enderman.stare': {
     name: 'mob.endermen.stare',
   },
   'entity.evoker_fangs.attack': {
     name: 'mob.evocation_fangs.attack',
   },
-  'entity.fishing_bobber.splash': {
-    /* only usage in java, but reused in bedrock */
-    name: 'random.splash',
-  },
+  'entity.fishing_bobber.splash': [
+    {
+      /* only usage in java, but reused in bedrock */
+      name: 'random.splash',
+    },
+  ],
   'entity.frog.ambient': {
     name: 'mob.frog.ambient',
   },
@@ -122,10 +119,9 @@ module.exports = {
     },
     name: 'random.explode',
   },
-  'entity.generic.splash': {
-    /* uses random.splash */
-    name: null,
-  },
+  'entity.generic.splash': [
+    /* uses random.splash, which is an older version in bedrock */
+  ],
   'entity.ghast.shoot': {
     name: 'mob.ghast.fireball',
   },
@@ -144,10 +140,9 @@ module.exports = {
   'entity.horse.ambient': {
     name: 'mob.horse.idle',
   },
-  'entity.hostile.splash': {
+  'entity.hostile.splash': [
     /* uses random.splash */
-    name: null,
-  },
+  ],
   'entity.item.break': {
     adjustments: {
       pitch: 10 / 9,
@@ -169,10 +164,9 @@ module.exports = {
   'entity.llama.ambient': {
     name: 'mob.llama.idle',
   },
-  'entity.mule.ambient': {
+  'entity.mule.ambient': [
     /* bedrock uses donkey sounds for mule */
-    name: null,
-  },
+  ],
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
   },
@@ -182,10 +176,9 @@ module.exports = {
   'entity.pig.ambient': {
     name: 'mob.pig.say',
   },
-  'entity.pig.hurt': {
+  'entity.pig.hurt': [
     /* uses mob.pig.say */
-    name: null,
-  },
+  ],
   'entity.piglin.ambient': {
     name: 'mob.piglin.ambient',
   },
@@ -222,25 +215,21 @@ module.exports = {
   'entity.player.hurt_sweet_berry_bush': {
     name: 'block.sweet_berry_bush.hurt',
   },
-  'entity.player.splash': {
+  'entity.player.splash': [
     /* uses random.splash */
-    name: null,
-  },
-  'entity.player.splash.high_speed': {
+  ],
+  'entity.player.splash.high_speed': [
     /* no bedrock equivalent */
-    name: null,
-  },
+  ],
   'entity.sheep.ambient': {
     name: 'mob.sheep.say',
   },
-  'entity.sheep.death': {
+  'entity.sheep.death': [
     /* uses mob.sheep.say */
-    name: null,
-  },
-  'entity.sheep.hurt': {
+  ],
+  'entity.sheep.hurt': [
     /* uses mob.sheep.say */
-    name: null,
-  },
+  ],
   'entity.shulker.ambient': {
     name: 'mob.shulker.ambient',
   },
@@ -256,10 +245,9 @@ module.exports = {
   'entity.spider.death': {
     name: 'mob.spider.death',
   },
-  'entity.spider.hurt': {
+  'entity.spider.hurt': [
     /* uses mob.spider.say */
-    name: null,
-  },
+  ],
   'entity.spider.step': {
     adjustments: {
       volume: 0.5,
@@ -284,9 +272,9 @@ module.exports = {
   'entity.villager.ambient': {
     name: 'mob.villager.idle',
   },
-  'entity.villager.celebrate': {
-    name: null,
-  },
+  'entity.villager.celebrate': [
+    /* no bedrock equivalent */
+  ],
   'entity.villager.death': {
     name: 'mob.villager.death',
   },
@@ -357,34 +345,38 @@ module.exports = {
     name: 'armor.equip_diamond',
   },
   'item.armor.equip_elytra': {
-    name: null,
     /* prevent mapping to regular leather armor */
-    poofName: 'poofsounds.equip_elytra',
+    name: 'poofsounds.equip_elytra',
   },
-  'item.axe.strip': {
-    additionalNames: ['use.stem'],
-    adjustments: {
-      pitch: 12 / 10,
+  'item.axe.strip': [
+    {
+      adjustments: {
+        pitch: 12 / 10,
+      },
+      name: 'use.stem',
     },
-    name: 'use.wood',
-  },
-  'item.bundle.insert': {
-    name: null,
-  },
+    {
+      adjustments: {
+        pitch: 12 / 10,
+      },
+      name: 'use.wood',
+    },
+  ],
+  'item.bundle.insert': [
+    /* no bundles in bedrock yet */
+  ],
   'item.elytra.flying': {
     name: 'elytra.loop',
   },
-  'item.firecharge.use': {
+  'item.firecharge.use': [
     /* no bedrock equivalent */
-    name: null,
-  },
+  ],
   'item.shield.block': {
     name: 'item.shield.block',
   },
-  'item.shield.break': {
+  'item.shield.break': [
     /* uses random.break */
-    name: null,
-  },
+  ],
   'item.totem.use': {
     name: 'random.totem',
   },
