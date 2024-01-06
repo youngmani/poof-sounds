@@ -13,28 +13,16 @@ const log = logger.child({ prefix: 'build' });
 
 const build = async version => {
   log.info('begin build');
-  let tempDir;
   try {
     if (!semver.valid(version)) {
       throw Error('invalid version');
     }
-    [tempDir] = await all([fs.mkdtemp('temp-'), fs.mkdir(TARGET_DIR, { recursive: true })]);
-    log.verbose(`building with temp dir ${tempDir}`);
-    await all([buildZip(tempDir, version), convertToBedrock(tempDir, version)]);
+    await fs.mkdir(TARGET_DIR, { recursive: true });
+    await all([buildZip(version), convertToBedrock(version)]);
   } catch (error) {
     log.error(error);
     log.error('build failed');
     return 1;
-  } finally {
-    if (tempDir) {
-      try {
-        await fs.rm(tempDir, { recursive: true, force: true });
-        log.verbose(`cleaned up temp dir ${tempDir}`);
-      } catch (error) {
-        log.warn(error);
-        log.warn(`failed to clean up temp dir ${tempDir}`);
-      }
-    }
   }
   log.info('end build');
   return 0;

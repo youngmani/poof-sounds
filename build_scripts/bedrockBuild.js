@@ -13,44 +13,39 @@ const PAINTING_SIZE = 128;
 
 const log = logger.child({ prefix: 'bedrock build' });
 
-const convertToBedrock = async (tempDir, version) => {
+const convertToBedrock = async version => {
+  const zip = new Zip();
+
   const [soundsJson, splashesTxt, kz] = await all([
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
     getSplashes(version),
     generateKz(),
-    fs.cp(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, `${tempDir}/bedrock/sounds/${POOF_NAMESPACE}`, {
-      recursive: true,
+    zip.addLocalFolderPromise('bedrock'),
+  ]);
+
+  zip.addLocalFile('pack.png', '', 'pack_icon.png');
+
+  const [kzPng] = await Promise.all([
+    kz.getBufferAsync(Jimp.MIME_PNG),
+    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, { zipPath: `sounds/${POOF_NAMESPACE}` }),
+    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: `textures/entity` }),
+    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, {
+      zipPath: `textures/ui`,
     }),
   ]);
 
-  const promises = [
-    fs.copyFile('pack.png', `${tempDir}/bedrock/pack_icon.png`),
-    fs.cp(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, `${tempDir}/bedrock/textures/entity`, {
-      recursive: true,
-    }),
-    fs.cp(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, `${tempDir}/bedrock/textures/ui`, {
-      recursive: true,
-    }),
-    fs.cp(`bedrock/`, `${tempDir}/bedrock/`, { recursive: true }),
-    kz.writeAsync(`${tempDir}/bedrock/textures/painting/kz.png`),
-  ];
+  zip.addFile('textures/painting/kz.png', kzPng);
 
   const bedrockSounds = generateSoundDefinitions(soundsJson);
-  promises.push(
-    fs.writeFile(`${tempDir}/bedrock/sounds/sound_definitions.json`, JSON.stringify(bedrockSounds, null, 2))
-  );
+  zip.addFile('sounds/sound_definitions.json', Buffer.from(toJson(bedrockSounds)));
 
   const bedrockSplashes = generateSplashes(splashesTxt);
-  promises.push(fs.writeFile(`${tempDir}/bedrock/splashes.json`, JSON.stringify(bedrockSplashes, null, 2)));
+  zip.addFile('splashes.json', Buffer.from(toJson(bedrockSplashes)));
 
   const isBeta = !!semver.prerelease(version);
   const manifest = generateManifest(version, isBeta);
-  promises.push(fs.writeFile(`${tempDir}/bedrock/manifest.json`, JSON.stringify(manifest, null, 2)));
+  zip.addFile('manifest.json', Buffer.from(toJson(manifest)));
 
-  await all(promises);
-
-  const zip = new Zip();
-  await zip.addLocalFolderPromise(`${tempDir}/bedrock`);
   const target = `${TARGET_DIR}/poof-sounds-bedrock${isBeta ? '-beta' : ''}.mcpack`;
   await zip.writeZipPromise(target, { overwrite: true });
   log.info(`successfully wrote mcpack file to: ${target}`);
@@ -191,5 +186,7 @@ const generateManifest = (version, isBeta) => {
     },
   };
 };
+
+const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
 
 module.exports = convertToBedrock;

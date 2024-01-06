@@ -4,35 +4,30 @@ const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const semver = require('semver');
 
-const { TARGET_DIR } = require('./constants');
+const { BASE_PACK_DIR, MC_NAMESPACE, TARGET_DIR } = require('./constants');
 const { all, getOverlayDirectories, logger, getSplashes } = require('./utils');
 
 const log = logger.child({ prefix: 'java build' });
 
-const buildZip = async (tempDir, version) => {
+const buildZip = async version => {
   const [mcmeta, overlayDirs, splashes] = await all([
     fs.readFile('pack.mcmeta', 'utf8'),
     getOverlayDirectories(),
     getSplashes(version),
-    fs.mkdir(`${tempDir}/java`, { recursive: true }),
   ]);
   const newMcmeta = mcmeta.replace('{VERSION}', version);
   log.info(`set version to ${version}`);
-  await all([
-    fs.writeFile(`${tempDir}/java/pack.mcmeta`, newMcmeta),
-    fs.writeFile(`${tempDir}/java/splashes.txt`, splashes),
-  ]);
 
   const zip = new Zip();
-  zip.addLocalFile(`${tempDir}/java/pack.mcmeta`);
+  zip.addFile('pack.mcmeta', Buffer.from(newMcmeta));
   zip.addLocalFile('pack.png');
-  const folderPromises = [zip.addLocalFolderPromise('assets', { zipPath: 'assets' })];
+  const folderPromises = [zip.addLocalFolderPromise(BASE_PACK_DIR, { zipPath: BASE_PACK_DIR })];
   overlayDirs.forEach(folder => {
     log.verbose(`adding overlay ${folder}`);
     folderPromises.push(zip.addLocalFolderPromise(`${folder}`, { zipPath: folder }));
   });
   await all(folderPromises);
-  zip.addLocalFile(`${tempDir}/java/splashes.txt`, 'assets/minecraft/texts');
+  zip.addFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`, Buffer.from(splashes));
   const isPrerelease = !!semver.prerelease(version);
   const target = `${TARGET_DIR}/poof-sounds${isPrerelease ? '-beta' : ''}.zip`;
   await zip.writeZipPromise(target, { overwrite: true });
