@@ -6,9 +6,10 @@ const semver = require('semver');
 const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
-const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
+const { BASE_PACK_DIR, CENSORED_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
 const { all, logger, getSplashes } = require('./utils');
 
+const NORMAL_SUBPACK = 'normal';
 const PAINTING_SIZE = 128;
 
 const log = logger.child({ prefix: 'bedrock build' });
@@ -24,10 +25,14 @@ const convertToBedrock = async version => {
   ]);
 
   zip.addLocalFile('pack.png', '', 'pack_icon.png');
+  zip.addFile(`subpacks/${NORMAL_SUBPACK}/`, null);
 
   const [kzPng] = await Promise.all([
     kz.getBufferAsync(Jimp.MIME_PNG),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, { zipPath: `sounds/${POOF_NAMESPACE}` }),
+    zip.addLocalFolderPromise(`${CENSORED_DIR}/${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, {
+      zipPath: `subpacks/${CENSORED_DIR}/sounds/${POOF_NAMESPACE}`,
+    }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: `textures/entity` }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, {
       zipPath: `textures/ui`,
@@ -184,6 +189,24 @@ const generateManifest = (version, isBeta) => {
       license: 'CC0',
       url: 'https://youngmani.github.io/poof-sounds/',
     },
+    subpacks: [
+      {
+        folder_name: CENSORED_DIR,
+        name: 'Censored',
+        memory_tier: 0,
+      },
+      {
+        folder_name: NORMAL_SUBPACK,
+        name: 'Normal',
+        memory_tier: 0,
+      },
+    ],
+    settings: [
+      {
+        type: 'label',
+        text: "Move slider to 'Censored' to reduce profanity",
+      },
+    ],
   };
 };
 
