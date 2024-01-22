@@ -1221,6 +1221,27 @@
     ],
     "subtitle": "i hate stray skellingtons"
   },
+  "entity.tadpole.grow_up": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/ribbit1",
+        "pitch": 1.1,
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/ribbit2",
+        "pitch": 1.1,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/ribbit3",
+        "pitch": 1.1,
+        "weight": 2
+      }
+    ],
+    "subtitle": "tadpole grows up into frog ribbit"
+  },
   "entity.villager.ambient": {
     "replace": true,
     "sounds": [

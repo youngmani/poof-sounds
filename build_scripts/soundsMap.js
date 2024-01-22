@@ -72,13 +72,21 @@ module.exports = {
   'entity.cow.ambient': {
     name: 'mob.cow.say',
   },
-  'entity.creeper.primed': {
-    /* prevent conflict with random.fuse which is used for tnt */
-    name: 'poofsounds.creeper.sss',
-    propOverrides: {
-      category: 'block',
+  'entity.creeper.primed': [
+    {
+      /* prevent conflict with random.fuse which is used for tnt */
+      name: 'poofsounds.creeper.sss',
+      propOverrides: {
+        category: 'block',
+      },
     },
-  },
+    {
+      adjustments: {
+        pitch: 0.5 * 1.2,
+      },
+      name: 'note.creeper',
+    },
+  ],
   'entity.dolphin.splash': {
     name: 'mob.dolphin.splash',
   },
@@ -107,6 +115,54 @@ module.exports = {
     {
       /* only usage in java, but reused in bedrock */
       name: 'random.splash',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.adddye',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.cleanarmor',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.cleanbanner',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.dyearmor',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.fillpotion',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.fillwater',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.takepotion',
+    },
+    {
+      adjustments: {
+        volume: 0.1,
+      },
+      name: 'cauldron.takewater',
     },
   ],
   'entity.frog.ambient': {
@@ -181,9 +237,17 @@ module.exports = {
   'entity.pig.hurt': [
     /* uses mob.pig.say */
   ],
-  'entity.piglin.ambient': {
-    name: 'mob.piglin.ambient',
-  },
+  'entity.piglin.ambient': [
+    {
+      name: 'mob.piglin.ambient',
+    },
+    {
+      adjustments: {
+        pitch: 1.2,
+      },
+      name: 'note.piglin',
+    },
+  ],
   'entity.piglin.retreat': {
     name: 'mob.piglin.retreat',
   },
@@ -235,9 +299,17 @@ module.exports = {
   'entity.shulker.ambient': {
     name: 'mob.shulker.ambient',
   },
-  'entity.skeleton.ambient': {
-    name: 'mob.skeleton.say',
-  },
+  'entity.skeleton.ambient': [
+    {
+      name: 'mob.skeleton.say',
+    },
+    {
+      adjustments: {
+        pitch: 1.2,
+      },
+      name: 'note.skeleton',
+    },
+  ],
   'entity.skeleton.death': {
     name: 'mob.skeleton.death',
   },
@@ -270,6 +342,9 @@ module.exports = {
   },
   'entity.stray.death': {
     name: 'mob.stray.death',
+  },
+  'entity.tadpole.grow_up': {
+    name: 'mob.tadpole.convert_to_frog',
   },
   'entity.villager.ambient': {
     name: 'mob.villager.idle',
@@ -325,18 +400,34 @@ module.exports = {
   'entity.wither.spawn': {
     name: 'mob.wither.spawn',
   },
-  'entity.wither_skeleton.ambient': {
-    name: 'entity.wither_skeleton.ambient',
-  },
+  'entity.wither_skeleton.ambient': [
+    {
+      name: 'entity.wither_skeleton.ambient',
+    },
+    {
+      adjustments: {
+        pitch: 1.2,
+      },
+      name: 'note.witherskeleton',
+    },
+  ],
   'entity.wither_skeleton.death': {
     name: 'entity.wither_skeleton.death',
   },
   'entity.wolf.ambient': {
     name: 'mob.wolf.bark',
   },
-  'entity.zombie.ambient': {
-    name: 'mob.zombie.say',
-  },
+  'entity.zombie.ambient': [
+    {
+      name: 'mob.zombie.say',
+    },
+    {
+      adjustments: {
+        pitch: 1.2,
+      },
+      name: 'note.zombie',
+    },
+  ],
   'entity.zombie.hurt': {
     name: 'mob.zombie.hurt',
   },
@@ -349,6 +440,9 @@ module.exports = {
   'item.armor.equip_elytra': {
     /* prevent mapping to regular leather armor */
     name: 'poofsounds.equip_elytra',
+    propOverrides: {
+      category: 'player',
+    },
   },
   'item.axe.strip': [
     {
