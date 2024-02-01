@@ -8,6 +8,12 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.3.2](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.2) - 01/31/2023
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- improve sound mapping of a few game events to custom sounds
+- (Bedrock Edition only) fix a sound playing in the wrong sound category
+
 ## [Version 4.3.1](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.1) - 01/18/2023
 
 - (Java Edition only) update resource pack version to be compatible with 1.20.5 snapshots
