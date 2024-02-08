@@ -1604,15 +1604,24 @@
       {
         "name": "poof-sounds:mono/bark",
         "volume": 2,
-        "weight": 2
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/woof",
         "volume": 2,
-        "weight": 3
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/woof2",
+        "volume": 2,
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/woof3",
+        "volume": 2
       }
     ],
-    "subtitle": "bark"
+    "subtitle": "woof"
   },
   "entity.zombie.ambient": {
     "replace": true,
