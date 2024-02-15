@@ -63,6 +63,12 @@ module.exports = {
   'entity.blaze.shoot': {
     name: 'mob.blaze.shoot',
   },
+  'entity.bogged.ambient': [
+    /* TBD */
+  ],
+  'entity.bogged.death': [
+    /* TBD */
+  ],
   'entity.cat.ambient': {
     name: 'mob.cat.meow',
   },

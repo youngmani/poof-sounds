@@ -253,6 +253,34 @@
     ],
     "subtitle": "blaze choo"
   },
+  "entity.bogged.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/bogged1",
+      "poof-sounds:mono/bogged2",
+      "poof-sounds:mono/bogged3",
+      "poof-sounds:mono/bogged4"
+    ],
+    "subtitle": "bogged skellington sound"
+  },
+  "entity.bogged.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/boggeddeath2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/boggeddeath3",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/boggeddeath4",
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate bogged skellingtons"
+  },
   "entity.cat.ambient": {
     "replace": true,
     "sounds": [
