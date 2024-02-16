@@ -4,7 +4,7 @@
   "description": "build scripts for poof sounds",
   "scripts": {
     "build": "node build_scripts/build.js",
-    "clean": "rm -rf build",
+    "clean": "node build_scripts/clean.js",
     "prebuild": "npm run validate",
     "preversion": "npm run validate",
     "validate": "node build_scripts/validate.js"
