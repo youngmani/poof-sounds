@@ -663,7 +663,9 @@
   "entity.horse.ambient": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/neigh"
+      "poof-sounds:mono/neigh",
+      "poof-sounds:mono/neigh2",
+      "poof-sounds:mono/neigh3"
     ],
     "subtitle": "horse neigh"
   },
@@ -1033,6 +1035,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa"
@@ -1050,6 +1055,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa (died)"
@@ -1067,6 +1075,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa (hurt)"
