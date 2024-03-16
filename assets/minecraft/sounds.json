@@ -1027,7 +1027,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1047,7 +1047,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1067,7 +1067,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1643,17 +1643,17 @@
       {
         "name": "poof-sounds:mono/bark",
         "volume": 2,
-        "weight": 5
+        "weight": 10
       },
       {
         "name": "poof-sounds:mono/woof",
         "volume": 2,
-        "weight": 2
+        "weight": 4
       },
       {
         "name": "poof-sounds:mono/woof2",
         "volume": 2,
-        "weight": 5
+        "weight": 8
       },
       {
         "name": "poof-sounds:mono/woof3",
