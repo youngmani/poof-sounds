@@ -3,7 +3,7 @@
     "description": "Place above poof sounds to reduce profanity \u00A78\u00A7o(v{VERSION})",
     "pack_format": 15,
     "supported_formats": {
-      "max_inclusive": 22,
+      "max_inclusive": 29,
       "min_inclusive": 6
     }
   }
