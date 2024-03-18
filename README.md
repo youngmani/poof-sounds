@@ -24,7 +24,7 @@
 
 ## Bedrock Edition (Experimental)
 
-**poof-sounds** is available for Minecraft Bedrock Edition on PC. Not all sounds will be mapped correctly, and there may be some issues with sound volume and pitch, as this pack is designed for Java Edition.
+**poof sounds** is available for Minecraft Bedrock Edition on PC. Not all sounds will be mapped correctly, and there may be some issues with sound volume and pitch, as this pack is designed for Java Edition.
 
 To install, download the `poof-sounds-bedrock.mcpack` file from the [latest release](https://github.com/youngmani/poof-sounds/releases/latest) ([direct download](https://github.com/youngmani/poof-sounds/releases/latest/download/poof-sounds-bedrock.mcpack)), and then double click the file to add it to Minecraft.
 

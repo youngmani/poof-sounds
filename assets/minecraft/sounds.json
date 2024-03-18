@@ -253,6 +253,34 @@
     ],
     "subtitle": "blaze choo"
   },
+  "entity.bogged.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/bogged1",
+      "poof-sounds:mono/bogged2",
+      "poof-sounds:mono/bogged3",
+      "poof-sounds:mono/bogged4"
+    ],
+    "subtitle": "bogged skellington sound"
+  },
+  "entity.bogged.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/boggeddeath2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/boggeddeath3",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/boggeddeath4",
+        "weight": 3
+      }
+    ],
+    "subtitle": "i hate bogged skellingtons"
+  },
   "entity.cat.ambient": {
     "replace": true,
     "sounds": [
@@ -635,7 +663,9 @@
   "entity.horse.ambient": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/neigh"
+      "poof-sounds:mono/neigh",
+      "poof-sounds:mono/neigh2",
+      "poof-sounds:mono/neigh3"
     ],
     "subtitle": "horse neigh"
   },
@@ -997,7 +1027,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1005,6 +1035,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa"
@@ -1014,7 +1047,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1022,6 +1055,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa (died)"
@@ -1031,7 +1067,7 @@
     "sounds": [
       {
         "name": "poof-sounds:mono/baa",
-        "weight": 3
+        "weight": 5
       },
       {
         "name": "poof-sounds:mono/baa2",
@@ -1039,6 +1075,9 @@
       },
       {
         "name": "poof-sounds:mono/baa3"
+      },
+      {
+        "name": "poof-sounds:mono/baa4"
       }
     ],
     "subtitle": "sheep baaa (hurt)"
@@ -1220,6 +1259,27 @@
       }
     ],
     "subtitle": "i hate stray skellingtons"
+  },
+  "entity.tadpole.grow_up": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/ribbit1",
+        "pitch": 1.1,
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/ribbit2",
+        "pitch": 1.1,
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/ribbit3",
+        "pitch": 1.1,
+        "weight": 2
+      }
+    ],
+    "subtitle": "tadpole grows up into frog ribbit"
   },
   "entity.villager.ambient": {
     "replace": true,
@@ -1583,15 +1643,24 @@
       {
         "name": "poof-sounds:mono/bark",
         "volume": 2,
-        "weight": 2
+        "weight": 10
       },
       {
         "name": "poof-sounds:mono/woof",
         "volume": 2,
-        "weight": 3
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/woof2",
+        "volume": 2,
+        "weight": 8
+      },
+      {
+        "name": "poof-sounds:mono/woof3",
+        "volume": 2
       }
     ],
-    "subtitle": "bark"
+    "subtitle": "woof"
   },
   "entity.zombie.ambient": {
     "replace": true,

@@ -8,7 +8,36 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
-## [Version 4.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.0) - 01/02/2023
+## [Version 4.3.6](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.6) - 03/15/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- adjust weights for a few sounds
+
+## [Version 4.3.5](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.5) - 02/29/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- add new variants to a couple sounds
+
+## [Version 4.3.4](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.4) - 02/15/2024
+
+- add sounds for new bogged mob
+
+## [Version 4.3.3](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.3) - 02/08/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- add new variants to a sound
+
+## [Version 4.3.2](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.2) - 01/31/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- improve sound mapping of a few game events to custom sounds
+- (Bedrock Edition only) fix a sound playing in the wrong sound category
+
+## [Version 4.3.1](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.1) - 01/18/2024
+
+- (Java Edition only) update resource pack version to be compatible with 1.20.5 snapshots
+
+## [Version 4.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.0) - 01/02/2024
 
 - add several new sounds
 - add new variants to a few sounds
@@ -59,7 +88,7 @@ What's new in every version of **poof sounds**!
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.2 and 1.20.3 snapshots
 - use container sound for a new container
 - combine another sound with the original game sound
-- (Bedrock Edition only) use dedicated Wither Skeleton sound for version 1.20.40
+- (Bedrock Edition only) use dedicated wither skeleton sound for version 1.20.40
 
 ## [Version 3.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v3.5.0) - 09/23/2023
 
