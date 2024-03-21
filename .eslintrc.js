@@ -5,7 +5,13 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'prettier'],
   rules: {
-    'prefer-const': 'error',
+    'arrow-body-style': ['error', 'as-needed'],
+    'consistent-return': 'error',
+    curly: ['error', 'multi-line', 'consistent'],
+    eqeqeq: 'error',
+    'no-console': 'warn',
     'no-shadow': 'error',
+    'no-useless-constructor': 'error',
+    'prefer-const': 'error',
   },
 };

@@ -3,10 +3,7 @@
     "ancient_debris": {
       "events": {
         "break": {
-          "pitch": [
-            0.80,
-            1.0
-          ],
+          "pitch": [0.8, 1.0],
           "sound": "poofsounds.dabriss.break",
           "volume": 1.0
         }

@@ -9,6 +9,13 @@ const { getOverlayDirectories, all, logger } = require('./utils');
 
 const log = logger.child({ prefix: 'validate' });
 
+class ValidationError extends Error {
+  constructor(...args) {
+    super(...args);
+    this.stack = null;
+  }
+}
+
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
   const usedFiles = new Set();
@@ -32,7 +39,7 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
           usedFiles.add(fileName);
           log.silly(`file exists: ${path}`);
         } else {
-          throw new Error(`sound does not exist: ${path}`);
+          throw new ValidationError(`sound does not exist: ${path}`);
         }
       });
     if (!sound.replace) {
@@ -61,7 +68,7 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
         log.silly(`correct number of audio channels for: ${path}`);
       } else {
-        throw new Error(`incorrect number of audio channels for: ${path}`);
+        throw new ValidationError(`incorrect number of audio channels for: ${path}`);
       }
     })
   );
@@ -74,7 +81,7 @@ const validateOverlaysExist = async () => {
   const mcmetaJson = JSON.parse(mcmeta);
   mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
     if (!/^[a-z0-9_-]+$/.test(directory)) {
-      throw new Error(`overlay has invalid directory: ${directory}`);
+      throw new ValidationError(`overlay has invalid directory: ${directory}`);
     }
     if (overlayDirs.includes(directory)) {
       if (usedDirs.has(directory)) {
@@ -84,7 +91,7 @@ const validateOverlaysExist = async () => {
       }
       usedDirs.add(directory);
     } else {
-      throw new Error(`overlay does not exist: ${directory}`);
+      throw new ValidationError(`overlay does not exist: ${directory}`);
     }
   });
   overlayDirs.forEach(dir => {
