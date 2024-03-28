@@ -7,6 +7,10 @@ const ffprobePath = require('ffprobe-static').path;
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
 const { getOverlayDirectories, all, logger } = require('./utils');
 
+const MONO_DIR = 'mono';
+const STEREO_DIR = 'stereo';
+const SOUNDS_DIR_PATH = `${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds`;
+
 const log = logger.child({ prefix: 'validate' });
 
 class ValidationError extends Error {
@@ -33,8 +37,8 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
         }
         if (
           namespace === POOF_NAMESPACE &&
-          ((folder === 'mono' && monoFiles.includes(fileName)) ||
-            (folder === 'stereo' && stereoFiles.includes(fileName)))
+          ((folder === MONO_DIR && monoFiles.includes(fileName)) ||
+            (folder === STEREO_DIR && stereoFiles.includes(fileName)))
         ) {
           usedFiles.add(fileName);
           log.silly(`file exists: ${path}`);
@@ -56,13 +60,13 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
 const validateSoundFormat = async (monoFiles, stereoFiles) => {
   const files = [];
   monoFiles.forEach(fileName => {
-    files.push({ path: `mono/${fileName}`, channels: 1 });
+    files.push({ path: `${MONO_DIR}/${fileName}`, channels: 1 });
   });
   stereoFiles.forEach(fileName => {
-    files.push({ path: `stereo/${fileName}`, channels: 2 });
+    files.push({ path: `${STEREO_DIR}/${fileName}`, channels: 2 });
   });
   const promises = files.map(({ path, channels }) =>
-    ffprobe(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/${path}`, {
+    ffprobe(`${SOUNDS_DIR_PATH}/${path}`, {
       path: ffprobePath,
     }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
@@ -105,8 +109,8 @@ const validate = async () => {
   log.info('begin validation');
   try {
     const [monoFiles, stereoFiles] = await all([
-      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/mono`),
-      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/stereo`),
+      fs.readdir(`${SOUNDS_DIR_PATH}/${MONO_DIR}`),
+      fs.readdir(`${SOUNDS_DIR_PATH}/${STEREO_DIR}`),
     ]);
     await all([
       verifySoundsExist(monoFiles, stereoFiles),
