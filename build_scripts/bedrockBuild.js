@@ -6,13 +6,13 @@ const semver = require('semver');
 const Jimp = require('jimp');
 
 const soundsMap = require('./soundsMap');
-const { BASE_PACK_DIR, CENSORED_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR } = require('./constants');
+const { BASE_PACK_DIR, CENSORED_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR, LOG_LABELS } = require('./constants');
 const { all, logger, getSplashes } = require('./utils');
 
 const NORMAL_SUBPACK = 'normal';
 const PAINTING_SIZE = 128;
 
-const log = logger.child({ prefix: 'bedrock build' });
+const log = logger.child({ label: LOG_LABELS.BEDROCK_BUILD });
 
 const convertToBedrock = async version => {
   const zip = new Zip();

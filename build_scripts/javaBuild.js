@@ -4,10 +4,10 @@ const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const semver = require('semver');
 
-const { BASE_PACK_DIR, CENSORED_DIR, MC_NAMESPACE, TARGET_DIR } = require('./constants');
+const { BASE_PACK_DIR, CENSORED_DIR, MC_NAMESPACE, TARGET_DIR, LOG_LABELS } = require('./constants');
 const { all, getOverlayDirectories, logger, getSplashes } = require('./utils');
 
-const log = logger.child({ prefix: 'java build' });
+const log = logger.child({ label: LOG_LABELS.JAVA_BUILD });
 
 const buildZip = async version => {
   const [mcmeta, overlayDirs, splashes, censoredZip] = await all([

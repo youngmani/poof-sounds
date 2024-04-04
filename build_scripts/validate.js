@@ -4,10 +4,21 @@ const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
 
-const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
+const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, LOG_LABELS } = require('./constants');
 const { getOverlayDirectories, all, logger } = require('./utils');
 
-const log = logger.child({ prefix: 'validate' });
+const MONO_DIR = 'mono';
+const STEREO_DIR = 'stereo';
+const SOUNDS_DIR_PATH = `${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds`;
+
+const log = logger.child({ label: LOG_LABELS.VALIDATE });
+
+class ValidationError extends Error {
+  constructor(...args) {
+    super(...args);
+    this.stack = null;
+  }
+}
 
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
@@ -26,13 +37,13 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
         }
         if (
           namespace === POOF_NAMESPACE &&
-          ((folder === 'mono' && monoFiles.includes(fileName)) ||
-            (folder === 'stereo' && stereoFiles.includes(fileName)))
+          ((folder === MONO_DIR && monoFiles.includes(fileName)) ||
+            (folder === STEREO_DIR && stereoFiles.includes(fileName)))
         ) {
           usedFiles.add(fileName);
           log.silly(`file exists: ${path}`);
         } else {
-          throw new Error(`sound does not exist: ${path}`);
+          throw new ValidationError(`sound does not exist: ${path}`);
         }
       });
     if (!sound.replace) {
@@ -49,19 +60,19 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
 const validateSoundFormat = async (monoFiles, stereoFiles) => {
   const files = [];
   monoFiles.forEach(fileName => {
-    files.push({ path: `mono/${fileName}`, channels: 1 });
+    files.push({ path: `${MONO_DIR}/${fileName}`, channels: 1 });
   });
   stereoFiles.forEach(fileName => {
-    files.push({ path: `stereo/${fileName}`, channels: 2 });
+    files.push({ path: `${STEREO_DIR}/${fileName}`, channels: 2 });
   });
   const promises = files.map(({ path, channels }) =>
-    ffprobe(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/${path}`, {
+    ffprobe(`${SOUNDS_DIR_PATH}/${path}`, {
       path: ffprobePath,
     }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
         log.silly(`correct number of audio channels for: ${path}`);
       } else {
-        throw new Error(`incorrect number of audio channels for: ${path}`);
+        throw new ValidationError(`incorrect number of audio channels for: ${path}`);
       }
     })
   );
@@ -74,7 +85,7 @@ const validateOverlaysExist = async () => {
   const mcmetaJson = JSON.parse(mcmeta);
   mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
     if (!/^[a-z0-9_-]+$/.test(directory)) {
-      throw new Error(`overlay has invalid directory: ${directory}`);
+      throw new ValidationError(`overlay has invalid directory: ${directory}`);
     }
     if (overlayDirs.includes(directory)) {
       if (usedDirs.has(directory)) {
@@ -84,7 +95,7 @@ const validateOverlaysExist = async () => {
       }
       usedDirs.add(directory);
     } else {
-      throw new Error(`overlay does not exist: ${directory}`);
+      throw new ValidationError(`overlay does not exist: ${directory}`);
     }
   });
   overlayDirs.forEach(dir => {
@@ -98,8 +109,8 @@ const validate = async () => {
   log.info('begin validation');
   try {
     const [monoFiles, stereoFiles] = await all([
-      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/mono`),
-      fs.readdir(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/stereo`),
+      fs.readdir(`${SOUNDS_DIR_PATH}/${MONO_DIR}`),
+      fs.readdir(`${SOUNDS_DIR_PATH}/${STEREO_DIR}`),
     ]);
     await all([
       verifySoundsExist(monoFiles, stereoFiles),
