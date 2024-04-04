@@ -2,10 +2,10 @@
 
 const fs = require('fs/promises');
 
-const { TARGET_DIR } = require('./constants');
+const { TARGET_DIR, LOG_LABELS } = require('./constants');
 const { logger } = require('./utils');
 
-const log = logger.child({ prefix: 'clean' });
+const log = logger.child({ label: LOG_LABELS.CLEAN });
 
 const clean = async () => {
   try {
