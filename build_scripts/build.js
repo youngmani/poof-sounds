@@ -6,10 +6,10 @@ const semver = require('semver');
 const buildZip = require('./javaBuild');
 const convertToBedrock = require('./bedrockBuild');
 
-const { TARGET_DIR } = require('./constants');
+const { TARGET_DIR, LOG_LABELS } = require('./constants');
 const { all, logger } = require('./utils');
 
-const log = logger.child({ prefix: 'build' });
+const log = logger.child({ label: LOG_LABELS.BUILD });
 
 const build = async version => {
   log.info('begin build');

@@ -4,14 +4,14 @@ const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
 
-const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE } = require('./constants');
+const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, LOG_LABELS } = require('./constants');
 const { getOverlayDirectories, all, logger } = require('./utils');
 
 const MONO_DIR = 'mono';
 const STEREO_DIR = 'stereo';
 const SOUNDS_DIR_PATH = `${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds`;
 
-const log = logger.child({ prefix: 'validate' });
+const log = logger.child({ label: LOG_LABELS.VALIDATE });
 
 class ValidationError extends Error {
   constructor(...args) {

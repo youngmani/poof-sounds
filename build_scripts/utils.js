@@ -4,7 +4,7 @@ const fs = require('fs/promises');
 const winston = require('winston');
 const semver = require('semver');
 
-const { BASE_PACK_DIR, MC_NAMESPACE } = require('./constants');
+const { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } = require('./constants');
 
 const all = async promises => {
   const results = await Promise.allSettled(promises);
@@ -26,16 +26,25 @@ const getSplashes = async version => {
   return splashes.toString() + `\npoof sounds v${version}\npoof sounds version ${semver.major(version)}!`;
 };
 
+const maxLabelLength = Object.values(LOG_LABELS).reduce((max, label) => Math.max(max, label.length), 0);
+
+const addLabel = winston.format(info => {
+  if (info.label) {
+    const formattedLabel = `[${info.label}]`.padEnd(maxLabelLength + 3);
+    info.message = formattedLabel + info.message;
+  }
+  return info;
+});
+
 const logFormat = winston.format.printf(info => {
   let log = `${info.level}: `;
-  if (info.prefix) log += `${info.prefix}: `;
   if (info.message) log += info.message;
   if (info.stack) log += `\n${info.stack}`;
   return log;
 });
 
 const logger = winston.createLogger({
-  format: winston.format.combine(winston.format.errors({ stack: true })),
+  format: winston.format.errors({ stack: true }),
   transports: [
     new winston.transports.Console({
       level: process.env.LOG_LEVEL ?? 'info',
@@ -44,7 +53,8 @@ const logger = winston.createLogger({
           info.level = info.level.toUpperCase();
           return info;
         })(),
-        winston.format.colorize(),
+        addLabel(),
+        winston.format.cli(),
         logFormat
       ),
     }),
