@@ -1724,6 +1724,20 @@
     "sounds": ["poof-sounds:mono/pigmansqueal"],
     "subtitle": "uh oh zombified piglin got hurt"
   },
+  "event.mob_effect.bad_omen": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/badomen1",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/badomen2",
+        "weight": 2
+      }
+    ],
+    "subtitle": "oh no bad omen"
+  },
   "item.armor.equip_diamond": {
     "replace": true,
     "sounds": [
