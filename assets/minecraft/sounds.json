@@ -629,6 +629,134 @@
     ],
     "subtitle": "glow squidward hurt"
   },
+  "entity.goat.death": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/goatdeath"],
+    "subtitle": "i hate goats"
+  },
+  "entity.goat.screaming.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream3"
+      }
+    ],
+    "subtitle": "SCREAMING GOAT"
+  },
+  "entity.goat.screaming.death": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1"
+      },
+      {
+        "name": "poof-sounds:mono/scream2"
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 5
+      }
+    ],
+    "subtitle": "SCREAMING GOAT DEATH"
+  },
+  "entity.goat.screaming.eat": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 2
+      }
+    ],
+    "subtitle": "SCREAMING GOAT EAT"
+  },
+  "entity.goat.screaming.hurt": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 5
+      }
+    ],
+    "subtitle": "SCREAMING GOAT HURT"
+  },
+  "entity.goat.screaming.long_jump": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 2
+      }
+    ],
+    "subtitle": "SCREAMING GOAT JUMP"
+  },
+  "entity.goat.screaming.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 2
+      }
+    ],
+    "subtitle": "SCREAMING GOAT MILK"
+  },
+  "entity.goat.screaming.prepare_ram": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/scream1",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/scream2",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/scream3",
+        "weight": 5
+      }
+    ],
+    "subtitle": "SCREAMING GOAT RAM"
+  },
   "entity.horse.ambient": {
     "replace": true,
     "sounds": ["poof-sounds:mono/neigh", "poof-sounds:mono/neigh2", "poof-sounds:mono/neigh3"],

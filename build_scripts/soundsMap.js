@@ -201,6 +201,30 @@ module.exports = {
   'entity.glow_squid.hurt': {
     name: 'mob.glow_squid.hurt',
   },
+  'entity.goat.death': {
+    name: 'mob.goat.death',
+  },
+  'entity.goat.screaming.ambient': {
+    name: 'mob.goat.ambient.screamer',
+  },
+  'entity.goat.screaming.death': {
+    name: 'mob.goat.death.screamer',
+  },
+  'entity.goat.screaming.eat': [
+    /* no bedrock equivalent */
+  ],
+  'entity.goat.screaming.hurt': {
+    name: 'mob.goat.hurt.screamer',
+  },
+  'entity.goat.screaming.long_jump': [
+    /* no bedrock equivalent */
+  ],
+  'entity.goat.screaming.milk': {
+    name: 'mob.goat.milk.screamer',
+  },
+  'entity.goat.screaming.prepare_ram': {
+    name: 'mob.goat.prepare_ram.screamer',
+  },
   'entity.horse.ambient': {
     name: 'mob.horse.idle',
   },
