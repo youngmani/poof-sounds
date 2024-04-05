@@ -13,5 +13,6 @@ module.exports = {
     'no-shadow': 'error',
     'no-useless-constructor': 'error',
     'prefer-const': 'error',
+    quotes: ['error', 'single', { avoidEscape: true }],
   },
 };

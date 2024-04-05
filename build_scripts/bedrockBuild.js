@@ -28,9 +28,9 @@ const convertToBedrock = async version => {
   const [kzPng] = await Promise.all([
     kz.getBufferAsync(Jimp.MIME_PNG),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, { zipPath: `sounds/${POOF_NAMESPACE}` }),
-    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: `textures/entity` }),
+    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: 'textures/entity' }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, {
-      zipPath: `textures/ui`,
+      zipPath: 'textures/ui',
     }),
   ]);
 
@@ -84,7 +84,7 @@ const generateKz = async () => {
     { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
   ].map(painting => addPainting(kz, painting));
   await all(promises);
-  log.debug(`generated kz.png`);
+  log.debug('generated kz.png');
   return kz;
 };
 
