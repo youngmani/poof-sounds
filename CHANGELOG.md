@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.4.0) - 04/07/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- (Java Edition only) add new sound event from 1.21 experimental data pack
+- add new sounds for a mob
+- reduce resource pack size with improved image and sound compression
+
 ## [Version 4.3.6](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.6) - 03/15/2024
 
 - (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
