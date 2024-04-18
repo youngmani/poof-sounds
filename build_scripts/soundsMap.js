@@ -467,7 +467,9 @@ module.exports = {
   'entity.zombified_piglin.hurt': {
     name: 'mob.zombiepig.zpighurt',
   },
-  'event.mob_effect.bad_omen': [],
+  'event.mob_effect.bad_omen': {
+    name: 'apply_effect.bad_omen',
+  },
   'item.armor.equip_diamond': {
     name: 'armor.equip_diamond',
   },
