@@ -258,6 +258,9 @@ module.exports = {
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
   },
+  'entity.panda.sneeze': {
+    name: 'mob.panda.sneeze',
+  },
   'entity.parrot.ambient': {
     name: 'mob.parrot.idle',
   },
