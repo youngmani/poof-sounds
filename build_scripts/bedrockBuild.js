@@ -5,25 +5,32 @@ const Zip = require('adm-zip');
 const semver = require('semver');
 const Jimp = require('jimp');
 
-const soundsMap = require('./soundsMap');
+const SOUNDS_MAP = require('./resources/soundsMap');
+const KZ_PAINTINGS = require('./resources/kzPaintings');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR, LOG_LABELS } = require('./constants');
 const { all, logger, getSplashes } = require('./utils');
 
 const PAINTING_SIZE = 128;
+const PAINTINGS_PATH = 'textures/painting';
 
 const log = logger.child({ label: LOG_LABELS.BEDROCK_BUILD });
 
 const convertToBedrock = async version => {
   const zip = new Zip();
 
-  const [soundsJson, splashesTxt, kz] = await all([
+  const [soundsJson, splashesTxt, kz, nonKzPaintings] = await all([
     fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
     getSplashes(version),
     generateKz(),
+    getNonKzPaintings(),
     zip.addLocalFolderPromise('bedrock'),
   ]);
 
   zip.addLocalFile('pack.png', '', 'pack_icon.png');
+  nonKzPaintings.forEach(name => {
+    log.debug(`adding non-kz painting ${name}`);
+    zip.addLocalFile(getPaintingPath(name), PAINTINGS_PATH);
+  });
 
   const [kzPng] = await Promise.all([
     kz.getBufferAsync(Jimp.MIME_PNG),
@@ -34,7 +41,7 @@ const convertToBedrock = async version => {
     }),
   ]);
 
-  zip.addFile('textures/painting/kz.png', kzPng);
+  zip.addFile(`${PAINTINGS_PATH}/kz.png`, kzPng);
 
   const bedrockSounds = generateSoundDefinitions(soundsJson);
   zip.addFile('sounds/sound_definitions.json', Buffer.from(toJson(bedrockSounds)));
@@ -55,41 +62,14 @@ const generateKz = async () => {
   const kz = await Jimp.read('build_scripts/resources/kz_template.png');
   const scale = PAINTING_SIZE / 16;
   if (scale !== 1) kz.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
-  const promises = [
-    { name: 'kebab', x: 0, y: 0, h: 1, w: 1 },
-    { name: 'aztec', x: 1, y: 0, h: 1, w: 1 },
-    { name: 'alban', x: 2, y: 0, h: 1, w: 1 },
-    { name: 'aztec2', x: 3, y: 0, h: 1, w: 1 },
-    { name: 'bomb', x: 4, y: 0, h: 1, w: 1 },
-    { name: 'plant', x: 5, y: 0, h: 1, w: 1 },
-    { name: 'wasteland', x: 6, y: 0, h: 1, w: 1 },
-    { name: 'pool', x: 0, y: 2, h: 1, w: 2 },
-    { name: 'courbet', x: 2, y: 2, h: 1, w: 2 },
-    { name: 'sea', x: 4, y: 2, h: 1, w: 2 },
-    { name: 'sunset', x: 6, y: 2, h: 1, w: 2 },
-    { name: 'creebet', x: 8, y: 2, h: 1, w: 2 },
-    { name: 'wanderer', x: 0, y: 4, h: 2, w: 1 },
-    { name: 'graham', x: 1, y: 4, h: 2, w: 1 },
-    { name: 'fighters', x: 0, y: 6, h: 2, w: 4 },
-    { name: 'match', x: 0, y: 8, h: 2, w: 2 },
-    { name: 'bust', x: 2, y: 8, h: 2, w: 2 },
-    { name: 'stage', x: 4, y: 8, h: 2, w: 2 },
-    { name: 'void', x: 6, y: 8, h: 2, w: 2 },
-    { name: 'skull_and_roses', x: 8, y: 8, h: 2, w: 2 },
-    { name: 'wither', x: 10, y: 8, h: 2, w: 2 },
-    { name: 'pointer', x: 0, y: 12, h: 4, w: 4 },
-    { name: 'pigscene', x: 4, y: 12, h: 4, w: 4 },
-    { name: 'burning_skull', x: 8, y: 12, h: 4, w: 4 },
-    { name: 'skeleton', x: 12, y: 4, h: 3, w: 4 },
-    { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
-  ].map(painting => addPainting(kz, painting));
+  const promises = KZ_PAINTINGS.map(painting => addPainting(kz, painting));
   await all(promises);
   log.debug('generated kz.png');
   return kz;
 };
 
 const addPainting = async (kz, { name, x, y, h, w }) => {
-  const image = await Jimp.read(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/painting/${name}.png`);
+  const image = await Jimp.read(getPaintingPath(name));
   const scale = (h * PAINTING_SIZE) / image.getHeight();
   if (scale !== 1) image.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
   if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`invalid painting dimensions for ${name}`);
@@ -97,15 +77,21 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
   log.silly(`added ${name} to kz`);
 };
 
+const getNonKzPaintings = async () => {
+  const kzPaintingNames = KZ_PAINTINGS.map(painting => painting.name);
+  const files = await fs.readdir(`${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/`);
+  return files.map(file => file.split('.')[0]).filter(name => !kzPaintingNames.includes(name));
+};
+
 const generateSoundDefinitions = soundsJson => {
   const javaSounds = JSON.parse(soundsJson);
   const definitions = {};
   Object.keys(javaSounds).forEach(key => {
-    if (!soundsMap[key]) {
+    if (!SOUNDS_MAP[key]) {
       log.warn(`unmapped java sound ${key}`);
       return;
     }
-    const soundMappings = soundsMap[key] instanceof Array ? soundsMap[key] : [soundsMap[key]];
+    const soundMappings = SOUNDS_MAP[key] instanceof Array ? SOUNDS_MAP[key] : [SOUNDS_MAP[key]];
     if (!soundMappings.length) {
       log.verbose(`skipping java sound ${key}`);
       return;
@@ -189,5 +175,7 @@ const generateManifest = (version, isBeta) => {
 };
 
 const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
+
+const getPaintingPath = name => `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/${name}.png`;
 
 module.exports = convertToBedrock;
