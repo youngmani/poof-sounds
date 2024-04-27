@@ -1357,6 +1357,11 @@
         "weight": 5
       },
       {
+        "name": "poof-sounds:mono/burgerbuns",
+        "volume": 0.8,
+        "weight": 2
+      },
+      {
         "name": "poof-sounds:mono/butterfly",
         "volume": 0.8,
         "weight": 5
