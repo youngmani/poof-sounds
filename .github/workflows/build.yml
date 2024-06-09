@@ -17,6 +17,7 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - run: npm ci
+      - run: npm run lint
       - run: npm run build
       - name: Draft release
         if: env.IS_RELEASE == 'true'

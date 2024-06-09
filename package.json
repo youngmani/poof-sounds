@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node build_scripts/build.js",
     "clean": "node build_scripts/clean.js",
+    "lint": "eslint . && prettier --check .",
     "prebuild": "npm run validate",
     "preversion": "npm run validate",
     "validate": "node build_scripts/validate.js"
