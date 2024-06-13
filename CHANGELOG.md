@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.6.0) - 06/12/2024
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.21
+- add new panorama for Minecraft version 1.21
+- add a new villager voice line
+- add more custom painting textures for Minecraft version 1.21
+
 ## [Version 4.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.5.0) - 04/23/2024
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.5
