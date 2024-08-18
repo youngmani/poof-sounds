@@ -22,6 +22,8 @@ module.exports = [
       'no-console': 'warn',
       'no-shadow': 'error',
       'no-useless-constructor': 'error',
+      'no-useless-rename': 'error',
+      'object-shorthand': 'error',
       'prefer-const': 'error',
       quotes: ['error', 'single', { avoidEscape: true }],
     },
