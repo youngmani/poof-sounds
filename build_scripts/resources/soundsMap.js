@@ -494,9 +494,9 @@ module.exports = {
       name: 'use.wood',
     },
   ],
-  'item.bundle.insert': [
-    /* no bundles in bedrock yet */
-  ],
+  'item.bundle.insert': {
+    name: 'bundle.insert',
+  },
   'item.elytra.flying': {
     name: 'elytra.loop',
   },
