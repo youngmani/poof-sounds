@@ -78,6 +78,9 @@ module.exports = {
   'entity.cow.ambient': {
     name: 'mob.cow.say',
   },
+  'entity.cow.milk': {
+    name: 'mob.cow.milk',
+  },
   'entity.creeper.primed': [
     {
       /* prevent conflict with random.fuse which is used for tnt */
@@ -204,6 +207,9 @@ module.exports = {
   'entity.goat.death': {
     name: 'mob.goat.death',
   },
+  'entity.goat.milk': [
+    /* mapped to mob.mooshroom.suspicious_milk */
+  ],
   'entity.goat.screaming.ambient': {
     name: 'mob.goat.ambient.screamer',
   },
@@ -251,6 +257,12 @@ module.exports = {
   },
   'entity.llama.ambient': {
     name: 'mob.llama.idle',
+  },
+  'entity.mooshroom.milk': [
+    /* mapped to mob.mooshroom.suspicious_milk */
+  ],
+  'entity.mooshroom.suspicious_milk': {
+    name: 'mob.mooshroom.suspicious_milk',
   },
   'entity.mule.ambient': [
     /* bedrock uses donkey sounds for mule */

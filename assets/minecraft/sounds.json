@@ -378,6 +378,25 @@
     ],
     "subtitle": "mooo cow"
   },
+  "entity.cow.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/milk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/milk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/milk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/milkspecial1"
+    ],
+    "subtitle": "cow milk"
+  },
   "entity.creeper.primed": {
     "replace": true,
     "sounds": [
@@ -634,6 +653,25 @@
     "sounds": ["poof-sounds:mono/goatdeath"],
     "subtitle": "i hate goats"
   },
+  "entity.goat.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "goat milk"
+  },
   "entity.goat.screaming.ambient": {
     "replace": true,
     "sounds": [
@@ -816,6 +854,44 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/llama1"],
     "subtitle": "llama duh"
+  },
+  "entity.mooshroom.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "mooshroom milk"
+  },
+  "entity.mooshroom.suspicious_milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "mooshroom milk (suspicious)"
   },
   "entity.mule.ambient": {
     "replace": true,
