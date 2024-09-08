@@ -100,7 +100,7 @@ What's new in every version of **poof sounds**!
 
 ## [Version 3.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.1) - 11/28/2023
 
-- (Java Edition only) update resource pack version to be compatible with 1.20.3 prereleases and 1.20.3
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.20.3
 - add a new variant for a sound
 - update a subtitle
 
@@ -178,7 +178,7 @@ What's new in every version of **poof sounds**!
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20
 - add new sounds for a few more mobs
 - fix the subtitle for a sound
-- (Bedrock Edition only) add support for custom pig texture which was added to **poof sounds** Java Edition v2.3.0
+- (Bedrock Edition only) add support for custom pig texture
 
 ## [Version 2.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v2.5.0) - 05/29/2023
 
