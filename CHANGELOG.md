@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.7.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.7.0) - 09/07/2024
+
+- add a new sound for a mob
+- add a couple more custom painting textures
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.2 snapshots
+- (Bedrock Edition only) map bundle sound event
+
 ## [Version 4.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.6.0) - 06/12/2024
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.21
