@@ -1115,11 +1115,30 @@
   "entity.player.hurt_freeze": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/freeze1",
-      "poof-sounds:mono/freeze2",
-      "poof-sounds:mono/freeze3",
-      "poof-sounds:mono/freeze4",
-      "poof-sounds:mono/freeze5"
+      {
+        "name": "poof-sounds:mono/freeze1_alt",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/freeze1",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/freeze2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze3",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze4",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze5",
+        "weight": 5
+      }
     ],
     "subtitle": "uh oh you are freezing"
   },
