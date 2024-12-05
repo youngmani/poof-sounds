@@ -8,6 +8,11 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.8.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.8.0) - 12/04/2024
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.4
+- add new panorama for "The Garden Awakens" update
+
 ## [Version 4.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v4.7.1) - 10/24/2024
 
 - (Java Edition only) update resource pack version to be compatible with newer 1.21.2 snapshots
