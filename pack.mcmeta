@@ -3,7 +3,7 @@
     "description": "Poofesure Minecraft Sounds\n\u00A78\u00A7ov{VERSION} by youngmani",
     "pack_format": 15,
     "supported_formats": {
-      "max_inclusive": 46,
+      "max_inclusive": 47,
       "min_inclusive": 6
     }
   },
@@ -21,6 +21,13 @@
         "formats": {
           "max_inclusive": 42,
           "min_inclusive": 33
+        }
+      },
+      {
+        "directory": "overlay_new_pig",
+        "formats": {
+          "max_inclusive": 999,
+          "min_inclusive": 47
         }
       }
     ]
