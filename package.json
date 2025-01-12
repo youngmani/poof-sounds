@@ -17,7 +17,7 @@
     "adm-zip": "0.5.12",
     "ffprobe": "^1.1.2",
     "ffprobe-static": "^3.1.0",
-    "jimp": "^0.22.10",
+    "jimp": "^1.6.0",
     "semver": "^7.5.4",
     "winston": "^3.11.0"
   },
