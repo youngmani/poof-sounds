@@ -3,7 +3,7 @@
 const fs = require('fs/promises');
 const Zip = require('adm-zip');
 const semver = require('semver');
-const Jimp = require('jimp');
+const { Jimp, JimpMime, ResizeStrategy } = require('jimp');
 
 const SOUNDS_MAP = require('./resources/soundsMap');
 const KZ_PAINTINGS = require('./resources/kzPaintings');
@@ -33,7 +33,7 @@ const convertToBedrock = async version => {
   });
 
   const [kzPng] = await Promise.all([
-    kz.getBufferAsync(Jimp.MIME_PNG),
+    kz.getBuffer(JimpMime.jpeg),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, { zipPath: `sounds/${POOF_NAMESPACE}` }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: 'textures/entity' }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, {
@@ -61,7 +61,7 @@ const convertToBedrock = async version => {
 const generateKz = async () => {
   const kz = await Jimp.read('build_scripts/resources/kz_template.png');
   const scale = PAINTING_SIZE / 16;
-  if (scale !== 1) kz.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
+  if (scale !== 1) kz.scale({ f: scale, mode: ResizeStrategy.NEAREST_NEIGHBOR });
   const promises = KZ_PAINTINGS.map(painting => addPainting(kz, painting));
   await all(promises);
   log.debug('generated kz.png');
@@ -70,10 +70,10 @@ const generateKz = async () => {
 
 const addPainting = async (kz, { name, x, y, h, w }) => {
   const image = await Jimp.read(getPaintingPath(name));
-  const scale = (h * PAINTING_SIZE) / image.getHeight();
-  if (scale !== 1) image.scale(scale, Jimp.RESIZE_NEAREST_NEIGHBOR);
-  if (w * PAINTING_SIZE !== image.getWidth()) throw new Error(`invalid painting dimensions for ${name}`);
-  await kz.blit(image, x * PAINTING_SIZE, y * PAINTING_SIZE);
+  const scale = (h * PAINTING_SIZE) / image.height;
+  if (scale !== 1) image.scale({ f: scale, mode: ResizeStrategy.NEAREST_NEIGHBOR });
+  if (w * PAINTING_SIZE !== image.width) throw new Error(`invalid painting dimensions for ${name}`);
+  await kz.blit({ src: image, x: x * PAINTING_SIZE, y: y * PAINTING_SIZE });
   log.silly(`added ${name} to kz`);
 };
 
