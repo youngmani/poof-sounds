@@ -1,6 +1,6 @@
 {
   "name": "poof-sounds",
-  "version": "4.9.0-2",
+  "version": "4.9.0-3",
   "description": "build scripts for poof sounds",
   "private": true,
   "scripts": {
