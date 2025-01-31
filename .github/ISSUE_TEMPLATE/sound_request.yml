@@ -22,6 +22,7 @@ body:
     attributes:
       label: Link to sound clip
       description: Add a link to a Twitch clip or YouTube video (with timestamp) of Poofesure making this sound, if applicable.
+      placeholder: ex. https://www.youtube.com/watch?v=0h4PMg7i348 at 9:30
     validations:
       required: false
   - type: textarea
