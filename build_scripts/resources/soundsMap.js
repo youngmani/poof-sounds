@@ -524,4 +524,7 @@ module.exports = {
   'item.totem.use': {
     name: 'random.totem',
   },
+  'ui.hud.bubble_pop': {
+    name: 'hud.bubble.pop',
+  },
 };

@@ -1917,5 +1917,27 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/totem"],
     "subtitle": "totem saved your life"
+  },
+  "ui.hud.bubble_pop": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/fwop1",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop2",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop3",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop4",
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "breath bubble pop (fwop)"
   }
 }
