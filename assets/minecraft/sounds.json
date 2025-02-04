@@ -1551,7 +1551,10 @@
       },
       {
         "name": "poof-sounds:mono/whipnaenae",
-        "weight": 3
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/whipnaenae2"
       },
       {
         "name": "poof-sounds:mono/yes1"
@@ -1603,7 +1606,7 @@
   },
   "entity.villager.trade": {
     "replace": true,
-    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae", "poof-sounds:mono/whipnaenae2"],
     "subtitle": "villager trading"
   },
   "entity.villager.yes": {
@@ -1722,7 +1725,7 @@
   },
   "entity.wandering_trader.trade": {
     "replace": true,
-    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae", "poof-sounds:mono/whipnaenae2"],
     "subtitle": "trader joe trading"
   },
   "entity.wandering_trader.yes": {
