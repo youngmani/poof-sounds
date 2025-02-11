@@ -1,0 +1,34 @@
+name: Sound request
+description: Suggest a new sound for the resource pack!
+title: 'Sound request: '
+labels: ['enhancement']
+assignees:
+  - youngmani
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this sound request!
+  - type: textarea
+    id: sound-description
+    attributes:
+      label: Describe the sound
+      description: Describe what in-game sound you would like to see added to the resource pack.
+      placeholder: ex. Add a new sound for pig oinking.
+    validations:
+      required: true
+  - type: textarea
+    id: sound-clip
+    attributes:
+      label: Link to sound clip
+      description: Add a link to a Twitch clip or YouTube video (with timestamp) of Poofesure making this sound, if applicable.
+      placeholder: ex. https://www.youtube.com/watch?v=0h4PMg7i348 at 9:30
+    validations:
+      required: false
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: Additional comments
+      description: Add anything else about the sound here, if applicable.
+    validations:
+      required: false

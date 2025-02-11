@@ -378,6 +378,25 @@
     ],
     "subtitle": "mooo cow"
   },
+  "entity.cow.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/milk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/milk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/milk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/milkspecial1"
+    ],
+    "subtitle": "cow milk"
+  },
   "entity.creeper.primed": {
     "replace": true,
     "sounds": [
@@ -634,6 +653,25 @@
     "sounds": ["poof-sounds:mono/goatdeath"],
     "subtitle": "i hate goats"
   },
+  "entity.goat.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "goat milk"
+  },
   "entity.goat.screaming.ambient": {
     "replace": true,
     "sounds": [
@@ -817,6 +855,44 @@
     "sounds": ["poof-sounds:mono/llama1"],
     "subtitle": "llama duh"
   },
+  "entity.mooshroom.milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "mooshroom milk"
+  },
+  "entity.mooshroom.suspicious_milk": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/mooshroommilk1",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk2",
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/mooshroommilk3",
+        "weight": 4
+      },
+      "poof-sounds:mono/mooshroommilkspecial1"
+    ],
+    "subtitle": "mooshroom milk (suspicious)"
+  },
   "entity.mule.ambient": {
     "replace": true,
     "sounds": ["poof-sounds:mono/donkey1"],
@@ -865,6 +941,11 @@
       }
     ],
     "subtitle": "meow"
+  },
+  "entity.panda.sneeze": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/sneeze"],
+    "subtitle": "panda AH CHOO"
   },
   "entity.parrot.ambient": {
     "replace": true,
@@ -1034,11 +1115,30 @@
   "entity.player.hurt_freeze": {
     "replace": true,
     "sounds": [
-      "poof-sounds:mono/freeze1",
-      "poof-sounds:mono/freeze2",
-      "poof-sounds:mono/freeze3",
-      "poof-sounds:mono/freeze4",
-      "poof-sounds:mono/freeze5"
+      {
+        "name": "poof-sounds:mono/freeze1_alt",
+        "weight": 3
+      },
+      {
+        "name": "poof-sounds:mono/freeze1",
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/freeze2",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze3",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze4",
+        "weight": 5
+      },
+      {
+        "name": "poof-sounds:mono/freeze5",
+        "weight": 5
+      }
     ],
     "subtitle": "uh oh you are freezing"
   },
@@ -1352,6 +1452,11 @@
         "weight": 5
       },
       {
+        "name": "poof-sounds:mono/burgerbuns",
+        "volume": 0.8,
+        "weight": 2
+      },
+      {
         "name": "poof-sounds:mono/butterfly",
         "volume": 0.8,
         "weight": 5
@@ -1446,7 +1551,10 @@
       },
       {
         "name": "poof-sounds:mono/whipnaenae",
-        "weight": 3
+        "weight": 2
+      },
+      {
+        "name": "poof-sounds:mono/whipnaenae2"
       },
       {
         "name": "poof-sounds:mono/yes1"
@@ -1498,7 +1606,7 @@
   },
   "entity.villager.trade": {
     "replace": true,
-    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae", "poof-sounds:mono/whipnaenae2"],
     "subtitle": "villager trading"
   },
   "entity.villager.yes": {
@@ -1617,7 +1725,7 @@
   },
   "entity.wandering_trader.trade": {
     "replace": true,
-    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae"],
+    "sounds": ["poof-sounds:mono/wawawaw", "poof-sounds:mono/whipnaenae", "poof-sounds:mono/whipnaenae2"],
     "subtitle": "trader joe trading"
   },
   "entity.wandering_trader.yes": {
@@ -1812,5 +1920,27 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/totem"],
     "subtitle": "totem saved your life"
+  },
+  "ui.hud.bubble_pop": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/fwop1",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop2",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop3",
+        "volume": 0.7
+      },
+      {
+        "name": "poof-sounds:mono/fwop4",
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "breath bubble pop (fwop)"
   }
 }

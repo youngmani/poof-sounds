@@ -8,6 +8,44 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.8.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.8.0) - 12/04/2024
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.4
+- add new panorama for "The Garden Awakens" update
+
+## [Version 4.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v4.7.1) - 10/24/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.21.2 snapshots
+- add a new variant to a sound
+
+## [Version 4.7.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.7.0) - 09/07/2024
+
+- add a new sound for a mob
+- add a couple more custom painting textures
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.2 snapshots
+- (Bedrock Edition only) map bundle sound event
+
+## [Version 4.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.6.0) - 06/12/2024
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.21
+- add new panorama for Minecraft version 1.21
+- add a new villager voice line
+- add more custom painting textures for Minecraft version 1.21
+
+## [Version 4.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.5.0) - 04/23/2024
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.5
+- add a new sound for a mob
+- add custom painting textures for new paintings added in upcoming 1.21 update
+- (Bedrock Edition only) map new sound event for 1.21 preview
+
+## [Version 4.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.4.0) - 04/07/2024
+
+- (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
+- (Java Edition only) add new sound event from 1.21 experimental data pack
+- add new sounds for a mob
+- reduce resource pack size with improved image and sound compression
+
 ## [Version 4.3.6](https://github.com/youngmani/poof-sounds/releases/tag/v4.3.6) - 03/15/2024
 
 - (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
@@ -72,7 +110,7 @@ What's new in every version of **poof sounds**!
 
 ## [Version 3.7.1](https://github.com/youngmani/poof-sounds/releases/tag/v3.7.1) - 11/28/2023
 
-- (Java Edition only) update resource pack version to be compatible with 1.20.3 prereleases and 1.20.3
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.20.3
 - add a new variant for a sound
 - update a subtitle
 
@@ -150,7 +188,7 @@ What's new in every version of **poof sounds**!
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20
 - add new sounds for a few more mobs
 - fix the subtitle for a sound
-- (Bedrock Edition only) add support for custom pig texture which was added to **poof sounds** Java Edition v2.3.0
+- (Bedrock Edition only) add support for custom pig texture
 
 ## [Version 2.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v2.5.0) - 05/29/2023
 

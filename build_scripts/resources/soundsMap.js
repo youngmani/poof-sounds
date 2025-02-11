@@ -78,6 +78,9 @@ module.exports = {
   'entity.cow.ambient': {
     name: 'mob.cow.say',
   },
+  'entity.cow.milk': {
+    name: 'mob.cow.milk',
+  },
   'entity.creeper.primed': [
     {
       /* prevent conflict with random.fuse which is used for tnt */
@@ -204,6 +207,9 @@ module.exports = {
   'entity.goat.death': {
     name: 'mob.goat.death',
   },
+  'entity.goat.milk': [
+    /* mapped to mob.mooshroom.suspicious_milk */
+  ],
   'entity.goat.screaming.ambient': {
     name: 'mob.goat.ambient.screamer',
   },
@@ -252,11 +258,20 @@ module.exports = {
   'entity.llama.ambient': {
     name: 'mob.llama.idle',
   },
+  'entity.mooshroom.milk': [
+    /* mapped to mob.mooshroom.suspicious_milk */
+  ],
+  'entity.mooshroom.suspicious_milk': {
+    name: 'mob.mooshroom.suspicious_milk',
+  },
   'entity.mule.ambient': [
     /* bedrock uses donkey sounds for mule */
   ],
   'entity.ocelot.ambient': {
     name: 'mob.ocelot.idle',
+  },
+  'entity.panda.sneeze': {
+    name: 'mob.panda.sneeze',
   },
   'entity.parrot.ambient': {
     name: 'mob.parrot.idle',
@@ -464,7 +479,9 @@ module.exports = {
   'entity.zombified_piglin.hurt': {
     name: 'mob.zombiepig.zpighurt',
   },
-  'event.mob_effect.bad_omen': [],
+  'event.mob_effect.bad_omen': {
+    name: 'apply_effect.bad_omen',
+  },
   'item.armor.equip_diamond': {
     name: 'armor.equip_diamond',
   },
@@ -489,9 +506,9 @@ module.exports = {
       name: 'use.wood',
     },
   ],
-  'item.bundle.insert': [
-    /* no bundles in bedrock yet */
-  ],
+  'item.bundle.insert': {
+    name: 'bundle.insert',
+  },
   'item.elytra.flying': {
     name: 'elytra.loop',
   },
@@ -506,5 +523,8 @@ module.exports = {
   ],
   'item.totem.use': {
     name: 'random.totem',
+  },
+  'ui.hud.bubble_pop': {
+    name: 'hud.bubble.pop',
   },
 };

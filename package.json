@@ -1,17 +1,19 @@
 {
   "name": "poof-sounds",
-  "version": "4.4.0-0",
+  "version": "4.9.0-5",
   "description": "build scripts for poof sounds",
   "private": true,
   "scripts": {
     "build": "node build_scripts/build.js",
     "clean": "node build_scripts/clean.js",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
     "prebuild": "npm run validate",
     "preversion": "npm run validate",
     "validate": "node build_scripts/validate.js"
   },
   "dependencies": {
-    "adm-zip": "^0.5.10",
+    "adm-zip": "0.5.12",
     "ffprobe": "^1.1.2",
     "ffprobe-static": "^3.1.0",
     "jimp": "^0.22.10",
@@ -19,8 +21,9 @@
     "winston": "^3.11.0"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint": "^9.4.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.3.0",
     "prettier": "^3.2.5"
   }
 }
