@@ -5,13 +5,15 @@ const Zip = require('adm-zip');
 const semver = require('semver');
 const Jimp = require('jimp');
 
-const SOUNDS_MAP = require('./resources/soundsMap');
 const KZ_PAINTINGS = require('./resources/kzPaintings');
+const PIG_TEXTURES_MAP = require('./resources/pigTexturesMap');
+const SOUNDS_MAP = require('./resources/soundsMap');
 const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, TARGET_DIR, LOG_LABELS } = require('./constants');
 const { all, logger, getSplashes } = require('./utils');
 
 const PAINTING_SIZE = 128;
 const PAINTINGS_PATH = 'textures/painting';
+const PIG_TEXTURE_PATH = 'textures/entity/pig';
 
 const log = logger.child({ label: LOG_LABELS.BEDROCK_BUILD });
 
@@ -31,11 +33,14 @@ const convertToBedrock = async version => {
     log.debug(`adding non-kz painting ${name}`);
     zip.addLocalFile(getPaintingPath(name), PAINTINGS_PATH);
   });
+  Object.entries(PIG_TEXTURES_MAP).forEach(([javaTexture, bedrockTexture]) => {
+    log.debug(`adding ${javaTexture} texture as ${bedrockTexture}`);
+    zip.addLocalFile(getPigTexturePath(javaTexture), PIG_TEXTURE_PATH, `${bedrockTexture}.png`);
+  });
 
   const [kzPng] = await Promise.all([
     kz.getBufferAsync(Jimp.MIME_PNG),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds/`, { zipPath: `sounds/${POOF_NAMESPACE}` }),
-    zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/entity`, { zipPath: 'textures/entity' }),
     zip.addLocalFolderPromise(`${BASE_PACK_DIR}/${MC_NAMESPACE}/textures/gui/title/background`, {
       zipPath: 'textures/ui',
     }),
@@ -177,5 +182,6 @@ const generateManifest = (version, isBeta) => {
 const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
 
 const getPaintingPath = name => `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/${name}.png`;
+const getPigTexturePath = name => `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PIG_TEXTURE_PATH}/${name}.png`;
 
 module.exports = convertToBedrock;
