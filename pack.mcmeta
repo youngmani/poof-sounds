@@ -24,9 +24,9 @@
         }
       },
       {
-        "directory": "overlay_new_pig",
+        "directory": "overlay_pig",
         "formats": {
-          "max_inclusive": 999,
+          "max_inclusive": 49,
           "min_inclusive": 47
         }
       }
