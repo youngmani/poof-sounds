@@ -10,29 +10,15 @@
       }
     },
     "bamboo_wood": {
-      "events": {
-        "item.use.on": {
-          "pitch": 0.8,
-          "sound": "use.wood"
-        }
-      }
+      "events": { "item.use.on": { "pitch": 0.8, "sound": "use.wood" } }
     },
     "cherry_wood": {
-      "events": {
-        "item.use.on": {
-          "pitch": 0.8,
-          "sound": "use.wood"
-        }
-      }
+      "events": { "item.use.on": { "pitch": 0.8, "sound": "use.wood" } }
     }
   },
   "entity_sounds": {
     "entities": {
-      "cod": {
-        "events": {
-          "death": "mob.fish.hurt"
-        }
-      },
+      "cod": { "events": { "death": "mob.fish.hurt" } },
       "creeper": {
         "events": {
           "fuse": {
@@ -51,21 +37,9 @@
           }
         }
       },
-      "pufferfish": {
-        "events": {
-          "death": "mob.fish.hurt"
-        }
-      },
-      "salmon": {
-        "events": {
-          "death": "mob.fish.hurt"
-        }
-      },
-      "tropicalfish": {
-        "events": {
-          "death": "mob.fish.hurt"
-        }
-      }
+      "pufferfish": { "events": { "death": "mob.fish.hurt" } },
+      "salmon": { "events": { "death": "mob.fish.hurt" } },
+      "tropicalfish": { "events": { "death": "mob.fish.hurt" } }
     }
   },
   "individual_event_sounds": {

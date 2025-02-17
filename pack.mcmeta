@@ -2,33 +2,21 @@
   "pack": {
     "description": "Poofesure Minecraft Sounds\n\u00A78\u00A7ov{VERSION} by youngmani",
     "pack_format": 15,
-    "supported_formats": {
-      "max_inclusive": 51,
-      "min_inclusive": 6
-    }
+    "supported_formats": { "max_inclusive": 52, "min_inclusive": 6 }
   },
   "overlays": {
     "entries": [
       {
         "directory": "overlay_1_20",
-        "formats": {
-          "max_inclusive": 32,
-          "min_inclusive": 6
-        }
+        "formats": { "max_inclusive": 32, "min_inclusive": 6 }
       },
       {
         "directory": "overlay_1_21",
-        "formats": {
-          "max_inclusive": 42,
-          "min_inclusive": 33
-        }
+        "formats": { "max_inclusive": 42, "min_inclusive": 33 }
       },
       {
-        "directory": "overlay_new_pig",
-        "formats": {
-          "max_inclusive": 999,
-          "min_inclusive": 47
-        }
+        "directory": "overlay_pig",
+        "formats": { "max_inclusive": 49, "min_inclusive": 47 }
       }
     ]
   }

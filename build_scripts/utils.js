@@ -22,11 +22,19 @@ const getOverlayDirectories = async () => {
 };
 
 const getSplashes = async version => {
-  const splashes = await fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`);
-  return splashes.toString() + `\npoof sounds v${version}\npoof sounds version ${semver.major(version)}!`;
+  const splashes = await fs.readFile(
+    `${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`,
+  );
+  return (
+    splashes.toString() +
+    `\npoof sounds v${version}\npoof sounds version ${semver.major(version)}!`
+  );
 };
 
-const maxLabelLength = Object.values(LOG_LABELS).reduce((max, label) => Math.max(max, label.length), 0);
+const maxLabelLength = Object.values(LOG_LABELS).reduce(
+  (max, label) => Math.max(max, label.length),
+  0,
+);
 
 const addLabel = winston.format(info => {
   if (info.label) {
@@ -55,15 +63,10 @@ const logger = winston.createLogger({
         })(),
         addLabel(),
         winston.format.cli(),
-        logFormat
+        logFormat,
       ),
     }),
   ],
 });
 
-module.exports = {
-  all,
-  getOverlayDirectories,
-  getSplashes,
-  logger,
-};
+module.exports = { all, getOverlayDirectories, getSplashes, logger };

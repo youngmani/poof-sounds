@@ -1,9 +1,6 @@
 module.exports = {
   arrowParens: 'avoid',
   endOfLine: 'auto',
-  printWidth: 120,
-  semi: true,
+  objectWrap: 'collapse',
   singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'es5',
 };
