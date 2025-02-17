@@ -3,14 +3,7 @@ const eslintConfigPrettier = require('eslint-config-prettier');
 const globals = require('globals');
 
 module.exports = [
-  {
-    languageOptions: {
-      globals: {
-        ...globals.es2021,
-        ...globals.node,
-      },
-    },
-  },
+  { languageOptions: { globals: { ...globals.es2021, ...globals.node } } },
   js.configs.recommended,
   eslintConfigPrettier,
   {

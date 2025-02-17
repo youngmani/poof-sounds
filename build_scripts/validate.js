@@ -4,7 +4,12 @@ const fs = require('fs/promises');
 const ffprobe = require('ffprobe');
 const ffprobePath = require('ffprobe-static').path;
 
-const { BASE_PACK_DIR, MC_NAMESPACE, POOF_NAMESPACE, LOG_LABELS } = require('./constants');
+const {
+  BASE_PACK_DIR,
+  MC_NAMESPACE,
+  POOF_NAMESPACE,
+  LOG_LABELS,
+} = require('./constants');
 const { getOverlayDirectories, all, logger } = require('./utils');
 
 const MONO_DIR = 'mono';
@@ -23,7 +28,9 @@ class ValidationError extends Error {
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
   const usedFiles = new Set();
-  const soundsJson = await fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`);
+  const soundsJson = await fs.readFile(
+    `${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`,
+  );
   const sounds = JSON.parse(soundsJson);
   Object.entries(sounds).forEach(([key, sound]) => {
     sound.sounds
@@ -66,21 +73,24 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
     files.push({ path: `${STEREO_DIR}/${fileName}`, channels: 2 });
   });
   const promises = files.map(({ path, channels }) =>
-    ffprobe(`${SOUNDS_DIR_PATH}/${path}`, {
-      path: ffprobePath,
-    }).then(info => {
+    ffprobe(`${SOUNDS_DIR_PATH}/${path}`, { path: ffprobePath }).then(info => {
       if (info.streams.length === 1 && info.streams[0].channels === channels) {
         log.silly(`correct number of audio channels for: ${path}`);
       } else {
-        throw new ValidationError(`incorrect number of audio channels for: ${path}`);
+        throw new ValidationError(
+          `incorrect number of audio channels for: ${path}`,
+        );
       }
-    })
+    }),
   );
   await all(promises);
 };
 
 const validateOverlaysExist = async () => {
-  const [mcmeta, overlayDirs] = await all([fs.readFile('pack.mcmeta', 'utf8'), getOverlayDirectories()]);
+  const [mcmeta, overlayDirs] = await all([
+    fs.readFile('pack.mcmeta', 'utf8'),
+    getOverlayDirectories(),
+  ]);
   const usedDirs = new Set();
   const mcmetaJson = JSON.parse(mcmeta);
   mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
