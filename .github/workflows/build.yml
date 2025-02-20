@@ -54,7 +54,8 @@ jobs:
         with:
           name: build
           path: build
-      - run: unzip build/poof-sounds.zip -d unoptimized
+      - name: Unzip Build
+        run: unzip build/poof-sounds.zip -d unoptimized || unzip build/poof-sounds-beta.zip -d unoptimized
       - uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: v0.4.0
