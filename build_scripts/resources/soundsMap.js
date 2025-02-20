@@ -207,6 +207,12 @@ module.exports = {
   ],
   'entity.wither_skeleton.death': { name: 'entity.wither_skeleton.death' },
   'entity.wolf.ambient': { name: 'mob.wolf.bark' },
+  'entity.wolf_angry.ambient': { name: 'mob.wolf.mad.bark' },
+  'entity.wolf_big.ambient': { name: 'mob.wolf.big.bark' },
+  'entity.wolf_cute.ambient': { name: 'mob.wolf.cute.bark' },
+  'entity.wolf_grumpy.ambient': { name: 'mob.wolf.grumpy.bark' },
+  'entity.wolf_puglin.ambient': { name: 'mob.wolf.puglin.bark' },
+  'entity.wolf_sad.ambient': { name: 'mob.wolf.sad.bark' },
   'entity.zombie.ambient': [
     { name: 'mob.zombie.say' },
     { adjustments: { pitch: 1.2 }, name: 'note.zombie' },

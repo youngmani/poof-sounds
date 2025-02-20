@@ -1079,6 +1079,66 @@
     ],
     "subtitle": "woof"
   },
+  "entity.wolf_angry.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (angry)"
+  },
+  "entity.wolf_big.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (big)"
+  },
+  "entity.wolf_cute.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (cute)"
+  },
+  "entity.wolf_grumpy.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (grumpy)"
+  },
+  "entity.wolf_puglin.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (puglin)"
+  },
+  "entity.wolf_sad.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof (sad)"
+  },
   "entity.zombie.ambient": {
     "replace": true,
     "sounds": [
