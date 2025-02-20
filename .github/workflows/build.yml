@@ -59,13 +59,7 @@ jobs:
       - uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: v0.4.0
+          artifact_name: optimized
           options: |
             pack_directory = 'unoptimized'
-            output_file_path = 'optimized.zip'
             never_store_squash_times = true
-      - uses: actions/upload-artifact@v4
-        with:
-          name: optimized
-          path: optimized.zip
-          retention-days: 3
-          if-no-files-found: error
