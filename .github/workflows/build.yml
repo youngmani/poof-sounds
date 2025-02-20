@@ -62,6 +62,7 @@ jobs:
           options: |
             pack_directory = 'unoptimized'
             output_file_path = 'optimized.zip'
+            never_store_squash_times = true
       - uses: actions/upload-artifact@v4
         with:
           name: optimized
