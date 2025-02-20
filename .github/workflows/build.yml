@@ -60,8 +60,8 @@ jobs:
         with:
           packsquash_version: v0.4.0
           options: |
-            pack_directory: 'unoptimized'
-            output_file_path: 'optimized.zip'
+            pack_directory = 'unoptimized'
+            output_file_path = 'optimized.zip'
       - uses: actions/upload-artifact@v4
         with:
           name: optimized
