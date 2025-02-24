@@ -8,6 +8,14 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 4.9.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.9.0) - 02/23/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.5 snapshots
+- add textures for new pig variants in Spring Drop 2025
+- add a new sound event
+- improve quality of an existing sound clip
+- (Bedrock Edition only) fix pig texture when saddled
+
 ## [Version 4.8.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.8.0) - 12/04/2024
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.4
