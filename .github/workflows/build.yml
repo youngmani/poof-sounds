@@ -36,7 +36,7 @@ jobs:
         with:
           name: build
           path: build
-      - uses: ncipollo/release-action@v1
+      - uses: youngmani/release-action@v1
         with:
           artifactErrorsFailBuild: true
           artifacts: build/*
