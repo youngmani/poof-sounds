@@ -36,6 +36,11 @@ const maxLabelLength = Object.values(LOG_LABELS).reduce(
   0,
 );
 
+const uppercaseLevel = winston.format(info => {
+  info.level = info.level.toUpperCase();
+  return info;
+});
+
 const addLabel = winston.format(info => {
   if (info.label) {
     const formattedLabel = `[${info.label}]`.padEnd(maxLabelLength + 3);
@@ -55,12 +60,9 @@ const logger = winston.createLogger({
   format: winston.format.errors({ stack: true }),
   transports: [
     new winston.transports.Console({
-      level: process.env.LOG_LEVEL ?? 'info',
+      level: process.env.LOG_LEVEL?.toLowerCase() ?? 'info',
       format: winston.format.combine(
-        winston.format(info => {
-          info.level = info.level.toUpperCase();
-          return info;
-        })(),
+        uppercaseLevel(),
         addLabel(),
         winston.format.cli(),
         logFormat,
