@@ -1,15 +1,13 @@
-'use strict';
+import { rm } from 'fs/promises';
 
-const fs = require('fs/promises');
-
-const { TARGET_DIR, LOG_LABELS } = require('./constants');
-const { logger } = require('./utils');
+import { TARGET_DIR, LOG_LABELS } from './constants.js';
+import { logger } from './utils.js';
 
 const log = logger.child({ label: LOG_LABELS.CLEAN });
 
 const clean = async () => {
   try {
-    await fs.rm(TARGET_DIR, { recursive: true, force: true });
+    await rm(TARGET_DIR, { recursive: true, force: true });
     log.info(`removed ${TARGET_DIR}`);
   } catch (error) {
     log.error(error);

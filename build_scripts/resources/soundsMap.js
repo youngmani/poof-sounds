@@ -1,7 +1,5 @@
-'use strict';
-
 // map java sound names to bedrock and add additional metadata
-module.exports = {
+const soundsMap = {
   'block.ancient_debris.break': {
     adjustments: { pitch: 11 / 12 },
     /* dig.ancient_debris is also used for placing debris */
@@ -242,3 +240,5 @@ module.exports = {
   'item.totem.use': { name: 'random.totem' },
   'ui.hud.bubble_pop': { name: 'hud.bubble.pop' },
 };
+
+export default soundsMap;

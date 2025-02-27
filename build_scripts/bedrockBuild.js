@@ -1,21 +1,19 @@
-'use strict';
+import { readFile, readdir } from 'fs/promises';
+import Zip from 'adm-zip';
+import { prerelease, major, minor, patch } from 'semver';
+import Jimp from 'jimp';
 
-const fs = require('fs/promises');
-const Zip = require('adm-zip');
-const semver = require('semver');
-const Jimp = require('jimp');
-
-const KZ_PAINTINGS = require('./resources/kzPaintings');
-const PIG_TEXTURES_MAP = require('./resources/pigTexturesMap');
-const SOUNDS_MAP = require('./resources/soundsMap');
-const {
+import KZ_PAINTINGS from './resources/kzPaintings.js';
+import PIG_TEXTURES_MAP from './resources/pigTexturesMap.js';
+import SOUNDS_MAP from './resources/soundsMap.js';
+import {
   BASE_PACK_DIR,
   MC_NAMESPACE,
   POOF_NAMESPACE,
   TARGET_DIR,
   LOG_LABELS,
-} = require('./constants');
-const { all, logger, getSplashes } = require('./utils');
+} from './constants.js';
+import { all, logger, getSplashes } from './utils.js';
 
 const PAINTING_SIZE = 128;
 const PAINTINGS_PATH = 'textures/painting';
@@ -27,7 +25,7 @@ const convertToBedrock = async version => {
   const zip = new Zip();
 
   const [soundsJson, splashesTxt, kz, nonKzPaintings] = await all([
-    fs.readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
+    readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
     getSplashes(version),
     generateKz(),
     getNonKzPaintings(),
@@ -70,7 +68,7 @@ const convertToBedrock = async version => {
   const bedrockSplashes = generateSplashes(splashesTxt);
   zip.addFile('splashes.json', Buffer.from(toJson(bedrockSplashes)));
 
-  const isBeta = !!semver.prerelease(version);
+  const isBeta = !!prerelease(version);
   const manifest = generateManifest(version, isBeta);
   zip.addFile('manifest.json', Buffer.from(toJson(manifest)));
 
@@ -102,7 +100,7 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
 
 const getNonKzPaintings = async () => {
   const kzPaintingNames = KZ_PAINTINGS.map(painting => painting.name);
-  const files = await fs.readdir(
+  const files = await readdir(
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/`,
   );
   return files
@@ -167,12 +165,12 @@ const generateSplashes = splashesTxt => {
 
 const generateManifest = (version, isBeta) => {
   const versionArr = [
-    semver.major(version),
-    semver.minor(version),
+    major(version),
+    minor(version),
     isBeta
-      ? 1000 * semver.patch(version) +
-        (semver.prerelease(version).find(i => typeof i === 'number') ?? 0)
-      : semver.patch(version),
+      ? 1000 * patch(version) +
+        (prerelease(version).find(i => typeof i === 'number') ?? 0)
+      : patch(version),
   ];
   log.info(`using version ${versionArr}, beta=${isBeta}`);
 
@@ -211,4 +209,4 @@ const getPaintingPath = name =>
 const getPigTexturePath = name =>
   `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PIG_TEXTURE_PATH}/${name}.png`;
 
-module.exports = convertToBedrock;
+export default convertToBedrock;

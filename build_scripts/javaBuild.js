@@ -1,22 +1,20 @@
-'use strict';
+import { readFile } from 'fs/promises';
+import Zip from 'adm-zip';
+import { prerelease } from 'semver';
 
-const fs = require('fs/promises');
-const Zip = require('adm-zip');
-const semver = require('semver');
-
-const {
+import {
   BASE_PACK_DIR,
   MC_NAMESPACE,
   TARGET_DIR,
   LOG_LABELS,
-} = require('./constants');
-const { all, getOverlayDirectories, logger, getSplashes } = require('./utils');
+} from './constants.js';
+import { all, getOverlayDirectories, logger, getSplashes } from './utils.js';
 
 const log = logger.child({ label: LOG_LABELS.JAVA_BUILD });
 
 const buildZip = async version => {
   const [mcmeta, overlayDirs, splashes] = await all([
-    fs.readFile('pack.mcmeta', 'utf8'),
+    readFile('pack.mcmeta', 'utf8'),
     getOverlayDirectories(),
     getSplashes(version),
   ]);
@@ -40,10 +38,10 @@ const buildZip = async version => {
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`,
     Buffer.from(splashes),
   );
-  const isPrerelease = !!semver.prerelease(version);
+  const isPrerelease = !!prerelease(version);
   const target = `${TARGET_DIR}/poof-sounds${isPrerelease ? '-beta' : ''}.zip`;
   await zip.writeZipPromise(target, { overwrite: true });
   log.info(`successfully wrote zip file to: ${target}`);
 };
 
-module.exports = buildZip;
+export default buildZip;

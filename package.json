@@ -3,6 +3,7 @@
   "version": "4.9.0",
   "description": "build scripts for poof sounds",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "node build_scripts/build.js",
     "clean": "node build_scripts/clean.js",

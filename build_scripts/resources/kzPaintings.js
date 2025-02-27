@@ -1,7 +1,5 @@
-'use strict';
-
 // list of paintings to generate kz.png
-module.exports = [
+const kzPaintings = [
   { name: 'kebab', x: 0, y: 0, h: 1, w: 1 },
   { name: 'aztec', x: 1, y: 0, h: 1, w: 1 },
   { name: 'alban', x: 2, y: 0, h: 1, w: 1 },
@@ -29,3 +27,5 @@ module.exports = [
   { name: 'skeleton', x: 12, y: 4, h: 3, w: 4 },
   { name: 'donkey_kong', x: 12, y: 7, h: 3, w: 4 },
 ];
+
+export default kzPaintings;

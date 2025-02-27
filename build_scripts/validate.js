@@ -1,16 +1,14 @@
-'use strict';
+import { readFile, readdir } from 'fs/promises';
+import ffprobe from 'ffprobe';
+import { path as ffprobePath } from 'ffprobe-static';
 
-const fs = require('fs/promises');
-const ffprobe = require('ffprobe');
-const ffprobePath = require('ffprobe-static').path;
-
-const {
+import {
   BASE_PACK_DIR,
   MC_NAMESPACE,
   POOF_NAMESPACE,
   LOG_LABELS,
-} = require('./constants');
-const { getOverlayDirectories, all, logger } = require('./utils');
+} from './constants.js';
+import { getOverlayDirectories, all, logger } from './utils.js';
 
 const MONO_DIR = 'mono';
 const STEREO_DIR = 'stereo';
@@ -28,7 +26,7 @@ class ValidationError extends Error {
 const verifySoundsExist = async (monoFiles, stereoFiles) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
   const usedFiles = new Set();
-  const soundsJson = await fs.readFile(
+  const soundsJson = await readFile(
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`,
   );
   const sounds = JSON.parse(soundsJson);
@@ -88,7 +86,7 @@ const validateSoundFormat = async (monoFiles, stereoFiles) => {
 
 const validateOverlaysExist = async () => {
   const [mcmeta, overlayDirs] = await all([
-    fs.readFile('pack.mcmeta', 'utf8'),
+    readFile('pack.mcmeta', 'utf8'),
     getOverlayDirectories(),
   ]);
   const usedDirs = new Set();
@@ -119,8 +117,8 @@ const validate = async () => {
   log.info('begin validation');
   try {
     const [monoFiles, stereoFiles] = await all([
-      fs.readdir(`${SOUNDS_DIR_PATH}/${MONO_DIR}`),
-      fs.readdir(`${SOUNDS_DIR_PATH}/${STEREO_DIR}`),
+      readdir(`${SOUNDS_DIR_PATH}/${MONO_DIR}`),
+      readdir(`${SOUNDS_DIR_PATH}/${STEREO_DIR}`),
     ]);
     await all([
       verifySoundsExist(monoFiles, stereoFiles),

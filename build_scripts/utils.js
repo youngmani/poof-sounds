@@ -1,12 +1,10 @@
-'use strict';
+import { readdir, readFile } from 'fs/promises';
+import { format, createLogger, transports } from 'winston';
+import { major } from 'semver';
 
-const fs = require('fs/promises');
-const winston = require('winston');
-const semver = require('semver');
+import { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } from './constants.js';
 
-const { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } = require('./constants');
-
-const all = async promises => {
+export const all = async promises => {
   const results = await Promise.allSettled(promises);
   return results.map(result => {
     if (result.status === 'rejected') {
@@ -16,18 +14,18 @@ const all = async promises => {
   });
 };
 
-const getOverlayDirectories = async () => {
-  const files = await fs.readdir('.');
+export const getOverlayDirectories = async () => {
+  const files = await readdir('.');
   return files.filter(file => file.startsWith('overlay_'));
 };
 
-const getSplashes = async version => {
-  const splashes = await fs.readFile(
+export const getSplashes = async version => {
+  const splashes = await readFile(
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`,
   );
   return (
     splashes.toString() +
-    `\npoof sounds v${version}\npoof sounds version ${semver.major(version)}!`
+    `\npoof sounds v${version}\npoof sounds version ${major(version)}!`
   );
 };
 
@@ -36,12 +34,12 @@ const maxLabelLength = Object.values(LOG_LABELS).reduce(
   0,
 );
 
-const uppercaseLevel = winston.format(info => {
+const uppercaseLevel = format(info => {
   info.level = info.level.toUpperCase();
   return info;
 });
 
-const addLabel = winston.format(info => {
+const addLabel = format(info => {
   if (info.label) {
     const formattedLabel = `[${info.label}]`.padEnd(maxLabelLength + 3);
     info.message = formattedLabel + info.message;
@@ -49,26 +47,24 @@ const addLabel = winston.format(info => {
   return info;
 });
 
-const logFormat = winston.format.printf(info => {
+const logFormat = format.printf(info => {
   let log = `${info.level}: `;
   if (info.message) log += info.message;
   if (info.stack) log += `\n${info.stack}`;
   return log;
 });
 
-const logger = winston.createLogger({
-  format: winston.format.errors({ stack: true }),
+export const logger = createLogger({
+  format: format.errors({ stack: true }),
   transports: [
-    new winston.transports.Console({
+    new transports.Console({
       level: process.env.LOG_LEVEL?.toLowerCase() ?? 'info',
-      format: winston.format.combine(
+      format: format.combine(
         uppercaseLevel(),
         addLabel(),
-        winston.format.cli(),
+        format.cli(),
         logFormat,
       ),
     }),
   ],
 });
-
-module.exports = { all, getOverlayDirectories, getSplashes, logger };
