@@ -43,3 +43,4 @@ jobs:
           artifactContentType: application/zip
           draft: true
           generateReleaseNotes: true
+          prerelease: auto
