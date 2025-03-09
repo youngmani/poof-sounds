@@ -104,6 +104,26 @@
     ],
     "subtitle": "putthatinenderchest"
   },
+  "block.pointed_dripstone.drip_lava": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/drip1", "poof-sounds:mono/drip2"],
+    "subtitle": "drip (lava)"
+  },
+  "block.pointed_dripstone.drip_lava_into_cauldron": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/drip1", "poof-sounds:mono/drip2"],
+    "subtitle": "drip (lava into cauldron)"
+  },
+  "block.pointed_dripstone.drip_water": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/drip1", "poof-sounds:mono/drip2"],
+    "subtitle": "drip (water)"
+  },
+  "block.pointed_dripstone.drip_water_into_cauldron": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/drip1", "poof-sounds:mono/drip2"],
+    "subtitle": "drip (water into cauldron)"
+  },
   "block.portal.travel": {
     "replace": true,
     "sounds": [{ "name": "poof-sounds:stereo/destination", "volume": 4 }],
