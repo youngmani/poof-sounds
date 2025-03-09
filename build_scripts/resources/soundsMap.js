@@ -22,6 +22,16 @@ const soundsMap = {
   ],
   'block.end_portal.spawn': { name: 'block.end_portal.spawn' },
   'block.ender_chest.open': { name: 'random.enderchestopen' },
+  'block.pointed_dripstone.drip_lava': { name: 'drip.lava.pointed_dripstone' },
+  'block.pointed_dripstone.drip_lava_into_cauldron': {
+    name: 'cauldron_drip.lava.pointed_dripstone	',
+  },
+  'block.pointed_dripstone.drip_water': {
+    name: 'drip.water.pointed_dripstone',
+  },
+  'block.pointed_dripstone.drip_water_into_cauldron': {
+    name: 'cauldron_drip.water.pointed_dripstone',
+  },
   'block.portal.travel': { name: 'portal.travel' },
   'block.portal.trigger': { name: 'portal.trigger' },
   'block.shulker_box.open': { name: 'random.shulkerboxopen' },
