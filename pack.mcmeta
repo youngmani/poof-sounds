@@ -17,6 +17,10 @@
       {
         "directory": "overlay_pig",
         "formats": { "max_inclusive": 49, "min_inclusive": 47 }
+      },
+      {
+        "directory": "overlay_1_21_5",
+        "formats": { "max_inclusive": 999, "min_inclusive": 54 }
       }
     ]
   }
