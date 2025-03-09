@@ -913,6 +913,7 @@
       { "name": "poof-sounds:mono/newhat2", "volume": 0.96, "weight": 5 },
       { "name": "poof-sounds:mono/pooped", "volume": 0.99, "weight": 5 },
       { "name": "poof-sounds:mono/screaming", "volume": 0.75, "weight": 6 },
+      { "name": "poof-sounds:mono/shitpant", "volume": 1.25, "weight": 3 },
       { "name": "poof-sounds:mono/youbitch", "volume": 0.55, "weight": 5 }
     ],
     "subtitle": "villager sounds"
