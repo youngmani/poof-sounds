@@ -620,6 +620,30 @@
     ],
     "subtitle": "oink (hurt)"
   },
+  "entity.piglin_brute.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/oink1",
+        "pitch": 0.7,
+        "volume": 1.1,
+        "weight": 10
+      },
+      {
+        "name": "poof-sounds:mono/oink2",
+        "pitch": 0.7,
+        "volume": 1.1,
+        "weight": 4
+      },
+      {
+        "name": "poof-sounds:mono/oink3",
+        "pitch": 0.7,
+        "volume": 1.1,
+        "weight": 12
+      }
+    ],
+    "subtitle": "piglin brute oink"
+  },
   "entity.piglin.ambient": {
     "replace": true,
     "sounds": [
@@ -648,30 +672,6 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/piglinretreat"],
     "subtitle": "piglin retreats wee"
-  },
-  "entity.piglin_brute.ambient": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "poof-sounds:mono/oink1",
-        "pitch": 0.7,
-        "volume": 1.1,
-        "weight": 10
-      },
-      {
-        "name": "poof-sounds:mono/oink2",
-        "pitch": 0.7,
-        "volume": 1.1,
-        "weight": 4
-      },
-      {
-        "name": "poof-sounds:mono/oink3",
-        "pitch": 0.7,
-        "volume": 1.1,
-        "weight": 12
-      }
-    ],
-    "subtitle": "piglin brute oink"
   },
   "entity.pillager.ambient": {
     "replace": true,
@@ -1063,16 +1063,6 @@
     ],
     "subtitle": "witch giggle hehehehe"
   },
-  "entity.wither.death": {
-    "replace": true,
-    "sounds": ["poof-sounds:mono/witherdead"],
-    "subtitle": "the wither is dead"
-  },
-  "entity.wither.spawn": {
-    "replace": true,
-    "sounds": ["poof-sounds:stereo/witherspawn"],
-    "subtitle": "the scary wither has been spawned"
-  },
   "entity.wither_skeleton.ambient": {
     "replace": true,
     "sounds": [
@@ -1090,15 +1080,15 @@
     ],
     "subtitle": "i hate wither skellingtons"
   },
-  "entity.wolf.ambient": {
+  "entity.wither.death": {
     "replace": true,
-    "sounds": [
-      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
-      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
-      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
-      { "name": "poof-sounds:mono/woof3", "volume": 2 }
-    ],
-    "subtitle": "woof"
+    "sounds": ["poof-sounds:mono/witherdead"],
+    "subtitle": "the wither is dead"
+  },
+  "entity.wither.spawn": {
+    "replace": true,
+    "sounds": ["poof-sounds:stereo/witherspawn"],
+    "subtitle": "the scary wither has been spawned"
   },
   "entity.wolf_angry.ambient": {
     "replace": true,
@@ -1159,6 +1149,16 @@
       { "name": "poof-sounds:mono/woof3", "volume": 2 }
     ],
     "subtitle": "woof (sad)"
+  },
+  "entity.wolf.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "woof"
   },
   "entity.zombie.ambient": {
     "replace": true,

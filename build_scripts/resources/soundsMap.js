@@ -128,12 +128,12 @@ const soundsMap = {
   'entity.pig.hurt': [
     /* uses mob.pig.say */
   ],
+  'entity.piglin_brute.ambient': { name: 'mob.piglin_brute.ambient' },
   'entity.piglin.ambient': [
     { name: 'mob.piglin.ambient' },
     { adjustments: { pitch: 1.2 }, name: 'note.piglin' },
   ],
   'entity.piglin.retreat': { name: 'mob.piglin.retreat' },
-  'entity.piglin_brute.ambient': { name: 'mob.piglin_brute.ambient' },
   'entity.pillager.ambient': { name: 'mob.pillager.idle' },
   'entity.pillager.hurt': { name: 'mob.pillager.hurt' },
   'entity.player.burp': { name: 'random.burp' },
@@ -197,20 +197,20 @@ const soundsMap = {
   'entity.wandering_trader.trade': { name: 'mob.wanderingtrader.haggle' },
   'entity.wandering_trader.yes': { name: 'mob.wanderingtrader.yes' },
   'entity.witch.ambient': { name: 'mob.witch.ambient' },
-  'entity.wither.death': { name: 'mob.wither.death' },
-  'entity.wither.spawn': { name: 'mob.wither.spawn' },
   'entity.wither_skeleton.ambient': [
     { name: 'entity.wither_skeleton.ambient' },
     { adjustments: { pitch: 1.2 }, name: 'note.witherskeleton' },
   ],
+  'entity.wither.death': { name: 'mob.wither.death' },
+  'entity.wither.spawn': { name: 'mob.wither.spawn' },
   'entity.wither_skeleton.death': { name: 'entity.wither_skeleton.death' },
-  'entity.wolf.ambient': { name: 'mob.wolf.bark' },
   'entity.wolf_angry.ambient': { name: 'mob.wolf.mad.bark' },
   'entity.wolf_big.ambient': { name: 'mob.wolf.big.bark' },
   'entity.wolf_cute.ambient': { name: 'mob.wolf.cute.bark' },
   'entity.wolf_grumpy.ambient': { name: 'mob.wolf.grumpy.bark' },
   'entity.wolf_puglin.ambient': { name: 'mob.wolf.puglin.bark' },
   'entity.wolf_sad.ambient': { name: 'mob.wolf.sad.bark' },
+  'entity.wolf.ambient': { name: 'mob.wolf.bark' },
   'entity.zombie.ambient': [
     { name: 'mob.zombie.say' },
     { adjustments: { pitch: 1.2 }, name: 'note.zombie' },
