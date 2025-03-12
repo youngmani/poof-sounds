@@ -7,11 +7,11 @@
   "overlays": {
     "entries": [
       {
-        "directory": "overlay_1_20",
+        "directory": "overlay_1_20_0",
         "formats": { "max_inclusive": 32, "min_inclusive": 6 }
       },
       {
-        "directory": "overlay_1_21",
+        "directory": "overlay_1_21_0",
         "formats": { "max_inclusive": 42, "min_inclusive": 33 }
       },
       {
