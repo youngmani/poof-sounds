@@ -9,8 +9,6 @@ jobs:
     timeout-minutes: 10
     env:
       IS_RELEASE: ${{ startsWith(github.ref, 'refs/tags/') }}
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,3 +42,73 @@ jobs:
           draft: true
           generateReleaseNotes: true
           prerelease: auto
+  optimize:
+    name: Validate Optimized Assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      THRESHOLD: 0.05
+    steps:
+      - uses: actions/checkout@v4
+      - run: mkdir temp-compression
+      - uses: actions/cache@v4
+        id: cache-binaries
+        with:
+          path: temp-compression
+          key: optivorbis-0.3.0-oxipng-9.1.4
+      - name: Download binaries
+        if: steps.cache-binaries.outputs.cache-hit != 'true'
+        run: |
+          cd temp-compression
+          wget -nv -O optivorbis.zip https://github.com/OptiVorbis/OptiVorbis/releases/download/v0.3.0/OptiVorbis.CLI.x86_64-unknown-linux-musl.zip
+          unzip -q optivorbis.zip
+          rm optivorbis.zip
+          wget -nv -O oxipng.tar.gz https://github.com/shssoichiro/oxipng/releases/download/v9.1.4/oxipng-9.1.4-x86_64-unknown-linux-musl.tar.gz
+          tar -xzf oxipng.tar.gz --strip-components=1 --no-anchored oxipng
+          rm oxipng.tar.gz
+      - name: Check ogg files
+        id: check-ogg
+        run: |
+          OIFS="$IFS"
+          IFS=$'\n'
+          rc="0"
+          for f in $(find . -path ./unpackaged -prune -false -o -name "*.ogg"); do
+            ./temp-compression/optivorbis -q $f "${f::-4}.o.ogg";
+            before=$(stat -c%s $f);
+            after=$(stat -c%s "${f::-4}.o.ogg");
+            diff=$(expr $before - $after) || true;
+            percent=$(echo "scale=2 ; $diff / $after" | bc);
+            if (( $(echo "$percent > $THRESHOLD" | bc -l) )); then
+              echo "::error file=${f:2},line=1::${f:2} can be optimized";
+              rc="1";
+            fi;
+          done
+          IFS="$OIFS"
+          echo "status=$rc" >> "$GITHUB_OUTPUT"
+      - name: Check png files
+        id: check-png
+        run: |
+          OIFS="$IFS"
+          IFS=$'\n'
+          rc="0"
+          for f in $(find . -path ./unpackaged -prune -false -o -name "*.png"); do
+            before=$(stat -c%s $f);
+            ./temp-compression/oxipng -qso2 $f;
+            after=$(stat -c%s $f);
+            diff=$(expr $before - $after) || true;
+            percent=$(echo "scale=2 ; $diff / $after" | bc);
+            if (( $(echo "$percent > $THRESHOLD" | bc -l) )); then
+              echo "::error file=${f:2},line=1::${f:2} can be optimized";
+              rc="1";
+            fi;
+          done
+          IFS="$OIFS"
+          echo "status=$rc" >> "$GITHUB_OUTPUT"
+      - name: Check results
+        env:
+          CHECK_OGG: ${{ steps.check-ogg.outputs.status }}
+          CHECK_PNG: ${{ steps.check-png.outputs.status }}
+        run: |
+          if [[ $CHECK_OGG -ne 0 || $CHECK_PNG -ne 0 ]]; then
+            exit 1;
+          fi
