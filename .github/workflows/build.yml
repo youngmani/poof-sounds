@@ -58,8 +58,10 @@ jobs:
             before=$(stat -c%s $f);
             after=$(stat -c%s "${f::-4}.o.ogg");
             diff=$(expr $before - $after) || true;
-            percent=$(echo "scale=2 ; $diff / $after" | bc);
-            echo "${f:2} $percent";
+            percent=$(echo "scale=3 ; $diff / $after" | bc);
+            if (( $(echo "$percent > 0" | bc -l) )); then
+              echo "${f:2} $percent";
+            fi;
             if (( $(echo "$percent > $THRESHOLD" | bc -l) )); then
               echo "::error file=${f:2},line=1::${f:2} can be optimized";
               rc="1";
@@ -78,8 +80,10 @@ jobs:
             ./temp-compression/oxipng -qso2 $f;
             after=$(stat -c%s $f);
             diff=$(expr $before - $after) || true;
-            percent=$(echo "scale=2 ; $diff / $after" | bc);
-            echo "${f:2} $percent";
+            percent=$(echo "scale=3 ; $diff / $after" | bc);
+            if (( $(echo "$percent > 0" | bc -l) )); then
+              echo "${f:2} $percent";
+            fi;
             if (( $(echo "$percent > $THRESHOLD" | bc -l) )); then
               echo "::error file=${f:2},line=1::${f:2} can be optimized";
               rc="1";
