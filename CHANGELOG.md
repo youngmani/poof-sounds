@@ -8,10 +8,19 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.0.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.0.0) - 03/25/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.5
+- add panorama for "Spring to Life" update
+- adjust face color in warm and cold pig textures
+- add a few new sounds
+- slightly adjust frequency of a few sounds
+
 ## [Version 4.9.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.9.0) - 02/23/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.5 snapshots
-- add textures for new pig variants in Spring Drop 2025
+- add textures for new pig variants for "Spring to Life" update
+- support wolf sound variants for "Spring to Life" update
 - add a new sound event
 - improve quality of an existing sound clip
 - (Bedrock Edition only) fix pig texture when saddled
