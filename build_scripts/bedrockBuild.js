@@ -100,12 +100,20 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
 
 const getNonKzPaintings = async () => {
   const kzPaintingNames = KZ_PAINTINGS.map(painting => painting.name);
-  const files = await readdir(
-    `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/`,
+  const [javaFiles, bedrockFiles] = await all([
+    readdir(`${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/`).then(files =>
+      files.reduce((acc, file) => {
+        if (file.endsWith('.png')) acc.push(file.split('.')[0]);
+        return acc;
+      }, []),
+    ),
+    readdir(`bedrock/${PAINTINGS_PATH}/`).then(files =>
+      files.map(file => file.split('.')[0]),
+    ),
+  ]);
+  return javaFiles.filter(
+    name => !kzPaintingNames.includes(name) && !bedrockFiles.includes(name),
   );
-  return files
-    .map(file => file.split('.')[0])
-    .filter(name => !kzPaintingNames.includes(name));
 };
 
 const generateSoundDefinitions = soundsJson => {
