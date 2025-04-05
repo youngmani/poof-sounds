@@ -35,6 +35,7 @@ const soundsMap = {
   'block.portal.travel': { name: 'portal.travel' },
   'block.portal.trigger': { name: 'portal.trigger' },
   'block.shulker_box.open': { name: 'random.shulkerboxopen' },
+  'block.smithing_table.use': { name: 'smithing_table.use' },
   'entity.axolotl.splash': { name: 'mob.axolotl.splash' },
   'entity.blaze.shoot': { name: 'mob.blaze.shoot' },
   'entity.bogged.ambient': { name: 'mob.bogged.ambient' },
@@ -197,6 +198,9 @@ const soundsMap = {
   'entity.villager.hurt': { name: 'mob.villager.hit' },
   'entity.villager.no': { name: 'mob.villager.no' },
   'entity.villager.trade': { name: 'mob.villager.haggle' },
+  'entity.villager.work_toolsmith': [
+    /* uses smithing_table.use */
+  ],
   'entity.villager.yes': { name: 'mob.villager.yes' },
   'entity.vindicator.ambient': { name: 'mob.vindicator.idle' },
   'entity.vindicator.death': { name: 'mob.vindicator.death' },

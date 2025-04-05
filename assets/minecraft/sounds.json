@@ -143,6 +143,14 @@
     ],
     "subtitle": "putthatinshulkerbox"
   },
+  "block.smithing_table.use": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/clankclankclank",
+      "poof-sounds:mono/tinktinktink"
+    ],
+    "subtitle": "clank clank clank"
+  },
   "entity.axolotl.splash": {
     "replace": true,
     "sounds": [
@@ -977,6 +985,14 @@
       "poof-sounds:mono/whipnaenae2"
     ],
     "subtitle": "villager trading"
+  },
+  "entity.villager.work_toolsmith": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/clankclankclank",
+      "poof-sounds:mono/tinktinktink"
+    ],
+    "subtitle": "tink tink tink (villager)"
   },
   "entity.villager.yes": {
     "replace": true,
