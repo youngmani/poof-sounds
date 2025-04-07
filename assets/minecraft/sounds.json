@@ -10,6 +10,38 @@
     ],
     "subtitle": "you found dabriss"
   },
+  "block.anvil.destroy": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/clankclankbreak",
+      "poof-sounds:mono/tinktinkbreak"
+    ],
+    "subtitle": "tink tink fuck (anvil broke)"
+  },
+  "block.anvil.land": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/anvil1", "pitch": 1.05, "volume": 1.25 },
+      { "name": "poof-sounds:mono/anvil2", "pitch": 1.05, "volume": 1.25 }
+    ],
+    "subtitle": "anvil donk"
+  },
+  "block.anvil.place": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/anvil1", "pitch": 1.25, "volume": 1.25 },
+      { "name": "poof-sounds:mono/anvil2", "pitch": 1.25, "volume": 1.25 }
+    ],
+    "subtitle": "anvil donk"
+  },
+  "block.anvil.use": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/clankclankclank",
+      "poof-sounds:mono/tinktinktink"
+    ],
+    "subtitle": "tink tink tink (anvil)"
+  },
   "block.barrel.open": {
     "replace": true,
     "sounds": ["poof-sounds:mono/barrelopen1", "poof-sounds:mono/barrelopen2"],
@@ -149,7 +181,7 @@
       "poof-sounds:mono/clankclankclank",
       "poof-sounds:mono/tinktinktink"
     ],
-    "subtitle": "clank clank clank"
+    "subtitle": "tink tink tink (smithing table)"
   },
   "entity.axolotl.splash": {
     "replace": true,

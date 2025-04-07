@@ -6,6 +6,15 @@ const soundsMap = {
     name: 'poofsounds.dabriss.break',
     propOverrides: { category: 'block' },
   },
+  'block.anvil.destroy': { name: 'random.anvil_break' },
+  'block.anvil.land': {
+    adjustments: { pitch: 1.05 },
+    name: 'random.anvil_land',
+  },
+  'block.anvil.place': [
+    /* uses random.anvil_land */
+  ],
+  'block.anvil.use': { name: 'random.anvil_use' },
   'block.barrel.open': {
     adjustments: { pitch: 20 / 21 },
     name: 'block.barrel.open',
