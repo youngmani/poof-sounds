@@ -40,6 +40,9 @@ const uppercaseLevel = format(info => {
 });
 
 const addLabel = format(info => {
+  if (info.durationMs != null) {
+    info.message = `[${info.durationMs}ms] ${info.message}`;
+  }
   if (info.label) {
     const formattedLabel = `[${info.label}]`.padEnd(maxLabelLength + 3);
     info.message = formattedLabel + info.message;
