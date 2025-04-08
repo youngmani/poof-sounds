@@ -11,7 +11,7 @@ const config = [
       'arrow-body-style': ['error', 'as-needed'],
       'consistent-return': 'error',
       curly: ['error', 'multi-line', 'consistent'],
-      eqeqeq: ['error', { null: 'ignore' }],
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
       'no-console': 'warn',
       'no-shadow': 'error',
       'no-useless-constructor': 'error',
