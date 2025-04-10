@@ -95,9 +95,7 @@ const soundsMap = {
     adjustments: { pitch: 20 / 29 },
     name: 'random.explode',
   },
-  'entity.generic.splash': [
-    /* uses random.splash, which is an older version in bedrock */
-  ],
+  'entity.generic.splash': { name: 'entity.generic.splash' },
   'entity.ghast.shoot': { name: 'mob.ghast.fireball' },
   'entity.ghast.warn': { name: 'mob.ghast.charge' },
   'entity.glow_squid.ambient': { name: 'mob.glow_squid.ambient' },
@@ -122,7 +120,7 @@ const soundsMap = {
   },
   'entity.horse.ambient': { name: 'mob.horse.idle' },
   'entity.hostile.splash': [
-    /* uses random.splash */
+    /* uses entity.generic.splash */
   ],
   'entity.item.break': { adjustments: { pitch: 10 / 9 }, name: 'random.break' },
   'entity.lightning_bolt.impact': {
@@ -166,7 +164,7 @@ const soundsMap = {
     name: 'block.sweet_berry_bush.hurt',
   },
   'entity.player.splash': [
-    /* uses random.splash */
+    /* uses entity.generic.splash */
   ],
   'entity.player.splash.high_speed': [
     /* no bedrock equivalent */
