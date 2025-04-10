@@ -1293,6 +1293,14 @@
     ],
     "subtitle": "fire charge choo"
   },
+  "item.flintandsteel.use": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/flint1", "weight": 3 },
+      { "name": "poof-sounds:mono/flint2", "weight": 2 }
+    ],
+    "subtitle": "flint and steel"
+  },
   "item.shield.block": {
     "replace": true,
     "sounds": [

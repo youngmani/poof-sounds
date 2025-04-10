@@ -254,6 +254,7 @@ const soundsMap = {
   'item.firecharge.use': [
     /* no bedrock equivalent */
   ],
+  'item.flintandsteel.use': { name: 'fire.ignite' },
   'item.shield.block': { name: 'item.shield.block' },
   'item.shield.break': [
     /* uses random.break */
