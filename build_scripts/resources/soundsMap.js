@@ -19,6 +19,7 @@ const soundsMap = {
     adjustments: { pitch: 20 / 21 },
     name: 'block.barrel.open',
   },
+  'block.beehive.drip': { name: 'block.beehive.drip' },
   'block.bell.use': { name: 'block.bell.hit' },
   'block.bubble_column.upwards_ambient': { name: 'bubble.up' },
   'block.bubble_column.upwards_inside': { name: 'bubble.upinside' },

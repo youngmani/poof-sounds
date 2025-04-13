@@ -47,6 +47,36 @@
     "sounds": ["poof-sounds:mono/barrelopen1", "poof-sounds:mono/barrelopen2"],
     "subtitle": "putthatinbarrel"
   },
+  "block.beehive.drip": {
+    "replace": true,
+    "sounds": [
+      {
+        "attenuation_distance": 8,
+        "name": "poof-sounds:mono/drip1",
+        "pitch": 0.97,
+        "volume": 0.6
+      },
+      {
+        "attenuation_distance": 8,
+        "name": "poof-sounds:mono/drip1",
+        "pitch": 1.03,
+        "volume": 0.6
+      },
+      {
+        "attenuation_distance": 8,
+        "name": "poof-sounds:mono/drip2",
+        "pitch": 0.97,
+        "volume": 0.6
+      },
+      {
+        "attenuation_distance": 8,
+        "name": "poof-sounds:mono/drip2",
+        "pitch": 1.03,
+        "volume": 0.6
+      }
+    ],
+    "subtitle": "drip (beehive)"
+  },
   "block.bell.use": {
     "replace": true,
     "sounds": [

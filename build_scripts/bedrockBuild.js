@@ -151,19 +151,29 @@ const generateSoundDefinitions = soundsJson => {
 };
 
 const adjustSounds = (sounds = [], adjustments = {}) =>
-  JSON.parse(JSON.stringify(sounds)).map(s => {
-    if (typeof s === 'string') {
-      s = { name: s };
+  sounds.map(sound => {
+    let adjusted;
+    if (typeof sound === 'string') {
+      adjusted = { name: sound };
+    } else {
+      adjusted = { ...sound };
     }
-    s.name = `sounds/${s.name.replace(':', '/')}`;
+    adjusted.name = `sounds/${adjusted.name.replace(':', '/')}`;
     Object.entries(adjustments).forEach(([key, value]) => {
-      s[key] ??= 1;
-      s[key] *= value;
+      adjusted[key] ??= 1;
+      adjusted[key] *= value;
     });
-    if (Object.keys(s).length === 1 && s.name) {
-      s = s.name;
+    delete adjusted.stream;
+    delete adjusted.attenuation_distance;
+    delete adjusted.preload;
+    if (adjusted.type === 'event') {
+      log.warn(`unable to convert event sound ${adjusted.name}`);
     }
-    return s;
+    delete adjusted.type;
+    if (Object.keys(adjusted).length === 1 && adjusted.name) {
+      adjusted = adjusted.name;
+    }
+    return adjusted;
   });
 
 const generateSplashes = splashesTxt => {
