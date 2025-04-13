@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.1.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.1.0) - 04/13/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.6 snapshots
+- add a new custom painting texture
+- add a few new sounds
+- (Bedrock Edition only) fix mapping of a sound
+
 ## [Version 5.0.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.0.0) - 03/25/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.5
@@ -21,7 +28,7 @@ What's new in every version of **poof sounds**!
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.5 snapshots
 - add textures for new pig variants for "Spring to Life" update
 - support wolf sound variants for "Spring to Life" update
-- add a new sound event
+- add a new sound
 - improve quality of an existing sound clip
 - (Bedrock Edition only) fix pig texture when saddled
 
@@ -40,7 +47,7 @@ What's new in every version of **poof sounds**!
 - add a new sound for a mob
 - add a couple more custom painting textures
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.2 snapshots
-- (Bedrock Edition only) map bundle sound event
+- (Bedrock Edition only) map bundle sound
 
 ## [Version 4.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.6.0) - 06/12/2024
 
@@ -54,12 +61,12 @@ What's new in every version of **poof sounds**!
 - (Java Edition only) update resource pack version to be compatible with Minecraft version 1.20.5
 - add a new sound for a mob
 - add custom painting textures for new paintings added in upcoming 1.21 update
-- (Bedrock Edition only) map new sound event for 1.21 preview
+- (Bedrock Edition only) map new sound for 1.21 preview
 
 ## [Version 4.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v4.4.0) - 04/07/2024
 
 - (Java Edition only) update resource pack version to be compatible with newer 1.20.5 snapshots
-- (Java Edition only) add new sound event from 1.21 experimental data pack
+- (Java Edition only) add new sound from 1.21 experimental data pack
 - add new sounds for a mob
 - reduce resource pack size with improved image and sound compression
 
