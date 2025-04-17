@@ -1327,7 +1327,7 @@
     "replace": true,
     "sounds": [
       { "name": "poof-sounds:mono/flint1", "weight": 3 },
-      { "name": "poof-sounds:mono/flint2", "weight": 2 }
+      { "name": "poof-sounds:mono/flint2", "weight": 4 }
     ],
     "subtitle": "flint and steel"
   },
