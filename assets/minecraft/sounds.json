@@ -1178,6 +1178,15 @@
     ],
     "subtitle": "woof (angry)"
   },
+  "entity.wolf_angry.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (angry)"
+  },
   "entity.wolf_big.ambient": {
     "replace": true,
     "sounds": [
@@ -1187,6 +1196,15 @@
       { "name": "poof-sounds:mono/woof3", "volume": 2 }
     ],
     "subtitle": "woof (big)"
+  },
+  "entity.wolf_big.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (big)"
   },
   "entity.wolf_cute.ambient": {
     "replace": true,
@@ -1198,6 +1216,15 @@
     ],
     "subtitle": "woof (cute)"
   },
+  "entity.wolf_cute.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (cute)"
+  },
   "entity.wolf_grumpy.ambient": {
     "replace": true,
     "sounds": [
@@ -1207,6 +1234,15 @@
       { "name": "poof-sounds:mono/woof3", "volume": 2 }
     ],
     "subtitle": "woof (grumpy)"
+  },
+  "entity.wolf_grumpy.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (grumpy)"
   },
   "entity.wolf_puglin.ambient": {
     "replace": true,
@@ -1218,6 +1254,15 @@
     ],
     "subtitle": "woof (puglin)"
   },
+  "entity.wolf_puglin.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (puglin)"
+  },
   "entity.wolf_sad.ambient": {
     "replace": true,
     "sounds": [
@@ -1228,6 +1273,15 @@
     ],
     "subtitle": "woof (sad)"
   },
+  "entity.wolf_sad.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl (sad)"
+  },
   "entity.wolf.ambient": {
     "replace": true,
     "sounds": [
@@ -1237,6 +1291,15 @@
       { "name": "poof-sounds:mono/woof3", "volume": 2 }
     ],
     "subtitle": "woof"
+  },
+  "entity.wolf.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "growl"
   },
   "entity.zombie.ambient": {
     "replace": true,
