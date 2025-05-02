@@ -1353,6 +1353,16 @@
     ],
     "subtitle": "got an elytra"
   },
+  "item.armor.equip_netherite": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/dabrissarmor1", "volume": 0.8 },
+      { "name": "poof-sounds:mono/dabrissarmor2", "volume": 0.8 },
+      { "name": "poof-sounds:mono/dabrissarmor3", "volume": 0.8 },
+      { "name": "poof-sounds:mono/dabrissarmor4", "volume": 0.8 }
+    ],
+    "subtitle": "dabriss armor"
+  },
   "item.axe.strip": {
     "replace": true,
     "sounds": [

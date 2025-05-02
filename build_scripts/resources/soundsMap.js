@@ -253,6 +253,10 @@ const soundsMap = {
     name: 'poofsounds.equip_elytra',
     propOverrides: { category: 'player' },
   },
+  'item.armor.equip_netherite': {
+    name: 'armor.equip_netherite',
+    adjustments: { volume: 1.25 },
+  },
   'item.axe.strip': [
     { adjustments: { pitch: 12 / 10 }, name: 'use.stem' },
     { adjustments: { pitch: 12 / 10 }, name: 'use.wood' },
