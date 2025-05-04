@@ -8,6 +8,11 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.1.2](https://github.com/youngmani/poof-sounds/releases/tag/v5.1.2) - 05/03/2025
+
+- (Java Edition only) update resource pack version to be compatible with newer Minecraft 1.21.6 snapshots
+- add a few new sounds
+
 ## [Version 5.1.1](https://github.com/youngmani/poof-sounds/releases/tag/v5.1.1) - 04/16/2025
 
 - (Java Edition only) update resource pack version to be compatible with newer Minecraft 1.21.6 snapshots
