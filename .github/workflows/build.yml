@@ -36,7 +36,7 @@ jobs:
         id: cache-binaries
         with:
           path: temp-compression
-          key: optivorbis-0.3.0-oxipng-9.1.4
+          key: optivorbis-0.3.0-oxipng-9.1.5
       - name: Download binaries
         if: steps.cache-binaries.outputs.cache-hit != 'true'
         run: |
@@ -44,7 +44,7 @@ jobs:
           wget -nv -O optivorbis.zip https://github.com/OptiVorbis/OptiVorbis/releases/download/v0.3.0/OptiVorbis.CLI.x86_64-unknown-linux-musl.zip
           unzip -q optivorbis.zip
           rm optivorbis.zip
-          wget -nv -O oxipng.tar.gz https://github.com/shssoichiro/oxipng/releases/download/v9.1.4/oxipng-9.1.4-x86_64-unknown-linux-musl.tar.gz
+          wget -nv -O oxipng.tar.gz https://github.com/shssoichiro/oxipng/releases/download/v9.1.5/oxipng-9.1.5-x86_64-unknown-linux-musl.tar.gz
           tar -xzf oxipng.tar.gz --strip-components=1 --no-anchored oxipng
           rm oxipng.tar.gz
       - name: Check ogg files
