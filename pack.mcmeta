@@ -26,10 +26,6 @@
       {
         "directory": "overlay_1_21_5",
         "formats": { "max_inclusive": 60, "min_inclusive": 54 }
-      },
-      {
-        "directory": "overlay_1_21_6",
-        "formats": { "max_inclusive": 999, "min_inclusive": 61 }
       }
     ]
   }
