@@ -180,7 +180,7 @@ const generateSplashes = splashesTxt => {
   const splashes = splashesTxt
     .split('\n')
     .map(text => text.trim())
-    .filter(text => text);
+    .filter(text => text && !text.includes('§'));
   splashes.push('poof sounds on bedrock!');
   return { splashes };
 };
