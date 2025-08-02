@@ -129,6 +129,33 @@
     ],
     "subtitle": "putthatinchest"
   },
+  "block.copper_chest_oxidized.open": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/copperchestoxidizedopen1",
+      "poof-sounds:mono/copperchestoxidizedopen2",
+      "poof-sounds:mono/copperchestoxidizedopen3"
+    ],
+    "subtitle": "putthatinoxidizedcopperchest"
+  },
+  "block.copper_chest_weathered.open": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/copperchestweatheredopen1",
+      "poof-sounds:mono/copperchestweatheredopen2",
+      "poof-sounds:mono/copperchestweatheredopen3"
+    ],
+    "subtitle": "putthatinweatheredcopperchest"
+  },
+  "block.copper_chest.open": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/copperchestopen1",
+      "poof-sounds:mono/copperchestopen2",
+      "poof-sounds:mono/copperchestopen3"
+    ],
+    "subtitle": "putthatincopperchest"
+  },
   "block.decorated_pot.insert": {
     "replace": true,
     "sounds": [

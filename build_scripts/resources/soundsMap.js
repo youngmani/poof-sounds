@@ -26,6 +26,13 @@ const soundsMap = {
   'block.bubble_column.whirlpool_ambient': { name: 'bubble.down' },
   'block.bubble_column.whirlpool_inside': { name: 'bubble.downinside' },
   'block.chest.open': { name: 'random.chestopen' },
+  'block.copper_chest_oxidized.open': {
+    name: 'block.copper_chest.oxidized.open',
+  },
+  'block.copper_chest_weathered.open': {
+    name: 'block.copper_chest.weathered.open',
+  },
+  'block.copper_chest.open': { name: 'block.copper_chest.open' },
   'block.decorated_pot.insert': { name: 'block.decorated_pot.insert' },
   'block.end_gateway.spawn': [
     /* no bedrock equivalent */
