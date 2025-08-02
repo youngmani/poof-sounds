@@ -29,6 +29,8 @@ export const getSplashes = async version => {
   );
 };
 
+export const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
+
 const maxLabelLength = Object.values(LOG_LABELS).reduce(
   (max, label) => Math.max(max, label.length),
   0,

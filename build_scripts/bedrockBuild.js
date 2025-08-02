@@ -13,7 +13,7 @@ import {
   TARGET_DIR,
   LOG_LABELS,
 } from './constants.js';
-import { all, logger, getSplashes } from './utils.js';
+import { all, logger, getSplashes, toJson } from './utils.js';
 
 const PAINTING_SIZE = 128;
 const PAINTINGS_PATH = 'textures/painting';
@@ -96,7 +96,7 @@ const addPainting = async (kz, { name, x, y, h, w }) => {
     image.scale({ f: scale, mode: ResizeStrategy.NEAREST_NEIGHBOR });
   }
   if (w * PAINTING_SIZE !== image.width) {
-    throw new Error(`invalid painting dimensions for ${name}`);
+    throw Error(`invalid painting dimensions for ${name}`);
   }
   await kz.blit({ src: image, x: x * PAINTING_SIZE, y: y * PAINTING_SIZE });
   log.silly(`added ${name} to kz`);
@@ -223,8 +223,6 @@ const generateManifest = (version, isBeta) => {
     },
   };
 };
-
-const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
 
 const getPaintingPath = name =>
   `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/${name}.png`;
