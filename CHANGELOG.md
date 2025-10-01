@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.3.0) - 09/30/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.9
+  - Ends official support for Minecraft 1.20.0 and 1.20.1, though the pack will likely still work on older versions
+- add panorama for "The Copper Age" update
+- add sounds for the copper chest and shelf
+
 ## [Version 5.2.1](https://github.com/youngmani/poof-sounds/releases/tag/v5.2.1) - 06/26/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.7
