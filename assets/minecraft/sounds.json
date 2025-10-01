@@ -223,6 +223,26 @@
     "sounds": [{ "name": "poof-sounds:stereo/goingin", "volume": 4 }],
     "subtitle": "going into the nether!!"
   },
+  "block.shelf.place_item": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/shelfplace1",
+      "poof-sounds:mono/shelfplace2",
+      "poof-sounds:mono/shelfplace3",
+      "poof-sounds:mono/shelfplace4"
+    ],
+    "subtitle": "putthatinshelf"
+  },
+  "block.shelf.single_swap": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/shelfswap1",
+      "poof-sounds:mono/shelfswap2",
+      "poof-sounds:mono/shelfswap3",
+      "poof-sounds:mono/shelfswap4"
+    ],
+    "subtitle": "putthatinshelf (swap)"
+  },
   "block.shulker_box.open": {
     "replace": true,
     "sounds": [

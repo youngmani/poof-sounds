@@ -51,6 +51,8 @@ const soundsMap = {
   },
   'block.portal.travel': { name: 'portal.travel' },
   'block.portal.trigger': { name: 'portal.trigger' },
+  'block.shelf.place_item': { name: 'block.shelf.place_item' },
+  'block.shelf.single_swap': { name: 'block.shelf.single_swap' },
   'block.shulker_box.open': { name: 'random.shulkerboxopen' },
   'block.smithing_table.use': { name: 'smithing_table.use' },
   'entity.axolotl.splash': { name: 'mob.axolotl.splash' },
