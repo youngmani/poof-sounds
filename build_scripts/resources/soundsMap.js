@@ -151,6 +151,8 @@ const soundsMap = {
   ],
   'entity.ocelot.ambient': { name: 'mob.ocelot.idle' },
   'entity.panda.sneeze': { name: 'mob.panda.sneeze' },
+  'entity.parched.ambient': { name: 'mob.parched.ambient' },
+  'entity.parched.death': { name: 'mob.parched.death' },
   'entity.parrot.ambient': { name: 'mob.parrot.idle' },
   'entity.pig.ambient': { name: 'mob.pig.say' },
   'entity.pig.hurt': [

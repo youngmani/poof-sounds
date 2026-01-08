@@ -708,6 +708,25 @@
     "sounds": ["poof-sounds:mono/sneeze"],
     "subtitle": "panda AH CHOO"
   },
+  "entity.parched.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/parched1",
+      "poof-sounds:mono/parched2",
+      "poof-sounds:mono/parched3",
+      "poof-sounds:mono/parched4"
+    ],
+    "subtitle": "parched skellington sound"
+  },
+  "entity.parched.death": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/parcheddeath2", "weight": 5 },
+      { "name": "poof-sounds:mono/parcheddeath3", "weight": 4 },
+      { "name": "poof-sounds:mono/parcheddeath4", "weight": 3 }
+    ],
+    "subtitle": "i hate parched skellingtons"
+  },
   "entity.parrot.ambient": {
     "replace": true,
     "sounds": ["poof-sounds:mono/parrot1", "poof-sounds:mono/parrot2"],
