@@ -8,6 +8,12 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.4.0) - 01/07/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.11
+- add panorama for "Mounts of Mayhem" update
+- add sounds for new parched mob
+
 ## [Version 5.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.3.0) - 09/30/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.9
