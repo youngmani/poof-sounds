@@ -56,6 +56,21 @@ const soundsMap = {
   'block.shulker_box.open': { name: 'random.shulkerboxopen' },
   'block.smithing_table.use': { name: 'smithing_table.use' },
   'entity.axolotl.splash': { name: 'mob.axolotl.splash' },
+  'entity.baby_cat.ambient': [
+    /* not yet supported */
+  ],
+  'entity.baby_pig.ambient': [
+    /* not yet supported */
+  ],
+  'entity.baby_pig.hurt': [
+    /* not yet supported */
+  ],
+  'entity.baby_wolf.ambient': [
+    /* not yet supported */
+  ],
+  'entity.baby_wolf.growl': [
+    /* not yet supported */
+  ],
   'entity.blaze.shoot': { name: 'mob.blaze.shoot' },
   'entity.bogged.ambient': { name: 'mob.bogged.ambient' },
   'entity.bogged.death': { name: 'mob.bogged.death' },

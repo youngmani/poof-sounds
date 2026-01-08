@@ -277,6 +277,73 @@
     ],
     "subtitle": "splash (axolotl)"
   },
+  "entity.baby_cat.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.7, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.7, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
+      { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
+      { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+    ],
+    "subtitle": "baby meoww"
+  },
+  "entity.baby_pig.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
+        "volume": 1.1,
+        "weight": 4
+      },
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 30 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 21 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 27 },
+      { "name": "poof-sounds:mono/peppapig", "volume": 1.1, "weight": 5 }
+    ],
+    "subtitle": "baby oink"
+  },
+  "entity.baby_pig.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 10 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 7 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 9 }
+    ],
+    "subtitle": "baby oink (hurt)"
+  },
+  "entity.baby_wolf.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/bark", "volume": 2, "weight": 10 },
+      { "name": "poof-sounds:mono/woof", "volume": 2, "weight": 4 },
+      { "name": "poof-sounds:mono/woof2", "volume": 2, "weight": 8 },
+      { "name": "poof-sounds:mono/woof3", "volume": 2 }
+    ],
+    "subtitle": "baby woof"
+  },
+  "entity.baby_wolf.growl": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/grr1", "volume": 2, "weight": 2 },
+      { "name": "poof-sounds:mono/rrr1", "volume": 2, "weight": 3 },
+      { "name": "poof-sounds:mono/rrr2", "volume": 2, "weight": 3 }
+    ],
+    "subtitle": "baby growl"
+  },
   "entity.blaze.shoot": {
     "replace": true,
     "sounds": [
