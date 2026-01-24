@@ -59,6 +59,9 @@ const soundsMap = {
   'entity.baby_cat.ambient': [
     /* not yet supported */
   ],
+  'entity.baby_horse.ambient': [
+    /* not yet supported */
+  ],
   'entity.baby_pig.ambient': [
     /* not yet supported */
   ],

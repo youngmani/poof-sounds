@@ -301,6 +301,15 @@
     ],
     "subtitle": "baby meoww"
   },
+  "entity.baby_horse.ambient": {
+    "replace": true,
+    "sounds": [
+      "poof-sounds:mono/neigh",
+      "poof-sounds:mono/neigh2",
+      "poof-sounds:mono/neigh3"
+    ],
+    "subtitle": "horse neigh"
+  },
   "entity.baby_pig.ambient": {
     "replace": true,
     "sounds": [
