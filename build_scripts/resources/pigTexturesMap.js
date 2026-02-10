@@ -1,9 +1,12 @@
 // map java texture names to bedrock
 const pigTexturesMap = {
-  cold_pig: 'pig_cold',
+  pig_cold_baby: 'pig_cold_baby',
+  pig_cold: 'pig_cold',
+  pig_temperate_baby: 'pig_temperate_baby',
+  pig_temperate: 'pig_v3',
+  pig_warm_baby: 'pig_warm_baby',
+  pig_warm: 'pig_warm',
   pig: 'pig',
-  temperate_pig: 'pig_v3',
-  warm_pig: 'pig_warm',
 };
 
 export default pigTexturesMap;

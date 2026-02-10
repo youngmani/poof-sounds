@@ -56,24 +56,18 @@ const soundsMap = {
   'block.shulker_box.open': { name: 'random.shulkerboxopen' },
   'block.smithing_table.use': { name: 'smithing_table.use' },
   'entity.axolotl.splash': { name: 'mob.axolotl.splash' },
-  'entity.baby_cat.ambient': [
-    /* not yet supported */
-  ],
-  'entity.baby_horse.ambient': [
-    /* not yet supported */
-  ],
-  'entity.baby_pig.ambient': [
-    /* not yet supported */
-  ],
-  'entity.baby_pig.hurt': [
-    /* not yet supported */
-  ],
-  'entity.baby_wolf.ambient': [
-    /* not yet supported */
-  ],
-  'entity.baby_wolf.growl': [
-    /* not yet supported */
-  ],
+  'entity.baby_cat.ambient': {
+    adjustments: { pitch: 3 },
+    name: 'mob.baby_cat.ambient',
+  },
+  'entity.baby_horse.ambient': {
+    adjustments: { pitch: 2 },
+    name: 'mob.baby_horse.ambient',
+  },
+  'entity.baby_pig.ambient': { name: 'mob.baby_pig.ambient' },
+  'entity.baby_pig.hurt': { name: 'mob.baby_pig.hurt' },
+  'entity.baby_wolf.ambient': { name: 'mob.baby_wolf.bark' },
+  'entity.baby_wolf.growl': { name: 'mob.baby_wolf.growl' },
   'entity.blaze.shoot': { name: 'mob.blaze.shoot' },
   'entity.bogged.ambient': { name: 'mob.bogged.ambient' },
   'entity.bogged.death': { name: 'mob.bogged.death' },
