@@ -1,14 +1,5 @@
 {
   "block_sounds": {
-    "ancient_debris": {
-      "events": {
-        "break": {
-          "pitch": [0.8, 1.0],
-          "sound": "poofsounds.dabriss.break",
-          "volume": 1.0
-        }
-      }
-    },
     "bamboo_wood": {
       "events": { "item.use.on": { "pitch": 0.8, "sound": "use.wood" } }
     },

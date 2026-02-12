@@ -2,9 +2,7 @@
 const soundsMap = {
   'block.ancient_debris.break': {
     adjustments: { pitch: 11 / 12 },
-    /* dig.ancient_debris is also used for placing debris */
-    name: 'poofsounds.dabriss.break',
-    propOverrides: { category: 'block' },
+    name: 'dig.ancient_debris',
   },
   'block.anvil.destroy': { name: 'random.anvil_break' },
   'block.anvil.land': {
