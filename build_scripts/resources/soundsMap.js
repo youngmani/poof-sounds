@@ -69,8 +69,17 @@ const soundsMap = {
   'entity.blaze.shoot': { name: 'mob.blaze.shoot' },
   'entity.bogged.ambient': { name: 'mob.bogged.ambient' },
   'entity.bogged.death': { name: 'mob.bogged.death' },
+  'entity.cat_royal.ambient': [
+    /* not mapped yet */
+  ],
+  'entity.cat_royal.stray_ambient': [
+    /* not mapped yet */
+  ],
   'entity.cat.ambient': { name: 'mob.cat.meow' },
   'entity.cat.stray_ambient': { name: 'mob.cat.straymeow' },
+  'entity.cow_moody.ambient': [
+    /* not mapped yet */
+  ],
   'entity.cow.ambient': { name: 'mob.cow.say' },
   'entity.cow.milk': { name: 'mob.cow.milk' },
   'entity.creeper.primed': [
@@ -164,6 +173,18 @@ const soundsMap = {
   'entity.parched.ambient': { name: 'mob.parched.ambient' },
   'entity.parched.death': { name: 'mob.parched.death' },
   'entity.parrot.ambient': { name: 'mob.parrot.idle' },
+  'entity.pig_big.ambient': [
+    /* not mapped yet */
+  ],
+  'entity.pig_big.hurt': [
+    /* not mapped yet */
+  ],
+  'entity.pig_mini.ambient': [
+    /* not mapped yet */
+  ],
+  'entity.pig_mini.hurt': [
+    /* not mapped yet */
+  ],
   'entity.pig.ambient': { name: 'mob.pig.say' },
   'entity.pig.hurt': [
     /* uses mob.pig.say */

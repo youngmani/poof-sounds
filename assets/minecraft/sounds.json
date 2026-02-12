@@ -381,6 +381,54 @@
     ],
     "subtitle": "i hate bogged skellingtons"
   },
+  "entity.cat_royal.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.7, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.7, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
+      { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
+      { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+    ],
+    "subtitle": "meoww (royal)"
+  },
+  "entity.cat_royal.stray_ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.6, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.6, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.45 },
+      { "name": "poof-sounds:mono/meow2", "volume": 0.39 },
+      { "name": "poof-sounds:mono/meow3", "volume": 0.33 },
+      { "name": "poof-sounds:mono/meow4", "volume": 0.27 }
+    ],
+    "subtitle": "meow (royal)"
+  },
   "entity.cat.ambient": {
     "replace": true,
     "sounds": [
@@ -428,6 +476,15 @@
       { "name": "poof-sounds:mono/meow4", "volume": 0.27 }
     ],
     "subtitle": "meow"
+  },
+  "entity.cow_moody.ambient": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/moo", "volume": 0.95, "weight": 3 },
+      { "name": "poof-sounds:mono/moo2", "weight": 4 },
+      { "name": "poof-sounds:mono/moo3", "weight": 2 }
+    ],
+    "subtitle": "mooo cow (moody)"
   },
   "entity.cow.ambient": {
     "replace": true,
@@ -807,6 +864,54 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/parrot1", "poof-sounds:mono/parrot2"],
     "subtitle": "parrot noise"
+  },
+  "entity.pig_big.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
+        "volume": 1.1,
+        "weight": 4
+      },
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 30 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 21 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 27 },
+      { "name": "poof-sounds:mono/peppapig", "volume": 1.1, "weight": 5 }
+    ],
+    "subtitle": "oink (big)"
+  },
+  "entity.pig_big.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 10 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 7 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 9 }
+    ],
+    "subtitle": "oink (big) (hurt)"
+  },
+  "entity.pig_mini.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/ineedsomeonetomakemeoink",
+        "volume": 1.1,
+        "weight": 4
+      },
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 30 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 21 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 27 },
+      { "name": "poof-sounds:mono/peppapig", "volume": 1.1, "weight": 5 }
+    ],
+    "subtitle": "oink (mini)"
+  },
+  "entity.pig_mini.hurt": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/oink1", "volume": 1.1, "weight": 10 },
+      { "name": "poof-sounds:mono/oink2", "volume": 1.1, "weight": 7 },
+      { "name": "poof-sounds:mono/oink3", "volume": 1.1, "weight": 9 }
+    ],
+    "subtitle": "oink (mini) (hurt)"
   },
   "entity.pig.ambient": {
     "replace": true,
