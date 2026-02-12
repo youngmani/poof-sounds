@@ -141,7 +141,6 @@ const generateSoundDefinitions = soundsJson => {
       }
       const sound = { ...javaSounds[key], ...propOverrides };
       delete sound.replace;
-      delete sound.subtitle;
       sound.sounds = adjustSounds(sound.sounds, adjustments);
       definitions[name] = sound;
       log.debug(`converting ${key} to ${name}`);
