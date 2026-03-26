@@ -8,6 +8,15 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.5.0) - 03/25/2025
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 26.1
+- add panorama for "Tiny Takeover" update
+- add sound mappings for new mob variants
+- add sound mappings for baby mobs
+- add textures for baby pigs
+- (Bedrock Edition only) add subtitles for sounds
+
 ## [Version 5.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.4.0) - 01/07/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.11
@@ -17,7 +26,7 @@ What's new in every version of **poof sounds**!
 ## [Version 5.3.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.3.0) - 09/30/2025
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.9
-  - Ends official support for Minecraft 1.20.0 and 1.20.1, though the pack will likely still work on older versions
+  - ends official support for Minecraft 1.20.0 and 1.20.1, though the pack will likely still work on older versions
 - add panorama for "The Copper Age" update
 - add sounds for the copper chest and shelf
 
