@@ -12,7 +12,8 @@
       { "directory": "overlay_1_21_4", "min_format": 43, "max_format": 53 },
       { "directory": "overlay_1_21_5", "min_format": 54, "max_format": 60 },
       { "directory": "overlay_1_21_6", "min_format": 61, "max_format": 64 },
-      { "directory": "overlay_1_21_9", "min_format": 65, "max_format": 72 }
+      { "directory": "overlay_1_21_9", "min_format": 65, "max_format": 72 },
+      { "directory": "overlay_1_21_11", "min_format": 73, "max_format": 83 }
     ]
   }
 }
