@@ -1,5 +1,10 @@
 {
-	"name": "Node",
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:4-24-trixie",
-	"postCreateCommand": "npm ci"
+  "name": "Node",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:4-24-trixie",
+  "postCreateCommand": "npm ci",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+    }
+  }
 }
