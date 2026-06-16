@@ -8,7 +8,12 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
-## [Version 5.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.5.0) - 03/25/2025
+## [Version 5.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.6.0) - 06/16/2026
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 26.2
+- add panorama for "Chaos Cubed" update
+
+## [Version 5.5.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.5.0) - 03/25/2026
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 26.1
 - add panorama for "Tiny Takeover" update
@@ -17,7 +22,7 @@ What's new in every version of **poof sounds**!
 - add textures for baby pigs
 - (Bedrock Edition only) add subtitles for sounds
 
-## [Version 5.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.4.0) - 01/07/2025
+## [Version 5.4.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.4.0) - 01/08/2026
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 1.21.11
 - add panorama for "Mounts of Mayhem" update
