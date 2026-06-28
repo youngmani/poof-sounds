@@ -9,9 +9,7 @@ const soundsMap = {
     adjustments: { pitch: 1.05 },
     name: 'random.anvil_land',
   },
-  'block.anvil.place': [
-    /* uses random.anvil_land */
-  ],
+  'block.anvil.place': [/* uses random.anvil_land */],
   'block.anvil.use': { name: 'random.anvil_use' },
   'block.barrel.open': {
     adjustments: { pitch: 20 / 21 },
@@ -32,9 +30,7 @@ const soundsMap = {
   },
   'block.copper_chest.open': { name: 'block.copper_chest.open' },
   'block.decorated_pot.insert': { name: 'block.decorated_pot.insert' },
-  'block.end_gateway.spawn': [
-    /* no bedrock equivalent */
-  ],
+  'block.end_gateway.spawn': [/* no bedrock equivalent */],
   'block.end_portal.spawn': { name: 'block.end_portal.spawn' },
   'block.ender_chest.open': { name: 'random.enderchestopen' },
   'block.pointed_dripstone.drip_lava': { name: 'drip.lava.pointed_dripstone' },
@@ -70,9 +66,7 @@ const soundsMap = {
   'entity.bogged.ambient': { name: 'mob.bogged.ambient' },
   'entity.bogged.death': { name: 'mob.bogged.death' },
   'entity.cat_royal.ambient': { name: 'mob.royal_cat.ambient' },
-  'entity.cat_royal.stray_ambient': [
-    /* uses mob.royal_cat.ambient */
-  ],
+  'entity.cat_royal.stray_ambient': [/* uses mob.royal_cat.ambient */],
   'entity.cat.ambient': { name: 'mob.cat.meow' },
   'entity.cat.stray_ambient': { name: 'mob.cat.straymeow' },
   'entity.cow_moody.ambient': { name: 'mob.moody_cow.say' },
@@ -88,16 +82,12 @@ const soundsMap = {
   ],
   'entity.dolphin.splash': { name: 'mob.dolphin.splash' },
   'entity.donkey.ambient': { name: 'mob.horse.donkey.idle' },
-  'entity.dragon_fireball.explode': [
-    /* no bedrock equivalent */
-  ],
+  'entity.dragon_fireball.explode': [/* no bedrock equivalent */],
   'entity.ender_dragon.death': {
     adjustments: { volume: 8 },
     name: 'mob.enderdragon.death',
   },
-  'entity.ender_dragon.shoot': [
-    /* no bedrock equivalent */
-  ],
+  'entity.ender_dragon.shoot': [/* no bedrock equivalent */],
   'entity.enderman.stare': { name: 'mob.endermen.stare' },
   'entity.evoker_fangs.attack': { name: 'mob.evocation_fangs.attack' },
   'entity.fishing_bobber.splash': [
@@ -127,26 +117,18 @@ const soundsMap = {
   'entity.glow_squid.death': { name: 'mob.glow_squid.death' },
   'entity.glow_squid.hurt': { name: 'mob.glow_squid.hurt' },
   'entity.goat.death': { name: 'mob.goat.death' },
-  'entity.goat.milk': [
-    /* mapped to mob.mooshroom.suspicious_milk */
-  ],
+  'entity.goat.milk': [/* mapped to mob.mooshroom.suspicious_milk */],
   'entity.goat.screaming.ambient': { name: 'mob.goat.ambient.screamer' },
   'entity.goat.screaming.death': { name: 'mob.goat.death.screamer' },
-  'entity.goat.screaming.eat': [
-    /* no bedrock equivalent */
-  ],
+  'entity.goat.screaming.eat': [/* no bedrock equivalent */],
   'entity.goat.screaming.hurt': { name: 'mob.goat.hurt.screamer' },
-  'entity.goat.screaming.long_jump': [
-    /* no bedrock equivalent */
-  ],
+  'entity.goat.screaming.long_jump': [/* no bedrock equivalent */],
   'entity.goat.screaming.milk': { name: 'mob.goat.milk.screamer' },
   'entity.goat.screaming.prepare_ram': {
     name: 'mob.goat.prepare_ram.screamer',
   },
   'entity.horse.ambient': { name: 'mob.horse.idle' },
-  'entity.hostile.splash': [
-    /* uses entity.generic.splash */
-  ],
+  'entity.hostile.splash': [/* uses entity.generic.splash */],
   'entity.item.break': { adjustments: { pitch: 10 / 9 }, name: 'random.break' },
   'entity.lightning_bolt.impact': {
     adjustments: { pitch: 11 / 10 },
@@ -157,13 +139,9 @@ const soundsMap = {
     name: 'ambient.weather.thunder',
   },
   'entity.llama.ambient': { name: 'mob.llama.idle' },
-  'entity.mooshroom.milk': [
-    /* mapped to mob.mooshroom.suspicious_milk */
-  ],
+  'entity.mooshroom.milk': [/* mapped to mob.mooshroom.suspicious_milk */],
   'entity.mooshroom.suspicious_milk': { name: 'mob.mooshroom.suspicious_milk' },
-  'entity.mule.ambient': [
-    /* bedrock uses donkey sounds for mule */
-  ],
+  'entity.mule.ambient': [/* bedrock uses donkey sounds for mule */],
   'entity.ocelot.ambient': { name: 'mob.ocelot.idle' },
   'entity.panda.sneeze': { name: 'mob.panda.sneeze' },
   'entity.parched.ambient': { name: 'mob.parched.ambient' },
@@ -174,9 +152,7 @@ const soundsMap = {
   'entity.pig_mini.ambient': { name: 'mob.mini_pig.say' },
   'entity.pig_mini.hurt': { name: 'mob.mini_pig.hurt' },
   'entity.pig.ambient': { name: 'mob.pig.say' },
-  'entity.pig.hurt': [
-    /* uses mob.pig.say */
-  ],
+  'entity.pig.hurt': [/* uses mob.pig.say */],
   'entity.piglin_brute.ambient': { name: 'mob.piglin_brute.ambient' },
   'entity.piglin.ambient': [
     { name: 'mob.piglin.ambient' },
@@ -194,19 +170,11 @@ const soundsMap = {
   'entity.player.hurt_sweet_berry_bush': {
     name: 'block.sweet_berry_bush.hurt',
   },
-  'entity.player.splash': [
-    /* uses entity.generic.splash */
-  ],
-  'entity.player.splash.high_speed': [
-    /* no bedrock equivalent */
-  ],
+  'entity.player.splash': [/* uses entity.generic.splash */],
+  'entity.player.splash.high_speed': [/* no bedrock equivalent */],
   'entity.sheep.ambient': { name: 'mob.sheep.say' },
-  'entity.sheep.death': [
-    /* uses mob.sheep.say */
-  ],
-  'entity.sheep.hurt': [
-    /* uses mob.sheep.say */
-  ],
+  'entity.sheep.death': [/* uses mob.sheep.say */],
+  'entity.sheep.hurt': [/* uses mob.sheep.say */],
   'entity.shulker.ambient': { name: 'mob.shulker.ambient' },
   'entity.skeleton.ambient': [
     { name: 'mob.skeleton.say' },
@@ -215,9 +183,7 @@ const soundsMap = {
   'entity.skeleton.death': { name: 'mob.skeleton.death' },
   'entity.spider.ambient': { name: 'mob.spider.say' },
   'entity.spider.death': { name: 'mob.spider.death' },
-  'entity.spider.hurt': [
-    /* uses mob.spider.say */
-  ],
+  'entity.spider.hurt': [/* uses mob.spider.say */],
   'entity.spider.step': {
     adjustments: { volume: 0.5 },
     name: 'mob.spider.step',
@@ -229,16 +195,12 @@ const soundsMap = {
   'entity.stray.death': { name: 'mob.stray.death' },
   'entity.tadpole.grow_up': { name: 'mob.tadpole.convert_to_frog' },
   'entity.villager.ambient': { name: 'mob.villager.idle' },
-  'entity.villager.celebrate': [
-    /* no bedrock equivalent */
-  ],
+  'entity.villager.celebrate': [/* no bedrock equivalent */],
   'entity.villager.death': { name: 'mob.villager.death' },
   'entity.villager.hurt': { name: 'mob.villager.hit' },
   'entity.villager.no': { name: 'mob.villager.no' },
   'entity.villager.trade': { name: 'mob.villager.haggle' },
-  'entity.villager.work_toolsmith': [
-    /* uses smithing_table.use */
-  ],
+  'entity.villager.work_toolsmith': [/* uses smithing_table.use */],
   'entity.villager.yes': { name: 'mob.villager.yes' },
   'entity.vindicator.ambient': { name: 'mob.vindicator.idle' },
   'entity.vindicator.death': { name: 'mob.vindicator.death' },
@@ -293,14 +255,10 @@ const soundsMap = {
   ],
   'item.bundle.insert': { name: 'bundle.insert' },
   'item.elytra.flying': { name: 'elytra.loop' },
-  'item.firecharge.use': [
-    /* no bedrock equivalent */
-  ],
+  'item.firecharge.use': [/* no bedrock equivalent */],
   'item.flintandsteel.use': { name: 'fire.ignite' },
   'item.shield.block': { name: 'item.shield.block' },
-  'item.shield.break': [
-    /* uses random.break */
-  ],
+  'item.shield.break': [/* uses random.break */],
   'item.totem.use': { name: 'random.totem' },
   'ui.hud.bubble_pop': { name: 'hud.bubble.pop' },
 };
