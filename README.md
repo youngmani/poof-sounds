@@ -35,6 +35,7 @@ To request a new sound or to report an issue, please open an [issue on Github](h
 ## More Links
 
 - [Changelog](CHANGELOG.md)
+- [Contributing guidelines](CONTRIBUTING.md)
 
 ## Credits
 

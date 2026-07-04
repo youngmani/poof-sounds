@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /contributing
-title: Contributing
+title: Contributing guidelines
 ---
 
 # Contributing to **poof sounds**
@@ -11,6 +11,8 @@ Thank you for wanting to contribute to **poof sounds**! Community contributions 
 ## Support the project
 
 The best way to support **poof sounds** is to share it online and with your friends! You can also star the project on GitHub.
+
+[![stars](https://img.shields.io/github/stars/youngmani/poof-sounds)](https://github.com/youngmani/poof-sounds)
 
 ## Report a bug
 
