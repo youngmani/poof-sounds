@@ -42,6 +42,16 @@
     ],
     "subtitle": "tink tink tink (anvil)"
   },
+  "block.bamboo_wood_door.close": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/er"],
+    "subtitle": "bamboo door close"
+  },
+  "block.bamboo_wood_door.open": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ee"],
+    "subtitle": "bamboo door open"
+  },
   "block.barrel.open": {
     "replace": true,
     "sounds": ["poof-sounds:mono/barrelopen1", "poof-sounds:mono/barrelopen2"],
@@ -120,6 +130,16 @@
     "sounds": [{ "name": "poof-sounds:stereo/bubble_down", "volume": 0.7 }],
     "subtitle": "inside the bubble (down)"
   },
+  "block.cherry_wood_door.close": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/er"],
+    "subtitle": "cherry door close"
+  },
+  "block.cherry_wood_door.open": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ee"],
+    "subtitle": "cherry door open"
+  },
   "block.chest.open": {
     "replace": true,
     "sounds": [
@@ -193,6 +213,16 @@
     ],
     "subtitle": "putthatinenderchest"
   },
+  "block.nether_wood_door.close": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/er"],
+    "subtitle": "nether door close"
+  },
+  "block.nether_wood_door.open": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ee"],
+    "subtitle": "nether door open"
+  },
   "block.note_block.bass": {
     "replace": true,
     "sounds": ["poof-sounds:mono/raspberry"],
@@ -202,6 +232,11 @@
     "replace": true,
     "sounds": ["poof-sounds:mono/ding"],
     "subtitle": "bell note block"
+  },
+  "block.note_block.bit": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/shit"],
+    "subtitle": "bit note block"
   },
   "block.note_block.didgeridoo": {
     "replace": true,
