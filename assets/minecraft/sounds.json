@@ -193,6 +193,31 @@
     ],
     "subtitle": "putthatinenderchest"
   },
+  "block.note_block.bass": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/raspberry"],
+    "subtitle": "bass note block"
+  },
+  "block.note_block.bell": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ding"],
+    "subtitle": "bell note block"
+  },
+  "block.note_block.didgeridoo": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/err"],
+    "subtitle": "didgeridoo note block"
+  },
+  "block.note_block.harp": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/bum"],
+    "subtitle": "harp note block"
+  },
+  "block.note_block.snare": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/snare"],
+    "subtitle": "snare note block"
+  },
   "block.pointed_dripstone.drip_lava": {
     "replace": true,
     "sounds": ["poof-sounds:mono/drip1", "poof-sounds:mono/drip2"],
@@ -259,6 +284,16 @@
       "poof-sounds:mono/tinktinktink"
     ],
     "subtitle": "tink tink tink (smithing table)"
+  },
+  "block.wooden_door.close": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/er"],
+    "subtitle": "door close"
+  },
+  "block.wooden_door.open": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ee"],
+    "subtitle": "door open"
   },
   "entity.axolotl.splash": {
     "replace": true,
@@ -476,6 +511,16 @@
       { "name": "poof-sounds:mono/meow4", "volume": 0.27 }
     ],
     "subtitle": "meow"
+  },
+  "entity.chicken_picky.ambient": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/chicken"],
+    "subtitle": "cluck (picky)"
+  },
+  "entity.chicken.ambient": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/chicken"],
+    "subtitle": "cluck"
   },
   "entity.cow_moody.ambient": {
     "replace": true,
