@@ -1094,8 +1094,9 @@
   "entity.player.death": {
     "replace": true,
     "sounds": [
-      { "name": "poof-sounds:mono/diedshort", "volume": 0.85, "weight": 20 },
-      { "name": "poof-sounds:mono/noway" }
+      { "name": "poof-sounds:mono/diedshort", "volume": 0.85, "weight": 9 },
+      { "name": "poof-sounds:mono/noway" },
+      { "name": "poof-sounds:mono/stupid", "volume": 1.2, "weight": 9 }
     ],
     "subtitle": "dead"
   },
