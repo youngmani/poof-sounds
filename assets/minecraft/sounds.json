@@ -657,6 +657,16 @@
     "sounds": [{ "name": "poof-sounds:mono/randomsplash", "volume": 2 }],
     "subtitle": "splash (fishing)"
   },
+  "entity.fox.ambient": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/foxsqueak1"],
+    "subtitle": "fox noise"
+  },
+  "entity.fox.bite": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/foxbite1", "poof-sounds:mono/foxbite2"],
+    "subtitle": "fox bite"
+  },
   "entity.frog.ambient": {
     "replace": true,
     "sounds": [
@@ -864,8 +874,17 @@
   },
   "entity.llama.ambient": {
     "replace": true,
-    "sounds": ["poof-sounds:mono/llama1"],
+    "sounds": [
+      "poof-sounds:mono/llama1",
+      "poof-sounds:mono/llama2",
+      "poof-sounds:mono/llama3"
+    ],
     "subtitle": "llama duh"
+  },
+  "entity.llama.angry": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/llamaangry1"],
+    "subtitle": "llama baa (angry)"
   },
   "entity.mooshroom.milk": {
     "replace": true,
@@ -1636,7 +1655,8 @@
       "poof-sounds:mono/zombie1",
       "poof-sounds:mono/zombie2",
       "poof-sounds:mono/zombiegroan1",
-      "poof-sounds:mono/zombiegroan2"
+      "poof-sounds:mono/zombiegroan2",
+      "poof-sounds:mono/zombie3"
     ],
     "subtitle": "zombie says bruhhh"
   },

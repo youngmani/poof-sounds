@@ -120,6 +120,8 @@ const soundsMap = {
     { adjustments: { volume: 0.1 }, name: 'cauldron.takepotion' },
     { adjustments: { volume: 0.1 }, name: 'cauldron.takewater' },
   ],
+  'entity.fox.ambient': { name: 'mob.fox.ambient' },
+  'entity.fox.bite': { name: 'mob.fox.bite' },
   'entity.frog.ambient': { name: 'mob.frog.ambient' },
   'entity.generic.eat': { name: 'random.eat' },
   'entity.generic.explode': {
@@ -155,6 +157,7 @@ const soundsMap = {
     name: 'ambient.weather.thunder',
   },
   'entity.llama.ambient': { name: 'mob.llama.idle' },
+  'entity.llama.angry': { name: 'mob.llama.angry' },
   'entity.mooshroom.milk': [/* mapped to mob.mooshroom.suspicious_milk */],
   'entity.mooshroom.suspicious_milk': { name: 'mob.mooshroom.suspicious_milk' },
   'entity.mule.ambient': [/* bedrock uses donkey sounds for mule */],
