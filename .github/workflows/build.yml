@@ -15,6 +15,7 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
+      - run: corepack enable npm && npm -v
       - run: npm ci
       - run: npm run lint
       - run: npm run build
