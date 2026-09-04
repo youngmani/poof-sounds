@@ -29,13 +29,13 @@ jobs:
             --include='*.md' \
             --include='pack.png' \
             --include='LICENSE' \
-            --exclude='website/' \
+            --exclude='pages/' \
             --exclude='*' \
-            ./ website/
+            ./ pages/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./temp-site
+          source: ./pages
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
