@@ -24,16 +24,14 @@ jobs:
         uses: actions/configure-pages@v6
       - name: Copy files for site
         run: |
-          mkdir temp-site/
-           rsync -a \
+          rsync -a \
             --include='*/' \
             --include='*.md' \
-            --include='_config.yml' \
             --include='pack.png' \
             --include='LICENSE' \
-            --include='_layouts/***' \
+            --exclude='website/' \
             --exclude='*' \
-            ./ temp-site/
+            ./ website/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
