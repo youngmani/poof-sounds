@@ -8,6 +8,13 @@ title: Changelog
 
 What's new in every version of **poof sounds**!
 
+## [Version 5.7.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.7.0) - 09/19/2026
+
+- (Java Edition only) update resource pack version to be compatible with Minecraft 26.3
+- add panorama for "Wilderness Bound" update
+- add several new sounds
+- (Bedrock Edition only) add panorama for Vibrant Visuals
+
 ## [Version 5.6.0](https://github.com/youngmani/poof-sounds/releases/tag/v5.6.0) - 06/16/2026
 
 - (Java Edition only) update resource pack version to be compatible with Minecraft 26.2
