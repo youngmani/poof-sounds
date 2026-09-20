@@ -42,3 +42,9 @@ To request a new sound or to report an issue, please open an [issue on Github](h
 Sounds (used with permission): Poofesure ([YouTube](https://www.youtube.com/c/Poofesure), [Twitch](https://www.twitch.tv/poofesure))
 
 Resource pack: youngmani ([Twitch](https://www.twitch.tv/youngmani))
+
+## License
+
+Unless otherwise noted, the contents of this resource pack are dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
+
+The sound clips originating from Poofesure's YouTube videos are excluded from this CC0 dedication. These clips remain the copyrighted material of their respective copyright holder and are included in this resource pack with the copyright holder's permission.

@@ -38,13 +38,15 @@ Suggestions for new sounds or features are always welcome! Please follow these s
 
 If you're able to make a change to the sound pack yourself and are comfortable working with GitHub, open a pull request so your change can be added for others to enjoy! Please read the [Developer guidelines](#developer-guidelines) for information about making changes to the sound pack. Feel free to open a pull request even if your work is incomplete (for example, if Bedrock Edition support is still missing). A contributor can help you finish the remaining work.
 
+By contributing original work to this repository, you agree to dedicate that work to the public domain under CC0 1.0, provided that you have the necessary rights to make that dedication, unless otherwise agreed in writing.
+
 ## Developer guidelines
 
 ### Making a change to the resource pack
 
 The **poof sounds** repository follows the folder structure of a Java Edition resource pack.
 
-Sound files should be go under the `assets/poof-sounds/sounds/` folder in the appropriate subfolder, depending on how many audio channels the sound has. (Most directional sounds are mono, while global sounds are usually stereo.) Sound files are then mapped to in-game events in `assets/minecraft/sounds.json`.
+Sound files should go under the `assets/poof-sounds/sounds/` folder in the appropriate subfolder, depending on how many audio channels the sound has. (Most directional sounds are mono, while global sounds are usually stereo.) Sound files are then mapped to in-game events in `assets/minecraft/sounds.json`.
 
 ### Add Bedrock Edition support
 
