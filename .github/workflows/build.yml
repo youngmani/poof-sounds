@@ -129,7 +129,7 @@ jobs:
           draft: true
           generateReleaseNotes: true
           prerelease: auto
-  optimize:
+  packsquash:
     name: Optimize Resource Pack
     runs-on: ubuntu-latest
     timeout-minutes: 10
