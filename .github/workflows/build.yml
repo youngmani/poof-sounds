@@ -143,7 +143,7 @@ jobs:
         run: unzip build/poof-sounds.zip -d unoptimized || unzip build/poof-sounds-beta.zip -d unoptimized
       - uses: ComunidadAylas/PackSquash-action@v4
         with:
-          packsquash_version: v0.4.0
+          packsquash_version: v0.4.1
           artifact_name: optimized
           options: |
             pack_directory = 'unoptimized'
