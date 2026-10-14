@@ -149,6 +149,8 @@ const generateSoundDefinitions = soundsJson => {
   return { format_version: '1.14.0', sound_definitions: definitions };
 };
 
+const round = value => Math.round(value * 1e6) / 1e6;
+
 const adjustSounds = (sounds = [], adjustments = {}) =>
   sounds.map(sound => {
     let adjusted;
@@ -160,7 +162,7 @@ const adjustSounds = (sounds = [], adjustments = {}) =>
     adjusted.name = `sounds/${adjusted.name.replace(':', '/')}`;
     Object.entries(adjustments).forEach(([key, value]) => {
       adjusted[key] ??= 1;
-      adjusted[key] *= value;
+      adjusted[key] = round(adjusted[key] * value);
     });
     delete adjusted.stream;
     delete adjusted.attenuation_distance;
