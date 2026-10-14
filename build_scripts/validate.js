@@ -1,4 +1,6 @@
+import { execFile } from 'child_process';
 import { readFile, readdir } from 'fs/promises';
+import { promisify } from 'util';
 import ffprobe from 'ffprobe';
 import { path as ffprobePath } from 'ffprobe-static';
 
@@ -13,6 +15,8 @@ import { getOverlayDirectories, all, logger } from './utils.js';
 const MONO_DIR = 'mono';
 const STEREO_DIR = 'stereo';
 const SOUNDS_DIR_PATH = `${BASE_PACK_DIR}/${POOF_NAMESPACE}/sounds`;
+
+const execFileAsync = promisify(execFile);
 
 const log = logger.child({ label: LOG_LABELS.VALIDATE });
 
@@ -62,7 +66,25 @@ const verifySoundsExist = async (monoFiles, stereoFiles) => {
   });
 };
 
+// ffprobe-static does not include binaries for darwin/arm64,
+// allow local builds to run without this check
+const isFfprobeAvailable = async () => {
+  try {
+    await execFileAsync(ffprobePath, ['-version']);
+    return true;
+  } catch (error) {
+    if (process.env.CI?.toLowerCase() === 'true') {
+      throw new ValidationError(`unable to run ffprobe: ${error.message}`);
+    }
+    log.warn(`skipping audio channel validation: ${error.message}`);
+    return false;
+  }
+};
+
 const validateSoundFormat = async (monoFiles, stereoFiles) => {
+  if (!(await isFfprobeAvailable())) {
+    return;
+  }
   const files = [];
   monoFiles.forEach(fileName => {
     files.push({ path: `${MONO_DIR}/${fileName}`, channels: 1 });
