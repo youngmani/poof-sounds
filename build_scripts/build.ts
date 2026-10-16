@@ -1,9 +1,10 @@
 import { mkdir } from 'fs/promises';
+
 import { valid, clean, inc } from 'semver';
 
-import buildZip from './javaBuild.ts';
 import convertToBedrock from './bedrockBuild.ts';
 import { TARGET_DIR, LOG_LABELS } from './constants.ts';
+import buildZip from './javaBuild.ts';
 import { all, logger } from './utils.ts';
 
 const log = logger.child({ label: LOG_LABELS.BUILD });
@@ -33,4 +34,4 @@ const run = async () => {
   process.exit(await build(version));
 };
 
-run();
+await run();

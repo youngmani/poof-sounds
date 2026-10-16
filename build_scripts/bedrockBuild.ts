@@ -1,11 +1,9 @@
 import { readFile, readdir } from 'fs/promises';
-import Zip from 'adm-zip';
-import { prerelease, major, minor, patch } from 'semver';
-import { Jimp, JimpMime, ResizeStrategy } from 'jimp';
 
-import KZ_PAINTINGS, { type KzPainting_t } from './resources/kzPaintings.ts';
-import PIG_TEXTURES_MAP from './resources/pigTexturesMap.ts';
-import SOUNDS_MAP, { type SoundAdjustments_t } from './resources/soundsMap.ts';
+import Zip from 'adm-zip';
+import { Jimp, JimpMime, ResizeStrategy } from 'jimp';
+import { prerelease, major, minor, patch } from 'semver';
+
 import {
   BASE_PACK_DIR,
   MC_NAMESPACE,
@@ -13,13 +11,16 @@ import {
   TARGET_DIR,
   LOG_LABELS,
 } from './constants.ts';
-import { all, logger, getSplashes, toJson } from './utils.ts';
+import KZ_PAINTINGS, { type KzPainting_t } from './resources/kzPaintings.ts';
+import PIG_TEXTURES_MAP from './resources/pigTexturesMap.ts';
+import SOUNDS_MAP, { type SoundAdjustments_t } from './resources/soundsMap.ts';
 import type {
   BedrockSoundDefinition_t,
   BedrockSoundFile_t,
   JavaSoundFile_t,
   JavaSounds_t,
 } from './types.ts';
+import { all, logger, getSplashes, toJson } from './utils.ts';
 
 type Image_t = Awaited<ReturnType<typeof Jimp.read>>;
 
@@ -106,7 +107,7 @@ const addPainting = async (kz: Image_t, { name, x, y, h, w }: KzPainting_t) => {
   if (w * PAINTING_SIZE !== image.width) {
     throw Error(`invalid painting dimensions for ${name}`);
   }
-  await kz.blit({ src: image, x: x * PAINTING_SIZE, y: y * PAINTING_SIZE });
+  kz.blit({ src: image, x: x * PAINTING_SIZE, y: y * PAINTING_SIZE });
   log.silly(`added ${name} to kz`);
 };
 
@@ -199,15 +200,14 @@ const generateSplashes = (splashesTxt: string) => {
 };
 
 const generateManifest = (version: string, isBeta: boolean) => {
+  const prereleaseNum =
+    prerelease(version)?.find((i): i is number => typeof i === 'number') ?? 0;
   const versionArr = [
     major(version),
     minor(version),
-    isBeta
-      ? 1000 * patch(version) +
-        (prerelease(version)?.find(i => typeof i === 'number') ?? 0)
-      : patch(version),
+    isBeta ? 1000 * patch(version) + prereleaseNum : patch(version),
   ];
-  log.info(`using version ${versionArr}, beta=${isBeta}`);
+  log.info(`using version ${versionArr.join(',')}, beta=${isBeta}`);
 
   return {
     format_version: 2,

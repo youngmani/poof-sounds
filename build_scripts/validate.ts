@@ -1,6 +1,7 @@
 import { execFile } from 'child_process';
 import { readFile, readdir } from 'fs/promises';
 import { promisify } from 'util';
+
 import ffprobe from 'ffprobe';
 import { path as ffprobePath } from 'ffprobe-static';
 
@@ -10,8 +11,8 @@ import {
   POOF_NAMESPACE,
   LOG_LABELS,
 } from './constants.ts';
-import { getOverlayDirectories, all, logger } from './utils.ts';
 import type { JavaSounds_t, PackMcmeta_t } from './types.ts';
+import { getOverlayDirectories, all, logger } from './utils.ts';
 
 const MONO_DIR = 'mono';
 const STEREO_DIR = 'stereo';
@@ -171,4 +172,4 @@ const run = async () => {
   process.exit(await validate());
 };
 
-run();
+await run();

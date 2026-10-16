@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "arrowParens": "avoid",
+  "objectWrap": "collapse",
+  "singleQuote": true,
+  "printWidth": 80,
+  "sortImports": true,
+  "ignorePatterns": ["pages/**/*.html"]
+}

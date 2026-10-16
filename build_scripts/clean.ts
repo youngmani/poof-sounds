@@ -21,4 +21,4 @@ const run = async () => {
   process.exit(await clean());
 };
 
-run();
+await run();

@@ -1,14 +1,14 @@
 {
   "name": "poof-sounds",
   "version": "5.7.1-2",
-  "description": "build scripts for poof sounds",
   "private": true,
+  "description": "build scripts for poof sounds",
   "type": "module",
   "scripts": {
     "build": "node build_scripts/build.ts",
     "clean": "node build_scripts/clean.ts",
-    "lint": "eslint . && prettier --check .",
-    "lint:fix": "eslint --fix . && prettier --write .",
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxlint --fix && oxfmt",
     "prebuild": "npm run validate",
     "typecheck": "tsc",
     "preversion": "npm run validate",
@@ -23,17 +23,14 @@
     "winston": "^3.11.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
     "@types/ffprobe": "^1.1.8",
     "@types/ffprobe-static": "^2.0.3",
     "@types/node": "^24.19.2",
     "@types/semver": "^7.8.0",
-    "eslint": "^10.0.0",
-    "eslint-config-prettier": "^10.0.1",
-    "globals": "^17.1.0",
-    "prettier": "^3.5.0",
-    "typescript": "~6.0.3",
-    "typescript-eslint": "^8.71.2"
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "oxlint-tsgolint": "^7.0.2004",
+    "typescript": "^7.0.2"
   },
   "packageManager": "npm@12.0.2"
 }

@@ -1,6 +1,7 @@
 import { readdir, readFile } from 'fs/promises';
-import { format, createLogger, transports } from 'winston';
+
 import { major } from 'semver';
+import { format, createLogger, transports, type Logform } from 'winston';
 
 import { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } from './constants.ts';
 
@@ -39,26 +40,35 @@ const maxLabelLength = Object.values(LOG_LABELS).reduce(
   0,
 );
 
+interface LogInfo_t extends Logform.TransformableInfo {
+  message: string;
+  label?: string;
+  durationMs?: number;
+  stack?: string;
+}
+
 const uppercaseLevel = format(info => {
   info.level = info.level.toUpperCase();
   return info;
 });
 
 const addLabel = format(info => {
-  if (info.durationMs != null) {
-    info.message = `[${info.durationMs}ms] ${info.message}`;
+  const logInfo = info as LogInfo_t;
+  if (logInfo.durationMs != null) {
+    logInfo.message = `[${logInfo.durationMs}ms] ${logInfo.message}`;
   }
-  if (info.label) {
-    const formattedLabel = `[${info.label}]`.padEnd(maxLabelLength + 3);
-    info.message = formattedLabel + info.message;
+  if (logInfo.label) {
+    const formattedLabel = `[${logInfo.label}]`.padEnd(maxLabelLength + 3);
+    logInfo.message = formattedLabel + logInfo.message;
   }
   return info;
 });
 
 const logFormat = format.printf(info => {
-  let log = `${info.level}: `;
-  if (info.message) log += info.message;
-  if (info.stack) log += `\n${info.stack}`;
+  const { level, message, stack } = info as LogInfo_t;
+  let log = `${level}: `;
+  if (message) log += message;
+  if (stack) log += `\n${stack}`;
   return log;
 });
 

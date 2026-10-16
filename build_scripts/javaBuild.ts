@@ -1,4 +1,5 @@
 import { readFile } from 'fs/promises';
+
 import Zip from 'adm-zip';
 import { prerelease } from 'semver';
 
@@ -8,6 +9,7 @@ import {
   TARGET_DIR,
   LOG_LABELS,
 } from './constants.ts';
+import type { PackFormat_t, PackMcmeta_t } from './types.ts';
 import {
   all,
   getOverlayDirectories,
@@ -15,7 +17,6 @@ import {
   getSplashes,
   toJson,
 } from './utils.ts';
-import type { PackFormat_t, PackMcmeta_t } from './types.ts';
 
 const log = logger.child({ label: LOG_LABELS.JAVA_BUILD });
 
