@@ -50,7 +50,7 @@ Sound files should go under the `assets/poof-sounds/sounds/` folder in the appro
 
 ### Add Bedrock Edition support
 
-Although **poof sounds** is structured as a Java Edition resource pack, it is also converted into a Bedrock Edition resource pack during the build process using custom build scripts. `build_scripts/resources/soundsMap.js` contains mappings from Java Edition sound definitions their Bedrock Edition equivalents. The `bedrock/` folder contains additional files used only for the Bedrock version, and `build_scripts/bedrockBuild.js` performs the conversion from the Java Edition files into a Bedrock Edition resource pack. Note that this conversion process is specific to **poof sounds** and cannot be used to convert any Java Edition resource pack to Bedrock Edition.
+Although **poof sounds** is structured as a Java Edition resource pack, it is also converted into a Bedrock Edition resource pack during the build process using custom build scripts. `build_scripts/resources/soundsMap.ts` contains mappings from Java Edition sound definitions their Bedrock Edition equivalents. The `bedrock/` folder contains additional files used only for the Bedrock version, and `build_scripts/bedrockBuild.ts` performs the conversion from the Java Edition files into a Bedrock Edition resource pack. Note that this conversion process is specific to **poof sounds** and cannot be used to convert any Java Edition resource pack to Bedrock Edition.
 
 ### Validate and build the resource pack
 

@@ -7,18 +7,19 @@ import {
   MC_NAMESPACE,
   TARGET_DIR,
   LOG_LABELS,
-} from './constants.js';
+} from './constants.ts';
 import {
   all,
   getOverlayDirectories,
   logger,
   getSplashes,
   toJson,
-} from './utils.js';
+} from './utils.ts';
+import type { PackFormat_t, PackMcmeta_t } from './types.ts';
 
 const log = logger.child({ label: LOG_LABELS.JAVA_BUILD });
 
-const buildZip = async version => {
+const buildZip = async (version: string): Promise<void> => {
   const [mcmetaJson, overlayDirs, splashes] = await all([
     readFile('pack.mcmeta', 'utf8'),
     getOverlayDirectories(),
@@ -49,8 +50,8 @@ const buildZip = async version => {
   log.info(`successfully wrote zip file to: ${target}`);
 };
 
-const generateMcmeta = (mcmetaJson, version) => {
-  const mcmeta = JSON.parse(mcmetaJson);
+const generateMcmeta = (mcmetaJson: string, version: string) => {
+  const mcmeta = JSON.parse(mcmetaJson) as PackMcmeta_t;
   mcmeta.pack.description = mcmeta.pack.description.replace(
     '{VERSION}',
     version,
@@ -69,16 +70,16 @@ const generateMcmeta = (mcmetaJson, version) => {
   mcmeta.pack.pack_format = minFormatMajor;
   mcmeta.pack.supported_formats = [minFormatMajor, major(maxFormat)];
 
-  for (const overlay of mcmeta.overlays.entries) {
+  for (const overlay of mcmeta.overlays?.entries ?? []) {
     overlay.formats = [major(overlay.min_format), major(overlay.max_format)];
   }
 
   return mcmeta;
 };
 
-const major = version => {
+const major = (version: PackFormat_t | undefined) => {
   if (!version) throw Error('pack format version missing');
-  return version[0] ?? version;
+  return typeof version === 'number' ? version : version[0];
 };
 
 export default buildZip;

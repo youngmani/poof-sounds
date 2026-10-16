@@ -1,5 +1,5 @@
 // map java texture names to bedrock
-const pigTexturesMap = {
+const pigTexturesMap: Record<string, string> = {
   pig_cold_baby: 'pig_cold_baby',
   pig_cold: 'pig_cold',
   pig_temperate_baby: 'pig_temperate_baby',

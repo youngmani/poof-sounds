@@ -1,5 +1,13 @@
+export interface KzPainting_t {
+  name: string;
+  x: number;
+  y: number;
+  h: number;
+  w: number;
+}
+
 // list of paintings to generate kz.png
-const kzPaintings = [
+const kzPaintings: KzPainting_t[] = [
   { name: 'kebab', x: 0, y: 0, h: 1, w: 1 },
   { name: 'aztec', x: 1, y: 0, h: 1, w: 1 },
   { name: 'alban', x: 2, y: 0, h: 1, w: 1 },

@@ -3,17 +3,25 @@ import Zip from 'adm-zip';
 import { prerelease, major, minor, patch } from 'semver';
 import { Jimp, JimpMime, ResizeStrategy } from 'jimp';
 
-import KZ_PAINTINGS from './resources/kzPaintings.js';
-import PIG_TEXTURES_MAP from './resources/pigTexturesMap.js';
-import SOUNDS_MAP from './resources/soundsMap.js';
+import KZ_PAINTINGS, { type KzPainting_t } from './resources/kzPaintings.ts';
+import PIG_TEXTURES_MAP from './resources/pigTexturesMap.ts';
+import SOUNDS_MAP, { type SoundAdjustments_t } from './resources/soundsMap.ts';
 import {
   BASE_PACK_DIR,
   MC_NAMESPACE,
   POOF_NAMESPACE,
   TARGET_DIR,
   LOG_LABELS,
-} from './constants.js';
-import { all, logger, getSplashes, toJson } from './utils.js';
+} from './constants.ts';
+import { all, logger, getSplashes, toJson } from './utils.ts';
+import type {
+  BedrockSoundDefinition_t,
+  BedrockSoundFile_t,
+  JavaSoundFile_t,
+  JavaSounds_t,
+} from './types.ts';
+
+type Image_t = Awaited<ReturnType<typeof Jimp.read>>;
 
 const PAINTING_SIZE = 128;
 const PAINTINGS_PATH = 'textures/painting';
@@ -21,11 +29,11 @@ const PIG_TEXTURE_PATH = 'textures/entity/pig';
 
 const log = logger.child({ label: LOG_LABELS.BEDROCK_BUILD });
 
-const convertToBedrock = async version => {
+const convertToBedrock = async (version: string): Promise<void> => {
   const zip = new Zip();
 
   const [soundsJson, splashesTxt, kz, nonKzPaintings] = await all([
-    readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`),
+    readFile(`${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`, 'utf8'),
     getSplashes(version),
     generateKz(),
     getNonKzPaintings(),
@@ -89,7 +97,7 @@ const generateKz = async () => {
   return kz;
 };
 
-const addPainting = async (kz, { name, x, y, h, w }) => {
+const addPainting = async (kz: Image_t, { name, x, y, h, w }: KzPainting_t) => {
   const image = await Jimp.read(getPaintingPath(name));
   const scale = (h * PAINTING_SIZE) / image.height;
   if (scale !== 1) {
@@ -106,7 +114,7 @@ const getNonKzPaintings = async () => {
   const kzPaintingNames = KZ_PAINTINGS.map(painting => painting.name);
   const [javaFiles, bedrockFiles] = await all([
     readdir(`${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/`).then(files =>
-      files.reduce((acc, file) => {
+      files.reduce<string[]>((acc, file) => {
         if (file.endsWith('.png')) acc.push(file.split('.')[0]);
         return acc;
       }, []),
@@ -120,16 +128,16 @@ const getNonKzPaintings = async () => {
   );
 };
 
-const generateSoundDefinitions = soundsJson => {
-  const javaSounds = JSON.parse(soundsJson);
-  const definitions = {};
+const generateSoundDefinitions = (soundsJson: string) => {
+  const javaSounds = JSON.parse(soundsJson) as JavaSounds_t;
+  const definitions: Record<string, BedrockSoundDefinition_t> = {};
   Object.keys(javaSounds).forEach(key => {
-    if (!SOUNDS_MAP[key]) {
+    const mapping = SOUNDS_MAP[key];
+    if (!mapping) {
       log.warn(`unmapped java sound ${key}`);
       return;
     }
-    const soundMappings =
-      SOUNDS_MAP[key] instanceof Array ? SOUNDS_MAP[key] : [SOUNDS_MAP[key]];
+    const soundMappings = mapping instanceof Array ? mapping : [mapping];
     if (!soundMappings.length) {
       log.verbose(`skipping java sound ${key}`);
       return;
@@ -139,45 +147,49 @@ const generateSoundDefinitions = soundsJson => {
         log.warn(`${name} already mapped`);
         return;
       }
-      const sound = { ...javaSounds[key], ...propOverrides };
-      delete sound.replace;
-      sound.sounds = adjustSounds(sound.sounds, adjustments);
-      definitions[name] = sound;
+      const { replace: _replace, ...sound } = javaSounds[key];
+      definitions[name] = {
+        ...sound,
+        ...propOverrides,
+        sounds: adjustSounds(sound.sounds, adjustments),
+      };
       log.debug(`converting ${key} to ${name}`);
     });
   });
   return { format_version: '1.14.0', sound_definitions: definitions };
 };
 
-const round = value => Math.round(value * 1e6) / 1e6;
+const round = (value: number) => Math.round(value * 1e6) / 1e6;
 
-const adjustSounds = (sounds = [], adjustments = {}) =>
-  sounds.map(sound => {
-    let adjusted;
-    if (typeof sound === 'string') {
-      adjusted = { name: sound };
-    } else {
-      adjusted = { ...sound };
-    }
+const adjustSounds = (
+  sounds: (string | JavaSoundFile_t)[] = [],
+  adjustments: SoundAdjustments_t = {},
+) =>
+  sounds.map((sound): string | BedrockSoundFile_t => {
+    const {
+      stream: _stream,
+      attenuation_distance: _attenuationDistance,
+      preload: _preload,
+      type,
+      ...adjusted
+    }: JavaSoundFile_t = typeof sound === 'string' ? { name: sound } : sound;
     adjusted.name = `sounds/${adjusted.name.replace(':', '/')}`;
-    Object.entries(adjustments).forEach(([key, value]) => {
-      adjusted[key] ??= 1;
-      adjusted[key] = round(adjusted[key] * value);
-    });
-    delete adjusted.stream;
-    delete adjusted.attenuation_distance;
-    delete adjusted.preload;
-    if (adjusted.type === 'event') {
+    for (const [key, value] of Object.entries(adjustments) as [
+      keyof SoundAdjustments_t,
+      number,
+    ][]) {
+      adjusted[key] = round((adjusted[key] ?? 1) * value);
+    }
+    if (type === 'event') {
       log.warn(`unable to convert event sound ${adjusted.name}`);
     }
-    delete adjusted.type;
     if (Object.keys(adjusted).length === 1 && adjusted.name) {
-      adjusted = adjusted.name;
+      return adjusted.name;
     }
     return adjusted;
   });
 
-const generateSplashes = splashesTxt => {
+const generateSplashes = (splashesTxt: string) => {
   const splashes = splashesTxt
     .split('\n')
     .map(text => text.trim())
@@ -186,13 +198,13 @@ const generateSplashes = splashesTxt => {
   return { splashes };
 };
 
-const generateManifest = (version, isBeta) => {
+const generateManifest = (version: string, isBeta: boolean) => {
   const versionArr = [
     major(version),
     minor(version),
     isBeta
       ? 1000 * patch(version) +
-        (prerelease(version).find(i => typeof i === 'number') ?? 0)
+        (prerelease(version)?.find(i => typeof i === 'number') ?? 0)
       : patch(version),
   ];
   log.info(`using version ${versionArr}, beta=${isBeta}`);
@@ -225,9 +237,9 @@ const generateManifest = (version, isBeta) => {
   };
 };
 
-const getPaintingPath = name =>
+const getPaintingPath = (name: string) =>
   `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PAINTINGS_PATH}/${name}.png`;
-const getPigTexturePath = name =>
+const getPigTexturePath = (name: string) =>
   `${BASE_PACK_DIR}/${MC_NAMESPACE}/${PIG_TEXTURE_PATH}/${name}.png`;
 
 export default convertToBedrock;

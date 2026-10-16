@@ -5,13 +5,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build_scripts/build.js",
-    "clean": "node build_scripts/clean.js",
+    "build": "node build_scripts/build.ts",
+    "clean": "node build_scripts/clean.ts",
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
     "prebuild": "npm run validate",
+    "typecheck": "tsc",
     "preversion": "npm run validate",
-    "validate": "node build_scripts/validate.js"
+    "validate": "node build_scripts/validate.ts"
   },
   "dependencies": {
     "adm-zip": "^0.6.1",
@@ -23,10 +24,16 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/ffprobe": "^1.1.8",
+    "@types/ffprobe-static": "^2.0.3",
+    "@types/node": "^24.19.2",
+    "@types/semver": "^7.8.0",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.1",
     "globals": "^17.1.0",
-    "prettier": "^3.5.0"
+    "prettier": "^3.5.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2"
   },
   "packageManager": "npm@12.0.2"
 }

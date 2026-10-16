@@ -27,6 +27,7 @@ jobs:
       - run: corepack enable npm && node -v && npm -v
       - run: npm ci
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm run build
       - uses: actions/upload-artifact@v7
         with:

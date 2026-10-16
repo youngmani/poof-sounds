@@ -1,17 +1,17 @@
 import { mkdir } from 'fs/promises';
 import { valid, clean, inc } from 'semver';
 
-import buildZip from './javaBuild.js';
-import convertToBedrock from './bedrockBuild.js';
-import { TARGET_DIR, LOG_LABELS } from './constants.js';
-import { all, logger } from './utils.js';
+import buildZip from './javaBuild.ts';
+import convertToBedrock from './bedrockBuild.ts';
+import { TARGET_DIR, LOG_LABELS } from './constants.ts';
+import { all, logger } from './utils.ts';
 
 const log = logger.child({ label: LOG_LABELS.BUILD });
 
-const build = async version => {
+const build = async (version: string | null) => {
   log.info('begin build');
   try {
-    if (!valid(version)) {
+    if (!version || !valid(version)) {
       throw Error('invalid version');
     }
     await mkdir(TARGET_DIR, { recursive: true });
@@ -26,8 +26,8 @@ const build = async version => {
 };
 
 const run = async () => {
-  let version = clean(process.env.npm_package_version);
-  if (process.env.IS_RELEASE?.toLowerCase() !== 'true') {
+  let version = clean(process.env.npm_package_version ?? '');
+  if (version && process.env.IS_RELEASE?.toLowerCase() !== 'true') {
     version = inc(version, 'prerelease');
   }
   process.exit(await build(version));

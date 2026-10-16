@@ -2,24 +2,26 @@ import { readdir, readFile } from 'fs/promises';
 import { format, createLogger, transports } from 'winston';
 import { major } from 'semver';
 
-import { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } from './constants.js';
+import { BASE_PACK_DIR, MC_NAMESPACE, LOG_LABELS } from './constants.ts';
 
-export const all = async promises => {
+export const all = async <T extends readonly unknown[]>(
+  promises: T,
+): Promise<{ -readonly [P in keyof T]: Awaited<T[P]> }> => {
   const results = await Promise.allSettled(promises);
   return results.map(result => {
     if (result.status === 'rejected') {
       throw result.reason;
     }
     return result.value;
-  });
+  }) as { -readonly [P in keyof T]: Awaited<T[P]> };
 };
 
-export const getOverlayDirectories = async () => {
+export const getOverlayDirectories = async (): Promise<string[]> => {
   const files = await readdir('.');
   return files.filter(file => file.startsWith('overlay_'));
 };
 
-export const getSplashes = async version => {
+export const getSplashes = async (version: string): Promise<string> => {
   const splashes = await readFile(
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/texts/splashes.txt`,
   );
@@ -29,7 +31,8 @@ export const getSplashes = async version => {
   );
 };
 
-export const toJson = str => `${JSON.stringify(str, null, 2)}\n`;
+export const toJson = (str: unknown): string =>
+  `${JSON.stringify(str, null, 2)}\n`;
 
 const maxLabelLength = Object.values(LOG_LABELS).reduce(
   (max, label) => Math.max(max, label.length),

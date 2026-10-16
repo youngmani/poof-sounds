@@ -1,7 +1,7 @@
 import { rm } from 'fs/promises';
 
-import { TARGET_DIR, LOG_LABELS } from './constants.js';
-import { logger } from './utils.js';
+import { TARGET_DIR, LOG_LABELS } from './constants.ts';
+import { logger } from './utils.ts';
 
 const log = logger.child({ label: LOG_LABELS.CLEAN });
 

@@ -9,8 +9,9 @@ import {
   MC_NAMESPACE,
   POOF_NAMESPACE,
   LOG_LABELS,
-} from './constants.js';
-import { getOverlayDirectories, all, logger } from './utils.js';
+} from './constants.ts';
+import { getOverlayDirectories, all, logger } from './utils.ts';
+import type { JavaSounds_t, PackMcmeta_t } from './types.ts';
 
 const MONO_DIR = 'mono';
 const STEREO_DIR = 'stereo';
@@ -21,19 +22,23 @@ const execFileAsync = promisify(execFile);
 const log = logger.child({ label: LOG_LABELS.VALIDATE });
 
 class ValidationError extends Error {
-  constructor(...args) {
+  constructor(...args: ConstructorParameters<typeof Error>) {
     super(...args);
-    this.stack = null;
+    this.stack = undefined;
   }
 }
 
-const verifySoundsExist = async (monoFiles, stereoFiles) => {
+const verifySoundsExist = async (
+  monoFiles: string[],
+  stereoFiles: string[],
+) => {
   const allFiles = new Set([...monoFiles, ...stereoFiles]);
-  const usedFiles = new Set();
+  const usedFiles = new Set<string>();
   const soundsJson = await readFile(
     `${BASE_PACK_DIR}/${MC_NAMESPACE}/sounds.json`,
+    'utf8',
   );
-  const sounds = JSON.parse(soundsJson);
+  const sounds = JSON.parse(soundsJson) as JavaSounds_t;
   Object.entries(sounds).forEach(([key, sound]) => {
     sound.sounds
       .map(s => (typeof s === 'string' ? { name: s } : s))
@@ -74,18 +79,24 @@ const isFfprobeAvailable = async () => {
     return true;
   } catch (error) {
     if (process.env.CI?.toLowerCase() === 'true') {
-      throw new ValidationError(`unable to run ffprobe: ${error.message}`);
+      throw new ValidationError(`unable to run ffprobe: ${getMessage(error)}`);
     }
-    log.warn(`skipping audio channel validation: ${error.message}`);
+    log.warn(`skipping audio channel validation: ${getMessage(error)}`);
     return false;
   }
 };
 
-const validateSoundFormat = async (monoFiles, stereoFiles) => {
+const getMessage = (error: unknown) =>
+  error instanceof Error ? error.message : String(error);
+
+const validateSoundFormat = async (
+  monoFiles: string[],
+  stereoFiles: string[],
+) => {
   if (!(await isFfprobeAvailable())) {
     return;
   }
-  const files = [];
+  const files: { path: string; channels: number }[] = [];
   monoFiles.forEach(fileName => {
     files.push({ path: `${MONO_DIR}/${fileName}`, channels: 1 });
   });
@@ -111,8 +122,8 @@ const validateOverlaysExist = async () => {
     readFile('pack.mcmeta', 'utf8'),
     getOverlayDirectories(),
   ]);
-  const usedDirs = new Set();
-  const mcmetaJson = JSON.parse(mcmeta);
+  const usedDirs = new Set<string>();
+  const mcmetaJson = JSON.parse(mcmeta) as PackMcmeta_t;
   mcmetaJson.overlays?.entries?.forEach(({ directory }) => {
     if (!/^[a-z0-9_-]+$/.test(directory)) {
       throw new ValidationError(`overlay has invalid directory: ${directory}`);

@@ -1,5 +1,15 @@
+import type { BedrockSoundDefinition_t } from '../types.ts';
+
+export type SoundAdjustments_t = Partial<Record<'pitch' | 'volume', number>>;
+
+export interface SoundMapping_t {
+  name: string;
+  adjustments?: SoundAdjustments_t;
+  propOverrides?: Partial<Omit<BedrockSoundDefinition_t, 'sounds'>>;
+}
+
 // map java sound names to bedrock and add additional metadata
-const soundsMap = {
+const soundsMap: Record<string, SoundMapping_t | SoundMapping_t[]> = {
   'block.ancient_debris.break': {
     adjustments: { pitch: 11 / 12 },
     name: 'dig.ancient_debris',
