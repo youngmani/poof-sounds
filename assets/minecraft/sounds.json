@@ -822,6 +822,11 @@
     "sounds": ["poof-sounds:mono/ghastshoot"],
     "subtitle": "uh oh a ghast is shooting you"
   },
+  "entity.ghastling.ambient": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/ghastling"],
+    "subtitle": "ghastling"
+  },
   "entity.glow_squid.ambient": {
     "replace": true,
     "sounds": [

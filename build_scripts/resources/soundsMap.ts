@@ -145,6 +145,7 @@ const soundsMap: Record<string, SoundMapping_t | SoundMapping_t[]> = {
   'entity.generic.splash': { name: 'entity.generic.splash' },
   'entity.ghast.shoot': { name: 'mob.ghast.fireball' },
   'entity.ghast.warn': { name: 'mob.ghast.charge' },
+  'entity.ghastling.ambient': { name: 'mob.ghastling.ambient' },
   'entity.glow_squid.ambient': { name: 'mob.glow_squid.ambient' },
   'entity.glow_squid.death': { name: 'mob.glow_squid.death' },
   'entity.glow_squid.hurt': { name: 'mob.glow_squid.hurt' },
