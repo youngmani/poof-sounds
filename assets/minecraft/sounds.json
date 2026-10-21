@@ -371,6 +371,54 @@
     ],
     "subtitle": "baby meoww"
   },
+  "entity.baby_cat.purreow": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.7, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.7, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
+      { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
+      { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+    ],
+    "subtitle": "baby meoww"
+  },
+  "entity.baby_cat.stray_ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.7, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.7, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
+      { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
+      { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+    ],
+    "subtitle": "baby meoww"
+  },
   "entity.baby_horse.ambient": {
     "replace": true,
     "sounds": [
@@ -471,9 +519,35 @@
       { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
       { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
       { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
-      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 },
+      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
     ],
     "subtitle": "meoww (royal)"
+  },
+  "entity.cat_royal.purreow": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.6, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 0.94,
+        "volume": 0.62,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.6, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.45 },
+      { "name": "poof-sounds:mono/meow2", "volume": 0.39 },
+      { "name": "poof-sounds:mono/meow3", "volume": 0.33 },
+      { "name": "poof-sounds:mono/meow4", "volume": 0.27 },
+      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
+    ],
+    "subtitle": "meow (royal)"
   },
   "entity.cat_royal.stray_ambient": {
     "replace": true,
@@ -495,11 +569,36 @@
       { "name": "poof-sounds:mono/meow1", "volume": 0.45 },
       { "name": "poof-sounds:mono/meow2", "volume": 0.39 },
       { "name": "poof-sounds:mono/meow3", "volume": 0.33 },
-      { "name": "poof-sounds:mono/meow4", "volume": 0.27 }
+      { "name": "poof-sounds:mono/meow4", "volume": 0.27 },
+      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
     ],
     "subtitle": "meow (royal)"
   },
   "entity.cat.ambient": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "poof-sounds:mono/goodmeow1",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow1", "volume": 0.7, "weight": 2 },
+      {
+        "name": "poof-sounds:mono/goodmeow2",
+        "pitch": 1.06,
+        "volume": 0.72,
+        "weight": 2
+      },
+      { "name": "poof-sounds:mono/goodmeow2", "volume": 0.7, "weight": 2 },
+      { "name": "poof-sounds:mono/meow1", "volume": 0.6 },
+      { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
+      { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
+      { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 }
+    ],
+    "subtitle": "meoww"
+  },
+  "entity.cat.purreow": {
     "replace": true,
     "sounds": [
       {
@@ -562,7 +661,9 @@
     "sounds": [
       { "name": "poof-sounds:mono/moo", "volume": 0.95, "weight": 3 },
       { "name": "poof-sounds:mono/moo2", "weight": 4 },
-      { "name": "poof-sounds:mono/moo3", "weight": 2 }
+      { "name": "poof-sounds:mono/moo3", "weight": 2 },
+      { "name": "poof-sounds:mono/moomoody1", "volume": 1.2, "weight": 12 },
+      { "name": "poof-sounds:mono/moomoody2", "volume": 1.2, "weight": 12 }
     ],
     "subtitle": "mooo cow (moody)"
   },
