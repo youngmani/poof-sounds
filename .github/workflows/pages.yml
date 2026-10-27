@@ -28,11 +28,16 @@ jobs:
             --include='*/' \
             --include='*.md' \
             --include='pack.png' \
-            --include='LICENSE' \
             --exclude='pages/' \
             --exclude='*' \
             ./ pages/
-      - run: mv pages/LICENSE pages/LICENSE.md
+      - name: Generate license page
+        run: |
+          {
+            printf -- '---\nlayout: default\npermalink: /LICENSE\ntitle: License\n---\n\n```text\n'
+            cat LICENSE
+            printf '```\n'
+          } > pages/LICENSE.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

@@ -60,13 +60,13 @@ Although **poof sounds** is structured as a Java Edition resource pack, it is al
 
 To find out which sound events Minecraft supports and how to override them:
 
-- <https://minecraft.wiki>{: target="_blank" rel="noopener noreferrer"}
-  - <https://minecraft.wiki/w/Resource_pack>{: target="_blank" rel="noopener noreferrer"}
-  - <https://minecraft.wiki/w/Sounds.json>{: target="_blank" rel="noopener noreferrer"}
-  - Extract vanilla sounds from Java Edition: <https://minecraft.wiki/w/Tutorial:Sound_directory>{: target="_blank" rel="noopener noreferrer"}
-- Bedrock Edition vanilla resource pack: <https://github.com/Mojang/bedrock-samples>{: target="_blank" rel="noopener noreferrer"} (`sounds.json` and `sound_definitions.json`)
+- <https://minecraft.wiki>
+  - <https://minecraft.wiki/w/Resource_pack>
+  - <https://minecraft.wiki/w/Sounds.json>
+  - Extract vanilla sounds from Java Edition: <https://minecraft.wiki/w/Tutorial:Sound_directory>
+- Bedrock Edition vanilla resource pack: <https://github.com/Mojang/bedrock-samples> (`sounds.json` and `sound_definitions.json`)
 
 To work with audio files:
 
-- Convert video to audio or convert stereo to mono: <https://www.ffmpeg.org/>{: target="_blank" rel="noopener noreferrer"}
-- Adjust sound volume or combine sounds: <https://www.audacityteam.org/>{: target="_blank" rel="noopener noreferrer"}
+- Convert video to audio or convert stereo to mono: <https://www.ffmpeg.org/>
+- Adjust sound volume or combine sounds: <https://www.audacityteam.org/>
