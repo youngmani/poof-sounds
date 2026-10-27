@@ -32,6 +32,7 @@ jobs:
             --exclude='pages/' \
             --exclude='*' \
             ./ pages/
+      - run: mv pages/LICENSE pages/LICENSE.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
