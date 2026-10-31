@@ -47,6 +47,12 @@ const soundsMap: Record<string, SoundMapping_t | SoundMapping_t[]> = {
   'block.end_gateway.spawn': [/* no bedrock equivalent */],
   'block.end_portal.spawn': { name: 'block.end_portal.spawn' },
   'block.ender_chest.open': { name: 'random.enderchestopen' },
+  'block.mud.fall': {
+    adjustments: { volume: 1.33, pitch: 0.75 },
+    name: 'block.mud.fall',
+  },
+  'block.mud.hit': { adjustments: { volume: 1.33 }, name: 'block.mud.hit' },
+  'block.mud.step': { adjustments: { volume: 1.33 }, name: 'block.mud.step' },
   'block.nether_wood_door.close': { name: 'close.nether_wood_door' },
   'block.nether_wood_door.open': { name: 'open.nether_wood_door' },
   'block.note_block.bass': { name: 'note.bass' },
@@ -102,6 +108,7 @@ const soundsMap: Record<string, SoundMapping_t | SoundMapping_t[]> = {
   'entity.cow_moody.ambient': { name: 'mob.moody_cow.say' },
   'entity.cow.ambient': { name: 'mob.cow.say' },
   'entity.cow.milk': { name: 'mob.cow.milk' },
+  'entity.creaking.ambient': { name: 'mob.creaking.ambient' },
   'entity.creeper.primed': [
     {
       /* prevent conflict with random.fuse which is used for tnt */

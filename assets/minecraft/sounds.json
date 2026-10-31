@@ -213,6 +213,30 @@
     ],
     "subtitle": "putthatinenderchest"
   },
+  "block.mud.fall": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/mudwalk1", "pitch": 1.33, "volume": 1.25 },
+      { "name": "poof-sounds:mono/mudwalk3", "pitch": 1.33, "volume": 1.25 }
+    ],
+    "subtitle": "mud"
+  },
+  "block.mud.hit": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/mudwalk1", "pitch": 2, "volume": 1.25 },
+      { "name": "poof-sounds:mono/mudwalk3", "pitch": 2, "volume": 1.25 }
+    ],
+    "subtitle": "mud"
+  },
+  "block.mud.step": {
+    "replace": true,
+    "sounds": [
+      { "name": "poof-sounds:mono/mudwalk1", "volume": 1.25 },
+      { "name": "poof-sounds:mono/mudwalk3", "volume": 1.25 }
+    ],
+    "subtitle": "mud"
+  },
   "block.nether_wood_door.close": {
     "replace": true,
     "sounds": ["poof-sounds:mono/er"],
@@ -520,7 +544,8 @@
       { "name": "poof-sounds:mono/meow2", "pitch": 1.02, "volume": 0.54 },
       { "name": "poof-sounds:mono/meow3", "pitch": 1.04, "volume": 0.48 },
       { "name": "poof-sounds:mono/meow4", "pitch": 1.06, "volume": 0.42 },
-      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
+      { "name": "poof-sounds:mono/meowroyal2", "weight": 25 },
+      { "name": "poof-sounds:mono/meowroyal3", "weight": 25 }
     ],
     "subtitle": "meoww (royal)"
   },
@@ -545,7 +570,8 @@
       { "name": "poof-sounds:mono/meow2", "volume": 0.39 },
       { "name": "poof-sounds:mono/meow3", "volume": 0.33 },
       { "name": "poof-sounds:mono/meow4", "volume": 0.27 },
-      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
+      { "name": "poof-sounds:mono/meowroyal2", "weight": 25 },
+      { "name": "poof-sounds:mono/meowroyal3", "weight": 25 }
     ],
     "subtitle": "meow (royal)"
   },
@@ -570,7 +596,8 @@
       { "name": "poof-sounds:mono/meow2", "volume": 0.39 },
       { "name": "poof-sounds:mono/meow3", "volume": 0.33 },
       { "name": "poof-sounds:mono/meow4", "volume": 0.27 },
-      { "name": "poof-sounds:mono/meowroyal1", "weight": 25 }
+      { "name": "poof-sounds:mono/meowroyal2", "weight": 25 },
+      { "name": "poof-sounds:mono/meowroyal3", "weight": 25 }
     ],
     "subtitle": "meow (royal)"
   },
@@ -685,6 +712,11 @@
       "poof-sounds:mono/milkspecial1"
     ],
     "subtitle": "cow milk"
+  },
+  "entity.creaking.ambient": {
+    "replace": true,
+    "sounds": ["poof-sounds:mono/creak1", "poof-sounds:mono/creak2"],
+    "subtitle": "creak"
   },
   "entity.creeper.primed": {
     "replace": true,
