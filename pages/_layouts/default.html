@@ -20,6 +20,9 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.34/darkreader.min.js"></script>
     <script>DarkReader.auto();</script>
+    {% if site.cloudflare_analytics_token %}
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    {% endif %}
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>

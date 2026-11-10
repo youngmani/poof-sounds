@@ -38,6 +38,13 @@ jobs:
             cat LICENSE
             printf '```\n'
           } > pages/LICENSE.md
+      - name: Inject analytics token
+        env:
+          CF_ANALYTICS_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
+        run: |
+          if [ -n "$CF_ANALYTICS_TOKEN" ]; then
+            printf '\ncloudflare_analytics_token: "%s"\n' "$CF_ANALYTICS_TOKEN" >> pages/_config.yml
+          fi
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
